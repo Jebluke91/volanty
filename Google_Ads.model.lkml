@@ -18,3 +18,10 @@ include: "/bq_transfers/*.view.lkml"                # include all views in the v
 #     sql_on: ${users.id} = ${orders.user_id} ;;
 #   }
 # }
+
+explore: campaign_basic_stats_1444236597 {
+  view_label: "Campanhas Basico"
+}
+explore: ad_group_basic_stats_1444236597 {
+  view_label: "AdGroups Basico"
+}
