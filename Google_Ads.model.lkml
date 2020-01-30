@@ -1,4 +1,4 @@
-connection: "connection_name"
+connection: "volanty-production"
 
 include: "/bq_transfers/*.view.lkml"                # include all views in the views/ folder in this project
 # include: "/**/view.lkml"                   # include all views in this project
@@ -20,8 +20,8 @@ include: "/bq_transfers/*.view.lkml"                # include all views in the v
 # }
 
 explore: campaign_basic_stats_1444236597 {
-  view_label: "Campanhas Basico"
+  label: "Campanhas Basico"
 }
 explore: ad_group_basic_stats_1444236597 {
-  view_label: "AdGroups Basico"
+  label: "AdGroups Basico"
 }
