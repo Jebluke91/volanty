@@ -1,3 +1,5 @@
+
+explore: agendamentos_qvmc30 {}
 view: agendamentos_qvmc30 {
   sql_table_name: views.Agendamentos_QVMC30 ;;
 
