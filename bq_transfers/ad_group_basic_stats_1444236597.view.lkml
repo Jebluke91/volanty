@@ -91,10 +91,10 @@ view: ad_group_basic_stats_1444236597 {
     sql: ${TABLE}.CampaignId ;;
   }
 
-  dimension: clicks {
-    type: number
-    sql: ${TABLE}.Clicks ;;
-  }
+  # dimension: clicks {
+  #   type: number
+  #   sql: ${TABLE}.Clicks ;;
+  # }
 
   dimension: conversion_value {
     type: number
@@ -164,5 +164,9 @@ view: ad_group_basic_stats_1444236597 {
   measure: count {
     type: count
     drill_fields: []
+  }
+  measure: clicks {
+    type: number
+    sql: ${TABLE}.Clicks ;;
   }
 }
