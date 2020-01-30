@@ -1,4 +1,4 @@
-connection: "volanty-dev"
+connection: "volanty-production"
 
 include: "*.view"
 
