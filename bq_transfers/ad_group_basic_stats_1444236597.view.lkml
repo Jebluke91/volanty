@@ -44,7 +44,6 @@ view: ad_group_basic_stats_1444236597 {
   dimension: active_view_measurable_cost {
     type: number
     sql: ${TABLE}.ActiveViewMeasurableCost ;;
-    value_format: "R$#.00;($#.00)"
   }
 
   dimension: active_view_measurable_impressions {
@@ -109,7 +108,9 @@ view: ad_group_basic_stats_1444236597 {
 
   dimension: cost {
     type: number
+    value_format: "R$#.00;($#.00)"
     sql: ${TABLE}.Cost ;;
+
   }
 
   dimension_group: date {
