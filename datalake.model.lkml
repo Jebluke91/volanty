@@ -2,6 +2,8 @@ connection: "volanty-production"
 
 include: "/views/*.view"
 
+explore: schedule {}
+explore: acquisition {}
 explore: agendamentos_qvmc30 {}
 explore: carros {}
 explore: agendamentos_inspecoes {}
