@@ -6,6 +6,13 @@ view: goals {
     sql: ${TABLE}.label ;;
   }
 
+  dimension: pk {
+    primary_key: yes
+    hidden: yes
+    type: string
+    sql: CONCAT(${label},${month_month}) ;;
+  }
+
   dimension_group: month {
     type: time
     timeframes: [
@@ -32,7 +39,7 @@ view: goals {
   }
 
   measure: goal_value {
-    type: max
+    type: sum
     sql:${value} ;;
   }
 
