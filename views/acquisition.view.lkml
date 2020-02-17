@@ -4,6 +4,7 @@ view: acquisition {
   dimension: _id {
     type: string
     sql: ${TABLE}._id ;;
+    primary_key: yes
   }
 
   dimension: car_brand {

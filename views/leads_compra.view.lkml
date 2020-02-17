@@ -172,6 +172,7 @@ view: leads_compra {
   dimension: id_inspecao {
     type: number
     sql: ${TABLE}.id_inspecao ;;
+    primary_key: yes
   }
 
   dimension: km {

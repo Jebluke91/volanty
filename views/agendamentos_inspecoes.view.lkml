@@ -138,6 +138,7 @@ view: agendamentos_inspecoes {
   dimension: id_inspecao {
     type: number
     sql: ${TABLE}.id_inspecao ;;
+    primary_key: yes
   }
 
   dimension: km {

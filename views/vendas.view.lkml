@@ -37,6 +37,7 @@ view: vendas {
   dimension: schedule_key {
     type: number
     sql: ${TABLE}.scheduleKey ;;
+    primary_key: yes
   }
 
   dimension: status {

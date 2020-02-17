@@ -5,6 +5,7 @@ view: schedule {
     type: number
     value_format_name: id
     sql: ${TABLE}._id_ ;;
+    primary_key: yes
   }
 
   dimension: car {
