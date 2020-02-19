@@ -56,7 +56,7 @@ view: leads_compra {
     ]
     convert_tz: no
     datatype: date
-    sql: ${TABLE}.data_criacao_lead ;;
+    sql: CAST(${TABLE}.data_criacao_lead AS DATE) ;;
   }
 
   dimension_group: data_inspecao {
