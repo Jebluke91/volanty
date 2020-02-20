@@ -113,6 +113,29 @@ view: agendamentos_inspecoes {
   dimension: email_cliente {
     type: string
     sql: ${TABLE}.email_cliente ;;
+    action: {label:"Enviar form x"
+              url: "https://volanty.atlassian.net/jira/software/projects/AQ/boards/32/backlog"
+              form_param: {
+                name: "title"
+                type:  select
+                label: "desired label name"
+                description: "description text"
+                required: yes
+                default: "value string"
+                option: {
+                  name: "Olá nao gostaria de comprar mais carros?"
+                  label: "Form de compra"
+
+
+                }
+                option: {
+                  name: "Olá nao gostaria de vender mais carros?"
+                  label: "Form de venda"
+
+
+                }
+              }
+      }
   }
 
   dimension: email_inspetor {
@@ -139,6 +162,12 @@ view: agendamentos_inspecoes {
     type: number
     sql: ${TABLE}.id_inspecao ;;
     primary_key: yes
+    link: {
+      label: "Detalhes inspecao no admin"
+      url: "  https://admin.crmvolanty.com/#/inspecao/detalhes/{{value}}/relatorio"
+      icon_url: "https://admin.crmvolanty.com/favicon.png"
+    }
+
   }
 
   dimension: km {
@@ -263,11 +292,21 @@ view: agendamentos_inspecoes {
   dimension: url_do_admin {
     type: string
     sql: ${TABLE}.url_do_admin ;;
+    link: {
+      label: "Link para o admin"
+      url: "{{value}}"
+      icon_url: "https://admin.crmvolanty.com/favicon.png"
+    }
   }
 
   dimension: url_do_carro {
     type: string
     sql: ${TABLE}.url_do_carro ;;
+    link: {
+      label: "Página do carro"
+      url: "{{value}}"
+      icon_url: "https://admin.crmvolanty.com/favicon.png"
+    }
   }
 
   dimension: usuario_alteracao_preco {
@@ -322,5 +361,15 @@ view: agendamentos_inspecoes__exigencia_inspecao {
   dimension: entry {
     type: string
     sql: ${TABLE}.entry ;;
+  }
+}
+
+view: agendamentos_inspecoes_marketing{
+  extends: [agendamentos_inspecoes]
+  dimension: email_cliente {
+    hidden: yes
+  }
+  dimension: telefone_cliente{
+    hidden: yes
   }
 }

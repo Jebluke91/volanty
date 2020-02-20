@@ -7,11 +7,38 @@ datagroup: default_datagroup  {
 #   sql_trigger: SELECT MAX(transaction_date) FROM imaginary_table ;;
 }
 
+access_grant: marketing_team {
+  user_attribute: team
+  allowed_values: [ "marketing" ]
+}
+
+access_grant: admin_team {
+  user_attribute: team
+  allowed_values: ["admins"]
+}
+
+access_grant: financial_team {
+  user_attribute: team
+  allowed_values: ["financial"]
+}
+
+access_grant: rh_team {
+  user_attribute: team
+  allowed_values: ["rh"]
+}
+
+
 explore: schedule {}
 explore: acquisition {}
 explore: agendamentos_qvmc30 {}
 explore: carros {}
-explore: agendamentos_inspecoes {}
+explore: agendamentos_inspecoes {
+  required_access_grants: [admin_team]
+}
+explore: agendamentos_inspecoes_marketing {
+  required_access_grants: [marketing_team,admin_team]
+  extends: [agendamentos_inspecoes]
+}
 explore: visita {}
 explore: leads_compra {}
 explore: compras_selecionados_anuncios {}
