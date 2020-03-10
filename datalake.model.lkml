@@ -9,7 +9,7 @@ datagroup: default_datagroup  {
 
 access_grant: marketing_team {
   user_attribute: team
-  allowed_values: [ "marketing" ]
+  allowed_values: [ "marketing","admin"]
 }
 
 access_grant: admin_team {
@@ -17,16 +17,15 @@ access_grant: admin_team {
   allowed_values: ["admin"]
 }
 
-access_grant: financial_team {
-  user_attribute: team
-  allowed_values: ["financial"]
-}
+# access_grant: financial_team {
+#   user_attribute: team
+#   allowed_values: ["financial"]
+# }
 
-access_grant: marketing_admin {
-  user_attribute: team
-  allowed_values: ["marketing_admin"]
-}
-
+# access_grant: rh_team {
+#   user_attribute: team
+#   allowed_values: ["rh"]
+# }
 
 
 explore: schedule {}
@@ -34,10 +33,11 @@ explore: acquisition {}
 explore: agendamentos_qvmc30 {}
 explore: carros {}
 explore: agendamentos_inspecoes {
-  required_access_grants: [admin_team]
+  #required_access_grants: [admin_team]
 }
 explore: agendamentos_inspecoes_marketing {
-  required_access_grants: [marketing_team,admin_team]
+  required_access_grants: [marketing_team]
+
   extends: [agendamentos_inspecoes]
 }
 explore: visita {}
@@ -50,6 +50,6 @@ explore: funil_lead_aquisicao {}
 explore: funil_anuncio {
   join: goals {
     sql_on: upper(${goals.label}) = ${funil_anuncio.etapa}
-            AND ${goals.month_date} = ${funil_anuncio.data_date};;
+      AND ${goals.month_date} = ${funil_anuncio.data_date};;
   }
 }
