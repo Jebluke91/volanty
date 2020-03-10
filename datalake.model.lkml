@@ -14,19 +14,13 @@ access_grant: marketing_team {
 
 access_grant: admin_team {
   user_attribute: team
-  allowed_values: ["admins"]
+  allowed_values: ["admin"]
 }
 
 access_grant: financial_team {
   user_attribute: team
   allowed_values: ["financial"]
 }
-
-access_grant: rh_team {
-  user_attribute: team
-  allowed_values: ["rh"]
-}
-
 
 
 explore: schedule {}
