@@ -14,7 +14,7 @@ access_grant: marketing_team {
 
 access_grant: admin_team {
   user_attribute: team
-  allowed_values: ["admin"]
+  allowed_values: ["admin","marketing_admin"]
 }
 
 access_grant: financial_team {
@@ -22,9 +22,9 @@ access_grant: financial_team {
   allowed_values: ["financial"]
 }
 
-access_grant: rh_team {
+access_grant: marketing_admin {
   user_attribute: team
-  allowed_values: ["rh"]
+  allowed_values: ["marketing_admin"]
 }
 
 
