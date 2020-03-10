@@ -22,6 +22,12 @@ access_grant: financial_team {
   allowed_values: ["financial"]
 }
 
+access_grant: marketing_admin {
+  user_attribute: team
+  allowed_values: ["marketing_admin"]
+}
+
+
 
 explore: schedule {}
 explore: acquisition {}
