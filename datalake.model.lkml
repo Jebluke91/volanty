@@ -9,7 +9,7 @@ datagroup: default_datagroup  {
 
 access_grant: marketing_team {
   user_attribute: team
-  allowed_values: [ "Marketing" ]
+  allowed_values: [ "marketing" ]
 }
 
 access_grant: admin_team {
