@@ -31,7 +31,7 @@ explore: agendamentos_inspecoes {
   required_access_grants: [admin_team]
 }
 explore: agendamentos_inspecoes_marketing {
-  required_access_grants: [marketing_team]
+  required_access_grants: [marketing_team,admin_team]
   extends: [agendamentos_inspecoes]
 }
 explore: visita {}
