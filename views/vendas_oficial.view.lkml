@@ -307,11 +307,11 @@ view: vendas_oficial {
     drill_fields: []
   }
   measure: preco_total {
-    sql: ${preco_venda} ;;
+    sql: ${preco_por} ;;
     type: sum
   }
   measure: preco_medio {
-    sql: ${preco_venda} ;;
+    sql: ${preco_por} ;;
     type: average
   }
 }
