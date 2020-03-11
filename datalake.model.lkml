@@ -45,7 +45,6 @@ explore: leads_compra {}
 explore: compras_selecionados_anuncios {}
 explore: compras_selecionados_precificacao_qvmc {}
 explore: usuarios {}
-explore: vendas {}
 explore: vendas_oficial {}
 explore: funil_lead_aquisicao {}
 explore: funil_anuncio {
