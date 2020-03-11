@@ -1,7 +1,7 @@
 connection: "volanty-production"
 
 include: "/views/*.view"
-
+explore:  funil_lead_aquisicao_cav{}
 explore: funil_lead_aquisicao {}
 explore: funil_anuncio {
   join: goals {
