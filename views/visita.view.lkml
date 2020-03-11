@@ -143,6 +143,11 @@ view: visita {
     sql: ${TABLE}.placa ;;
   }
 
+  dimension: selecionado {
+    type: string
+    sql: ${TABLE}.selecionado ;;
+  }
+
   dimension: preco_anunciado {
     type: number
     sql: ${TABLE}.preco_anunciado ;;
