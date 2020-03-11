@@ -127,6 +127,7 @@ view: carros {
   dimension: inspection_key {
     type: number
     sql: ${TABLE}.inspectionKey ;;
+    primary_key: yes
   }
 
   dimension: intervalo_agendado_vendido {

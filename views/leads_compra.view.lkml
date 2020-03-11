@@ -56,7 +56,7 @@ view: leads_compra {
     ]
     convert_tz: no
     datatype: date
-    sql: ${TABLE}.data_criacao_lead ;;
+    sql: CAST(${TABLE}.data_criacao_lead AS DATE) ;;
   }
 
   dimension_group: data_inspecao {
@@ -172,6 +172,7 @@ view: leads_compra {
   dimension: id_inspecao {
     type: number
     sql: ${TABLE}.id_inspecao ;;
+    primary_key: yes
   }
 
   dimension: km {

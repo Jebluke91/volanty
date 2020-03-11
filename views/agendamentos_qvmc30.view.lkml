@@ -77,6 +77,7 @@ view: agendamentos_qvmc30 {
   dimension: placa {
     type: string
     sql: ${TABLE}.placa ;;
+    primary_key: yes
   }
 
   dimension: preco_max {
