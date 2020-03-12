@@ -313,6 +313,7 @@ view: vendas_oficial {
   measure: preco_medio {
     sql: ${preco_por} ;;
     type: average
+    value_format: "\"R$\"#"
 
   }
 }
