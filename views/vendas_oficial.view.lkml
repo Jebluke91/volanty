@@ -13,8 +13,7 @@ view: vendas_oficial {
 
   dimension: cav {
     type: string
-    sql: ${TABLE}.cav
-    drill_fields: [${marca}];;
+    sql: ${TABLE}.cav;;
   }
 
   dimension: cav_venda {
@@ -305,8 +304,11 @@ view: vendas_oficial {
 
   measure: count {
     type: count
+    drill_fields: [car_details*]
   }
-
+  set: car_details {
+    fields: [marca,versao,cav,cav_venda,ano_modelo,vendedor]
+  }
 
   measure: preco_soma {
     sql: ${preco_por} ;;
