@@ -2,7 +2,7 @@ connection: "volanty-production"
 
 include: "/views/*.view"
 
-label: "Volanty Gerall"
+label: "Volanty Geral"
 
 datagroup: default_datagroup  {
   max_cache_age: "24 hours"
@@ -52,10 +52,3 @@ explore: compras_selecionados_anuncios {}
 explore: compras_selecionados_precificacao_qvmc {}
 explore: usuarios {}
 explore: vendas_oficial {}
-explore: funil_lead_aquisicao {}
-explore: funil_anuncio {
-  join: goals {
-    sql_on: upper(${goals.label}) = ${funil_anuncio.etapa}
-      AND ${goals.month_date} = ${funil_anuncio.data_date};;
-  }
-}
