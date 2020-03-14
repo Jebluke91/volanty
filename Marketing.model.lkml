@@ -2,6 +2,13 @@ connection: "volanty-production"
 
 include: "/views/*.view"
 
+
+named_value_format: reais {
+  value_format: "\"R$\"#\".\"###"
+  strict_value_format: yes
+}
+
+
 datagroup: default_datagroup  {
   max_cache_age: "24 hours"
 #   sql_trigger: SELECT MAX(transaction_date) FROM imaginary_table ;;
