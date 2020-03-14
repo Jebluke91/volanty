@@ -308,7 +308,7 @@ view: vendas_oficial {
     drill_fields: [car_details*]
   }
   set: car_details {
-    fields: [marca, modelo, placa, versao, cav,vendedor,transmissao]
+    fields: [marca, cav]
   }
 
   measure: preco_soma {
