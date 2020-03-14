@@ -2,6 +2,8 @@ connection: "volanty-production"
 
 include: "/views/*.view"
 
+label: "Volanty Gerall"
+
 datagroup: default_datagroup  {
   max_cache_age: "24 hours"
 #   sql_trigger: SELECT MAX(transaction_date) FROM imaginary_table ;;
