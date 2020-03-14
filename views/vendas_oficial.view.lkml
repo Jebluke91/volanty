@@ -306,7 +306,7 @@ view: vendas_oficial {
     type: count
     drill_fields: []
   }
-  measure: preco_total {
+  measure: preco_soma {
     sql: ${preco_por} ;;
     type: sum
     value_format_name: reais
