@@ -305,9 +305,12 @@ view: vendas_oficial {
 
   measure: count {
     type: count
-    drill_fields: [marca]
+    drill_fields: [car_details*]
   }
 
+  set: car_details {
+    fields: [marca,cor,carroceria]
+  }
 
   measure: preco_soma {
     sql: ${preco_por} ;;
