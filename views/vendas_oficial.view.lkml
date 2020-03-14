@@ -309,7 +309,7 @@ view: vendas_oficial {
   }
 
   set: car_details {
-    fields: [marca,cor,carroceria]
+    fields: [cor,carroceria]
   }
 
   measure: preco_soma {
