@@ -30,7 +30,7 @@ access_grant: admin_team {
 # }
 
 named_value_format: reais {
-  value_format: "\"R$\"#\".\"###"
+  value_format: "\"R$\"#.\".\"###"
   strict_value_format: yes
 }
 
