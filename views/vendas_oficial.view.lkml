@@ -138,6 +138,7 @@ view: vendas_oficial {
     type: time
     timeframes: [
       raw,
+      day_of_month,
       time,
       date,
       week,
@@ -302,6 +303,12 @@ view: vendas_oficial {
     sql: ${TABLE}.versao ;;
   }
 
+  dimension: MTD {
+    type: yesno
+    sql: DATEPART(DAY, ${data_vendido_date}) < DATEPART(DAY, CURRENT_TIMESTAMP);;
+  }
+
+
   measure: count {
     type: count
     drill_fields: [car_details*]
@@ -319,6 +326,6 @@ view: vendas_oficial {
     sql: ${preco_por} ;;
     type: average
     value_format_name: reais
-
   }
+
 }
