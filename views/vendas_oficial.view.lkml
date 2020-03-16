@@ -11,10 +11,6 @@ view: vendas_oficial {
     sql: ${TABLE}.carroceria ;;
   }
 
-  dimension: cav {
-    type: string
-    sql: ${TABLE}.cav;;
-  }
 
   dimension: cav_venda {
     type: string
@@ -36,19 +32,7 @@ view: vendas_oficial {
     sql: ${TABLE}.cor ;;
   }
 
-  dimension_group: data_agendado {
-    type: time
-    timeframes: [
-      raw,
-      time,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
-    sql: ${TABLE}.data_agendado ;;
-  }
+
 
   dimension_group: data_anunciado {
     type: time
@@ -64,33 +48,7 @@ view: vendas_oficial {
     sql: ${TABLE}.data_anunciado ;;
   }
 
-  dimension_group: data_exigencia {
-    type: time
-    timeframes: [
-      raw,
-      time,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
-    sql: ${TABLE}.data_exigencia ;;
-  }
 
-  dimension_group: data_pedido_colocado {
-    type: time
-    timeframes: [
-      raw,
-      time,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
-    sql: ${TABLE}.data_pedido_colocado ;;
-  }
 
   dimension_group: data_reserva {
     type: time
@@ -106,19 +64,7 @@ view: vendas_oficial {
     sql: CAST(${TABLE}.data_reserva AS TIMESTAMP) ;;
   }
 
-  dimension_group: data_reservado {
-    type: time
-    timeframes: [
-      raw,
-      time,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
-    sql: ${TABLE}.data_reservado ;;
-  }
+
 
   dimension_group: data_retirado {
     type: time
@@ -154,20 +100,6 @@ view: vendas_oficial {
     sql: ${TABLE}.desconto_aplicado ;;
   }
 
-  dimension: entregue_ao_comprador {
-    type: yesno
-    sql: ${TABLE}.entregue_ao_comprador ;;
-  }
-
-  dimension: estado {
-    type: string
-    sql: ${TABLE}.estado ;;
-  }
-
-  dimension: inspection_key {
-    type: number
-    sql: ${TABLE}.inspectionKey ;;
-  }
 
   dimension: intervalo_agendado_vendido {
     type: number
@@ -184,10 +116,6 @@ view: vendas_oficial {
     sql: ${TABLE}.intervalo_anunciado_vendido ;;
   }
 
-  dimension: intervalo_exigencia_anuncio {
-    type: number
-    sql: ${TABLE}.intervalo_exigencia_anuncio ;;
-  }
 
   dimension: intervalo_reservado_vendido {
     type: number
@@ -224,15 +152,6 @@ view: vendas_oficial {
     sql: ${TABLE}.preco_anuncio ;;
   }
 
-  dimension: preco_de {
-    type: number
-    sql: ${TABLE}.preco_de ;;
-  }
-
-  dimension: preco_por {
-    type: number
-    sql: ${TABLE}.preco_por ;;
-  }
 
   dimension: preco_venda {
     type: string
@@ -254,20 +173,7 @@ view: vendas_oficial {
     sql: ${TABLE}.status ;;
   }
 
-  dimension: status_pedido {
-    type: string
-    sql: ${TABLE}.status_pedido ;;
-  }
 
-  dimension: tipo_express {
-    type: yesno
-    sql: ${TABLE}.tipo_express ;;
-  }
-
-  dimension: tipo_venda {
-    type: string
-    sql: ${TABLE}.tipo_venda ;;
-  }
 
   dimension: transmissao {
     type: string
@@ -314,16 +220,16 @@ view: vendas_oficial {
     drill_fields: [car_details*]
   }
   set: car_details {
-    fields: [marca,versao,cav,cav_venda,ano_modelo,vendedor]
+    fields: [marca,versao,cav_venda,ano_modelo,vendedor]
   }
 
   measure: preco_soma {
-    sql: ${preco_por} ;;
+    sql: ${preco_venda} ;;
     type: sum
     value_format_name: reais
   }
   measure: preco_medio {
-    sql: ${preco_por} ;;
+    sql: ${preco_venda} ;;
     type: average
     value_format_name: reais
   }
