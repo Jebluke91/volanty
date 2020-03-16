@@ -134,7 +134,7 @@ view: vendas_oficial {
     sql: ${TABLE}.data_retirado ;;
   }
 
-  dimension_group: data_vendido {
+  dimension_group: data_venda {
     type: time
     timeframes: [
       raw,
@@ -146,7 +146,7 @@ view: vendas_oficial {
       quarter,
       year
     ]
-    sql: ${TABLE}.data_vendido ;;
+    sql: ${TABLE}.data_venda ;;
   }
 
   dimension: desconto_aplicado {
