@@ -1,4 +1,4 @@
-view: carros {
+view: Inventório {
   sql_table_name: views.Carros ;;
 
   dimension: ano_modelo {
