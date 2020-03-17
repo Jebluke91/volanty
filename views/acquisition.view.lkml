@@ -1,6 +1,5 @@
-view: acquisition {
-  sql_table_name: datalake_prd.Acquisition
-  label: "Compras";;
+view: Compras {
+  sql_table_name: datalake_prd.Acquisition;;
 
 
   dimension: _id {
