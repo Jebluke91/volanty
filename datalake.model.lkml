@@ -9,9 +9,9 @@ datagroup: default_datagroup  {
 #   sql_trigger: SELECT MAX(transaction_date) FROM imaginary_table ;;
 }
 
-access_grant: marketing_team {
+access_grant: user_team {
   user_attribute: team
-  allowed_values: [ "marketing","admin"]
+  allowed_values: [ "user","admin"]
 }
 
 access_grant: admin_team {
@@ -19,21 +19,11 @@ access_grant: admin_team {
   allowed_values: ["admin"]
 }
 
-# access_grant: financial_team {
-#   user_attribute: team
-#   allowed_values: ["financial"]
-# }
-
-# access_grant: rh_team {
-#   user_attribute: team
-#   allowed_values: ["rh"]
-# }
 
 named_value_format: reais {
   value_format: "#,##0"
   strict_value_format: yes
 }
-
 
 
 explore: Aquisitions {
@@ -50,8 +40,7 @@ explore: agendamentos_inspecoes {
   #required_access_grants: [admin_team]
 }
 explore: agendamentos_inspecoes_marketing {
-  required_access_grants: [marketing_team]
-
+  required_access_grants: [user_team]
   extends: [agendamentos_inspecoes]
 }
 explore: visita {}
