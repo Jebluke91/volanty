@@ -36,9 +36,9 @@ named_value_format: reais {
 
 
 
-explore: acquisition {}
+explore: Aquisitions {}
 explore: agendamentos_qvmc30 {}
-explore: carros {}
+explore: Carros {}
 explore: agendamentos_inspecoes {
   #required_access_grants: [admin_team]
 }
