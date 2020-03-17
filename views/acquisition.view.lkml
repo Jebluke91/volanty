@@ -1,7 +1,7 @@
 view: acquisition {
   sql_table_name: datalake_prd.Acquisition ;;
 
-label: "compras"
+label: "Compras"
 
   dimension: _id {
     type: string
