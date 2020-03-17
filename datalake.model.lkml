@@ -2,7 +2,7 @@ connection: "volanty-production"
 
 include: "/views/*.view"
 
-label: "Volanty Geral"
+label: " Volanty Geral"
 
 datagroup: default_datagroup  {
   max_cache_age: "24 hours"
