@@ -1,4 +1,5 @@
-view: Compras {
+view: Aquisitions {
+  label: "compras"
   sql_table_name: datalake_prd.Acquisition;;
 
 
