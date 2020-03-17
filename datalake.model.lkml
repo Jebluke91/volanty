@@ -39,8 +39,13 @@ named_value_format: reais {
 explore: Aquisitions {
   label: "Compras"
 }
-explore: agendamentos_qvmc30 {}
-explore: Carros {}
+explore: agendamentos_qvmc30 {
+  label: "Formulário_QVMC"
+}
+
+explore: Carros {
+  label: "Inventário"
+}
 explore: agendamentos_inspecoes {
   #required_access_grants: [admin_team]
 }
@@ -53,4 +58,6 @@ explore: visita {}
 explore: leads_compra {}
 explore: compras_selecionados_anuncios {}
 explore: compras_selecionados_precificacao_qvmc {}
-explore: vendas_oficial {}
+explore: vendas_oficial {
+  label: "Vendas"
+}
