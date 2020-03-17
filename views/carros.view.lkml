@@ -1,7 +1,6 @@
 view: Carros {
   sql_table_name: views.Carros ;;
 
-label: "Inventório"
 
   dimension: ano_modelo {
     type: number
