@@ -27,8 +27,14 @@ named_value_format: reais {
 
 
 explore: Aquisitions {
-  label: "Compras"
+  label: "Compras_Admin"
 }
+
+explore: Aquisitions_User {
+  label: "Compras"
+  extends: [Aquisitions]
+}
+
 explore: agendamentos_qvmc30 {
   label: "Formulário_QVMC"
 }
