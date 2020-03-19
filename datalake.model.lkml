@@ -28,6 +28,7 @@ named_value_format: reais {
 
 explore: Aquisitions {
   label: "Compras_Admin"
+  required_access_grants: [admin_team]
 }
 
 explore: Aquisitions_User {
@@ -37,6 +38,7 @@ explore: Aquisitions_User {
 
 explore: agendamentos_qvmc30 {
   label: "Formulário_QVMC_Admin"
+  required_access_grants: [admin_team]
 }
 
 explore: agendamentos_qvmc30_user {
@@ -54,11 +56,11 @@ explore: agendamentos_inspecoes {
 }
 explore: agendamentos_inspecoes_user {
   label: "agendamentos_inspecoes"
-  required_access_grants: [user_team]
   extends: [agendamentos_inspecoes]
 }
 explore: visita {
   label: "visita_admin"
+  required_access_grants: [admin_team]
 }
 explore: visita_user {
   label: "visita"
@@ -67,6 +69,7 @@ explore: visita_user {
 
 explore: leads_compra {
   label: "leads_compra_admin"
+  required_access_grants: [admin_team]
 }
 explore: leads_compra_user {
   label: "leads_compra"
