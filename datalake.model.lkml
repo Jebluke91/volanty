@@ -36,7 +36,12 @@ explore: Aquisitions_User {
 }
 
 explore: agendamentos_qvmc30 {
+  label: "Formulário_QVMC_Admin"
+}
+
+explore: agendamentos_qvmc30_user {
   label: "Formulário_QVMC"
+  extends: [agendamentos_qvmc30]
 }
 
 explore: Carros {
@@ -49,8 +54,22 @@ explore: agendamentos_inspecoes_marketing {
   required_access_grants: [user_team]
   extends: [agendamentos_inspecoes]
 }
-explore: visita {}
-explore: leads_compra {}
+explore: visita {
+  label: "visita_admin"
+}
+explore: visita_user {
+  label: "visita"
+  extends: [visita]
+}
+
+explore: leads_compra {
+  label: "leads_compra_admin"
+}
+explore: leads_compra_user {
+  label: "leads_compra"
+  extends: [leads_compra]
+}
+
 explore: compras_selecionados_anuncios {}
 explore: compras_selecionados_precificacao_qvmc {}
 explore: vendas_oficial {
