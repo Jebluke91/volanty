@@ -48,9 +48,12 @@ explore: Carros {
   label: "Inventário"
 }
 explore: agendamentos_inspecoes {
-  #required_access_grants: [admin_team]
+  label: "agendamentos_inspecoes_admin"
+  required_access_grants: [admin_team]
+
 }
-explore: agendamentos_inspecoes_marketing {
+explore: agendamentos_inspecoes_user {
+  label: "agendamentos_inspecoes"
   required_access_grants: [user_team]
   extends: [agendamentos_inspecoes]
 }
