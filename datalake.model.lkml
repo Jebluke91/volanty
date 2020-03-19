@@ -25,7 +25,6 @@ named_value_format: reais {
   strict_value_format: yes
 }
 
-
 explore: Aquisitions {
   label: "Compras_Admin"
   required_access_grants: [admin_team]
@@ -34,6 +33,7 @@ explore: Aquisitions {
 explore: Aquisitions_User {
   label: "Compras"
   extends: [Aquisitions]
+  required_access_grants: [user_team]
 }
 
 explore: agendamentos_qvmc30 {
@@ -44,6 +44,7 @@ explore: agendamentos_qvmc30 {
 explore: agendamentos_qvmc30_user {
   label: "Formulário_QVMC"
   extends: [agendamentos_qvmc30]
+  required_access_grants: [user_team]
 }
 
 explore: Carros {
@@ -57,6 +58,7 @@ explore: agendamentos_inspecoes {
 explore: agendamentos_inspecoes_user {
   label: "agendamentos_inspecoes"
   extends: [agendamentos_inspecoes]
+  required_access_grants: [user_team]
 }
 explore: visita {
   label: "visita_admin"
@@ -65,6 +67,7 @@ explore: visita {
 explore: visita_user {
   label: "visita"
   extends: [visita]
+  required_access_grants: [user_team]
 }
 
 explore: leads_compra {
@@ -74,6 +77,7 @@ explore: leads_compra {
 explore: leads_compra_user {
   label: "leads_compra"
   extends: [leads_compra]
+  required_access_grants: [user_team]
 }
 
 explore: compras_selecionados_anuncios {}
