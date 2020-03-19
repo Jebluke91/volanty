@@ -364,7 +364,7 @@ view: agendamentos_inspecoes__exigencia_inspecao {
   }
 }
 
-view: agendamentos_inspecoes_marketing{
+view: agendamentos_inspecoes_user{
   extends: [agendamentos_inspecoes]
   dimension: email_cliente {
     hidden: yes
