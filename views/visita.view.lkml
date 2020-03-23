@@ -201,6 +201,16 @@ view: visita {
   }
 }
 
+view: visita_user {
+  extends: [visita]
+  dimension: email_visitante {
+    hidden: yes
+  }
+  dimension: telefone_visitante {
+    hidden: yes
+  }
+}
+
 view: visita__inspecao_restricoes {
   dimension: entry {
     type: string

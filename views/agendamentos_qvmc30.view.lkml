@@ -135,3 +135,11 @@ view: agendamentos_qvmc30 {
     drill_fields: []
   }
 }
+
+view: agendamentos_qvmc30_user{
+  extends: [agendamentos_qvmc30]
+  dimension: email_agendamento {
+    hidden: yes
+  }
+
+}

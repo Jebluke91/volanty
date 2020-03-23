@@ -349,3 +349,29 @@ view: leads_compra {
     drill_fields: []
   }
 }
+
+view: leads_compra_user{
+  extends: [leads_compra]
+  dimension: email_comprador {
+    hidden: yes
+  }
+  dimension: email_lead {
+    hidden: yes
+  }
+  dimension: email_proprietario {
+    hidden: yes
+  }
+  dimension: email_agendamento {
+    hidden: yes
+  }
+  dimension: telefone_comprador {
+    hidden: yes
+  }
+  dimension: telefone_proprietario {
+    hidden: yes
+  }
+  dimension: telefone_agendamento {
+    hidden: yes
+  }
+
+}

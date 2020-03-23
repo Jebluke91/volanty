@@ -185,4 +185,16 @@ view: Aquisitions {
     type: count
     drill_fields: [owner_name]
   }
+
+
+}
+
+view: Aquisitions_User{
+  extends: [Aquisitions]
+  dimension: owner_email {
+    hidden: yes
+  }
+  dimension: owner_phone{
+    hidden: yes
+  }
 }
