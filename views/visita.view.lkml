@@ -59,6 +59,7 @@ view: visita {
     timeframes: [
       raw,
       date,
+      day_of_month,
       week,
       month,
       quarter,
@@ -180,6 +181,11 @@ view: visita {
   }
 
   dimension: status_visita {
+    type: string
+    sql: ${TABLE}.status_visita ;;
+  }
+
+  dimension: produto {
     type: string
     sql: ${TABLE}.status_visita ;;
   }
