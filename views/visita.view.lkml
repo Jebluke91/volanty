@@ -187,7 +187,7 @@ view: visita {
 
   dimension: produto {
     type: string
-    sql: ${TABLE}.status_visita ;;
+    sql: ${TABLE}.produto ;;
   }
 
   dimension: telefone_visitante {
