@@ -211,7 +211,9 @@ view: vendas_oficial {
 
   dimension: MTD {
     type: yesno
-    sql:  EXTRACT(DAY FROM ${TABLE}.data_vendido) < EXTRACT(DAY FROM CURRENT_DATE("America/Buenos_Aires")) ;;
+    sql:  EXTRACT(DAY FROM DATETIME(${TABLE}.data_vendido,"America/Sao_Paulo") < EXTRACT(DAY FROM CURRENT_DATE("America/Sao_Paulo")) AND
+        EXTRACT(HOUR FROM DATETIME(${TABLE}.data_vendido,"America/Sao_Paulo") <= EXTRACT(HOUR FROM CURRENT_DATE("America/Sao_Paulo")) AND
+        EXTRACT(MINUTE FROM DATETIME(${TABLE}.data_vendido,"America/Sao_Paulo") < EXTRACT(MINUTE FROM CURRENT_DATE("America/Sao_Paulo"));;
   }
 
 
