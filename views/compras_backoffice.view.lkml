@@ -1,5 +1,5 @@
-view: compras_excel_selecionados_v2 {
-  sql_table_name: `volanty-production.spreedsheets_data.compras_excel_selecionados_V2`
+view: compras_backoffice {
+  sql_table_name: `volanty-production.spreedsheets_data.Compras_backoffice`
     ;;
   drill_fields: [id]
 
@@ -437,31 +437,6 @@ view: compras_excel_selecionados_v2 {
   measure: count {
     type: count
     drill_fields: [id]
-  }
-
-  measure: soma_margem_bruta {
-    type: sum
-    sql: ${TABLE}.${valor_margem_bruta_venda}  ;;
-  }
-
-  measure: soma_impostos {
-    type: sum
-    sql: ${TABLE}.${valor_impostos_venda}  ;;
-  }
-
-  measure: soma_valor_venda {
-    type: sum
-    sql: ${TABLE}.${valor_venda_final}  ;;
-  }
-
-  measure: soma_valor_revisao {
-    type: sum
-    sql: ${TABLE}.${custo_revisao}  ;;
-  }
-
-  measure: soma_valor_compra {
-    type: sum
-    sql: ${TABLE}.${total_compra}  ;;
   }
 
 }
