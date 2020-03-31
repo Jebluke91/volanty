@@ -90,5 +90,6 @@ explore: vendas_oficial {
 
 explore: compras_selecionados_excel_input {
   label: "compras_backoffice"
-
 }
+
+explore: teste {}
