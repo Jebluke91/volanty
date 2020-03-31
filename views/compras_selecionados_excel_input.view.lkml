@@ -1,5 +1,5 @@
-view: compras_backoffice {
-  sql_table_name: `volanty-production.spreedsheets_data.Compras_backoffice`
+view: compras_selecionados_excel_input {
+  sql_table_name: `volanty-production.spreedsheets_data.compras_selecionados_excel_input`
     ;;
   drill_fields: [id]
 
@@ -438,5 +438,4 @@ view: compras_backoffice {
     type: count
     drill_fields: [id]
   }
-
 }

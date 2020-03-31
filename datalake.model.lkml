@@ -88,7 +88,7 @@ explore: vendas_oficial {
   label: "Vendas"
 }
 
-explore: compras_backoffice {
+explore: compras_selecionados_excel_input {
   label: "compras_backoffice"
 
 }
