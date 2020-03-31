@@ -81,12 +81,14 @@ explore: leads_compra_user {
 }
 
 explore: compras_selecionados_anuncios {}
+
 explore: compras_selecionados_precificacao_qvmc {}
+
 explore: vendas_oficial {
   label: "Vendas"
 }
 
-explore: compras_selecionados_excel_v2 {
+explore: compras_excel_selecionados_v2 {
   label: "compras_backoffice"
 
 }

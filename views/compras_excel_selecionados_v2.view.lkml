@@ -1,8 +1,7 @@
-view: compras_selecionados_excel_v2 {
-  sql_table_name: `volanty-production.spreedsheets_data.compras_selecionados_excelV2`
+view: compras_excel_selecionados_v2 {
+  sql_table_name: `volanty-production.spreedsheets_data.compras_excel_selecionados_V2`
     ;;
   drill_fields: [id]
-
 
   dimension: id {
     primary_key: yes
@@ -20,11 +19,6 @@ view: compras_selecionados_excel_v2 {
     sql: ${TABLE}.ano_modelo ;;
   }
 
-  dimension: bo_aportado {
-    type: string
-    sql: ${TABLE}.bo_aportado ;;
-  }
-
   dimension: cav_captacao {
     type: string
     sql: ${TABLE}.cav_captacao ;;
@@ -35,9 +29,29 @@ view: compras_selecionados_excel_v2 {
     sql: ${TABLE}.cav_showroom ;;
   }
 
+  dimension: cav_venda {
+    type: string
+    sql: ${TABLE}.cav_venda ;;
+  }
+
   dimension: chassi {
     type: string
     sql: ${TABLE}.chassi ;;
+  }
+
+  dimension_group: comunica____o_de_venda {
+    type: time
+    timeframes: [
+      raw,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    convert_tz: no
+    datatype: date
+    sql: ${TABLE}.comunica____o_de_venda ;;
   }
 
   dimension: consulta_ve__culo {
@@ -160,9 +174,19 @@ view: compras_selecionados_excel_v2 {
     sql: ${TABLE}.garantia ;;
   }
 
-  dimension: icms {
+  dimension: giro_an__ncio {
     type: number
-    sql: ${TABLE}.icms ;;
+    sql: ${TABLE}.giro_an__ncio ;;
+  }
+
+  dimension: giro_total {
+    type: number
+    sql: ${TABLE}.giro_total ;;
+  }
+
+  dimension: icms_anuncio {
+    type: number
+    sql: ${TABLE}.icms_anuncio ;;
   }
 
   dimension: icms_remessa {
@@ -170,9 +194,14 @@ view: compras_selecionados_excel_v2 {
     sql: ${TABLE}.icms_remessa ;;
   }
 
-  dimension: impostos {
+  dimension: icms_venda {
     type: number
-    sql: ${TABLE}.impostos ;;
+    sql: ${TABLE}.icms_venda ;;
+  }
+
+  dimension: impostos_anuncio {
+    type: number
+    sql: ${TABLE}.impostos_anuncio ;;
   }
 
   dimension: km {
@@ -190,6 +219,11 @@ view: compras_selecionados_excel_v2 {
     sql: ${TABLE}.m__s_ano_compra ;;
   }
 
+  dimension: m__s_ano_venda {
+    type: string
+    sql: ${TABLE}.m__s_ano_venda ;;
+  }
+
   dimension: m__s_icms_remessa {
     type: string
     sql: ${TABLE}.m__s_icms_remessa ;;
@@ -200,19 +234,34 @@ view: compras_selecionados_excel_v2 {
     sql: ${TABLE}.marca ;;
   }
 
-  dimension: margem_bruta {
+  dimension: margem_bruta_anuncio {
     type: number
-    sql: ${TABLE}.margem_bruta ;;
+    sql: ${TABLE}.margem_bruta_anuncio ;;
   }
 
-  dimension: margem_de_cont_ {
+  dimension: margem_bruta_venda {
     type: number
-    sql: ${TABLE}.margem_de_cont_ ;;
+    sql: ${TABLE}.margem_bruta_venda ;;
   }
 
-  dimension: margem_l__quida {
+  dimension: margem_de_cont__anuncio {
     type: number
-    sql: ${TABLE}.margem_l__quida ;;
+    sql: ${TABLE}.margem_de_cont__anuncio ;;
+  }
+
+  dimension: margem_de_cont__venda {
+    type: number
+    sql: ${TABLE}.margem_de_cont__venda ;;
+  }
+
+  dimension: margem_l__quida_anuncio {
+    type: number
+    sql: ${TABLE}.margem_l__quida_anuncio ;;
+  }
+
+  dimension: margem_liquida_venda {
+    type: number
+    sql: ${TABLE}.margem_liquida_venda ;;
   }
 
   dimension: mes_ano_anuncio {
@@ -235,19 +284,34 @@ view: compras_selecionados_excel_v2 {
     sql: ${TABLE}.nfe_compra ;;
   }
 
+  dimension: nfe_venda {
+    type: string
+    sql: ${TABLE}.nfe_venda ;;
+  }
+
   dimension: origem {
     type: string
     sql: ${TABLE}.origem ;;
   }
 
-  dimension: pis_e_cofins {
+  dimension: pis_e_cofins_anuncio {
     type: number
-    sql: ${TABLE}.pis_e_cofins ;;
+    sql: ${TABLE}.pis_e_cofins_anuncio ;;
+  }
+
+  dimension: pis_e_cofins_venda {
+    type: number
+    sql: ${TABLE}.pis_e_cofins_venda ;;
   }
 
   dimension: placa {
     type: string
     sql: ${TABLE}.placa ;;
+  }
+
+  dimension: placa_nova {
+    type: string
+    sql: ${TABLE}.Placa_Nova ;;
   }
 
   dimension: prazo_para_anuncio {
@@ -275,9 +339,9 @@ view: compras_selecionados_excel_v2 {
     sql: ${TABLE}.renavam ;;
   }
 
-  dimension: repasse_ao_proprietario {
+  dimension: repasse {
     type: number
-    sql: ${TABLE}.repasse_ao_proprietario ;;
+    sql: ${TABLE}.repasse ;;
   }
 
   dimension: situacao {
@@ -320,24 +384,49 @@ view: compras_selecionados_excel_v2 {
     sql: ${TABLE}.valor_anuncio ;;
   }
 
-  dimension: valor_margem_bruta {
+  dimension: valor_impostos_venda {
     type: number
-    sql: ${TABLE}.valor_margem_bruta ;;
+    sql: ${TABLE}.valor_impostos_venda ;;
   }
 
-  dimension: valor_margem_de_cont_ {
+  dimension: valor_margem_bruta_anuncio {
     type: number
-    sql: ${TABLE}.valor_margem_de_cont_ ;;
+    sql: ${TABLE}.valor_margem_bruta_anuncio ;;
   }
 
-  dimension: valor_margem_l__quida {
+  dimension: valor_margem_bruta_venda {
     type: number
-    sql: ${TABLE}.valor_margem_l__quida ;;
+    sql: ${TABLE}.valor_margem_bruta_venda ;;
+  }
+
+  dimension: valor_margem_de_cont__anuncio {
+    type: number
+    sql: ${TABLE}.valor_margem_de_cont__anuncio ;;
+  }
+
+  dimension: valor_margem_de_cont__venda {
+    type: number
+    sql: ${TABLE}.valor_margem_de_cont__venda ;;
+  }
+
+  dimension: valor_margem_l__quida_anuncio {
+    type: number
+    sql: ${TABLE}.valor_margem_l__quida_anuncio ;;
+  }
+
+  dimension: valor_margem_liquida_venda {
+    type: number
+    sql: ${TABLE}.valor_margem_liquida_venda ;;
   }
 
   dimension: valor_nfe {
     type: number
     sql: ${TABLE}.valor_nfe ;;
+  }
+
+  dimension: valor_venda_final {
+    type: number
+    sql: ${TABLE}.valor_venda_final ;;
   }
 
   dimension: vers__o {
@@ -350,16 +439,29 @@ view: compras_selecionados_excel_v2 {
     drill_fields: [id]
   }
 
-  measure: soma_total_compra {
+  measure: soma_margem_bruta {
     type: sum
-    sql: ${TABLE}.${total_compra} ;;
-
+    sql: ${TABLE}.${valor_margem_bruta_venda}  ;;
   }
 
-  measure: soma_total_impostos {
+  measure: soma_impostos {
     type: sum
-    sql: ${TABLE}.${impostos} ;;
+    sql: ${TABLE}.${valor_impostos_venda}  ;;
+  }
 
+  measure: soma_valor_venda {
+    type: sum
+    sql: ${TABLE}.${valor_venda_final}  ;;
+  }
+
+  measure: soma_valor_revisao {
+    type: sum
+    sql: ${TABLE}.${custo_revisao}  ;;
+  }
+
+  measure: soma_valor_compra {
+    type: sum
+    sql: ${TABLE}.${total_compra}  ;;
   }
 
 }
