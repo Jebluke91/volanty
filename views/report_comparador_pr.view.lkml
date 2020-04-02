@@ -132,4 +132,8 @@ view: report_comparador_pr {
     sql: ${TABLE}.precofipe ;;
     type: average
   }
+  measure: Preco_Medio_Papito {
+    sql: ${TABLE}.Papito_prediction ;;
+    type: average
+  }
 }
