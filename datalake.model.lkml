@@ -84,6 +84,10 @@ explore: compras_selecionados_anuncios {}
 
 explore: compras_selecionados_precificacao_qvmc {}
 
+explore: report_comparador_pr {
+  label: "Comparador_Precos"
+}
+
 explore: vendas_oficial {
   label: "Vendas"
 }
