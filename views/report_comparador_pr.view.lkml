@@ -129,7 +129,7 @@ view: report_comparador_pr {
     type: average
   }
   measure: Preco_Medio_FIPE {
-    sql: ${TABLE}.preco_fipe ;;
+    sql: ${TABLE}.precofipe ;;
     type: average
   }
 }
