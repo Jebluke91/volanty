@@ -121,18 +121,15 @@ view: report_comparador_pr {
   }
 
   measure: Preco_Medio_Volanty {
+    sql: ${TABLE}.${ultimo_preco} ;;
     type: average
-   sql: ${TABLE}.${ultimo_preco} ;;
-    drill_fields: []
   }
   measure: Preco_Medio_Web_Motors {
-    type: average
     sql: ${TABLE}.${media_webmotors} ;;
-    drill_fields: []
+    type: average
   }
   measure: Preco_Medio_FIPE {
-    type: average
     sql: ${TABLE}.${preco_fipe} ;;
-    drill_fields: []
+    type: average
   }
 }
