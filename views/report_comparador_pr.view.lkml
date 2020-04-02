@@ -113,7 +113,7 @@ view: report_comparador_pr {
 
   measure: Volanty_mais_cara_que_Papito {
     type: sum
-    sql: ${TABLE}.Volanty_mais_cara_que_Papito ;;
+    sql: ${TABLE}.${Volanty_mais_cara_que_Papito} ;;
   }
 
   measure: Volanty_mais_cara_que_WebM {
