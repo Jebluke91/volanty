@@ -126,6 +126,22 @@ view: report_comparador_pr {
    type: sum
   }
 
+  measure: Volanty_mais_barata_que_Papito {
+    sql: ${TABLE}.Volanty_mais_barata_que_Papito ;;
+    type: sum
+  }
+
+  measure: Volanty_mais_barata_que_WebM {
+    sql: ${TABLE}.Volanty_mais_barata_que_WebM ;;
+    type: sum
+  }
+
+  measure: volanty_mais_barata_que_fipe {
+    sql: ${TABLE}.volanty_mais_barata_que_fipe ;;
+    type: sum
+  }
+
+
   measure: Preco_Medio_Volanty {
     sql: ${TABLE}.ultimo_preco ;;
     type: average
