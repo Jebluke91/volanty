@@ -129,17 +129,21 @@ view: report_comparador_pr {
   measure: Preco_Medio_Volanty {
     sql: ${TABLE}.ultimo_preco ;;
     type: average
+    value_format_name: reais
   }
   measure: Preco_Medio_Web_Motors {
     sql: ${TABLE}.media_webmotors ;;
     type: average
+    value_format_name: reais
   }
   measure: Preco_Medio_FIPE {
     sql: ${TABLE}.precofipe ;;
     type: average
+    value_format_name: reais
   }
   measure: Preco_Medio_Papito {
     sql: ${TABLE}.Papito_prediction ;;
     type: average
+    value_format_name: reais
   }
 }
