@@ -105,19 +105,25 @@ view: report_comparador_pr {
     sql: ${TABLE}.versao ;;
   }
 
-  dimension: volanty_mais_cara_que_fipe {
-    type: number
-    sql: ${TABLE}.Volanty_mais_cara_que_Fipe ;;
-  }
-
-  dimension: volanty_mais_cara_que_web_m {
-    type: number
-    sql: ${TABLE}.Volanty_mais_cara_que_WebM ;;
-  }
 
   measure: count {
     type: count
     drill_fields: []
+  }
+
+  measure: Volanty_mais_cara_que_Papito {
+    type: sum
+    sql: ${TABLE}.Volanty_mais_cara_que_Papito ;;
+  }
+
+  measure: Volanty_mais_cara_que_WebM {
+    type: sum
+    sql: ${TABLE}.${Volanty_mais_cara_que_WebM} ;;
+  }
+
+  measure: volanty_mais_cara_que_fipe {
+    type: sum
+    sql: ${TABLE}.${volanty_mais_cara_que_fipe} ;;
   }
 
   measure: Preco_Medio_Volanty {
