@@ -105,6 +105,11 @@ view: report_comparador_pr {
     sql: ${TABLE}.versao ;;
   }
 
+  dimension: dias_anunciado {
+    type: string
+    sql: ${TABLE}.dias_anunciado ;;
+  }
+
 
   measure: count {
     type: count
@@ -114,31 +119,40 @@ view: report_comparador_pr {
   measure: Volanty_mais_cara_que_Papito {
     sql: ${TABLE}.Volanty_mais_cara_que_Papito ;;
    type: sum
+   drill_fields: [car_details*]
+  }
+  set: car_details {
+    fields: [marca,modelo,versao,ano_modelo,cor,transmissao,ultimo_preco,preco_fipe,papito_prediction,media_webmotors,dias_anunciado]
   }
 
   measure: Volanty_mais_cara_que_WebM {
     sql: ${TABLE}.Volanty_mais_cara_que_WebM ;;
    type: sum
+    drill_fields: [car_details*]
   }
+
 
   measure: volanty_mais_cara_que_fipe {
   sql: ${TABLE}.volanty_mais_cara_que_fipe ;;
    type: sum
+    drill_fields: [car_details*]
   }
 
   measure: Volanty_mais_barata_que_Papito {
     sql: ${TABLE}.Volanty_mais_barata_que_Papito ;;
     type: sum
+    drill_fields: [car_details*]
   }
-
   measure: Volanty_mais_barata_que_WebM {
     sql: ${TABLE}.Volanty_mais_barata_que_WebM ;;
     type: sum
+    drill_fields: [car_details*]
   }
 
   measure: volanty_mais_barata_que_fipe {
     sql: ${TABLE}.volanty_mais_barata_que_fipe ;;
     type: sum
+    drill_fields: [car_details*]
   }
 
 
