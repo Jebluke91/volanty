@@ -122,7 +122,7 @@ view: report_comparador_pr {
    drill_fields: [car_details*]
   }
   set: car_details {
-    fields: [placa,marca,modelo,versao,ano_modelo,cor,transmissao,ultimo_preco,preco_fipe,papito_prediction,media_webmotors,dias_anunciado]
+    fields: [placa,marca,modelo,versao,ano_modelo,cor,transmissao,km,ultimo_preco,preco_fipe,papito_prediction,media_webmotors,dias_anunciado]
   }
 
   measure: Volanty_mais_cara_que_WebM {
