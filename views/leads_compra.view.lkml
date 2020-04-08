@@ -1,4 +1,4 @@
-view: Leads_Compra {
+view: leads_compra {
   sql_table_name: `volanty-production.views.Leads_Compra`
     ;;
 
@@ -128,8 +128,39 @@ view: Leads_Compra {
     sql: ${TABLE}.utm_volanty_lead ;;
   }
 
+  dimension: status {
+    type: string
+    sql: ${TABLE}.status ;;
+  }
+
   measure: count {
     type: count
     drill_fields: []
   }
 }
+
+view: leads_compra_user{
+  extends: [leads_compra]
+  dimension: email_comprador {
+    hidden: yes
+  }
+  dimension: email_lead {
+    hidden: yes
+  }
+  dimension: email_proprietario {
+    hidden: yes
+  }
+  dimension: email_agendamento {
+    hidden: yes
+  }
+  dimension: telefone_comprador {
+    hidden: yes
+  }
+  dimension: telefone_proprietario {
+    hidden: yes
+  }
+  dimension: telefone_agendamento {
+    hidden: yes
+  }
+
+  }

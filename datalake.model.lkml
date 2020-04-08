@@ -70,13 +70,13 @@ explore: visita_user {
   required_access_grants: [user_team]
 }
 
-explore: Leads_Compra{
+explore: leads_compra {
   label: "leads_compra_admin"
   required_access_grants: [admin_team]
 }
 explore: leads_compra_user {
   label: "leads_compra"
-  extends: [Leads_Compra]
+  extends: [leads_compra]
   required_access_grants: [user_team]
 }
 
@@ -96,8 +96,6 @@ explore: compras_selecionados_excel_input {
   label: "compras_backoffice"
 }
 
-explore: leads_unicos_compra {
-  label: "Leads_Unico_Compra"
-}
+
 
 explore: teste {}
