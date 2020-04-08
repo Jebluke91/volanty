@@ -96,4 +96,8 @@ explore: compras_selecionados_excel_input {
   label: "compras_backoffice"
 }
 
+explore: leads_unicos_compra {
+  label: "Leads_Unico_Compra"
+}
+
 explore: teste {}
