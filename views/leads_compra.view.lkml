@@ -1,4 +1,4 @@
-view: leads_compra {
+view: Leads_Compra {
   sql_table_name: `volanty-production.views.Leads_Compra`
     ;;
 
