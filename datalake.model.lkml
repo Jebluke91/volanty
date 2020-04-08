@@ -70,13 +70,13 @@ explore: visita_user {
   required_access_grants: [user_team]
 }
 
-explore: leads_compra {
+explore: Leads_Compra{
   label: "leads_compra_admin"
   required_access_grants: [admin_team]
 }
 explore: leads_compra_user {
   label: "leads_compra"
-  extends: [leads_compra]
+  extends: [Leads_Compra]
   required_access_grants: [user_team]
 }
 
