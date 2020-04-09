@@ -132,6 +132,35 @@ view: leads_compra {
     type: string
     sql: ${TABLE}.status ;;
   }
+  dimension: marca {
+    type: string
+    sql: ${TABLE}.marca ;;
+  }
+  dimension: modelo {
+    type: string
+    sql: ${TABLE}.modelo ;;
+  }
+
+  dimension: versao {
+    type: string
+    sql: ${TABLE}.versao ;;
+  }
+  dimension: ano_modelo {
+    type: string
+    sql: ${TABLE}.ano_modelo ;;
+  }
+
+  dimension: estado {
+    type: string
+    sql: ${TABLE}.estado ;;
+  }
+
+
+  dimension: preco_por {
+    type: string
+    sql: ${TABLE}.preco_por ;;
+  }
+
 
   measure: count {
     type: count
