@@ -3,7 +3,7 @@ view: Carros {
 
 
   dimension: ano_modelo {
-    type: number
+    type: string
     sql: ${TABLE}.ano_modelo ;;
   }
 
