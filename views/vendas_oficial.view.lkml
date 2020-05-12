@@ -92,7 +92,9 @@ view: vendas_oficial {
       quarter,
       year
     ]
-    sql: ${TABLE}.data_vendido ;;
+    sql: ${TABLE}.data_vendido
+    ;;
+    html: <font size="12">{{value}}</font>  ;;
   }
 
   dimension: desconto_aplicado {
