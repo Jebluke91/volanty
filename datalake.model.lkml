@@ -36,15 +36,10 @@ explore: Aquisitions_User {
   required_access_grants: [user_team]
 }
 
-explore: agendamentos_qvmc30 {
-  label: "Formulário_QVMC_Admin"
-  required_access_grants: [admin_team]
-}
 
-explore: agendamentos_qvmc30_user {
-  label: "Formulário_QVMC"
-  extends: [agendamentos_qvmc30]
-  required_access_grants: [user_team]
+explore: simulacoes_qvmc {
+  label: "Simulacoes_qvmc"
+
 }
 
 explore: Carros {
