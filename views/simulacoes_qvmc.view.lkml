@@ -87,7 +87,7 @@ view: simulacoes_qvmc {
   }
 
   dimension: preco_max {
-    type: string
+    type: number
     sql: ${TABLE}.preco_max ;;
   }
 
