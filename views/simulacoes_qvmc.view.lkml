@@ -62,7 +62,7 @@ view: simulacoes_qvmc {
   }
 
   dimension: km {
-    type: string
+    type: number
     sql: ${TABLE}.km ;;
   }
 
