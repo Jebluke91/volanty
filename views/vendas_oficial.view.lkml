@@ -94,7 +94,6 @@ view: vendas_oficial {
     ]
     sql: ${TABLE}.data_vendido
     ;;
-    html: <font size="12">{{value}}</font>  ;;
   }
 
   dimension: desconto_aplicado {
