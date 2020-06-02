@@ -87,6 +87,10 @@ explore: vendas_oficial {
   label: "Vendas"
 }
 
+explore: atribuicao_venda_leads {
+  label: "atribuicao_venda_leads"
+}
+
 explore: compras_selecionados_excel_input {
   label: "compras_backoffice"
 }
