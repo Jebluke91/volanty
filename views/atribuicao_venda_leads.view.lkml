@@ -45,6 +45,11 @@ view: atribuicao_venda_leads {
     sql: ${TABLE}.referencia_lead ;;
   }
 
+  dimension: produto {
+    type: string
+    sql: ${TABLE}.produto ;;
+  }
+
   dimension: tipo_match {
     type: string
     sql: ${TABLE}.tipo_match ;;
