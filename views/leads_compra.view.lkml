@@ -161,6 +161,10 @@ view: leads_compra {
     sql: ${TABLE}.preco_por ;;
   }
 
+  dimension: mensagem {
+    type: string
+    sql: ${TABLE}.mensagem ;;
+  }
 
   measure: count {
     type: count
