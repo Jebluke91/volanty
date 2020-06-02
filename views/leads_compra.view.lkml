@@ -191,5 +191,8 @@ view: leads_compra_user{
   dimension: telefone_agendamento {
     hidden: yes
   }
+  dimension: mensagem {
+    hidden: yes
+  }
 
   }
