@@ -45,6 +45,31 @@ view: atribuicao_venda_leads {
     sql: ${TABLE}.referencia_lead ;;
   }
 
+  dimension: email_comprador {
+    type: string
+    sql: ${TABLE}.email_comprador ;;
+  }
+
+  dimension: telefone_comprador {
+    type: string
+    sql: ${TABLE}.telefone_comprador ;;
+  }
+
+  dimension: telefone_lead {
+    type: string
+    sql: ${TABLE}.telefone_lead ;;
+  }
+
+  dimension: email_lead {
+    type: string
+    sql: ${TABLE}.email_lead ;;
+  }
+
+  dimension: mensagem {
+    type: string
+    sql: ${TABLE}.mensagem ;;
+  }
+
   dimension: produto {
     type: string
     sql: ${TABLE}.produto ;;
