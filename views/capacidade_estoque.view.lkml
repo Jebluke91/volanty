@@ -26,4 +26,8 @@ view: capacidade_estoque {
     type: count
     drill_fields: []
   }
+  measure: sum {
+    type: sum
+    drill_fields: []
+  }
 }
