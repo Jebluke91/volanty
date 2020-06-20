@@ -13,12 +13,12 @@ view: capacidade_estoque {
   }
 
   measure: lotacao {
-    type: number
+    type: sum
     sql: ${TABLE}.lotacao ;;
   }
 
   measure: qtd {
-    type: number
+    type: sum
     sql: ${TABLE}.qtd ;;
   }
 
