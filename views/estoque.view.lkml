@@ -41,13 +41,13 @@ view: estoque {
     sql: ${TABLE}.Dias_Em_Estoque ;;
   }
 
-  dimension: dias_sem_lead {
-    type: number
+  measure: dias_sem_lead {
+    type: sum
     sql: ${TABLE}.Dias_sem_Lead ;;
   }
 
-  dimension: dias_sem_visita {
-    type: number
+  measure: dias_sem_visita {
+    type: sum
     sql: ${TABLE}.Dias_sem_Visita ;;
   }
 
@@ -81,8 +81,8 @@ view: estoque {
     sql: ${TABLE}.placa ;;
   }
 
-  dimension: preco_por {
-    type: number
+  measure: preco_por {
+    type: sum
     sql: ${TABLE}.preco_por ;;
   }
 
@@ -91,13 +91,13 @@ view: estoque {
     sql: ${TABLE}.produto ;;
   }
 
-  dimension: qtd_lead {
-    type: number
+  measure: qtd_lead {
+    type: sum
     sql: ${TABLE}.qtd_lead ;;
   }
 
-  dimension: qtd_visita {
-    type: number
+  measure: qtd_visita {
+    type: sum
     sql: ${TABLE}.qtd_visita ;;
   }
 
