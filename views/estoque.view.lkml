@@ -45,6 +45,8 @@ view: estoque {
     type: number
     sql: ${TABLE}.Dias_Em_Estoque ;;
     drill_fields: [car_details*]
+    html: {{ rendered_value }} || {{ modelo._rendered_value }} >> ;;  ## here we use || to concatenate the values
+
   }
   set: car_details {
     fields: [placa,marca,modelo,versao,preco_por,produto,qtd_lead,qtd_visita,dias_em_estoque,dias_sem_lead,dias_sem_visita]
