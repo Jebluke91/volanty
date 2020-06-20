@@ -12,22 +12,15 @@ view: capacidade_estoque {
     sql: ${TABLE}.CAV ;;
   }
 
-  dimension: lotacao {
+  measure: lotacao {
     type: number
     sql: ${TABLE}.lotacao ;;
   }
 
-  dimension: qtd {
+  measure: qtd {
     type: number
     sql: ${TABLE}.qtd ;;
   }
 
-  measure: count {
-    type: count
-    drill_fields: []
-  }
-  measure: sum {
-    type: sum
-    drill_fields: []
-  }
+
 }
