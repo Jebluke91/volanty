@@ -41,9 +41,25 @@ view: estoque {
     sql: ${TABLE}.Dias_Em_Estoque ;;
   }
 
+  dimension: dias_em_estoque_ {
+    type: number
+    sql: ${TABLE}.Dias_Em_Estoque ;;
+  }
+
+  dimension: dias_sem_lead_ {
+    type: number
+    sql: ${TABLE}.Dias_sem_Lead ;;
+  }
+
+
   measure: dias_sem_lead {
     type: sum
     sql: ${TABLE}.Dias_sem_Lead ;;
+  }
+
+  dimension: dias_sem_visita_ {
+    type: number
+    sql: ${TABLE}.Dias_sem_Visita ;;
   }
 
   measure: dias_sem_visita {
@@ -86,6 +102,11 @@ view: estoque {
     sql: ${TABLE}.preco_por ;;
   }
 
+  dimension: preco_por_ {
+    type: number
+    sql: ${TABLE}.preco_por ;;
+  }
+
   dimension: produto {
     type: string
     sql: ${TABLE}.produto ;;
@@ -94,6 +115,16 @@ view: estoque {
   measure: qtd_lead {
     type: sum
     sql: ${TABLE}.qtd_lead ;;
+  }
+
+  dimension: qtd_lead_{
+    type: number
+    sql: ${TABLE}.qtd_lead ;;
+  }
+
+  dimension: qtd_visita_ {
+    type: number
+    sql: ${TABLE}.qtd_visita ;;
   }
 
   measure: qtd_visita {
