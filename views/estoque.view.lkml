@@ -120,7 +120,12 @@ view: estoque {
   dimension: qtd_lead_{
     type: number
     sql: ${TABLE}.qtd_lead ;;
+    drill_fields: [car_details*]
   }
+  set: car_details {
+    fields: [marca,modelo,versao,preco_por,produto,qtd_lead,qtd_visita,dias_em_estoque,dias_sem_lead,dias_sem_visita]
+  }
+
 
   dimension: qtd_visita_ {
     type: number
