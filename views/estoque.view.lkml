@@ -45,7 +45,7 @@ view: estoque {
     type: number
     sql: ${TABLE}.Dias_Em_Estoque ;;
     drill_fields: [car_details*]
-    html: {{ rendered_value }} || {{ modelo._rendered_value }} >> ;;  ## here we use || to concatenate the values
+    html: {{ rendered_value }} || {{ modelo._rendered_value }} - {{ placa._rendered_value }} ;;  ## here we use || to concatenate the values
 
   }
   set: car_details {
