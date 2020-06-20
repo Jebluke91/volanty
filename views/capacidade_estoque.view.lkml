@@ -2,10 +2,7 @@ view: capacidade_estoque {
   sql_table_name: `volanty-production.views.capacidade_estoque`
     ;;
 
-  dimension: capacidade {
-    type: number
-    sql: ${TABLE}.capacidade ;;
-  }
+
 
   dimension: cav {
     type: string
@@ -22,5 +19,9 @@ view: capacidade_estoque {
     sql: ${TABLE}.qtd ;;
   }
 
+  measure: capacidade {
+   type: sum
+    sql: ${TABLE}.capacidade ;;
+  }
 
 }
