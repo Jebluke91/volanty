@@ -36,8 +36,8 @@ view: estoque {
     sql: ${TABLE}.data_anunciado ;;
   }
 
-  dimension: dias_em_estoque {
-    type: number
+  measure: dias_em_estoque {
+    type: sum
     sql: ${TABLE}.Dias_Em_Estoque ;;
   }
 
