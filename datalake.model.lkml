@@ -43,7 +43,7 @@ explore: simulacoes_qvmc {
 }
 
 explore: Carros {
-  label: "Inventário"
+
 }
 explore: agendamentos_inspecoes {
   label: "agendamentos_inspecoes_admin"
@@ -89,6 +89,14 @@ explore: vendas_oficial {
 
 explore: atribuicao_venda_leads {
   label: "atribuicao_venda_leads"
+}
+
+explore: estoque {
+  label: "Estoque"
+}
+
+explore: capacidade_estoque {
+  label: "Capacidade_Estoque"
 }
 
 explore: compras_selecionados_excel_input {
