@@ -44,7 +44,12 @@ view: estoque {
   dimension: dias_em_estoque_ {
     type: number
     sql: ${TABLE}.Dias_Em_Estoque ;;
+    drill_fields: [car_details*]
   }
+  set: car_details {
+    fields: [marca,modelo,versao,preco_por,produto,qtd_lead,qtd_visita,dias_em_estoque,dias_sem_lead,dias_sem_visita]
+  }
+
 
   dimension: dias_sem_lead_ {
     type: number
