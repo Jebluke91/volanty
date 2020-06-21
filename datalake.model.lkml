@@ -95,8 +95,12 @@ explore: estoque {
   label: "Estoque"
 }
 
+explore: estoque_movimentacao {
+  label: "Estoque_movimentacao"
+}
+
 explore: capacidade_estoque {
-  label: "Capacidade_Estoque"
+  label: "Estoque_capacidade"
 }
 
 explore: compras_selecionados_excel_input {
