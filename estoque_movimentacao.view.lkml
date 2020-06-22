@@ -2,9 +2,18 @@ view: estoque_movimentacao {
   sql_table_name: `volanty-production.views.Estoque_Movimentacao`
     ;;
 
-  measure: entrada_acumulada {
-    type: sum
+  dimension: entrada_acumulada {
+    type: number
     sql: ${TABLE}.entrada_acumulada ;;
+  }
+
+  dimension_group: mes {
+    type: time
+    timeframes: [
+      month,
+      year
+    ]
+    sql: ${TABLE}.mes ;;
   }
 
   measure: estoque_mes {
@@ -13,7 +22,6 @@ view: estoque_movimentacao {
   }
 
   dimension: mes_entrada {
-    label: "mes"
     type: string
     sql: ${TABLE}.mes_entrada ;;
   }
@@ -28,8 +36,8 @@ view: estoque_movimentacao {
     sql: ${TABLE}.qtd_saida ;;
   }
 
-  measure: saida_acumulada {
-    type: sum
+  dimension: saida_acumulada {
+    type: number
     sql: ${TABLE}.saida_acumulada ;;
   }
 
