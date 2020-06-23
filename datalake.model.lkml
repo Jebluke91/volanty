@@ -95,6 +95,10 @@ explore: estoque {
   label: "Estoque"
 }
 
+explore: leads_proprietario {
+
+}
+
 explore: estoque_movimentacao {
   label: "Estoque_movimentacao"
 }
