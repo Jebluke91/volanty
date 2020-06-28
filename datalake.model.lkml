@@ -103,6 +103,10 @@ explore: estoque_movimentacao {
   label: "Estoque_movimentacao"
 }
 
+explore: compras_selecionados {
+  label: "Estoque_movimentacao"
+}
+
 explore: capacidade_estoque {
   label: "Estoque_capacidade"
 }
