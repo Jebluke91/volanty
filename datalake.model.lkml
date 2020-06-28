@@ -106,6 +106,9 @@ explore: estoque_movimentacao {
 explore: compras_selecionados {
   label: "compras_selecionados"
 }
+explore: compra_sele {
+  label: "compras_sele"
+}
 
 explore: capacidade_estoque {
   label: "Estoque_capacidade"
