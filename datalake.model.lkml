@@ -107,6 +107,9 @@ explore: compras_selecionados {
   label: "compras_selecionados"
 }
 explore: compra_sele {
+  label: "compra_sele"
+}
+explore: compras_sele {
   label: "compras_sele"
 }
 
