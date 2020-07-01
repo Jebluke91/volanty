@@ -78,7 +78,7 @@ view: vendas_oficial {
       quarter,
       year
     ]
-    sql:  CAST(${TABLE}.data_reserva AS TIMESTAMP)
+    sql:  ${TABLE}.data_vendido
     ;;
   }
 
