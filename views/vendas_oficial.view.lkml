@@ -50,20 +50,6 @@ view: vendas_oficial {
 
 
 
-  dimension_group: data_reserva {
-    type: time
-    timeframes: [
-      raw,
-      time,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
-    sql: CAST(${TABLE}.data_reserva AS TIMESTAMP) ;;
-  }
-
 
 
   dimension_group: data_retirado {
@@ -92,7 +78,7 @@ view: vendas_oficial {
       quarter,
       year
     ]
-    sql: ${TABLE}.data_vendido
+    sql:  CAST(${TABLE}.data_reserva AS TIMESTAMP)
     ;;
   }
 
