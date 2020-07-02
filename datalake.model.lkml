@@ -111,7 +111,3 @@ explore: compras_selecionados {
 explore: capacidade_estoque {
   label: "Estoque_capacidade"
 }
-
-explore: compras_selecionados_excel_input {
-  label: "compras_backoffice"
-}
