@@ -13,7 +13,7 @@ view: acquisition_lead {
   }
 
   measure: count_acquisition_lead_ {
-    type: number
+    type: sum
     sql: ${TABLE}.count ;;
   }
 
@@ -22,7 +22,7 @@ view: acquisition_lead {
     sql: ${TABLE}.max ;;
   }
   measure: max_ {
-    type: number
+    type: sum
     sql: ${TABLE}.max ;;
   }
 
@@ -32,7 +32,7 @@ view: acquisition_lead {
   }
 
   measure: mean_ {
-    type: number
+    type: sum
     sql: ${TABLE}.mean ;;
   }
 
@@ -73,7 +73,7 @@ view: acquisition_lead {
   }
 
   measure: median_ {
-    type: number
+    type: sum
     sql: ${TABLE}.median ;;
   }
   dimension: min {
@@ -82,7 +82,7 @@ view: acquisition_lead {
   }
 
   measure: min_ {
-    type: number
+    type: sum
     sql: ${TABLE}.min ;;
   }
 
@@ -92,7 +92,7 @@ view: acquisition_lead {
   }
 
   measure: moda_ {
-    type: number
+    type: sum
     sql: ${TABLE}.moda ;;
   }
 
@@ -101,7 +101,7 @@ view: acquisition_lead {
     sql: ${TABLE}.q1 ;;
   }
   measure: q1_ {
-    type: number
+    type: sum
     sql: ${TABLE}.q1 ;;
   }
 
@@ -110,7 +110,7 @@ view: acquisition_lead {
     sql: ${TABLE}.q3 ;;
   }
   measure: q3_ {
-    type: number
+    type: sum
     sql: ${TABLE}.q3 ;;
   }
 
@@ -120,7 +120,7 @@ view: acquisition_lead {
   }
 
   measure: std_ {
-    type: number
+    type: sum
     sql: ${TABLE}.Std ;;
   }
 
