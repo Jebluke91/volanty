@@ -103,10 +103,6 @@ explore: estoque_movimentacao {
   label: "Estoque_movimentacao"
 }
 
-explore: acquisition_lead {
-  label: "describe_aquisition_lead"
-  required_access_grants: [admin_team]
-}
 
 explore: compras_selecionados {
   label: "compras_selecionados"
