@@ -41,9 +41,11 @@ view: acquisition_lead {
     sql: ${TABLE}.media_movel_30_dias ;;
   }
   measure: media_movel_30_dias_ {
-    type: number
+    type: sum
     sql: ${TABLE}.media_movel_30_dias ;;
   }
+
+
 
   dimension: media_movel_60_dias {
     type: number
@@ -51,7 +53,7 @@ view: acquisition_lead {
   }
 
   measure: media_movel_60_dias_ {
-    type: number
+    type: sum
     sql: ${TABLE}.media_movel_60_dias ;;
   }
 
@@ -61,7 +63,7 @@ view: acquisition_lead {
   }
 
   measure: media_movel_90_dias_ {
-    type: number
+    type: sum
     sql: ${TABLE}.media_movel_90_dias ;;
   }
 
