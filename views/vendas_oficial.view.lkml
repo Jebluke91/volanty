@@ -22,6 +22,11 @@ view: vendas_oficial {
     sql: ${TABLE}.cep_comprador ;;
   }
 
+  dimension: uf_comprador {
+    type: string
+    sql: ${TABLE}.uf_comprador ;;
+  }
+
   dimension: cidade_comprador {
     type: string
     sql: ${TABLE}.cidade_comprador ;;
@@ -167,10 +172,7 @@ view: vendas_oficial {
     sql: ${TABLE}.transmissao ;;
   }
 
-  dimension: uf {
-    type: string
-    sql: ${TABLE}.uf ;;
-  }
+
 
   dimension_group: ultima_atualizacao {
     type: time
