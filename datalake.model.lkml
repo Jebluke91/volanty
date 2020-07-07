@@ -44,17 +44,9 @@ explore: simulacoes_qvmc {
 
 explore: Carros {
 
-}
-explore: agendamentos_inspecoes {
-  label: "agendamentos_inspecoes_admin"
-  required_access_grants: [admin_team]
 
 }
-explore: agendamentos_inspecoes_user {
-  label: "agendamentos_inspecoes"
-  extends: [agendamentos_inspecoes]
-  required_access_grants: [user_team]
-}
+
 explore: visita {
   label: "visita_admin"
   required_access_grants: [admin_team]
