@@ -19,6 +19,11 @@ view: capacidade_estoque {
     sql: ${TABLE}.qtd ;;
   }
 
+  measure: reservados {
+    type: sum
+    sql: ${TABLE}.reservados ;;
+  }
+
   measure: capacidade {
    type: sum
     sql: ${TABLE}.capacidade ;;
