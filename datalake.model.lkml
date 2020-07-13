@@ -104,6 +104,10 @@ explore: compras_selecionados {
   label: "compras_selecionados"
 }
 
+explore: web_motors {
+  label: "Oportunidades_Web_Motors"
+  required_access_grants: [admin_team]
+}
 
 explore: capacidade_estoque {
   label: "Estoque_capacidade"
