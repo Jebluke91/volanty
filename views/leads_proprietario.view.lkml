@@ -55,7 +55,7 @@ view: leads_proprietario {
     sql: ${TABLE}.marca ;;
   }
 
-  dimension: maximo_preco {
+  dimension: maximo_preco_compra {
     type: number
     sql: ${TABLE}.maximo_preco ;;
   }
@@ -80,14 +80,38 @@ view: leads_proprietario {
     sql: ${TABLE}.media_referrer ;;
   }
 
-  dimension: minimo_preco {
+  dimension: minimo_preco_compra {
     type: number
-    sql: ${TABLE}.minimo_preco ;;
+    sql: ${TABLE}.minimo_preco_compra;;
+  }
+
+  dimension: minimo_preco_consignado {
+    type: number
+    sql: ${TABLE}.minimo_preco_consignado;;
+  }
+
+  dimension: maximo_preco_consignado {
+    type: number
+    sql: ${TABLE}.maximo_preco_consignado;;
+  }
+
+  dimension: maximo_preco_troca {
+    type: number
+    sql: ${TABLE}.maximo_preco_troca;;
+  }
+
+  dimension: minimo_preco_troca {
+    type: number
+    sql: ${TABLE}.minimo_preco_troca;;
   }
 
   dimension: model {
     type: string
     sql: ${TABLE}.model ;;
+  }
+  dimension: modelo_escolhido {
+    type: string
+    sql: ${TABLE}.modelo_escolhido ;;
   }
 
   dimension: nome_proprietario {
