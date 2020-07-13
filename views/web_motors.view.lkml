@@ -73,7 +73,7 @@ view: web_motors {
   }
 
   measure: tempo_anuncio_ {
-    type: sum
+    type: average
     sql: ${TABLE}.tempo_anuncio ;;
   }
 
