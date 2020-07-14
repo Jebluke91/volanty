@@ -92,7 +92,7 @@ view: simulacoes_qvmc {
   }
 
   measure: preco_max_ {
-    type: sum
+    type: average
     sql: ${TABLE}.preco_max ;;
   }
 
@@ -102,7 +102,7 @@ view: simulacoes_qvmc {
   }
 
   measure: preco_min_ {
-    type: sum
+    type: average
     sql: ${TABLE}.preco_min ;;
   }
 
