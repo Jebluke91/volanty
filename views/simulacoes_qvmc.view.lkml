@@ -91,8 +91,18 @@ view: simulacoes_qvmc {
     sql: ${TABLE}.preco_max ;;
   }
 
+  measure: preco_max_ {
+    type: sum
+    sql: ${TABLE}.preco_max ;;
+  }
+
   dimension: preco_min {
     type: string
+    sql: ${TABLE}.preco_min ;;
+  }
+
+  measure: preco_min_ {
+    type: sum
     sql: ${TABLE}.preco_min ;;
   }
 
