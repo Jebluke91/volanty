@@ -17,8 +17,19 @@ view: conversao_aquisicao_v1 {
     sql: ${TABLE}.Agendamentos ;;
   }
 
+  measure: agendamentos_ {
+    type: sum
+    sql: ${TABLE}.Agendamentos ;;
+  }
+
   dimension: aquisicao {
     type: number
+    sql: ${TABLE}.Aquisicao ;;
+  }
+
+
+  measure: aquisicao_ {
+    type: sum
     sql: ${TABLE}.Aquisicao ;;
   }
 
@@ -69,6 +80,11 @@ view: conversao_aquisicao_v1 {
 
   dimension: simulacoes {
     type: number
+    sql: ${TABLE}.Simulacoes ;;
+  }
+
+  measure: simulacoes_ {
+    type: sum
     sql: ${TABLE}.Simulacoes ;;
   }
 
