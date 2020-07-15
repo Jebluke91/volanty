@@ -109,6 +109,11 @@ explore: web_motors {
   required_access_grants: [admin_team]
 }
 
+explore: report_alteracao_precos {
+  label: "report_estoque_crítico"
+  required_access_grants: [admin_team]
+}
+
 
 explore: conversao_aquisicao_v1 {
   label: "Conversao_Proprietário"
