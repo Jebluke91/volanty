@@ -111,7 +111,7 @@ explore: web_motors {
 
 explore: report_alteracao_precos {
   label: "report_estoque_crítico"
-  required_access_grants: [admin_team]
+
 }
 
 
