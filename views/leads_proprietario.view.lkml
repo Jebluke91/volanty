@@ -57,7 +57,7 @@ view: leads_proprietario {
 
   dimension: maximo_preco_compra {
     type: number
-    sql: ${TABLE}.maximo_preco ;;
+    sql: ${TABLE}.maximo_preco_compra ;;
   }
 
   dimension: media_ga_client_id {
