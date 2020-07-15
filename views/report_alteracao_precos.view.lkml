@@ -51,6 +51,36 @@ view: report_alteracao_precos {
     sql: ${TABLE}.km ;;
   }
 
+  dimension: Aging {
+    type: number
+    sql: ${TABLE}.Aging ;;
+  }
+
+  dimension: fipe {
+    type: number
+    sql: ${TABLE}.fipe ;;
+  }
+
+  dimension: webmotors_average {
+    type: number
+    sql: ${TABLE}.webmotors_average ;;
+  }
+
+  dimension: inventory_averageTimeToSell {
+    type: number
+    sql: ${TABLE}.inventory_averageTimeToSell ;;
+  }
+
+  dimension: inventory_currentQuantity {
+    type: number
+    sql: ${TABLE}.inventory_currentQuantity ;;
+  }
+  dimension: Media_Venda {
+    type: number
+    sql: ${TABLE}.Media_Venda ;;
+  }
+
+
   dimension_group: last_update {
     type: time
     timeframes: [
