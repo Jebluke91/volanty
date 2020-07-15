@@ -65,6 +65,19 @@ view: estoque {
     sql: ${TABLE}.Dias_sem_Lead ;;
   }
 
+  measure: Media_WebMotors_ {
+    type: sum
+    sql: ${TABLE}.Media_WebMotors ;;
+  }
+
+  dimension: Media_WebMotors {
+    type: number
+    sql: ${TABLE}.Media_WebMotors ;;
+  }
+
+
+
+
   dimension: dias_sem_visita_ {
     type: number
     sql: ${TABLE}.Dias_sem_Visita ;;
