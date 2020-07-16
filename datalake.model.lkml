@@ -25,16 +25,8 @@ named_value_format: reais {
   strict_value_format: yes
 }
 
-explore: Aquisitions {
-  label: "Compras_Admin"
-  required_access_grants: [admin_team]
-}
 
-explore: Aquisitions_User {
-  label: "Compras"
-  extends: [Aquisitions]
-  required_access_grants: [user_team]
-}
+
 
 
 explore: simulacoes_qvmc {
