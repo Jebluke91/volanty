@@ -115,3 +115,7 @@ explore: conversao_aquisicao_v1 {
 explore: capacidade_estoque {
   label: "Estoque_capacidade"
 }
+
+explore: pedido_compra {
+  label: "Compras"
+}
