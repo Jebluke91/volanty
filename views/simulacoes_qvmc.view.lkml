@@ -71,9 +71,9 @@ view: simulacoes_qvmc {
     sql: ${TABLE}.marca ;;
   }
 
-  dimension: modelo_carro {
+  dimension: modelo {
     type: string
-    sql: ${TABLE}.modelo_carro ;;
+    sql: ${TABLE}.modelo ;;
   }
 
   dimension: nome_agendamento {
@@ -86,24 +86,44 @@ view: simulacoes_qvmc {
     sql: ${TABLE}.placa ;;
   }
 
-  dimension: preco_max {
+  dimension: preco_maximo_compra {
     type: number
-    sql: ${TABLE}.preco_max ;;
+    sql: ${TABLE}.preco_maximo_compra ;;
   }
 
-  measure: preco_max_ {
+  dimension: preco_maximo_consignado {
+    type: number
+    sql: ${TABLE}.preco_maximo_consignado ;;
+  }
+
+  dimension: preco_minimo_consignado {
+    type: number
+    sql: ${TABLE}.preco_minimo_consignado ;;
+  }
+
+  dimension: preco_maximo_troca {
+    type: number
+    sql: ${TABLE}.preco_maximo_troca ;;
+  }
+
+  dimension: preco_minimo_troca {
+    type: number
+    sql: ${TABLE}.preco_minimo_troca ;;
+  }
+
+  measure: preco_max_compra_ {
     type: average
-    sql: ${TABLE}.preco_max ;;
+    sql: ${TABLE}.preco_max_compra ;;
   }
 
-  dimension: preco_min {
+  dimension: preco_min_compra {
     type: string
-    sql: ${TABLE}.preco_min ;;
+    sql: ${TABLE}.preco_min_compra ;;
   }
 
-  measure: preco_min_ {
+  measure: preco_min_compra_ {
     type: average
-    sql: ${TABLE}.preco_min ;;
+    sql: ${TABLE}.preco_min_compra ;;
   }
 
   dimension: referer {
