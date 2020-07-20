@@ -22,6 +22,16 @@ view: estoque {
     sql: ${TABLE}.cor ;;
   }
 
+  dimension: categoria {
+    type: string
+    sql: ${TABLE}.categoria ;;
+  }
+
+  dimension: compra {
+    type: number
+    sql: ${TABLE}.compra ;;
+  }
+
   dimension_group: data_anunciado {
     type: time
     timeframes: [
