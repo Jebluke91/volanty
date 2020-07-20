@@ -17,6 +17,21 @@ view: estoque {
     sql: ${TABLE}.cav ;;
   }
 
+  dimension: fipe {
+    type: number
+    sql: ${TABLE}.fipe ;;
+  }
+
+  dimension: webmotors_average {
+    type: number
+    sql: ${TABLE}.webmotors_average ;;
+  }
+
+  dimension: Media_Venda {
+    type: number
+    sql: ${TABLE}.Media_Venda ;;
+  }
+
   dimension: cor {
     type: string
     sql: ${TABLE}.cor ;;
