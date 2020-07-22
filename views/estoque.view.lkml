@@ -42,6 +42,17 @@ view: estoque {
     sql: ${TABLE}.categoria ;;
   }
 
+  dimension: critico_dias_em_estoque {
+    type: string
+    sql: ${TABLE}.critico_dias_em_estoque ;;
+  }
+
+  dimension: critico_lead_por_dias {
+    type: string
+    sql: ${TABLE}.critico_lead_por_dias ;;
+  }
+
+
   dimension: compra {
     type: number
     sql: ${TABLE}.compra ;;
