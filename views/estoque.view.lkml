@@ -210,7 +210,7 @@ view: estoque {
 
   dimension: link_anuncio {
     type: string
-    sql: ${TABLE}.versao ;;
+    sql: ${TABLE}.link_anuncio ;;
   }
 
   measure: count {
