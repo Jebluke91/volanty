@@ -109,7 +109,7 @@ explore: report_alteracao_precos {
 
 explore: conversao_aquisicao_v1 {
   label: "Conversao_Proprietário"
-  required_access_grants: [admin_team]
+
 }
 
 explore: capacidade_estoque {
