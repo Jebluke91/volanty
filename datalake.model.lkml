@@ -59,9 +59,7 @@ explore: leads_compra_user {
   required_access_grants: [user_team]
 }
 
-explore: compras_selecionados_anuncios {}
 
-explore: compras_selecionados_precificacao_qvmc {}
 
 explore: report_comparador_pr {
   label: "Comparador_Precos"
@@ -89,6 +87,7 @@ explore: estoque_movimentacao {
 
 explore: acquisition_lead {
   label: "acquisiton_lead_describe"
+  required_access_grants: [admin_team]
 }
 
 
