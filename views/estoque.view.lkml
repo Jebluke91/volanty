@@ -12,6 +12,11 @@ view: estoque {
     sql: ${TABLE}.carroceria ;;
   }
 
+  dimension: origem {
+    type: string
+    sql: ${TABLE}.origem ;;
+  }
+
   dimension: cav {
     type: string
     sql: ${TABLE}.cav ;;
