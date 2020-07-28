@@ -119,3 +119,7 @@ explore: capacidade_estoque {
 explore: pedido_compra {
   label: "Compras"
 }
+
+explore: teste_integracao_looker {
+  label: "Teste Integração Looker"
+}
