@@ -82,7 +82,8 @@ view: estoque {
     sql: ${TABLE}.Dias_Em_Estoque ;;
     drill_fields: [car_details*]
     html:{{ rendered_value }} <br>
-    {{ modelo._rendered_value }} - {{ placa._rendered_value }}    ;;  ## here we use || to concatenate the values
+    {{ modelo._rendered_value }} - {{ placa._rendered_value }} <br>
+    {{ link_anuncio._rendered_value }} ;;  ## here we use || to concatenate the values
 
   }
   set: car_details {
@@ -124,9 +125,9 @@ view: estoque {
     sql: ${TABLE}.Dias_sem_Visita ;;
   }
 
-  dimension: estado {
+  dimension: UF {
     type: string
-    sql: ${TABLE}.estado ;;
+    sql: ${TABLE}.UF ;;
   }
 
   dimension: inspection_key {
@@ -198,6 +199,11 @@ view: estoque {
   }
 
   dimension: versao {
+    type: string
+    sql: ${TABLE}.versao ;;
+  }
+
+  dimension: link_anuncio {
     type: string
     sql: ${TABLE}.versao ;;
   }
