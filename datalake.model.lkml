@@ -118,3 +118,7 @@ explore: capacidade_estoque {
 explore: pedido_compra {
   label: "Compras"
 }
+
+explore: tempo_venda_km {
+  label: "Tempo de Venda por Km"
+}
