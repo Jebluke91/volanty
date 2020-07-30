@@ -122,3 +122,7 @@ explore: pedido_compra {
 explore: tempo_venda_km {
   label: "Tempo de Venda por Km"
 }
+
+explore: tempo_venda_preco {
+  label: "Tempo de Venda por Preco"
+}
