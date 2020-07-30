@@ -3,7 +3,7 @@ view: tempo_venda_km {
     ;;
 
   dimension: faixa_km {
-    type: number
+    type: string
     sql: ${TABLE}.faixa_km ;;
   }
 
