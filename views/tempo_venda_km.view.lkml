@@ -12,8 +12,9 @@ view: tempo_venda_km {
     sql: ${TABLE}.media_tempo_venda ;;
   }
 
-  measure: count {
-    type: count
-    drill_fields: []
+  dimension: position {
+    type: number
+    sql: ${TABLE}.position ;;
   }
+
 }
