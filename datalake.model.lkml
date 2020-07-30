@@ -128,5 +128,5 @@ explore: tempo_venda_preco {
 }
 
 explore: liquidez_modelo {
-  label: "Tempo de Venda por Preco"
+  label: "Liquidez Modelo"
 }
