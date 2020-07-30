@@ -126,3 +126,7 @@ explore: tempo_venda_km {
 explore: tempo_venda_preco {
   label: "Tempo de Venda por Preco"
 }
+
+explore: liquidez_modelo {
+  label: "Tempo de Venda por Preco"
+}
