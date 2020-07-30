@@ -17,8 +17,8 @@ view: tempo_venda_preco {
     sql: ${TABLE}.qtd ;;
   }
 
-  measure: count {
-    type: count
-    drill_fields: []
+  dimension: position {
+    type: number
+    sql: ${TABLE}.position ;;
   }
 }
