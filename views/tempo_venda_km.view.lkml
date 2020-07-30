@@ -12,6 +12,12 @@ view: tempo_venda_km {
     sql: ${TABLE}.media_tempo_venda ;;
   }
 
+  dimension: qtd {
+    type: number
+    sql: ${TABLE}.number ;;
+  }
+
+
   dimension: position {
     type: number
     sql: ${TABLE}.position ;;
