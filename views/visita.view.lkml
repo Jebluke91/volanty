@@ -1,5 +1,11 @@
 view: visita {
-  sql_table_name: views.Visita ;;
+  sql_table_name: `volanty-production.views.Visita`
+    ;;
+
+  dimension: ano_modelo {
+    type: string
+    sql: ${TABLE}.ano_modelo ;;
+  }
 
   dimension: cav {
     type: string
@@ -9,35 +15,6 @@ view: visita {
   dimension: comentarios_visita {
     type: string
     sql: ${TABLE}.comentarios_visita ;;
-  }
-
-  dimension_group: data_inspecao_agendada_para {
-    type: time
-    timeframes: [
-      raw,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
-    convert_tz: no
-    datatype: date
-    sql: ${TABLE}.data_inspecao_agendada_para ;;
-  }
-
-  dimension_group: data_inspecao_atualizada {
-    type: time
-    timeframes: [
-      raw,
-      time,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
-    sql: CAST(${TABLE}.data_inspecao_atualizada AS TIMESTAMP) ;;
   }
 
   dimension_group: data_visita_agendada_para {
@@ -51,22 +28,20 @@ view: visita {
       quarter,
       year
     ]
-    sql: CAST(${TABLE}.data_visita_agendada_para AS TIMESTAMP) ;;
+    sql: ${TABLE}.data_visita_agendada_para ;;
   }
 
   dimension_group: data_visita_criada {
     type: time
     timeframes: [
       raw,
+      time,
       date,
-      day_of_month,
       week,
       month,
       quarter,
       year
     ]
-    convert_tz: no
-    datatype: date
     sql: ${TABLE}.data_visita_criada ;;
   }
 
@@ -81,7 +56,7 @@ view: visita {
       quarter,
       year
     ]
-    sql: CAST(${TABLE}.data_visitada AS TIMESTAMP) ;;
+    sql: ${TABLE}.data_visitada ;;
   }
 
   dimension: email_visitante {
@@ -89,29 +64,9 @@ view: visita {
     sql: ${TABLE}.email_visitante ;;
   }
 
-  dimension: inspecao_analise {
-    type: string
-    sql: ${TABLE}.inspecao_analise ;;
-  }
-
-  dimension: inspecao_checkin {
-    type: yesno
-    sql: ${TABLE}.inspecao_checkin ;;
-  }
-
-  dimension: inspecao_restricoes {
-    hidden: yes
-    sql: ${TABLE}.inspecao_restricoes ;;
-  }
-
-  dimension: inspecao_status {
-    type: string
-    sql: ${TABLE}.inspecao_status ;;
-  }
-
-  dimension: inspecao_status_processamento {
+  dimension: inspectionkey {
     type: number
-    sql: ${TABLE}.inspecao_status_processamento ;;
+    sql: ${TABLE}.inspectionkey ;;
   }
 
   dimension: inspetor_visita {
@@ -122,6 +77,16 @@ view: visita {
   dimension: level_of_interest_feedback {
     type: number
     sql: ${TABLE}.levelOfInterestFeedback ;;
+  }
+
+  dimension: marca {
+    type: string
+    sql: ${TABLE}.marca ;;
+  }
+
+  dimension: modelo {
+    type: string
+    sql: ${TABLE}.modelo ;;
   }
 
   dimension: nome_visitante {
@@ -142,12 +107,6 @@ view: visita {
   dimension: placa {
     type: string
     sql: ${TABLE}.placa ;;
-    primary_key: yes
-  }
-
-  dimension: selecionado {
-    type: string
-    sql: ${TABLE}.selecionado ;;
   }
 
   dimension: preco_anunciado {
@@ -170,14 +129,24 @@ view: visita {
     sql: ${TABLE}.preco_venda ;;
   }
 
+  dimension: produto {
+    type: string
+    sql: ${TABLE}.produto ;;
+  }
+
+  dimension: referencia_cliente_telefone {
+    type: string
+    sql: ${TABLE}.referencia_cliente_telefone ;;
+  }
+
+  dimension: referencia_lead {
+    type: string
+    sql: ${TABLE}.referencia_lead ;;
+  }
+
   dimension: responsavel_venda {
     type: string
     sql: ${TABLE}.responsavel_venda ;;
-  }
-
-  dimension: status_agendamento {
-    type: string
-    sql: ${TABLE}.status_agendamento ;;
   }
 
   dimension: status_visita {
@@ -185,35 +154,23 @@ view: visita {
     sql: ${TABLE}.status_visita ;;
   }
 
-  dimension: produto {
-    type: string
-    sql: ${TABLE}.produto ;;
-  }
-
   dimension: telefone_visitante {
     type: string
     sql: ${TABLE}.telefone_visitante ;;
   }
 
+  dimension: uf {
+    type: string
+    sql: ${TABLE}.UF ;;
+  }
+
+  dimension: versao {
+    type: string
+    sql: ${TABLE}.versao ;;
+  }
+
   measure: count {
     type: count
     drill_fields: []
-  }
-}
-
-view: visita_user {
-  extends: [visita]
-  dimension: email_visitante {
-    hidden: yes
-  }
-  dimension: telefone_visitante {
-    hidden: yes
-  }
-}
-
-view: visita__inspecao_restricoes {
-  dimension: entry {
-    type: string
-    sql: ${TABLE}.entry ;;
   }
 }
