@@ -40,14 +40,13 @@ explore: Carros {
 }
 
 explore: visita {
-  label: "visita_admin"
-  required_access_grants: [admin_team]
-}
-explore: visita_user {
   label: "visita"
-  extends: [visita]
-  required_access_grants: [user_team]
 }
+#explore: visita_user {
+#  label: "visita"
+#  extends: [visita]
+#  required_access_grants: [user_team]
+#}
 
 explore: leads_compra {
   label: "leads_compra_admin"
