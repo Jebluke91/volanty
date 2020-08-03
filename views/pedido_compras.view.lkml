@@ -64,9 +64,9 @@ view: pedido_compras {
     sql: ${TABLE}.id_carro ;;
   }
 
-  dimension: id_cav {
+  dimension: cav {
     type: string
-    sql: ${TABLE}.id_cav ;;
+    sql: ${TABLE}.cav ;;
   }
 
   dimension: id_lead {
