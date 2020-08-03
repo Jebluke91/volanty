@@ -92,6 +92,11 @@ view: liquidez_modelo {
     sql: ${TABLE}.visitas_por_venda ;;
   }
 
+  dimension: total_vendidos {
+    type: number
+    sql: ${TABLE}.total_vendidos ;;
+  }
+
   measure: count {
     type: count
     drill_fields: []
