@@ -110,7 +110,7 @@ explore: capacidade_estoque {
   label: "Estoque_capacidade"
 }
 
-explore: pedido_compra {
+explore: pedido_compras {
   label: "Compras"
 }
 
