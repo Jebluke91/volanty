@@ -50,14 +50,9 @@ explore: visita {
 #}
 
 explore: leads_compra {
-  label: "leads_compra_admin"
-  required_access_grants: [admin_team]
-}
-explore: leads_compra_user {
   label: "leads_compra"
-  extends: [leads_compra]
-  required_access_grants: [user_team]
 }
+
 
 
 
