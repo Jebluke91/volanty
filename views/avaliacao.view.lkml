@@ -116,7 +116,7 @@ view: avaliacao {
 
 
   dimension: fipe {
-    type: string
+    type: number
     sql: ${TABLE}.fipe ;;
   }
 
@@ -147,7 +147,7 @@ view: avaliacao {
   }
 
   dimension: webmotors {
-    type: string
+    type: number
     sql: ${TABLE}.preco_webmotors ;;
   }
 
