@@ -146,6 +146,11 @@ view: avaliacao {
     sql: ${TABLE}.placa ;;
   }
 
+  dimension: webmotors {
+    type: string
+    sql: ${TABLE}.preco_webmotors ;;
+  }
+
 
 
   measure: count {
