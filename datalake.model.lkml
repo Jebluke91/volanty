@@ -35,29 +35,24 @@ explore: simulacoes_qvmc {
 }
 
 explore: Carros {
+}
 
-
+explore: avaliacao {
 }
 
 explore: visita {
-  label: "visita_admin"
-  required_access_grants: [admin_team]
-}
-explore: visita_user {
   label: "visita"
-  extends: [visita]
-  required_access_grants: [user_team]
 }
+#explore: visita_user {
+#  label: "visita"
+#  extends: [visita]
+#  required_access_grants: [user_team]
+#}
 
 explore: leads_compra {
-  label: "leads_compra_admin"
-  required_access_grants: [admin_team]
-}
-explore: leads_compra_user {
   label: "leads_compra"
-  extends: [leads_compra]
-  required_access_grants: [user_team]
 }
+
 
 
 
@@ -115,7 +110,7 @@ explore: capacidade_estoque {
   label: "Estoque_capacidade"
 }
 
-explore: pedido_compra {
+explore: pedido_compras {
   label: "Compras"
 }
 

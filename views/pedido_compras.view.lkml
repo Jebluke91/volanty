@@ -1,5 +1,5 @@
-view: pedido_compra {
-  sql_table_name: `volanty-production.views.Pedido_Compra`
+view: pedido_compras {
+  sql_table_name: `volanty-production.views.Pedido_Compras`
     ;;
 
   dimension: _id_ {
@@ -7,18 +7,27 @@ view: pedido_compra {
     sql: ${TABLE}._id_ ;;
   }
 
-  dimension: ano_carro {
+  dimension: ano_modelo {
     type: string
-    sql: ${TABLE}.ano_carro ;;
+    sql: ${TABLE}.ano_modelo ;;
   }
 
-  dimension: ano_modelo_carro {
+  dimension: board_value_type {
     type: string
-    sql: ${TABLE}.ano_modelo_carro ;;
+    sql: ${TABLE}.board_value_type ;;
   }
 
-  dimension: data_atualizacao {
-    type: string
+  dimension_group: data_atualizacao {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
     sql: ${TABLE}.data_atualizacao ;;
   }
 
@@ -55,9 +64,9 @@ view: pedido_compra {
     sql: ${TABLE}.id_carro ;;
   }
 
-  dimension: id_cav {
+  dimension: cav {
     type: string
-    sql: ${TABLE}.id_cav ;;
+    sql: ${TABLE}.cav ;;
   }
 
   dimension: id_lead {
@@ -75,14 +84,14 @@ view: pedido_compra {
     sql: ${TABLE}.km_carro ;;
   }
 
-  dimension: marca_carro {
+  dimension: marca {
     type: string
-    sql: ${TABLE}.marca_carro ;;
+    sql: ${TABLE}.marca ;;
   }
 
-  dimension: modelo_carro {
+  dimension: modelo {
     type: string
-    sql: ${TABLE}.modelo_carro ;;
+    sql: ${TABLE}.modelo ;;
   }
 
   dimension: notas_internas {
@@ -105,9 +114,9 @@ view: pedido_compra {
     sql: ${TABLE}.numero_documentos ;;
   }
 
-  dimension: placa_carro {
+  dimension: placa {
     type: string
-    sql: ${TABLE}.placa_carro ;;
+    sql: ${TABLE}.placa ;;
   }
 
   dimension: preco {
@@ -140,9 +149,24 @@ view: pedido_compra {
     sql: ${TABLE}.razao ;;
   }
 
+  dimension: source {
+    type: string
+    sql: ${TABLE}.source ;;
+  }
+
   dimension: status {
     type: string
     sql: ${TABLE}.status ;;
+  }
+
+  dimension: tipo {
+    type: string
+    sql: ${TABLE}.tipo ;;
+  }
+
+  dimension: troca {
+    type: yesno
+    sql: ${TABLE}.troca ;;
   }
 
   dimension: usuario {
@@ -175,14 +199,9 @@ view: pedido_compra {
     sql: ${TABLE}.veiculo_possui_manual ;;
   }
 
-  dimension: vendedor {
+  dimension: versao {
     type: string
-    sql: ${TABLE}.vendedor ;;
-  }
-
-  dimension: versao_carro {
-    type: string
-    sql: ${TABLE}.versao_carro ;;
+    sql: ${TABLE}.versao ;;
   }
 
   measure: count {
