@@ -2,9 +2,9 @@ view: avaliacao {
   sql_table_name: `volanty-production.views.Avaliacao`
     ;;
 
-  dimension: cav_id {
+  dimension: cav {
     type: string
-    sql: ${TABLE}.cav_id ;;
+    sql: ${TABLE}.cav ;;
   }
 
   dimension_group: data_criacao_avaliacao {
@@ -113,6 +113,40 @@ view: avaliacao {
     type: string
     sql: ${TABLE}.usuario ;;
   }
+
+
+  dimension: fipe {
+    type: string
+    sql: ${TABLE}.fipe ;;
+  }
+
+
+  dimension: modelo {
+    type: string
+    sql: ${TABLE}.model ;;
+  }
+
+  dimension: marca {
+    type: string
+    sql: ${TABLE}.brand ;;
+  }
+
+  dimension: versao {
+    type: string
+    sql: ${TABLE}.version ;;
+  }
+
+  dimension: ano_modelo {
+    type: string
+    sql: ${TABLE}.ano_modelo ;;
+  }
+
+  dimension: placa {
+    type: string
+    sql: ${TABLE}.placa ;;
+  }
+
+
 
   measure: count {
     type: count
