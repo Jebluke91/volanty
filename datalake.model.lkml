@@ -35,8 +35,9 @@ explore: simulacoes_qvmc {
 }
 
 explore: Carros {
+}
 
-
+explore: avaliacao {
 }
 
 explore: visita {
