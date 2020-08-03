@@ -148,7 +148,7 @@ view: leads_compra {
 
   dimension: tipovisita {
     type: string
-    sql: ${TABLE}.tipovisita ;;
+    sql: ${TABLE}.tipo_visita ;;
   }
 
   dimension: ano_modelo {
