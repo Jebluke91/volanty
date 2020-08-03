@@ -145,6 +145,12 @@ view: leads_compra {
     type: string
     sql: ${TABLE}.versao ;;
   }
+
+  dimension: tipovisita {
+    type: string
+    sql: ${TABLE}.tipovisita ;;
+  }
+
   dimension: ano_modelo {
     type: string
     sql: ${TABLE}.ano_modelo ;;
