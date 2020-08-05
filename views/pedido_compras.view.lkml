@@ -204,6 +204,12 @@ view: pedido_compras {
     sql: ${TABLE}.versao ;;
   }
 
+  dimension: email_proprietario {
+    type: string
+    sql: ${TABLE}.email_proprietario ;;
+  }
+
+
   measure: count {
     type: count
     drill_fields: []
