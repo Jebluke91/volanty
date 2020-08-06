@@ -86,7 +86,7 @@ explore: acquisition_lead {
 }
 
 
-explore: compras_selecionados {
+explore: compras_Selecionados {
   label: "compras_selecionados"
 }
 
