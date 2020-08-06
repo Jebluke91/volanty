@@ -1,5 +1,5 @@
 view: compras_selecionados {
-  sql_table_name: `volanty-production.spreedsheets_data.compras_selecionados`
+  sql_table_name: `volanty-production.spreedsheets_data.compras_Selecionados`
     ;;
   drill_fields: [id]
 
@@ -79,8 +79,17 @@ view: compras_selecionados {
     sql: ${TABLE}.data_anuncio ;;
   }
 
-  dimension: data_compra {
-    type: string
+  dimension_group: data_compra {
+    type: time
+    timeframes:[
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
     sql: ${TABLE}.data_compra ;;
   }
 
