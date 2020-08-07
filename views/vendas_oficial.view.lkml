@@ -223,5 +223,11 @@ view: vendas_oficial {
     type: average
     value_format_name: reais
   }
+  measure: cumulative_total_count {
+    type: running_total
+    sql: ${data_vendido_date} ;;
+    direction: "column"
+  }
+
 
 }
