@@ -45,6 +45,17 @@ view: leads_proprietario {
     sql: ${TABLE}.email_proprietario ;;
   }
 
+  dimension: deal_extra_reason {
+    type: string
+    sql: ${TABLE}.deal_extra_reason ;;
+  }
+
+  dimension: deal_extra_description {
+    type: string
+    sql: ${TABLE}.deal_extra_description ;;
+  }
+
+
   dimension: km {
     type: number
     sql: ${TABLE}.km ;;
