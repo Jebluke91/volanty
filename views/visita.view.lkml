@@ -69,6 +69,13 @@ view: visita {
     sql: ${TABLE}.inspectionkey ;;
   }
 
+
+  dimension: observacao_cliente {
+    type: string
+    sql: ${TABLE}.observacao_cliente ;;
+  }
+
+
   dimension: inspetor_visita {
     type: string
     sql: ${TABLE}.inspetor_visita ;;
@@ -82,6 +89,16 @@ view: visita {
   dimension: marca {
     type: string
     sql: ${TABLE}.marca ;;
+  }
+
+  dimension: lead_id {
+    type: string
+    sql: ${TABLE}.lead_id ;;
+  }
+
+  dimension: referencia_cliente_telefone {
+    type: string
+    sql: ${TABLE}.referencia_cliente_telefone ;;
   }
 
   dimension: modelo {
