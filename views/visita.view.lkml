@@ -111,9 +111,9 @@ view: visita {
     sql: ${TABLE}.nome_visitante ;;
   }
 
-  dimension: observacao_cliente {
+  dimension: tipo {
     type: string
-    sql: ${TABLE}.observacao_cliente ;;
+    sql: ${TABLE}.tipo ;;
   }
 
   dimension: origem_visita {
