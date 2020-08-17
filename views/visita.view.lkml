@@ -151,10 +151,6 @@ view: visita {
     sql: ${TABLE}.produto ;;
   }
 
-  dimension: referencia_cliente_telefone {
-    type: string
-    sql: ${TABLE}.referencia_cliente_telefone ;;
-  }
 
   dimension: referencia_lead {
     type: string
