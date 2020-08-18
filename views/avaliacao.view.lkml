@@ -128,7 +128,7 @@ view: avaliacao {
 
   dimension: marca {
     type: string
-    sql: ${TABLE}.brand ;;
+    sql: ${TABLE}.marca ;;
   }
 
   dimension: versao {
