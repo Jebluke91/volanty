@@ -78,6 +78,11 @@ view: leads_compra {
     sql: ${TABLE}.nome_inspetor_visita ;;
   }
 
+  dimension: lead_id {
+    type: string
+    sql: ${TABLE}.lead_id ;;
+  }
+
   dimension: produto {
     type: string
     sql: ${TABLE}.produto ;;

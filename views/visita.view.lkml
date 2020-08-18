@@ -151,6 +151,10 @@ view: visita {
     sql: ${TABLE}.produto ;;
   }
 
+  dimension: leadid {
+    type: string
+    sql: ${TABLE}.leadid ;;
+  }
 
   dimension: referencia_lead {
     type: string
