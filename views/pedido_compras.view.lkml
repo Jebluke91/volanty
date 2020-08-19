@@ -37,6 +37,7 @@ view: pedido_compras {
       raw,
       time,
       date,
+     day_of_month,
       week,
       month,
       quarter,
