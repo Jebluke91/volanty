@@ -42,6 +42,12 @@ view: estoque {
     sql: ${TABLE}.cor ;;
   }
 
+  dimension: tag {
+    type: string
+    sql: ${TABLE}.tag ;;
+  }
+
+
   dimension: categoria {
     type: string
     sql: ${TABLE}.categoria ;;
