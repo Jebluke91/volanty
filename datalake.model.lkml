@@ -113,15 +113,3 @@ explore: capacidade_estoque {
 explore: pedido_compras {
   label: "Compras"
 }
-
-explore: tempo_venda_km {
-  label: "Tempo de Venda por Km"
-}
-
-explore: tempo_venda_preco {
-  label: "Tempo de Venda por Preco"
-}
-
-explore: liquidez_modelo {
-  label: "Liquidez Modelo"
-}
