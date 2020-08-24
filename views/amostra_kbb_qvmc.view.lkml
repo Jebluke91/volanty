@@ -1,5 +1,5 @@
-view: amostra_kbb {
-  sql_table_name: `volanty-production.adhoc_views.Amostra_KBB`
+view: amostra_kbb_qvmc {
+  sql_table_name: `volanty-production.spreedsheets_data.Amostra_KBB_QVMC`
     ;;
 
   dimension: ano_modelo {
