@@ -150,8 +150,21 @@ view: leads_proprietario {
     sql: ${TABLE}.version ;;
   }
 
-  measure: count {
-    type: count
-    drill_fields: []
+  dimension: media_utmsource {
+    type: string
+    sql: ${TABLE}.media_utmsource ;;
   }
+  dimension: media_utmCampaign {
+    type: string
+    sql: ${TABLE}.media_utmCampaign ;;
+  }
+
+  dimension: media_utmmedium {
+    type: string
+    sql: ${TABLE}.media_utmmedium ;;
+  }
+
+
+
+
 }

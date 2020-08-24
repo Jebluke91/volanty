@@ -25,6 +25,10 @@ view: funil_lead_aquisicao {
     type: string
     sql: ${TABLE}.etapa ;;
   }
+  dimension: utm_source {
+    type: string
+    sql: ${TABLE}.utm_source ;;
+  }
 
   measure: count {
     type: count
