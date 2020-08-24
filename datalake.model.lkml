@@ -85,6 +85,11 @@ explore: acquisition_lead {
   required_access_grants: [admin_team]
 }
 
+explore: amostra_kbb {
+  label: "amostra_kbb"
+  required_access_grants: [admin_team]
+}
+
 
 explore: compras_selecionados {
   label: "compras_selecionados"
