@@ -17,17 +17,17 @@ view: teste_o2 {
   }
 
   dimension: Qtd {
-    type: string
+    type: number
     sql: ${TABLE}.string_field_1 ;;
   }
 
   dimension: Nota {
-    type: string
+    type: number
     sql: ${TABLE}.string_field_2 ;;
   }
 
   dimension: Taxa_de_Sucesso {
-    type: string
+    type: number
     sql: ${TABLE}.string_field_3 ;;
   }
 
