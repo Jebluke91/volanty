@@ -86,7 +86,7 @@ explore: acquisition_lead {
 }
 
 
-explore: teste_o {
+explore: teste_o2 {
   label: "teste_o"
   required_access_grants: [admin_team]
 }
