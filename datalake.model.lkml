@@ -85,6 +85,12 @@ explore: acquisition_lead {
   required_access_grants: [admin_team]
 }
 
+
+explore: teste_o {
+  label: "teste_o"
+  required_access_grants: [admin_team]
+}
+
 explore: amostra_kbb_qvmc {
   label: "amostra_kbb"
   required_access_grants: [admin_team]
