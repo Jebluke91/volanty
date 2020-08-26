@@ -1,5 +1,5 @@
-view: teste_o {
-  sql_table_name: `volanty-production.spreedsheets_data.teste_o`
+view: teste_o2 {
+  sql_table_name: `volanty-production.spreedsheets_data.teste_o2`
     ;;
 
   dimension: Mês {
@@ -7,17 +7,17 @@ view: teste_o {
     sql: ${TABLE}.string_field_0 ;;
   }
 
-  dimension: QTD {
+  dimension: Qtd {
     type: string
     sql: ${TABLE}.string_field_1 ;;
   }
 
-  dimension: Pesquisa {
+  dimension: Nota {
     type: string
     sql: ${TABLE}.string_field_2 ;;
   }
 
-  dimension: Taxa_Sucesso {
+  dimension: Taxa_de_Sucesso {
     type: string
     sql: ${TABLE}.string_field_3 ;;
   }
