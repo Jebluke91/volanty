@@ -13,22 +13,22 @@ view: teste_o2 {
       quarter,
       year
     ]
-    sql: ${TABLE}.string_field_0 ;;
+    sql: ${TABLE}.M__s ;;
   }
 
   dimension: Qtd {
     type: number
-    sql: ${TABLE}.string_field_1 ;;
+    sql: ${TABLE}.QTD ;;
   }
 
   dimension: Nota {
     type: number
-    sql: ${TABLE}.string_field_2 ;;
+    sql: ${TABLE}.Pesquisa ;;
   }
 
   dimension: Taxa_de_Sucesso {
     type: number
-    sql: ${TABLE}.string_field_3 ;;
+    sql: ${TABLE}.Taxa_de_Sucesso ;;
   }
 
   measure: count {
