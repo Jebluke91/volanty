@@ -2,8 +2,17 @@ view: teste_o2 {
   sql_table_name: `volanty-production.spreedsheets_data.teste_o2`
     ;;
 
-  dimension: Mês {
-    type: string
+  dimension_group: Mês {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
     sql: ${TABLE}.string_field_0 ;;
   }
 
