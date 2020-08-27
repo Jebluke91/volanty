@@ -1,5 +1,5 @@
 view: teste_o2 {
-  sql_table_name: `volanty-production.spreedsheets_data.teste_o2`
+  sql_table_name: `volanty-production.spreedsheets_data.text_2`
     ;;
 
   dimension_group: m__s {
