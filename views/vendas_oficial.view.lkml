@@ -41,7 +41,7 @@ view: vendas_oficial {
     sql: ${TABLE}.origem ;;
   }
   dimension: valor_compra {
-    type: string
+    type: number
     sql: ${TABLE}.valor_compra ;;
   }
 
@@ -154,7 +154,7 @@ view: vendas_oficial {
 
 
   dimension: preco_venda {
-    type: string
+    type: number
     sql: ${TABLE}.preco_venda ;;
   }
 
