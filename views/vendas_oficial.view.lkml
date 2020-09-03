@@ -36,6 +36,14 @@ view: vendas_oficial {
     type: string
     sql: ${TABLE}.cor ;;
   }
+  dimension: origem {
+    type: string
+    sql: ${TABLE}.origem ;;
+  }
+  dimension: valor_compra {
+    type: string
+    sql: ${TABLE}.valor_compra ;;
+  }
 
 
 
