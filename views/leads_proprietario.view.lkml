@@ -163,6 +163,10 @@ view: leads_proprietario {
     type: string
     sql: ${TABLE}.media_utmmedium ;;
   }
+  measure: count {
+    type: count
+    drill_fields: []
+  }
 
 
 

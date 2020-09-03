@@ -17,6 +17,13 @@ view: Carros {
     sql: ${TABLE}.cav ;;
   }
 
+
+  dimension: valor_compra {
+    type: number
+    sql: ${TABLE}.compra ;;
+  }
+
+
   dimension: cor {
     type: string
     sql: ${TABLE}.cor ;;
