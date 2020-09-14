@@ -163,6 +163,29 @@ view: leads_proprietario {
     type: string
     sql: ${TABLE}.media_utmmedium ;;
   }
+
+  dimension: media_interestedInHomeInspection{
+    type: string
+    sql: ${TABLE}.media_interestedInHomeInspection ;;
+  }
+
+  dimension: media_priceAcceptable{
+    type: string
+    sql: ${TABLE}.media_priceAcceptable ;;
+  }
+
+  dimension: media_priceFeedback{
+    type: string
+    sql: ${TABLE}.media_priceFeedback ;;
+  }
+
+  dimension: media_schedulingStrategy{
+    type: string
+    sql: ${TABLE}.media_schedulingStrategy ;;
+  }
+
+
+
   measure: count {
     type: count
     drill_fields: []
