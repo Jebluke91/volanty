@@ -119,3 +119,6 @@ explore: capacidade_estoque {
 explore: pedido_compras {
   label: "Compras"
 }
+explore: agenda_cavs{
+  label: "Agenda_Cavs"
+}
