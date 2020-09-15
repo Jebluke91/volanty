@@ -36,6 +36,11 @@ view: funil_lead_aquisicao {
     sql: ${TABLE}.utm_source ;;
   }
 
+  dimension: modelo {
+    type: string
+    sql: ${TABLE}.modelo ;;
+  }
+
   measure: count {
     type: count
     drill_fields: []
