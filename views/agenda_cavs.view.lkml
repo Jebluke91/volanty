@@ -1,5 +1,5 @@
 view: agenda_cavs {
-  sql_table_name: `volanty-production.adhoc_views.Agenda_CAVS`
+  sql_table_name: `volanty-production.adhoc_views.Agenda_CAV`
     ;;
 
   dimension: cav {
