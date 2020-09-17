@@ -48,7 +48,7 @@ view: funil_lead_aquisicao_cavv1 {
   }
 
   dimension: media_priceAcceptable {
-    type: string
+    type: yesno
     sql: ${TABLE}.media_priceAcceptable ;;
   }
 
