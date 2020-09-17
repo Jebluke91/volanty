@@ -47,6 +47,11 @@ view: funil_lead_aquisicao_cavv1 {
     sql: ${TABLE}.model ;;
   }
 
+  dimension: media_priceAcceptable {
+    type: string
+    sql: ${TABLE}.media_priceAcceptable ;;
+  }
+
 
 
   measure: count {
