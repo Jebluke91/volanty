@@ -170,7 +170,7 @@ view: leads_proprietario {
   }
 
   dimension: media_priceAcceptable{
-    type: string
+    type: yesno
     sql: ${TABLE}.media_priceAcceptable ;;
   }
 
