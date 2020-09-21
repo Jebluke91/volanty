@@ -165,7 +165,7 @@ view: leads_proprietario {
   }
 
   dimension: media_interestedInHomeInspection{
-    type: string
+    type: yesno
     sql: ${TABLE}.media_interestedInHomeInspection ;;
   }
 
