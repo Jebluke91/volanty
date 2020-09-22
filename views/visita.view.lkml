@@ -190,4 +190,8 @@ view: visita {
     type: count
     drill_fields: []
   }
+  measure: origin {
+    type: string
+    sql: ${TABLE}.origin ;;
+  }
 }
