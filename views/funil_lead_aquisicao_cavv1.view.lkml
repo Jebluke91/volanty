@@ -37,6 +37,23 @@ view: funil_lead_aquisicao_cavv1 {
     sql: ${TABLE}.uf ;;
   }
 
+  dimension: modelo_escolhido {
+    type: string
+    sql: ${TABLE}.modelo_escolhido ;;
+  }
+
+  dimension: model {
+    type: string
+    sql: ${TABLE}.model ;;
+  }
+
+  dimension: media_priceAcceptable {
+    type: yesno
+    sql: ${TABLE}.media_priceAcceptable ;;
+  }
+
+
+
   measure: count {
     type: count
     drill_fields: []
