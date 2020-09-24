@@ -107,10 +107,6 @@ explore: report_alteracao_precos {
 }
 
 
-explore: conversao_aquisicao_v1 {
-  label: "Conversao_Proprietário"
-
-}
 
 explore: capacidade_estoque {
   label: "Estoque_capacidade"
