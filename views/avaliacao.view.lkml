@@ -85,9 +85,9 @@ view: avaliacao {
     sql: ${TABLE}.status_proposta ;;
   }
 
-  dimension: deal_extra_reason {
+  dimension: deal_reason {
     type: string
-    sql: ${TABLE}.deal_extra_reason ;;
+    sql: ${TABLE}.deal_reason ;;
   }
 
   dimension: deal_extra_description {
