@@ -85,6 +85,16 @@ view: avaliacao {
     sql: ${TABLE}.status_proposta ;;
   }
 
+  dimension: deal_extra_reason {
+    type: string
+    sql: ${TABLE}.deal_extra_reason ;;
+  }
+
+  dimension: deal_extra_description {
+    type: string
+    sql: ${TABLE}.deal_extra_description ;;
+  }
+
   dimension: telefone_proprietario {
     type: string
     sql: ${TABLE}.telefone_proprietario ;;
