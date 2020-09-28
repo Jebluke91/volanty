@@ -146,6 +146,11 @@ view: avaliacao {
     sql: ${TABLE}.media_schedulingStrategy ;;
   }
 
+  dimension: media_origin{
+    type: string
+    sql: ${TABLE}.media_origin ;;
+  }
+
   dimension: mediautmsource{
     type: string
     sql: ${TABLE}.mediautmsource ;;
