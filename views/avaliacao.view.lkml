@@ -143,7 +143,7 @@ view: avaliacao {
 
   dimension: mediaschedulingstrategy{
     type: string
-    sql: ${TABLE}.mediaschedulingstrategy ;;
+    sql: ${TABLE}.media_schedulingStrategy ;;
   }
 
   dimension: mediautmsource{
