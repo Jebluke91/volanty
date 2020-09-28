@@ -123,7 +123,7 @@ view: avaliacao {
 
   dimension: modelo {
     type: string
-    sql: ${TABLE}.model ;;
+    sql: ${TABLE}.modelo ;;
   }
 
   dimension: marca {
