@@ -59,6 +59,11 @@ view: compras_selecionados {
     sql: ${TABLE}.CAV_venda ;;
   }
 
+  dimension: fornecedor {
+    type: string
+    sql: ${TABLE}.fornecedor ;;
+  }
+
   dimension: chassi {
     type: string
     sql: ${TABLE}.Chassi ;;
