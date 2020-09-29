@@ -1,5 +1,5 @@
 view: compras_selecionados {
-  sql_table_name: `volanty-production:views.Compras_Selecionados_BO`
+  sql_table_name: `volanty-production.views.Compras_Selecionados_BO`
     ;;
   drill_fields: [id]
 
