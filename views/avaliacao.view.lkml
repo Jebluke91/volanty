@@ -90,9 +90,9 @@ view: avaliacao {
     sql: ${TABLE}.deal_reason ;;
   }
 
-  dimension: deal_extra_description {
+  dimension: deal_description {
     type: string
-    sql: ${TABLE}.deal_extra_description ;;
+    sql: ${TABLE}.deal_description ;;
   }
 
   dimension: telefone_proprietario {
