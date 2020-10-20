@@ -116,6 +116,10 @@ explore: capacidade_estoque {
 explore: campanhas_proprietarios {
   label: "Campanhas_Proprietarios"
 }
+
+explore: campanhas_comprador {
+  label: "Campanhas_Compradores"
+}
 explore: pedido_compras {
   label: "Compras"
 }
