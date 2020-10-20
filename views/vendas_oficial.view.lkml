@@ -65,20 +65,6 @@ view: vendas_oficial {
 
 
 
-  dimension_group: data_retirado {
-    type: time
-    timeframes: [
-      raw,
-      time,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
-    sql: ${TABLE}.data_retirado ;;
-  }
-
   dimension_group: data_vendido {
     type: time
     timeframes: [
@@ -95,16 +81,7 @@ view: vendas_oficial {
     ;;
   }
 
-  dimension: desconto_aplicado {
-    type: string
-    sql: ${TABLE}.desconto_aplicado ;;
-  }
 
-
-  dimension: intervalo_agendado_vendido {
-    type: number
-    sql: ${TABLE}.intervalo_agendado_vendido ;;
-  }
 
   dimension: intervalo_anunciado_reservado {
     type: number
@@ -137,10 +114,17 @@ view: vendas_oficial {
     sql: ${TABLE}.modelo ;;
   }
 
-  dimension: percentual_comissao {
-    type: number
-    sql: ${TABLE}.percentual_comissao ;;
+  dimension: referencia_lead {
+    type: string
+    sql: ${TABLE}.referencia_lead ;;
   }
+
+  dimension: meta_nome_campanha {
+    type: string
+    sql: ${TABLE}.meta_nome_campanha ;;
+  }
+
+
 
   dimension: placa {
     type: string
@@ -163,10 +147,7 @@ view: vendas_oficial {
     sql: ${TABLE}.produto ;;
   }
 
-  dimension: saldo_proprietario {
-    type: string
-    sql: ${TABLE}.saldo_proprietario ;;
-  }
+
 
   dimension: status {
     type: string
@@ -182,19 +163,6 @@ view: vendas_oficial {
 
 
 
-  dimension_group: ultima_atualizacao {
-    type: time
-    timeframes: [
-      raw,
-      time,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
-    sql: CAST(${TABLE}.ultima_atualizacao AS TIMESTAMP) ;;
-  }
 
   dimension: vendedor {
     type: string
