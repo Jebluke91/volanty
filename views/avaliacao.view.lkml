@@ -150,11 +150,20 @@ view: avaliacao {
     type: number
     sql: ${TABLE}.preco_webmotors ;;
   }
+  dimension: media_utmTerm {
+    type: string
+    sql: ${TABLE}.media_utmTerm ;;
 
+  }
+  dimension: media_utmContent {
+    type: string
+    sql: ${TABLE}.media_utmContent ;;
 
+  }
 
   measure: count {
     type: count
     drill_fields: []
   }
+
 }
