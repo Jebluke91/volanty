@@ -107,18 +107,19 @@ explore: report_alteracao_precos {
 }
 
 
-explore: conversao_aquisicao_v1 {
-  label: "Conversao_Proprietário"
-
-}
 
 explore: capacidade_estoque {
   label: "Estoque_capacidade"
 }
 
+
+explore: campanhas_proprietarios {
+  label: "Campanhas_Proprietarios"
+}
+
+explore: campanhas_comprador {
+  label: "Campanhas_Compradores"
+}
 explore: pedido_compras {
   label: "Compras"
-}
-explore: agenda_cavs{
-  label: "Agenda_Cavs"
 }

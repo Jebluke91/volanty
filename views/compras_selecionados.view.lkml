@@ -1,5 +1,5 @@
 view: compras_selecionados {
-  sql_table_name: `volanty-production.spreedsheets_data.Compras_Selecionados`
+  sql_table_name: `volanty-production.views.Compras_Selecionados_BO`
     ;;
   drill_fields: [id]
 
@@ -57,6 +57,11 @@ view: compras_selecionados {
   dimension: cav_venda {
     type: string
     sql: ${TABLE}.CAV_venda ;;
+  }
+
+  dimension: fornecedor {
+    type: string
+    sql: ${TABLE}.fornecedor ;;
   }
 
   dimension: chassi {

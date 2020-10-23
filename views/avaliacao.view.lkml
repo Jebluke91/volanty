@@ -85,6 +85,16 @@ view: avaliacao {
     sql: ${TABLE}.status_proposta ;;
   }
 
+  dimension: deal_reason {
+    type: string
+    sql: ${TABLE}.deal_reason ;;
+  }
+
+  dimension: deal_description {
+    type: string
+    sql: ${TABLE}.deal_description ;;
+  }
+
   dimension: telefone_proprietario {
     type: string
     sql: ${TABLE}.telefone_proprietario ;;
@@ -123,7 +133,7 @@ view: avaliacao {
 
   dimension: modelo {
     type: string
-    sql: ${TABLE}.model ;;
+    sql: ${TABLE}.modelo ;;
   }
 
   dimension: marca {
@@ -139,6 +149,21 @@ view: avaliacao {
   dimension: ano_modelo {
     type: string
     sql: ${TABLE}.ano_modelo ;;
+  }
+
+  dimension: mediaschedulingstrategy{
+    type: string
+    sql: ${TABLE}.media_schedulingStrategy ;;
+  }
+
+  dimension: media_origin{
+    type: string
+    sql: ${TABLE}.media_origin ;;
+  }
+
+  dimension: mediautmsource{
+    type: string
+    sql: ${TABLE}.mediautmsource ;;
   }
 
   dimension: placa {
