@@ -184,6 +184,16 @@ view: avaliacao {
     type: string
     sql: ${TABLE}.media_utmContent ;;
   }
+  dimension: cancellation_reason {
+    type: string
+    sql: ${TABLE}.cancellation_reason ;;
+  }
+  dimension: cancellation_description {
+    type: string
+    sql: ${TABLE}.cancellation_description ;;
+  }
+
+
 
 
 
