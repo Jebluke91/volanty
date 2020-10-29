@@ -176,10 +176,30 @@ view: avaliacao {
     sql: ${TABLE}.preco_webmotors ;;
   }
 
+  dimension: media_utmTerm {
+    type: string
+    sql: ${TABLE}.media_utmTerm ;;
+  }
+  dimension: media_utmContent {
+    type: string
+    sql: ${TABLE}.media_utmContent ;;
+  }
+  dimension: motivo_cancelamento {
+    type: string
+    sql: ${TABLE}.motivo_cancelamento ;;
+  }
+  dimension: descricao_cancelamento {
+    type: string
+    sql: ${TABLE}.descricao_cancelamento ;;
+  }
+
+
+
 
 
   measure: count {
     type: count
     drill_fields: []
   }
+
 }

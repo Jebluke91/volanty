@@ -183,6 +183,15 @@ view: leads_proprietario {
     type: string
     sql: ${TABLE}.media_schedulingStrategy ;;
   }
+  dimension: media_utmTerm {
+    type: string
+    sql: ${TABLE}.media_utmTerm ;;
+  }
+  dimension: media_utmContent {
+    type: string
+    sql: ${TABLE}.media_utmContent ;;
+  }
+
 
 
 
