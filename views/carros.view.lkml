@@ -17,6 +17,11 @@ view: Carros {
     sql: ${TABLE}.cav ;;
   }
 
+  dimension: tag {
+    type: string
+    sql: ${TABLE}.tag ;;
+  }
+
 
   dimension: valor_compra {
     type: number
