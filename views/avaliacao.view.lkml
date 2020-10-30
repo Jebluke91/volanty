@@ -192,7 +192,10 @@ view: avaliacao {
     type: string
     sql: ${TABLE}.descricao_cancelamento ;;
   }
-
+  dimension: proposta {
+    type: number
+    sql: ${TABLE}.proposta ;;
+  }
 
 
 
