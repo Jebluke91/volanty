@@ -218,6 +218,10 @@ view: estoque {
     type: string
     sql: ${TABLE}.link_anuncio ;;
   }
+  dimension: tag_black_friday {
+    type: string
+    sql: ${TABLE}.tag_black_friday ;;
+  }
 
   measure: count {
     type: count
