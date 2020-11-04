@@ -173,6 +173,10 @@ view: vendas_oficial {
     type: string
     sql: ${TABLE}.versao ;;
   }
+  dimension: tag_black_friday {
+    type: string
+    sql: ${TABLE}.tag_black_friday ;;
+  }
 
   dimension: MTD {
     type: yesno
