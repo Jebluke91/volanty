@@ -17,6 +17,11 @@ view: vendas_oficial {
     sql: ${TABLE}.cav_venda ;;
   }
 
+  dimension: uf_venda {
+    type: string
+    sql: ${TABLE}.uf_venda ;;
+  }
+
   dimension: cep_comprador {
     type: string
     sql: ${TABLE}.cep_comprador ;;
