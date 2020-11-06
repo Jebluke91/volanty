@@ -2,7 +2,7 @@ view: vendas_oficial {
   sql_table_name: volanty-production.views.Vendas_Oficial ;;
 
   dimension: ano_modelo {
-    type: number
+    type: string
     sql: ${TABLE}.ano_modelo ;;
   }
 
