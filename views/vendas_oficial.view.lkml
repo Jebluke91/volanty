@@ -132,7 +132,7 @@ view: vendas_oficial {
   }
 
   dimension: preco_anuncio {
-    type: string
+    type: number
     sql: ${TABLE}.preco_anuncio ;;
   }
 
