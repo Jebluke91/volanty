@@ -74,6 +74,10 @@ view: avaliacao {
     type: number
     sql: ${TABLE}.numero_debitos ;;
   }
+  dimension: km {
+    type: number
+    sql: ${TABLE}.km ;;
+  }
 
   dimension: status {
     type: string

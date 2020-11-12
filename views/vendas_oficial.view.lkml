@@ -2,7 +2,7 @@ view: vendas_oficial {
   sql_table_name: volanty-production.views.Vendas_Oficial ;;
 
   dimension: ano_modelo {
-    type: number
+    type: string
     sql: ${TABLE}.ano_modelo ;;
   }
 
@@ -15,6 +15,11 @@ view: vendas_oficial {
   dimension: cav_venda {
     type: string
     sql: ${TABLE}.cav_venda ;;
+  }
+
+  dimension: uf_venda {
+    type: string
+    sql: ${TABLE}.uf_venda ;;
   }
 
   dimension: cep_comprador {
@@ -132,7 +137,7 @@ view: vendas_oficial {
   }
 
   dimension: preco_anuncio {
-    type: string
+    type: number
     sql: ${TABLE}.preco_anuncio ;;
   }
 
