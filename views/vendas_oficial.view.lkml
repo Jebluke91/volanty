@@ -67,9 +67,6 @@ view: vendas_oficial {
   }
 
 
-
-
-
   dimension_group: data_vendido {
     type: time
     timeframes: [
@@ -129,6 +126,32 @@ view: vendas_oficial {
     sql: ${TABLE}.meta_nome_campanha ;;
   }
 
+  dimension: referencia_cliente_telefone {
+    type: string
+    sql: ${TABLE}.referencia_cliente_telefone ;;
+  }
+  dimension: utm_fonte_lead {
+    type: string
+    sql: ${TABLE}.utm_fonte_lead ;;
+  }
+  dimension: utm_campanha_lead {
+    type: string
+    sql: ${TABLE}.utm_campanha_lead ;;
+  }
+  dimension: utm_volanty_lead {
+    type: string
+    sql: ${TABLE}.utm_volanty_lead ;;
+  }
+  dimension: utm_midia_lead {
+    type: string
+    sql: ${TABLE}.utm_midia_lead ;;
+  }
+  dimension: visitid {
+    type: string
+    sql: ${TABLE}.visitid ;;
+  }
+
+
 
 
   dimension: placa {
@@ -167,8 +190,6 @@ view: vendas_oficial {
   }
 
 
-
-
   dimension: vendedor {
     type: string
     sql: ${TABLE}.vendedor ;;
@@ -187,30 +208,6 @@ view: vendas_oficial {
     type: yesno
     sql:  EXTRACT(DAY FROM  ${TABLE}.data_vendido) <= EXTRACT(DAY FROM CURRENT_DATE("America/Sao_Paulo"))
 ;;
-  }
-  dimension: referencia_cliente_telefone {
-    type: string
-    sql: ${TABLE}.referencia_cliente_telefone ;;
-  }
-  dimension: utm_fonte_lead {
-    type: string
-    sql: ${TABLE}.utm_fonte_lead ;;
-  }
-  dimension: utm_campanha_lead {
-    type: string
-    sql: ${TABLE}.utm_campanha_lead ;;
-  }
-  dimension: utm_volanty_lead {
-    type: string
-    sql: ${TABLE}.utm_volanty_lead ;;
-  }
-  dimension: utm_midia_lead {
-    type: string
-    sql: ${TABLE}.utm_midia_lead ;;
-  }
-  dimension: visitid {
-    type: string
-    sql: ${TABLE}.visitid ;;
   }
 
 
