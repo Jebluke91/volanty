@@ -185,6 +185,26 @@ view: visita {
     type: string
     sql: ${TABLE}.versao ;;
   }
+  dimension: meta_nome_campanha {
+    type: string
+    sql: ${TABLE}.meta_nome_campanha ;;
+  }
+  dimension: utm_campanha_lead {
+    type: string
+    sql: ${TABLE}.utm_campanha_lead ;;
+  }
+  dimension: utm_fonte_lead {
+    type: string
+    sql: ${TABLE}.utm_fonte_lead ;;
+  }
+  dimension: utm_volanty_lead {
+    type: string
+    sql: ${TABLE}.utm_volanty_lead ;;
+  }
+  dimension: utm_midia_lead {
+    type: string
+    sql: ${TABLE}.utm_midia_lead ;;
+  }
 
   measure: count {
     type: count
