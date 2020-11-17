@@ -1,5 +1,5 @@
-view: data_vendido_garantia {
-  sql_table_name: `volanty-production:views.Data_Vendido_Garantia`
+view: data_entrega{
+  sql_table_name: `volanty-production.views.Data_Entrega`
    ;;
 
   dimension_group: delivery_date {
