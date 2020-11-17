@@ -55,7 +55,7 @@ view: vendas_oficial {
   dimension_group: data_anunciado {
     type: time
     timeframes: [
-      raw,
+      day_of_month,
       time,
       date,
       week,
@@ -70,7 +70,7 @@ view: vendas_oficial {
   dimension_group: data_vendido {
     type: time
     timeframes: [
-      raw,
+      day_of_month,
       time,
       date,
       week,
@@ -211,7 +211,7 @@ view: vendas_oficial {
   dimension_group: data_entrega {
     type: time
     timeframes: [
-      raw,
+      day_of_month,
       time,
       date,
       week,
