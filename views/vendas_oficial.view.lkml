@@ -209,6 +209,21 @@ view: vendas_oficial {
     sql:  EXTRACT(DAY FROM  ${TABLE}.data_vendido) <= EXTRACT(DAY FROM CURRENT_DATE("America/Sao_Paulo"))
 ;;
   }
+  dimension_group: data_entrega {
+    type: time
+    timeframes: [
+      raw,
+      day_of_month,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql:  ${TABLE}.data_entrega
+      ;;
+  }
 
 
   measure: count {
