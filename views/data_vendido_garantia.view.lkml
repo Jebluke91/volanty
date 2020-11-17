@@ -1,5 +1,5 @@
 view: data_vendido_garantia {
-  sql_table_name: `volanty-production.views.Data_Vendido_Garantia`
+  sql_table_name: `volanty-production:views.Data_Vendido_Garantia`
    ;;
 
   dimension_group: delivery_date {
@@ -35,6 +35,21 @@ view: data_vendido_garantia {
     type: string
     sql: ${TABLE}.versao ;;
   }
+
+  dimension_group:  data_vendido {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql: ${TABLE}. data_vendido ;;
+  }
+
   dimension: buyer_name {
     type: string
     sql: ${TABLE}.buyer_name ;;
