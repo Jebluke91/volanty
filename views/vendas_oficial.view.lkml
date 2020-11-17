@@ -212,7 +212,6 @@ view: vendas_oficial {
     type: time
     timeframes: [
       raw,
-      day_of_month,
       time,
       date,
       week,
