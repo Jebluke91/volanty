@@ -12,6 +12,11 @@ view: pedido_compras {
     sql: ${TABLE}.ano_modelo ;;
   }
 
+  dimension: faixa_km {
+    type: string
+    sql: ${TABLE}.faixa_km ;;
+  }
+
   dimension: board_value_type {
     type: string
     sql: ${TABLE}.board_value_type ;;
