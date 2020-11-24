@@ -12,6 +12,11 @@ view: leads_proprietario {
     sql: ${TABLE}.Cav ;;
   }
 
+  dimension: faixa_km {
+    type: string
+    sql: ${TABLE}.faixa_km ;;
+  }
+
   dimension_group: data_criacao_lead {
     type: time
     timeframes: [
