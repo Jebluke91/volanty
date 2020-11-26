@@ -12,6 +12,11 @@ view: simulacoes_qvmc {
     sql: ${TABLE}.ano_modelo ;;
   }
 
+  dimension: faixa_km {
+    type: string
+    sql: ${TABLE}.faixa_km ;;
+  }
+
   dimension: canal_origem {
     type: string
     sql: ${TABLE}.canal_origem ;;
