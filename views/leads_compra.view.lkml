@@ -49,18 +49,7 @@ view: leads_compra {
     sql: ${TABLE}.data_visita_criada ;;
   }
 
-  dimension_group: data_visita_executada {
-    type: time
-    timeframes: [
-      raw,
-      time,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
-    sql: ${TABLE}.data_visita_executada ;;
+
   }
 
   dimension: email_lead {
