@@ -173,5 +173,5 @@ view: leads_compra {
 
   measure: count {
     type: count
-
   }
+ }
