@@ -93,6 +93,11 @@ view: leads_compra {
     sql: ${TABLE}.referencia_lead ;;
   }
 
+  dimension: placa {
+    type: string
+    sql: ${TABLE}.placa ;;
+  }
+
   dimension: status_visita {
     type: string
     sql: ${TABLE}.status_visita ;;
