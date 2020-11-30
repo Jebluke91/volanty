@@ -53,6 +53,9 @@ explore: leads_compra {
   label: "leads_compra"
 }
 
+explore: leads_ads_ {
+  label: "leads_compra_custo"
+}
 
 
 
