@@ -4,7 +4,6 @@ view: leads_ads_ {
 
   dimension: cost {
     type: number
-    value_format: "#.00;(#.00)"
     sql: ${TABLE}.cost ;;
   }
 
