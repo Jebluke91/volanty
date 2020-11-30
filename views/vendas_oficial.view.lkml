@@ -81,6 +81,20 @@ view: vendas_oficial {
     sql:  ${TABLE}.data_vendido
     ;;
   }
+  dimension_group: Data_ativacao_garantia {
+    type: time
+    timeframes: [
+      day_of_month,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql:  ${TABLE}.Data_ativacao_garantia
+      ;;
+  }
 
 
 
@@ -137,6 +151,8 @@ view: vendas_oficial {
     type: string
     sql: ${TABLE}.utm_campanha_lead ;;
   }
+
+
   dimension: utm_volanty_lead {
     type: string
     sql: ${TABLE}.utm_volanty_lead ;;
