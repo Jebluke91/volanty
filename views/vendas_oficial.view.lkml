@@ -12,9 +12,9 @@ view: vendas_oficial {
   }
 
 
-  dimension: cav_venda {
+  dimension: cav {
     type: string
-    sql: ${TABLE}.cav_venda ;;
+    sql: ${TABLE}.cav ;;
   }
 
   dimension: uf_venda {
@@ -44,6 +44,11 @@ view: vendas_oficial {
   dimension: origem {
     type: string
     sql: ${TABLE}.origem ;;
+  }
+
+  dimension: fornecedor {
+    type: string
+    sql: ${TABLE}.fornecedor ;;
   }
   dimension: valor_compra {
     type: number
@@ -245,7 +250,7 @@ view: vendas_oficial {
     drill_fields: [car_details*]
   }
   set: car_details {
-    fields: [marca,modelo,versao,cav_venda,ano_modelo,vendedor]
+    fields: [marca,modelo,versao,cav,ano_modelo,vendedor]
   }
 
   measure: preco_soma {
