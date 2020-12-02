@@ -176,10 +176,7 @@ view: estoque {
     sql: ${TABLE}.preco_por ;;
   }
 
-  dimension: produto {
-    type: string
-    sql: ${TABLE}.produto ;;
-  }
+
 
   measure: qtd_lead {
     type: sum
