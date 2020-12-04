@@ -23,6 +23,7 @@ view: leads_proprietario {
       raw,
       time,
       date,
+      day_of_week,
       week,
       month,
       quarter,

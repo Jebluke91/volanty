@@ -6,6 +6,7 @@ view: funil_lead_aquisicao {
     timeframes: [
       raw,
       date,
+      day_of_week,
       week,
       month,
       quarter,
