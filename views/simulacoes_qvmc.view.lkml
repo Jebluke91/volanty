@@ -182,5 +182,10 @@ view: simulacoes_qvmc {
     drill_fields: []
   }
 
+  measure: average {
+    type: average
+    drill_fields: []
+  }
+
 
 }
