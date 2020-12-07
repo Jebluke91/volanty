@@ -34,7 +34,7 @@ view: funil_lead_aquisicao_cavv1 {
 
   dimension: uf {
     type: string
-    sql:
+    sql: ${TABLE}.uf ;;
 
     dimension: media_origin {
     type: string
