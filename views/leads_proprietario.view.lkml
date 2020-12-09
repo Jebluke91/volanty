@@ -72,6 +72,11 @@ view: leads_proprietario {
     sql: ${TABLE}.marca ;;
   }
 
+  dimension: uf {
+    type: string
+    sql: ${TABLE}.uf ;;
+  }
+
   dimension: maximo_preco_compra {
     type: number
     sql: ${TABLE}.maximo_preco_compra ;;
