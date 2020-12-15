@@ -7,6 +7,11 @@ view: avaliacao {
     sql: ${TABLE}.cav ;;
   }
 
+  dimension: uf {
+    type: string
+    sql: ${TABLE}.uf ;;
+  }
+
   dimension_group: data_criacao_avaliacao {
     type: time
     timeframes: [
@@ -183,6 +188,11 @@ view: avaliacao {
   dimension: media_utmTerm {
     type: string
     sql: ${TABLE}.media_utmTerm ;;
+  }
+
+  dimension: media_feedbackprice {
+    type: string
+    sql: ${TABLE}.media_pricefeedback ;;
   }
   dimension: media_utmContent {
     type: string
