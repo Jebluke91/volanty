@@ -91,6 +91,11 @@ view: visita {
     sql: ${TABLE}.marca ;;
   }
 
+  dimension: feedback_reason {
+    type: string
+    sql: ${TABLE}.feedback_reason ;;
+  }
+
   dimension: lead_id {
     type: string
     sql: ${TABLE}.lead_id ;;
