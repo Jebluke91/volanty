@@ -129,10 +129,7 @@ view: vendas_oficial {
     sql: ${TABLE}.marca ;;
   }
 
-  dimension: reasondescription {
-    type: string
-    sql: ${TABLE}.reasondescription ;;
-  }
+
 
   dimension: modelo {
     type: string
