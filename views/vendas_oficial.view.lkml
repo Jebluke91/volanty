@@ -12,9 +12,9 @@ view: vendas_oficial {
   }
 
 
-  dimension: cav_venda {
+  dimension: cav {
     type: string
-    sql: ${TABLE}.cav_venda ;;
+    sql: ${TABLE}.cav ;;
   }
 
   dimension: uf_venda {
@@ -45,6 +45,11 @@ view: vendas_oficial {
     type: string
     sql: ${TABLE}.origem ;;
   }
+
+  dimension: fornecedor {
+    type: string
+    sql: ${TABLE}.fornecedor ;;
+  }
   dimension: valor_compra {
     type: number
     sql: ${TABLE}.valor_compra ;;
@@ -55,7 +60,7 @@ view: vendas_oficial {
   dimension_group: data_anunciado {
     type: time
     timeframes: [
-      raw,
+      day_of_month,
       time,
       date,
       week,
@@ -70,7 +75,7 @@ view: vendas_oficial {
   dimension_group: data_vendido {
     type: time
     timeframes: [
-      raw,
+      day_of_month,
       time,
       date,
       week,
@@ -80,6 +85,20 @@ view: vendas_oficial {
     ]
     sql:  ${TABLE}.data_vendido
     ;;
+  }
+  dimension_group: Data_ativacao_garantia {
+    type: time
+    timeframes: [
+      day_of_month,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql:  ${TABLE}.Data_ativacao_garantia
+      ;;
   }
 
 
@@ -110,6 +129,8 @@ view: vendas_oficial {
     sql: ${TABLE}.marca ;;
   }
 
+
+
   dimension: modelo {
     type: string
     sql: ${TABLE}.modelo ;;
@@ -137,6 +158,8 @@ view: vendas_oficial {
     type: string
     sql: ${TABLE}.utm_campanha_lead ;;
   }
+
+
   dimension: utm_volanty_lead {
     type: string
     sql: ${TABLE}.utm_volanty_lead ;;
@@ -211,7 +234,7 @@ view: vendas_oficial {
   dimension_group: data_entrega {
     type: time
     timeframes: [
-      raw,
+      day_of_month,
       time,
       date,
       week,
@@ -229,7 +252,7 @@ view: vendas_oficial {
     drill_fields: [car_details*]
   }
   set: car_details {
-    fields: [marca,modelo,versao,cav_venda,ano_modelo,vendedor]
+    fields: [marca,modelo,versao,cav,ano_modelo,vendedor]
   }
 
   measure: preco_soma {

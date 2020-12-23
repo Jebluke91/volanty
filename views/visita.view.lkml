@@ -64,6 +64,12 @@ view: visita {
     sql: ${TABLE}.email_visitante ;;
   }
 
+
+
+  dimension: feedback_reason {
+    type: string
+    sql: ${TABLE}.feedback_reason ;;
+  }
   dimension: inspectionkey {
     type: number
     sql: ${TABLE}.inspectionkey ;;
@@ -90,6 +96,8 @@ view: visita {
     type: string
     sql: ${TABLE}.marca ;;
   }
+
+
 
   dimension: lead_id {
     type: string

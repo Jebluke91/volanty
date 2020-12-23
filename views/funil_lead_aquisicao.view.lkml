@@ -6,6 +6,7 @@ view: funil_lead_aquisicao {
     timeframes: [
       raw,
       date,
+      day_of_week,
       week,
       month,
       quarter,
@@ -34,6 +35,11 @@ view: funil_lead_aquisicao {
   dimension: utm_source {
     type: string
     sql: ${TABLE}.utm_source ;;
+  }
+
+  dimension: faixa_km {
+    type: string
+    sql: ${TABLE}.faixa_km ;;
   }
 
   dimension: modelo {

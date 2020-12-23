@@ -22,6 +22,11 @@ view: campanhas_comprador {
     sql: ${TABLE}.meta_nome_campanha ;;
   }
 
+  dimension: uf {
+    type: string
+    sql: ${TABLE}.uf ;;
+  }
+
   dimension: produto {
     type: string
     sql: ${TABLE}.produto ;;

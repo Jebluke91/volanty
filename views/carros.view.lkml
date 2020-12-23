@@ -17,6 +17,11 @@ view: Carros {
     sql: ${TABLE}.cav ;;
   }
 
+  dimension: link_anuncio {
+    type: string
+    sql: ${TABLE}.link_anuncio ;;
+  }
+
   dimension: tag {
     type: string
     sql: ${TABLE}.tag ;;

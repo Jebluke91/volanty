@@ -12,12 +12,18 @@ view: leads_proprietario {
     sql: ${TABLE}.Cav ;;
   }
 
+  dimension: faixa_km {
+    type: string
+    sql: ${TABLE}.faixa_km ;;
+  }
+
   dimension_group: data_criacao_lead {
     type: time
     timeframes: [
       raw,
       time,
       date,
+      day_of_week,
       week,
       month,
       quarter,
@@ -64,6 +70,11 @@ view: leads_proprietario {
   dimension: marca {
     type: string
     sql: ${TABLE}.marca ;;
+  }
+
+  dimension: uf {
+    type: string
+    sql: ${TABLE}.uf ;;
   }
 
   dimension: maximo_preco_compra {
