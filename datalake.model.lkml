@@ -80,6 +80,11 @@ explore: leads_proprietario {
 }
 
 
+explore: vendas_canceladas {
+
+}
+
+
 
 explore: estoque_movimentacao {
   label: "Estoque_movimentacao"
