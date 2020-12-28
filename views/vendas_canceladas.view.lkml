@@ -252,6 +252,6 @@ view: vendas_canceladas {
   measure: count {
     type: count
     drill_fields: []
-
+  }
 
   }
