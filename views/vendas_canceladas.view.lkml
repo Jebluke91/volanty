@@ -1,4 +1,5 @@
 view: vendas_canceladas {
+
   sql_table_name: `volanty-production.views.Vendas_Canceladas`
     ;;
 
@@ -251,5 +252,6 @@ view: vendas_canceladas {
   measure: count {
     type: count
     drill_fields: []
+
+
   }
-}
