@@ -155,6 +155,11 @@ view: vendas_canceladas {
     sql: ${TABLE}.reasonDescription ;;
   }
 
+
+  dimension: reason {
+    type: string
+    sql: ${TABLE}.reason ;;
+  }
   dimension: referencia_cliente_telefone {
     type: string
     sql: ${TABLE}.referencia_cliente_telefone ;;
