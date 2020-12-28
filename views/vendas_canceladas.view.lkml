@@ -1,5 +1,5 @@
 view: vendas_canceladas {
-  sql_table_name: volanty-production.views.Vendas_Canceladas ;;
+  sql_table_name: `volanty-production.views.Vendas_Canceladas` ;;
 
   dimension: inspection_key {
     type: string
