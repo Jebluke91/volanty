@@ -133,3 +133,7 @@ explore: campanhas_comprador {
 explore: pedido_compras {
   label: "Compras"
 }
+
+explore: preleads{
+  label: "PreLeads"
+}
