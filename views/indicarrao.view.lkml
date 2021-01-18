@@ -12,8 +12,17 @@ view: indicarrao {
     sql: ${TABLE}._id ;;
   }
 
-  dimension: data_atualizacao {
-    type: string
+  dimension_group: data_atualizacao {
+     type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
     sql: ${TABLE}.data_atualizacao ;;
   }
 
