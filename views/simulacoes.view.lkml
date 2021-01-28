@@ -1,4 +1,4 @@
-view: simulacoes_qvmc {
+view: simulacoes {
   sql_table_name: `volanty-production.adhoc_views.Simulacoes`
     ;;
 
