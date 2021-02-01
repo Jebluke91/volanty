@@ -1,6 +1,10 @@
 view: preleads {
   sql_table_name: `volanty-production.DW.PreLeads`
   ;;
+  dimension: _id {
+    type: string
+    sql: ${TABLE}._id ;;
+  }
   dimension: ownersPhone {
     type: string
     sql: ${TABLE}.ownersPhone ;;
