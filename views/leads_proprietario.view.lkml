@@ -6,10 +6,14 @@ view: leads_proprietario {
     type: number
     sql: ${TABLE}.ano_modelo ;;
   }
-
   dimension: cav {
     type: string
     sql: ${TABLE}.Cav ;;
+  }
+
+  dimension: preLeadId {
+    type: string
+    sql: ${TABLE}.preLeadId ;;
   }
 
   dimension: faixa_km {
