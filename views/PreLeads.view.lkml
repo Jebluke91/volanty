@@ -78,6 +78,38 @@ view: preleads {
     sql: ${TABLE}. lead ;;
   }
 
+  dimension:  cav {
+    type: string
+    sql: ${TABLE}. cav ;;
+  }
+  dimension:  uf {
+    type: string
+    sql: ${TABLE}. uf ;;
+  }
+  dimension_group: data_inspecao_agendada {
+    type: time
+    timeframes: [
+      raw,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+  }
+  dimension:  nome_proprietario_lead {
+    type: string
+    sql: ${TABLE}. nome_proprietario_lead ;;
+  }
+  dimension:  email_proprietario_lead {
+    type: string
+    sql: ${TABLE}. email_proprietario_lead ;;
+  }
+  dimension:  placa_lead {
+    type: string
+    sql: ${TABLE}. placa_lead ;;
+  }
+
     measure: count {
       type: count
       drill_fields: []
