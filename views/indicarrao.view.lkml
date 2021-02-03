@@ -105,6 +105,26 @@ view: indicarrao {
     sql: ${TABLE}.userId ;;
   }
 
+  dimension: nome_proprietario_lead {
+    type: string
+    sql: ${TABLE}.nome_proprietario_lead ;;
+  }
+
+  dimension: email_proprietario_lead {
+    type: string
+    sql: ${TABLE}.email_proprietario_lead ;;
+  }
+
+  dimension: placa_lead {
+    type: string
+    sql: ${TABLE}.placa_lead ;;
+  }
+
+  dimension: data_inspecao_agendada {
+    type: string
+    sql: ${TABLE}.data_inspecao_agendada ;;
+  }
+
   measure: count {
     type: count
     drill_fields: []
