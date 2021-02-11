@@ -203,6 +203,11 @@ view: leads_proprietario {
     sql: ${TABLE}.media_utmContent ;;
   }
 
+  dimension: preLeadId {
+    type: string
+    sql: ${TABLE}.preLeadId ;;
+  }
+
 
 
 
