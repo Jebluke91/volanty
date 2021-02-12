@@ -61,10 +61,27 @@ view: estoque_comercial {
     sql: ${TABLE}.placa_2 ;;
   }
 
+  dimension: UF {
+    type: string
+    sql: ${TABLE}.UF ;;
+  }
+
+  dimension: cav {
+    type: string
+    sql: ${TABLE}.cav ;;
+  }
+
   dimension: valor_compra {
     type: number
     sql: ${TABLE}.valor_compra ;;
   }
+
+  dimension: fipe {
+    type: number
+    sql: ${TABLE}.fipe ;;
+  }
+
+
 
   measure: count {
     type: count

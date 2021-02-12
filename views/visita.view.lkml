@@ -12,6 +12,12 @@ view: visita {
     sql: ${TABLE}.cav ;;
   }
 
+
+  dimension: visitid {
+    type: string
+    sql: ${TABLE}.visitid ;;
+  }
+
   dimension: comentarios_visita {
     type: string
     sql: ${TABLE}.comentarios_visita ;;
