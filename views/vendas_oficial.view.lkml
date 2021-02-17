@@ -174,6 +174,29 @@ view: vendas_oficial {
   }
 
 
+  dimension: delivery_type {
+    type: string
+    sql: ${TABLE}.delivery_type ;;
+  }
+
+
+  dimension: type {
+    type: string
+    sql: ${TABLE}.type ;;
+  }
+
+
+  dimension: supporter {
+    type: string
+    sql: ${TABLE}.supporter ;;
+  }
+
+  dimension: referralcav {
+    type: string
+    sql: ${TABLE}.referralcav ;;
+  }
+
+
 
 
   dimension: placa {
