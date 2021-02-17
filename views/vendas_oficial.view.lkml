@@ -174,26 +174,26 @@ view: vendas_oficial {
   }
 
 
-  dimension: delivery_type {
+  dimension: tipo_entrega {
     type: string
-    sql: ${TABLE}.delivery_type ;;
+    sql: ${TABLE}.tipo_entrega ;;
   }
 
 
-  dimension: type {
+  dimension: produto_venda {
     type: string
-    sql: ${TABLE}.type ;;
+    sql: ${TABLE}.produto_venda ;;
   }
 
 
-  dimension: supporter {
+  dimension: consultor_apoiador {
     type: string
-    sql: ${TABLE}.supporter ;;
+    sql: ${TABLE}.consultor_apoiador ;;
   }
 
-  dimension: referralcav {
+  dimension: cav_venda {
     type: string
-    sql: ${TABLE}.referralcav ;;
+    sql: ${TABLE}.cav_venda ;;
   }
 
 
@@ -244,10 +244,7 @@ view: vendas_oficial {
     type: string
     sql: ${TABLE}.versao ;;
   }
-  dimension: tag_black_friday {
-    type: string
-    sql: ${TABLE}.tag_black_friday ;;
-  }
+
 
   dimension: MTD {
     type: yesno
