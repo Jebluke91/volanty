@@ -2,9 +2,9 @@ view: leads_proprietario {
   sql_table_name: `volanty-production.views.Leads_Proprietario`
     ;;
 
-  dimension: ano_modelo {
+  dimension: modelYear {
     type: number
-    sql: ${TABLE}.ano_modelo ;;
+    sql: ${TABLE}.modelYear ;;
   }
   dimension: cav {
     type: string
@@ -71,9 +71,9 @@ view: leads_proprietario {
     sql: ${TABLE}.km ;;
   }
 
-  dimension: marca {
+  dimension: brand {
     type: string
-    sql: ${TABLE}.marca ;;
+    sql: ${TABLE}.brand ;;
   }
 
   dimension: uf {
