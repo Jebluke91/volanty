@@ -1,5 +1,5 @@
 view: simulacoes_qvmc {
-  sql_table_name: `volanty-production.views.Simulacoes_QVMC`
+  sql_table_name: `volanty-production.adhoc_views.Simulacoes`
     ;;
 
   dimension: agendou_avaliacao {
@@ -12,14 +12,14 @@ view: simulacoes_qvmc {
     sql: ${TABLE}.ano_modelo ;;
   }
 
-  dimension: faixa_km {
-    type: string
-    sql: ${TABLE}.faixa_km ;;
-  }
-
   dimension: canal_origem {
     type: string
     sql: ${TABLE}.canal_origem ;;
+  }
+
+  dimension: cor {
+    type: string
+    sql: ${TABLE}.cor ;;
   }
 
   dimension_group: data_sessao {
@@ -29,7 +29,6 @@ view: simulacoes_qvmc {
       time,
       date,
       week,
-     day_of_week,
       month,
       quarter,
       year
@@ -45,6 +44,11 @@ view: simulacoes_qvmc {
   dimension: email_agendamento {
     type: string
     sql: ${TABLE}.email_agendamento ;;
+  }
+
+  dimension: faixa_km {
+    type: string
+    sql: ${TABLE}.Faixa_KM ;;
   }
 
   dimension: ga_client_id {
@@ -77,9 +81,44 @@ view: simulacoes_qvmc {
     sql: ${TABLE}.marca ;;
   }
 
+  dimension: maximo_preco_compra {
+    type: number
+    sql: ${TABLE}.maximo_preco_compra ;;
+  }
+
+  dimension: maximo_preco_consignado {
+    type: number
+    sql: ${TABLE}.maximo_preco_consignado ;;
+  }
+
+  dimension: maximo_preco_troca {
+    type: number
+    sql: ${TABLE}.maximo_preco_troca ;;
+  }
+
+  dimension: minimo_preco_compra {
+    type: number
+    sql: ${TABLE}.minimo_preco_compra ;;
+  }
+
+  dimension: minimo_preco_consignado {
+    type: number
+    sql: ${TABLE}.minimo_preco_consignado ;;
+  }
+
+  dimension: minimo_preco_troca {
+    type: number
+    sql: ${TABLE}.minimo_preco_troca ;;
+  }
+
   dimension: modelo {
     type: string
     sql: ${TABLE}.modelo ;;
+  }
+
+  dimension: modelo_escolhido {
+    type: string
+    sql: ${TABLE}.modelo_escolhido ;;
   }
 
   dimension: nome_agendamento {
@@ -92,44 +131,14 @@ view: simulacoes_qvmc {
     sql: ${TABLE}.placa ;;
   }
 
-  dimension: preco_maximo_compra {
+  dimension: preco_max {
     type: number
-    sql: ${TABLE}.preco_maximo_compra ;;
+    sql: ${TABLE}.preco_max ;;
   }
 
-  dimension: preco_maximo_consignado {
+  dimension: preco_min {
     type: number
-    sql: ${TABLE}.preco_maximo_consignado ;;
-  }
-
-  dimension: preco_minimo_consignado {
-    type: number
-    sql: ${TABLE}.preco_minimo_consignado ;;
-  }
-
-  dimension: preco_maximo_troca {
-    type: number
-    sql: ${TABLE}.preco_maximo_troca ;;
-  }
-
-  dimension: preco_minimo_troca {
-    type: number
-    sql: ${TABLE}.preco_minimo_troca ;;
-  }
-
-  measure: preco_max_compra_ {
-    type: average
-    sql: ${TABLE}.preco_max_compra ;;
-  }
-
-  dimension: preco_min_compra {
-    type: string
-    sql: ${TABLE}.preco_min_compra ;;
-  }
-
-  measure: preco_min_compra_ {
-    type: average
-    sql: ${TABLE}.preco_min_compra ;;
+    sql: ${TABLE}.preco_min ;;
   }
 
   dimension: referer {
@@ -145,6 +154,11 @@ view: simulacoes_qvmc {
   dimension: tipo_precificacao_selecionado {
     type: string
     sql: ${TABLE}.tipo_precificacao_selecionado ;;
+  }
+
+  dimension: uf {
+    type: string
+    sql: ${TABLE}.uf ;;
   }
 
   dimension: utm_campaign {
@@ -181,7 +195,4 @@ view: simulacoes_qvmc {
     type: count
     drill_fields: []
   }
-
-
-
 }

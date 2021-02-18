@@ -174,6 +174,29 @@ view: vendas_oficial {
   }
 
 
+  dimension: tipo_entrega {
+    type: string
+    sql: ${TABLE}.tipo_entrega ;;
+  }
+
+
+  dimension: produto_venda {
+    type: string
+    sql: ${TABLE}.produto_venda ;;
+  }
+
+
+  dimension: consultor_apoiador {
+    type: string
+    sql: ${TABLE}.consultor_apoiador ;;
+  }
+
+  dimension: cav_venda {
+    type: string
+    sql: ${TABLE}.cav_venda ;;
+  }
+
+
 
 
   dimension: placa {
@@ -221,10 +244,7 @@ view: vendas_oficial {
     type: string
     sql: ${TABLE}.versao ;;
   }
-  dimension: tag_black_friday {
-    type: string
-    sql: ${TABLE}.tag_black_friday ;;
-  }
+
 
   dimension: MTD {
     type: yesno
@@ -252,7 +272,7 @@ view: vendas_oficial {
     drill_fields: [car_details*]
   }
   set: car_details {
-    fields: [marca,modelo,versao,cav,ano_modelo,vendedor]
+    fields: [marca,placa,modelo,versao,cav,ano_modelo,vendedor]
   }
 
   measure: preco_soma {

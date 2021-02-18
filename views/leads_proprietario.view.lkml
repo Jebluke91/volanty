@@ -2,9 +2,9 @@ view: leads_proprietario {
   sql_table_name: `volanty-production.views.Leads_Proprietario`
     ;;
 
-  dimension: modelYear {
+  dimension: ano_modelo {
     type: number
-    sql: ${TABLE}.modelYear ;;
+    sql: ${TABLE}.ano_modelo ;;
   }
   dimension: cav {
     type: string
@@ -71,9 +71,9 @@ view: leads_proprietario {
     sql: ${TABLE}.km ;;
   }
 
-  dimension: brand {
+  dimension: marca {
     type: string
-    sql: ${TABLE}.brand ;;
+    sql: ${TABLE}.marca ;;
   }
 
   dimension: uf {
@@ -131,9 +131,9 @@ view: leads_proprietario {
     sql: ${TABLE}.minimo_preco_troca;;
   }
 
-  dimension: model {
+  dimension: modelo {
     type: string
-    sql: ${TABLE}.model ;;
+    sql: ${TABLE}.modelo ;;
   }
   dimension: modelo_escolhido {
     type: string
@@ -160,9 +160,9 @@ view: leads_proprietario {
     sql: ${TABLE}.telefone_proprietario ;;
   }
 
-  dimension: version {
+  dimension: versao {
     type: string
-    sql: ${TABLE}.version ;;
+    sql: ${TABLE}.versao ;;
   }
 
   dimension: media_utmsource {
@@ -206,6 +206,7 @@ view: leads_proprietario {
     type: string
     sql: ${TABLE}.media_utmContent ;;
   }
+
 
 
 
