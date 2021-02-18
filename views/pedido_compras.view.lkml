@@ -85,9 +85,9 @@ view: pedido_compras {
     sql: ${TABLE}.id_order ;;
   }
 
-  dimension: km_carro {
+  dimension: km {
     type: number
-    sql: ${TABLE}.km_carro ;;
+    sql: ${TABLE}.km ;;
   }
 
   dimension: marca {
