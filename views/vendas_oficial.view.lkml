@@ -220,6 +220,11 @@ view: vendas_oficial {
     sql: ${TABLE}.produto ;;
   }
 
+  dimension: tag {
+    type: string
+    sql: ${TABLE}.tag ;;
+  }
+
 
 
   dimension: status {
