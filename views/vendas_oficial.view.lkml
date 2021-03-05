@@ -141,6 +141,11 @@ view: vendas_oficial {
     sql: ${TABLE}.referencia_lead ;;
   }
 
+  dimension: Garantia_Premium {
+    type: string
+    sql: ${TABLE}.Garantia_Premium ;;
+  }
+
   dimension: meta_nome_campanha {
     type: string
     sql: ${TABLE}.meta_nome_campanha ;;
