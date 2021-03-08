@@ -2,9 +2,9 @@ view: leads_compra {
   sql_table_name: `volanty-production.views.Leads_Compra`
     ;;
 
-  dimension: cav_visita {
+  dimension: cav {
     type: string
-    sql: ${TABLE}.cav_visita ;;
+    sql: ${TABLE}.cav ;;
   }
 
   dimension_group: data_criacao_lead {
@@ -77,10 +77,7 @@ view: leads_compra {
     sql: ${TABLE}.produto ;;
   }
 
-  dimension: cav {
-    type: string
-    sql: ${TABLE}.cav ;;
-  }
+
 
 
   dimension: referencia_lead {
