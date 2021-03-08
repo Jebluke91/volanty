@@ -148,7 +148,7 @@ view: vendas_oficial {
 
 
   dimension: Garantia_Premium_Preco {
-    type: string
+    type: number
     sql: ${TABLE}.Garantia_Premium_Preco ;;
   }
 
