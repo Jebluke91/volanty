@@ -77,6 +77,12 @@ view: leads_compra {
     sql: ${TABLE}.produto ;;
   }
 
+  dimension: cav {
+    type: string
+    sql: ${TABLE}.cav ;;
+  }
+
+
   dimension: referencia_lead {
     type: string
     sql: ${TABLE}.referencia_lead ;;
