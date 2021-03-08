@@ -142,7 +142,7 @@ view: vendas_oficial {
   }
 
   dimension: Garantia_Premium {
-    type: yesno
+    type: string
     sql: ${TABLE}.Garantia_Premium ;;
   }
 
