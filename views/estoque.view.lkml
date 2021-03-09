@@ -63,6 +63,11 @@ view: estoque {
     sql: ${TABLE}.critico_lead_por_dias ;;
   }
 
+  dimension: fornecedor {
+    type: string
+    sql: ${TABLE}.fornecedor ;;
+  }
+
 
   dimension: compra {
     type: number
@@ -98,7 +103,7 @@ view: estoque {
 
   }
   set: car_details {
-    fields: [placa,marca,modelo,versao,preco_por,produto,qtd_lead,qtd_visita,dias_em_estoque,dias_sem_lead,dias_sem_visita]
+    fields: [placa,marca,modelo,versao,preco_por,qtd_lead,qtd_visita,dias_em_estoque,dias_sem_lead,dias_sem_visita]
   }
 
 
