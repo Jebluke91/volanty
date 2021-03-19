@@ -18,7 +18,14 @@ view: estoque_movimentacao_detalhado_v1 {
   }
 
   dimension: estoque_inicio_mes_mais_entrada {
-    type: number
+   type: time
+    timeframes: [
+
+      month,
+
+    ]
+    sql: ${TABLE}.data_anunciado ;;
+  }
     sql: ${TABLE}.estoque_inicio_mes_mais_entrada ;;
   }
 
