@@ -13,6 +13,7 @@ view: leads_compra {
       raw,
       time,
       date,
+      day_of_week,
       week,
       month,
       quarter,
