@@ -122,10 +122,6 @@ explore: capacidade_estoque {
   label: "Estoque_capacidade"
 }
 
-explore: estoque_movimentacao_detalhado_v1 {
-  label: "Estoque_movimentacao_detalhado"
-}
-
 
 explore: campanhas_proprietarios {
   label: "Campanhas_Proprietarios"
