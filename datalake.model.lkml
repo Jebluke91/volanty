@@ -57,6 +57,9 @@ explore: leads_ads_ {
   label: "leads_compra_custo"
 }
 
+explore: financiamentos_ {
+  label: "Financiamento"
+}
 
 
 explore: report_comparador_pr {
