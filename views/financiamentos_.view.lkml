@@ -1,5 +1,5 @@
 view: financiamentos_ {
-  sql_table_name: `volanty-production.spreedsheets_data.Financiamentos_`
+  sql_table_name: `volanty-production.spreedsheets_data.Financiamento_`
     ;;
 
   dimension: banco {
