@@ -93,22 +93,22 @@ view: financiamentos_ {
   }
 
   dimension: valor_da_parcela {
-    type: string
+    type: number
     sql: ${TABLE}.Valor_da_Parcela ;;
   }
 
   dimension: valor_financiado {
-    type: string
+    type: number
     sql: ${TABLE}.Valor_Financiado ;;
   }
 
   dimension: valor_pago {
-    type: string
+    type: number
     sql: ${TABLE}.Valor_Pago ;;
   }
 
   dimension: valor_total {
-    type: string
+    type: number
     sql: ${TABLE}.Valor_Total ;;
   }
 
