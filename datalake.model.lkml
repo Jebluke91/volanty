@@ -78,9 +78,7 @@ explore: estoque {
   label: "Estoque"
 }
 
-explore: indicarrao_cadastros {
-  label: "indicarrao_cadastros"
-}
+
 
 explore: leads_proprietario {
 
@@ -143,4 +141,8 @@ explore: pedido_compras {
 
 explore: indicarrao{
   label: "Indicarrao"
+}
+
+explore: indicarrao_cadastros {
+  label: "indicarrao_cadastros"
 }
