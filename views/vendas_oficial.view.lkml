@@ -152,6 +152,17 @@ view: vendas_oficial {
     sql: ${TABLE}.Garantia_Premium_Preco ;;
   }
 
+
+  dimension: lavagem {
+    type: number
+    sql: ${TABLE}.lavagem ;;
+  }
+
+  dimension: lavagem_preco {
+    type: number
+    sql: ${TABLE}.lavagem_preco ;;
+  }
+
   dimension: meta_nome_campanha {
     type: string
     sql: ${TABLE}.meta_nome_campanha ;;
