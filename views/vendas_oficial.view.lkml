@@ -155,12 +155,12 @@ view: vendas_oficial {
 
   dimension: lavagem {
     type: number
-    sql: ${TABLE}.lavagem ;;
+    sql: ${TABLE}.Lavagem ;;
   }
 
   dimension: lavagem_preco {
     type: number
-    sql: ${TABLE}.lavagem_preco ;;
+    sql: ${TABLE}.Lavagem_preco ;;
   }
 
   dimension: meta_nome_campanha {
