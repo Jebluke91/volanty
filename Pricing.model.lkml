@@ -19,3 +19,7 @@ explore: rmse_qvmc_placa {
   label: "RMSE_qvmc_placa"
 
 }
+explore: rmse_vendas_oficial {
+  label: "RMSE_vendas_oficial"
+
+}
