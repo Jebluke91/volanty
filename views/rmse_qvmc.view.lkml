@@ -12,6 +12,21 @@ view: rmse_qvmc {
     sql: ${TABLE}.RMSE ;;
   }
 
+  dimension_group: data {
+    type: time
+    timeframes: [
+      day_of_month,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql: ${TABLE}.data ;;
+  }
+
+
   measure: count {
     type: count
     drill_fields: []
