@@ -141,6 +141,28 @@ view: vendas_oficial {
     sql: ${TABLE}.referencia_lead ;;
   }
 
+  dimension: Garantia_Premium {
+    type: string
+    sql: ${TABLE}.Garantia_Premium ;;
+  }
+
+
+  dimension: Garantia_Premium_Preco {
+    type: number
+    sql: ${TABLE}.Garantia_Premium_Preco ;;
+  }
+
+
+  dimension: lavagem {
+    type: number
+    sql: ${TABLE}.Lavagem ;;
+  }
+
+  dimension: lavagem_preco {
+    type: number
+    sql: ${TABLE}.Lavagem_preco ;;
+  }
+
   dimension: meta_nome_campanha {
     type: string
     sql: ${TABLE}.meta_nome_campanha ;;
@@ -218,6 +240,11 @@ view: vendas_oficial {
   dimension: produto {
     type: string
     sql: ${TABLE}.produto ;;
+  }
+
+  dimension: tag {
+    type: string
+    sql: ${TABLE}.tag ;;
   }
 
 

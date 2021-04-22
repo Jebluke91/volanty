@@ -43,6 +43,7 @@ view: visita {
       raw,
       time,
       date,
+      day_of_week,
       week,
       month,
       quarter,
@@ -50,6 +51,23 @@ view: visita {
     ]
     sql: ${TABLE}.data_visita_criada ;;
   }
+
+  dimension_group: data_atualizacao {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      day_of_week,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql: ${TABLE}.data_atualizacao ;;
+  }
+
+
 
   dimension_group: data_visitada {
     type: time

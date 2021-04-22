@@ -7,15 +7,19 @@ view: estoque_movimentacao {
     sql: ${TABLE}.entrada_acumulada ;;
   }
 
-  measure: estoque_mes {
-    type: sum
+  dimension: estoque_mes {
+    type: number
     sql: ${TABLE}.estoque_mes ;;
   }
 
   dimension_group: mes {
     type: time
     timeframes: [
+      raw,
+      date,
+      week,
       month,
+      quarter,
       year
     ]
     convert_tz: no
@@ -28,13 +32,13 @@ view: estoque_movimentacao {
     sql: ${TABLE}.mes_entrada ;;
   }
 
-  measure: qtd_entrada {
-    type: sum
+  dimension: qtd_entrada {
+    type: number
     sql: ${TABLE}.qtd_entrada ;;
   }
 
-  measure: qtd_saida {
-    type: sum
+  dimension: qtd_saida {
+    type: number
     sql: ${TABLE}.qtd_saida ;;
   }
 

@@ -57,6 +57,9 @@ explore: leads_ads_ {
   label: "leads_compra_custo"
 }
 
+explore: financiamentos_ {
+  label: "Financiamento"
+}
 
 
 explore: report_comparador_pr {
@@ -74,6 +77,8 @@ explore: atribuicao_venda_leads {
 explore: estoque {
   label: "Estoque"
 }
+
+
 
 explore: leads_proprietario {
 
@@ -136,4 +141,8 @@ explore: pedido_compras {
 
 explore: indicarrao{
   label: "Indicarrao"
+}
+
+explore: indicarrao_cadastros {
+  label: "indicarrao_cadastros"
 }
