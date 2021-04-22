@@ -3,7 +3,7 @@ connection: "volanty-production"
 
 include: "/views/*.view"
 
-label: "Pricing.model"
+label: "Pricing"
 
 datagroup: default_datagroup  {
   max_cache_age: "24 hours"
