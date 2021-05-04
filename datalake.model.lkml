@@ -40,6 +40,10 @@ explore: Carros {
 explore: avaliacao {
 }
 
+explore: custo_proprietario {
+}
+
+
 explore: visita {
   label: "visita"
 }
