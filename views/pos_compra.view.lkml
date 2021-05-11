@@ -66,6 +66,11 @@ view: pos_compra {
     sql: ${TABLE}.modelo ;;
   }
 
+  dimension: ano_modelo {
+    type: string
+    sql: ${TABLE}.ano_modelo ;;
+  }
+
   dimension: order_id {
     type: string
     sql: ${TABLE}.order_id ;;
