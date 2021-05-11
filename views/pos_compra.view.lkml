@@ -34,8 +34,20 @@ view: pos_compra {
 
 
 
-  dimension: data_criacao {
-    type: string
+
+
+
+  dimension_group: data_criacao {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
     sql: ${TABLE}.data_criacao ;;
   }
 
