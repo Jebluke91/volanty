@@ -37,6 +37,24 @@ view: pos_compra {
 
 
 
+
+    dimension_group: update_date {
+      type: time
+      timeframes: [
+        raw,
+        time,
+        date,
+        week,
+        month,
+        quarter,
+        year
+      ]
+      sql: ${TABLE}.updateDate ;;
+    }
+
+  }
+
+
   dimension_group: data_criacao {
     type: time
     timeframes: [
@@ -120,10 +138,6 @@ view: pos_compra {
     sql: ${TABLE}.UF ;;
   }
 
-  dimension: update_date {
-    type: string
-    sql: ${TABLE}.updateDate ;;
-  }
 
   dimension: usuario {
     type: string
