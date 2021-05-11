@@ -37,6 +37,9 @@ explore: simulacoes_qvmc {
 explore: Carros {
 }
 
+explore: pos_compra {
+}
+
 explore: avaliacao {
 }
 
