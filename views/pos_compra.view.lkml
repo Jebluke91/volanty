@@ -76,6 +76,20 @@ view: pos_compra {
     sql: ${TABLE}.placa ;;
   }
 
+
+
+  dimension: dias_entre_compra_ordem {
+    type: number
+    sql: ${TABLE}.dias_entre_compra_ordem ;;
+  }
+
+
+  dimension: dias_em_servico {
+    type: number
+    sql: ${TABLE}.dias_em_servico ;;
+  }
+
+
   dimension: preco {
     type: number
     sql: ${TABLE}.preco ;;
