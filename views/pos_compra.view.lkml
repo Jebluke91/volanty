@@ -52,7 +52,7 @@ view: pos_compra {
       sql: ${TABLE}.updateDate ;;
     }
 
-  }
+
 
 
   dimension_group: data_criacao {
