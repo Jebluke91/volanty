@@ -7,6 +7,21 @@ view: pos_compra {
     sql: ${TABLE}._id ;;
   }
 
+  dimension: avarias_avaliacao {
+    type: number
+    sql: ${TABLE}.avarias_avaliacao ;;
+  }
+
+  dimension: avarias_reavaliacao {
+    type: number
+    sql: ${TABLE}.avarias_reavaliacao ;;
+  }
+
+  dimension: avarias_oficina {
+    type: number
+    sql: ${TABLE}.avarias_oficina ;;
+  }
+
   dimension: board_value {
     type: string
     sql: ${TABLE}.Board_Value ;;
@@ -16,6 +31,8 @@ view: pos_compra {
     type: string
     sql: ${TABLE}.cav ;;
   }
+
+
 
   dimension: data_criacao {
     type: string
