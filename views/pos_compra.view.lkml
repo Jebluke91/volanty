@@ -17,7 +17,7 @@ view: pos_compra {
     sql: ${TABLE}.avarias_reavaliacao ;;
   }
 
-  dimension: avarias_oficina {
+  dimension: avarias_ordem {
     type: number
     sql: ${TABLE}.avarias_oficina ;;
   }
