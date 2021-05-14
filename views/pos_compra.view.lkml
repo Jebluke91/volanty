@@ -19,7 +19,7 @@ view: pos_compra {
 
   dimension: avarias_ordem {
     type: number
-    sql: ${TABLE}.avarias_oficina ;;
+    sql: ${TABLE}.avarias_ordem ;;
   }
 
   dimension: board_value {
