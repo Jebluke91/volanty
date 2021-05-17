@@ -40,6 +40,9 @@ view: pos_compra_fila {
     sql: ${TABLE}.data_criacao ;;
   }
 
+
+
+
   dimension: dias_fila {
     type: number
     sql: ${TABLE}.dias_fila ;;

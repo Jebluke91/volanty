@@ -69,6 +69,21 @@ view: pos_compra {
     sql: ${TABLE}.data_criacao ;;
   }
 
+  dimension_group: data_liberacao_pos_compra {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql: ${TABLE}.data_liberacao_pos_compra ;;
+  }
+
+
   dimension: km {
     type: string
     sql: ${TABLE}.km ;;
