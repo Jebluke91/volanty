@@ -53,6 +53,23 @@ view: pos_compra_fila {
     sql: ${TABLE}.marca ;;
   }
 
+  dimension: source {
+    type: string
+    sql: ${TABLE}.source ;;
+  }
+
+  dimension: tipo {
+    type: string
+    sql: ${TABLE}.tipo ;;
+  }
+
+  dimension: uf {
+    type: string
+    sql: ${TABLE}.uf ;;
+  }
+
+
+
   dimension: modelo {
     type: string
     sql: ${TABLE}.modelo ;;
