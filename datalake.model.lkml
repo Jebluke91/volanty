@@ -156,3 +156,6 @@ explore: indicarrao{
 explore: indicarrao_cadastros {
   label: "indicarrao_cadastros"
 }
+explore: fipe_vendas {
+  label: "Fipe_Vendas"
+}
