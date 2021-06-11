@@ -37,8 +37,18 @@ explore: simulacoes_qvmc {
 explore: Carros {
 }
 
+explore: pos_compra {
+}
+
+explore: pos_compra_fila {
+}
+
 explore: avaliacao {
 }
+
+explore: custo_proprietario {
+}
+
 
 explore: visita {
   label: "visita"
