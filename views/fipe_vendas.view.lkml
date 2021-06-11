@@ -1,5 +1,5 @@
 view: fipe_vendas {
-  sql_table_name: `volanty-hml.views.Fipe_Vendas
+  sql_table_name: `volanty-production.adhoc_views.Fipe_Vendas`
   ;;
 
 
