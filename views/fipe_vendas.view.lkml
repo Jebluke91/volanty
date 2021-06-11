@@ -9,22 +9,27 @@ view: fipe_vendas {
     type: string
     sql: ${TABLE}.model ;;
   }
+
   dimension: model_year {
     type: number
     sql: ${TABLE}.model_year ;;
   }
+
   dimension: fipe_price {
     type: number
     sql: ${TABLE}.fipe_price ;;
   }
+
   dimension: sale_price {
     type: number
     sql: ${TABLE}.sale_price ;;
   }
+
   dimension: percentage {
     type: number
     sql: ${TABLE}.percentage ;;
   }
+
   dimension_group: sale_date {
     type: time
     timeframes: [
