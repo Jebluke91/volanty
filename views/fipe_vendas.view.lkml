@@ -1,8 +1,6 @@
 view: fipe_vendas {
   sql_table_name: `volanty-production.adhoc_views.Fipe_Vendas`
   ;;
-
-
   dimension: brand {
     type: string
     sql: ${TABLE}.brand ;;
