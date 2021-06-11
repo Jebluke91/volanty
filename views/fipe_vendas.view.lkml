@@ -43,6 +43,18 @@ view: fipe_vendas {
     ]
     sql: ${TABLE}.sale_date ;;
   }
+  dimension: fornecedor {
+    type: string
+    sql: ${TABLE}.fornecedor ;;
+  }
+  dimension: origem {
+    type: string
+    sql: ${TABLE}.origem ;;
+  }
+  dimension: km {
+    type: number
+    sql: ${TABLE}.km ;;
+  }
 
   measure: count {
     type: count
