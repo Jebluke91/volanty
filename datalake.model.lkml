@@ -131,8 +131,6 @@ explore: report_alteracao_precos {
 
 }
 
-
-
 explore: capacidade_estoque {
   label: "Estoque_capacidade"
 }
