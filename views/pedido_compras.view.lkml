@@ -75,6 +75,11 @@ view: pedido_compras {
     sql: ${TABLE}.cav ;;
   }
 
+  dimension: uf {
+    type: string
+    sql: ${TABLE}.UF ;;
+  }
+
   dimension: id_lead {
     type: string
     sql: ${TABLE}.id_lead ;;
