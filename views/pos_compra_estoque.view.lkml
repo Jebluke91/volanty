@@ -53,6 +53,11 @@ view: pos_compra_estoque {
     sql: ${TABLE}.modelo ;;
   }
 
+  dimension: ano_modelo {
+    type: string
+    sql: ${TABLE}.ano_modelo ;;
+  }
+
   dimension: parceiro {
     type: string
     sql: ${TABLE}.parceiro ;;
