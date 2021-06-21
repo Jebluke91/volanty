@@ -40,6 +40,10 @@ explore: Carros {
 explore: pos_compra {
 }
 
+explore: pos_compra_estoque {
+}
+
+
 explore: pos_compra_fila {
 }
 
