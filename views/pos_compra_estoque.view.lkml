@@ -9,21 +9,6 @@ view: pos_compra_estoque {
     sql: ${TABLE}.id ;;
   }
 
-  dimension: car_color {
-    type: string
-    sql: ${TABLE}.car_color ;;
-  }
-
-  dimension: car_km {
-    type: string
-    sql: ${TABLE}.car_km ;;
-  }
-
-  dimension: car_plate {
-    type: string
-    sql: ${TABLE}.car_plate ;;
-  }
-
   dimension: cav {
     type: string
     sql: ${TABLE}.cav ;;
@@ -34,9 +19,19 @@ view: pos_compra_estoque {
     sql: ${TABLE}.cidade ;;
   }
 
+  dimension: cor {
+    type: string
+    sql: ${TABLE}.cor ;;
+  }
+
   dimension: data_criacao {
     type: string
     sql: ${TABLE}.data_criacao ;;
+  }
+
+  dimension: km {
+    type: string
+    sql: ${TABLE}.km ;;
   }
 
   dimension: marca {
@@ -52,6 +47,11 @@ view: pos_compra_estoque {
   dimension: parceiro {
     type: string
     sql: ${TABLE}.parceiro ;;
+  }
+
+  dimension: placa {
+    type: string
+    sql: ${TABLE}.placa ;;
   }
 
   dimension: preco_compra {
