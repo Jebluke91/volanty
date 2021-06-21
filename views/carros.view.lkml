@@ -198,6 +198,12 @@ view: Carros {
     sql: ${TABLE}.placa ;;
   }
 
+
+  dimension: fornecedor {
+    type: string
+    sql: ${TABLE}.fornecedor ;;
+  }
+
   dimension: preco_de {
     type: number
     sql: ${TABLE}.preco_de ;;
