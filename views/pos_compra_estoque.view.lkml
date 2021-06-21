@@ -24,9 +24,18 @@ view: pos_compra_estoque {
     sql: ${TABLE}.cor ;;
   }
 
-  dimension: data_criacao {
-    type: string
-    sql: ${TABLE}.data_criacao ;;
+  dimension_group: data_criacao {
+   type: time
+    timeframes: [
+      day_of_month,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql: ${TABLE}.data_anunciado ;;
   }
 
   dimension: km {
