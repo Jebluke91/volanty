@@ -35,7 +35,7 @@ view: pos_compra_estoque {
       quarter,
       year
     ]
-    sql: ${TABLE}.data_anunciado ;;
+    sql: ${TABLE}.data_criacao ;;
   }
 
   dimension: km {
