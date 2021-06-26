@@ -7,6 +7,11 @@ view: avaliacao {
     sql: ${TABLE}.cav ;;
   }
 
+  dimension: uf {
+    type: string
+    sql: ${TABLE}.uf ;;
+  }
+
   dimension_group: data_criacao_avaliacao {
     type: time
     timeframes: [
@@ -74,6 +79,10 @@ view: avaliacao {
     type: number
     sql: ${TABLE}.numero_debitos ;;
   }
+  dimension: km {
+    type: number
+    sql: ${TABLE}.km ;;
+  }
 
   dimension: status {
     type: string
@@ -83,6 +92,16 @@ view: avaliacao {
   dimension: status_proposta {
     type: string
     sql: ${TABLE}.status_proposta ;;
+  }
+
+  dimension: deal_reason {
+    type: string
+    sql: ${TABLE}.deal_reason ;;
+  }
+
+  dimension: deal_description {
+    type: string
+    sql: ${TABLE}.deal_description ;;
   }
 
   dimension: telefone_proprietario {
@@ -123,12 +142,12 @@ view: avaliacao {
 
   dimension: modelo {
     type: string
-    sql: ${TABLE}.model ;;
+    sql: ${TABLE}.modelo ;;
   }
 
   dimension: marca {
     type: string
-    sql: ${TABLE}.brand ;;
+    sql: ${TABLE}.marca ;;
   }
 
   dimension: versao {
@@ -141,6 +160,21 @@ view: avaliacao {
     sql: ${TABLE}.ano_modelo ;;
   }
 
+  dimension: mediaschedulingstrategy{
+    type: string
+    sql: ${TABLE}.media_schedulingStrategy ;;
+  }
+
+  dimension: media_origin{
+    type: string
+    sql: ${TABLE}.media_origin ;;
+  }
+
+  dimension: mediautmsource{
+    type: string
+    sql: ${TABLE}.mediautmsource ;;
+  }
+
   dimension: placa {
     type: string
     sql: ${TABLE}.placa ;;
@@ -151,10 +185,36 @@ view: avaliacao {
     sql: ${TABLE}.preco_webmotors ;;
   }
 
+  dimension: media_utmTerm {
+    type: string
+    sql: ${TABLE}.media_utmTerm ;;
+  }
+
+  dimension: media_feedbackprice {
+    type: string
+    sql: ${TABLE}.media_pricefeedback ;;
+  }
+  dimension: media_utmContent {
+    type: string
+    sql: ${TABLE}.media_utmContent ;;
+  }
+  dimension: motivo_cancelamento {
+    type: string
+    sql: ${TABLE}.motivo_cancelamento ;;
+  }
+  dimension: descricao_cancelamento {
+    type: string
+    sql: ${TABLE}.descricao_cancelamento ;;
+  }
+  dimension: proposta {
+    type: number
+    sql: ${TABLE}.proposta ;;
+  }
 
 
   measure: count {
     type: count
     drill_fields: []
   }
+
 }

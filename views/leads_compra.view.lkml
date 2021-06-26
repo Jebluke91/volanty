@@ -2,9 +2,9 @@ view: leads_compra {
   sql_table_name: `volanty-production.views.Leads_Compra`
     ;;
 
-  dimension: cav_visita {
+  dimension: cav {
     type: string
-    sql: ${TABLE}.cav_visita ;;
+    sql: ${TABLE}.cav ;;
   }
 
   dimension_group: data_criacao_lead {
@@ -13,6 +13,7 @@ view: leads_compra {
       raw,
       time,
       date,
+      day_of_week,
       week,
       month,
       quarter,
@@ -49,19 +50,8 @@ view: leads_compra {
     sql: ${TABLE}.data_visita_criada ;;
   }
 
-  dimension_group: data_visita_executada {
-    type: time
-    timeframes: [
-      raw,
-      time,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
-    sql: ${TABLE}.data_visita_executada ;;
-  }
+
+
 
   dimension: email_lead {
     type: string
@@ -78,14 +68,27 @@ view: leads_compra {
     sql: ${TABLE}.nome_inspetor_visita ;;
   }
 
+  dimension: lead_id {
+    type: string
+    sql: ${TABLE}.lead_id ;;
+  }
+
   dimension: produto {
     type: string
     sql: ${TABLE}.produto ;;
   }
 
+
+
+
   dimension: referencia_lead {
     type: string
     sql: ${TABLE}.referencia_lead ;;
+  }
+
+  dimension: placa {
+    type: string
+    sql: ${TABLE}.placa ;;
   }
 
   dimension: status_visita {
@@ -174,35 +177,5 @@ view: leads_compra {
 
   measure: count {
     type: count
-    drill_fields: []
   }
-}
-
-view: leads_compra_user{
-  extends: [leads_compra]
-  dimension: email_comprador {
-    hidden: yes
-  }
-  dimension: email_lead {
-    hidden: yes
-  }
-  dimension: email_proprietario {
-    hidden: yes
-  }
-  dimension: email_agendamento {
-    hidden: yes
-  }
-  dimension: telefone_comprador {
-    hidden: yes
-  }
-  dimension: telefone_proprietario {
-    hidden: yes
-  }
-  dimension: telefone_agendamento {
-    hidden: yes
-  }
-  dimension: mensagem {
-    hidden: yes
-  }
-
-  }
+ }

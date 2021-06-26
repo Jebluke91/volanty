@@ -12,6 +12,12 @@ view: visita {
     sql: ${TABLE}.cav ;;
   }
 
+
+  dimension: visitid {
+    type: string
+    sql: ${TABLE}.visitid ;;
+  }
+
   dimension: comentarios_visita {
     type: string
     sql: ${TABLE}.comentarios_visita ;;
@@ -37,6 +43,7 @@ view: visita {
       raw,
       time,
       date,
+      day_of_week,
       week,
       month,
       quarter,
@@ -44,6 +51,23 @@ view: visita {
     ]
     sql: ${TABLE}.data_visita_criada ;;
   }
+
+  dimension_group: data_atualizacao {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      day_of_week,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql: ${TABLE}.data_atualizacao ;;
+  }
+
+
 
   dimension_group: data_visitada {
     type: time
@@ -64,10 +88,23 @@ view: visita {
     sql: ${TABLE}.email_visitante ;;
   }
 
+
+
+  dimension: feedback_reason {
+    type: string
+    sql: ${TABLE}.feedback_reason ;;
+  }
   dimension: inspectionkey {
     type: number
     sql: ${TABLE}.inspectionkey ;;
   }
+
+
+  dimension: observacao_cliente {
+    type: string
+    sql: ${TABLE}.observacao_cliente ;;
+  }
+
 
   dimension: inspetor_visita {
     type: string
@@ -84,6 +121,18 @@ view: visita {
     sql: ${TABLE}.marca ;;
   }
 
+
+
+  dimension: lead_id {
+    type: string
+    sql: ${TABLE}.lead_id ;;
+  }
+
+  dimension: referencia_cliente_telefone {
+    type: string
+    sql: ${TABLE}.referencia_cliente_telefone ;;
+  }
+
   dimension: modelo {
     type: string
     sql: ${TABLE}.modelo ;;
@@ -94,9 +143,9 @@ view: visita {
     sql: ${TABLE}.nome_visitante ;;
   }
 
-  dimension: observacao_cliente {
+  dimension: tipo {
     type: string
-    sql: ${TABLE}.observacao_cliente ;;
+    sql: ${TABLE}.tipo ;;
   }
 
   dimension: origem_visita {
@@ -134,9 +183,9 @@ view: visita {
     sql: ${TABLE}.produto ;;
   }
 
-  dimension: referencia_cliente_telefone {
+  dimension: leadid {
     type: string
-    sql: ${TABLE}.referencia_cliente_telefone ;;
+    sql: ${TABLE}.leadid ;;
   }
 
   dimension: referencia_lead {
@@ -168,9 +217,33 @@ view: visita {
     type: string
     sql: ${TABLE}.versao ;;
   }
+  dimension: meta_nome_campanha {
+    type: string
+    sql: ${TABLE}.meta_nome_campanha ;;
+  }
+  dimension: utm_campanha_lead {
+    type: string
+    sql: ${TABLE}.utm_campanha_lead ;;
+  }
+  dimension: utm_fonte_lead {
+    type: string
+    sql: ${TABLE}.utm_fonte_lead ;;
+  }
+  dimension: utm_volanty_lead {
+    type: string
+    sql: ${TABLE}.utm_volanty_lead ;;
+  }
+  dimension: utm_midia_lead {
+    type: string
+    sql: ${TABLE}.utm_midia_lead ;;
+  }
 
   measure: count {
     type: count
     drill_fields: []
+  }
+  dimension: origin {
+    type: string
+    sql: ${TABLE}.origin ;;
   }
 }

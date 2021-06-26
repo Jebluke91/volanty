@@ -1,12 +1,17 @@
-view: funil_lead_aquisicao {
-  sql_table_name: views.Funil_Lead_Aquisicao ;;
+view: funil_lead_aquisicao_cavv1 {
+  sql_table_name: `volanty-production.raw_views.Funil_Lead_Aquisicao_Cavv1`
+    ;;
+
+  dimension: cav {
+    type: string
+    sql: ${TABLE}.cav ;;
+  }
 
   dimension_group: data {
     type: time
     timeframes: [
       raw,
       date,
-      day_of_week,
       week,
       month,
       quarter,
@@ -27,25 +32,32 @@ view: funil_lead_aquisicao {
     sql: ${TABLE}.etapa ;;
   }
 
-  dimension: tipo {
+  dimension: uf {
     type: string
-    sql: ${TABLE}.tipo ;;
+    sql: ${TABLE}.uf ;;
+    }
+
+    dimension: media_origin {
+    type: string
+    sql: ${TABLE}.media_origin ;;
   }
 
-  dimension: utm_source {
+  dimension: modelo_escolhido {
     type: string
-    sql: ${TABLE}.utm_source ;;
-  }
-
-  dimension: faixa_km {
-    type: string
-    sql: ${TABLE}.faixa_km ;;
+    sql: ${TABLE}.modelo_escolhido ;;
   }
 
   dimension: modelo {
     type: string
     sql: ${TABLE}.modelo ;;
   }
+
+  dimension: media_priceAcceptable {
+    type: yesno
+    sql: ${TABLE}.media_priceAcceptable ;;
+  }
+
+
 
   measure: count {
     type: count

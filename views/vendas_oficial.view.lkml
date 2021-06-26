@@ -2,7 +2,7 @@ view: vendas_oficial {
   sql_table_name: volanty-production.views.Vendas_Oficial ;;
 
   dimension: ano_modelo {
-    type: number
+    type: string
     sql: ${TABLE}.ano_modelo ;;
   }
 
@@ -12,9 +12,14 @@ view: vendas_oficial {
   }
 
 
-  dimension: cav_venda {
+  dimension: cav {
     type: string
-    sql: ${TABLE}.cav_venda ;;
+    sql: ${TABLE}.cav ;;
+  }
+
+  dimension: uf_venda {
+    type: string
+    sql: ${TABLE}.uf_venda ;;
   }
 
   dimension: cep_comprador {
@@ -36,13 +41,26 @@ view: vendas_oficial {
     type: string
     sql: ${TABLE}.cor ;;
   }
+  dimension: origem {
+    type: string
+    sql: ${TABLE}.origem ;;
+  }
+
+  dimension: fornecedor {
+    type: string
+    sql: ${TABLE}.fornecedor ;;
+  }
+  dimension: valor_compra {
+    type: number
+    sql: ${TABLE}.valor_compra ;;
+  }
 
 
 
   dimension_group: data_anunciado {
     type: time
     timeframes: [
-      raw,
+      day_of_month,
       time,
       date,
       week,
@@ -54,27 +72,9 @@ view: vendas_oficial {
   }
 
 
-
-
-
-  dimension_group: data_retirado {
-    type: time
-    timeframes: [
-      raw,
-      time,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
-    sql: ${TABLE}.data_retirado ;;
-  }
-
   dimension_group: data_vendido {
     type: time
     timeframes: [
-      raw,
       day_of_month,
       time,
       date,
@@ -86,17 +86,22 @@ view: vendas_oficial {
     sql:  ${TABLE}.data_vendido
     ;;
   }
-
-  dimension: desconto_aplicado {
-    type: string
-    sql: ${TABLE}.desconto_aplicado ;;
+  dimension_group: Data_ativacao_garantia {
+    type: time
+    timeframes: [
+      day_of_month,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql:  ${TABLE}.Data_ativacao_garantia
+      ;;
   }
 
 
-  dimension: intervalo_agendado_vendido {
-    type: number
-    sql: ${TABLE}.intervalo_agendado_vendido ;;
-  }
 
   dimension: intervalo_anunciado_reservado {
     type: number
@@ -124,15 +129,97 @@ view: vendas_oficial {
     sql: ${TABLE}.marca ;;
   }
 
+
+
   dimension: modelo {
     type: string
     sql: ${TABLE}.modelo ;;
   }
 
-  dimension: percentual_comissao {
-    type: number
-    sql: ${TABLE}.percentual_comissao ;;
+  dimension: referencia_lead {
+    type: string
+    sql: ${TABLE}.referencia_lead ;;
   }
+
+  dimension: Garantia_Premium {
+    type: string
+    sql: ${TABLE}.Garantia_Premium ;;
+  }
+
+
+  dimension: Garantia_Premium_Preco {
+    type: number
+    sql: ${TABLE}.Garantia_Premium_Preco ;;
+  }
+
+
+  dimension: lavagem {
+    type: number
+    sql: ${TABLE}.Lavagem ;;
+  }
+
+  dimension: lavagem_preco {
+    type: number
+    sql: ${TABLE}.Lavagem_preco ;;
+  }
+
+  dimension: meta_nome_campanha {
+    type: string
+    sql: ${TABLE}.meta_nome_campanha ;;
+  }
+
+  dimension: referencia_cliente_telefone {
+    type: string
+    sql: ${TABLE}.referencia_cliente_telefone ;;
+  }
+  dimension: utm_fonte_lead {
+    type: string
+    sql: ${TABLE}.utm_fonte_lead ;;
+  }
+  dimension: utm_campanha_lead {
+    type: string
+    sql: ${TABLE}.utm_campanha_lead ;;
+  }
+
+
+  dimension: utm_volanty_lead {
+    type: string
+    sql: ${TABLE}.utm_volanty_lead ;;
+  }
+  dimension: utm_midia_lead {
+    type: string
+    sql: ${TABLE}.utm_midia_lead ;;
+  }
+  dimension: visitid {
+    type: string
+    sql: ${TABLE}.visitid ;;
+  }
+
+
+  dimension: tipo_entrega {
+    type: string
+    sql: ${TABLE}.tipo_entrega ;;
+  }
+
+
+  dimension: produto_venda {
+    type: string
+    sql: ${TABLE}.produto_venda ;;
+  }
+
+
+  dimension: consultor_apoiador {
+    type: string
+    sql: ${TABLE}.consultor_apoiador ;;
+  }
+
+  dimension: cav_venda {
+    type: string
+    sql: ${TABLE}.cav_venda ;;
+  }
+
+
+
 
   dimension: placa {
     type: string
@@ -140,13 +227,13 @@ view: vendas_oficial {
   }
 
   dimension: preco_anuncio {
-    type: string
+    type: number
     sql: ${TABLE}.preco_anuncio ;;
   }
 
 
   dimension: preco_venda {
-    type: string
+    type: number
     sql: ${TABLE}.preco_venda ;;
   }
 
@@ -155,10 +242,12 @@ view: vendas_oficial {
     sql: ${TABLE}.produto ;;
   }
 
-  dimension: saldo_proprietario {
+  dimension: tag {
     type: string
-    sql: ${TABLE}.saldo_proprietario ;;
+    sql: ${TABLE}.tag ;;
   }
+
+
 
   dimension: status {
     type: string
@@ -173,21 +262,6 @@ view: vendas_oficial {
   }
 
 
-
-  dimension_group: ultima_atualizacao {
-    type: time
-    timeframes: [
-      raw,
-      time,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
-    sql: CAST(${TABLE}.ultima_atualizacao AS TIMESTAMP) ;;
-  }
-
   dimension: vendedor {
     type: string
     sql: ${TABLE}.vendedor ;;
@@ -198,10 +272,25 @@ view: vendas_oficial {
     sql: ${TABLE}.versao ;;
   }
 
+
   dimension: MTD {
     type: yesno
-    sql:  EXTRACT(DAY FROM  ${TABLE}.data_vendido) < EXTRACT(DAY FROM CURRENT_DATE("America/Sao_Paulo"))
+    sql:  EXTRACT(DAY FROM  ${TABLE}.data_vendido) <= EXTRACT(DAY FROM CURRENT_DATE("America/Sao_Paulo"))
 ;;
+  }
+  dimension_group: data_entrega {
+    type: time
+    timeframes: [
+      day_of_month,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql:  ${TABLE}.data_entrega
+      ;;
   }
 
 
@@ -210,7 +299,7 @@ view: vendas_oficial {
     drill_fields: [car_details*]
   }
   set: car_details {
-    fields: [marca,modelo,versao,cav_venda,ano_modelo,vendedor]
+    fields: [marca,placa,modelo,versao,cav,ano_modelo,vendedor]
   }
 
   measure: preco_soma {
@@ -223,5 +312,8 @@ view: vendas_oficial {
     type: average
     value_format_name: reais
   }
+
+
+
 
 }

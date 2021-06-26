@@ -37,8 +37,22 @@ explore: simulacoes_qvmc {
 explore: Carros {
 }
 
+explore: pos_compra {
+}
+
+explore: pos_compra_estoque {
+}
+
+
+explore: pos_compra_fila {
+}
+
 explore: avaliacao {
 }
+
+explore: custo_proprietario {
+}
+
 
 explore: visita {
   label: "visita"
@@ -53,7 +67,13 @@ explore: leads_compra {
   label: "leads_compra"
 }
 
+explore: leads_ads_ {
+  label: "leads_compra_custo"
+}
 
+explore: financiamentos_ {
+  label: "Financiamento"
+}
 
 
 explore: report_comparador_pr {
@@ -72,9 +92,18 @@ explore: estoque {
   label: "Estoque"
 }
 
+
+
 explore: leads_proprietario {
 
 }
+
+
+explore: vendas_canceladas {
+
+}
+
+
 
 explore: estoque_movimentacao {
   label: "Estoque_movimentacao"
@@ -82,6 +111,12 @@ explore: estoque_movimentacao {
 
 explore: acquisition_lead {
   label: "acquisiton_lead_describe"
+  required_access_grants: [admin_team]
+}
+
+
+explore: amostra_kbb_qvmc {
+  label: "amostra_kbb"
   required_access_grants: [admin_team]
 }
 
@@ -100,28 +135,29 @@ explore: report_alteracao_precos {
 
 }
 
-
-explore: conversao_aquisicao_v1 {
-  label: "Conversao_Proprietário"
-
-}
-
 explore: capacidade_estoque {
   label: "Estoque_capacidade"
 }
 
+
+explore: campanhas_proprietarios {
+  label: "Campanhas_Proprietarios"
+}
+
+explore: campanhas_comprador {
+  label: "Campanhas_Compradores"
+}
 explore: pedido_compras {
   label: "Compras"
 }
 
-explore: tempo_venda_km {
-  label: "Tempo de Venda por Km"
+explore: indicarrao{
+  label: "Indicarrao"
 }
 
-explore: tempo_venda_preco {
-  label: "Tempo de Venda por Preco"
+explore: indicarrao_cadastros {
+  label: "indicarrao_cadastros"
 }
-
-explore: liquidez_modelo {
-  label: "Liquidez Modelo"
+explore: fipe_vendas {
+  label: "Fipe_Vendas"
 }

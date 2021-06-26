@@ -17,6 +17,28 @@ view: Carros {
     sql: ${TABLE}.cav ;;
   }
 
+  dimension: link_anuncio {
+    type: string
+    sql: ${TABLE}.link_anuncio ;;
+  }
+
+  dimension: tag {
+    type: string
+    sql: ${TABLE}.tag ;;
+  }
+
+  dimension: tag2 {
+    type: string
+    sql: ${TABLE}.tag2 ;;
+  }
+
+
+  dimension: valor_compra {
+    type: number
+    sql: ${TABLE}.compra ;;
+  }
+
+
   dimension: cor {
     type: string
     sql: ${TABLE}.cor ;;
@@ -174,6 +196,12 @@ view: Carros {
   dimension: placa {
     type: string
     sql: ${TABLE}.placa ;;
+  }
+
+
+  dimension: fornecedor {
+    type: string
+    sql: ${TABLE}.fornecedor ;;
   }
 
   dimension: preco_de {

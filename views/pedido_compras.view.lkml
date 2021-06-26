@@ -12,6 +12,11 @@ view: pedido_compras {
     sql: ${TABLE}.ano_modelo ;;
   }
 
+  dimension: faixa_km {
+    type: string
+    sql: ${TABLE}.faixa_km ;;
+  }
+
   dimension: board_value_type {
     type: string
     sql: ${TABLE}.board_value_type ;;
@@ -37,6 +42,7 @@ view: pedido_compras {
       raw,
       time,
       date,
+     day_of_month,
       week,
       month,
       quarter,
@@ -69,6 +75,11 @@ view: pedido_compras {
     sql: ${TABLE}.cav ;;
   }
 
+  dimension: uf {
+    type: string
+    sql: ${TABLE}.UF ;;
+  }
+
   dimension: id_lead {
     type: string
     sql: ${TABLE}.id_lead ;;
@@ -79,9 +90,9 @@ view: pedido_compras {
     sql: ${TABLE}.id_order ;;
   }
 
-  dimension: km_carro {
+  dimension: km {
     type: number
-    sql: ${TABLE}.km_carro ;;
+    sql: ${TABLE}.km ;;
   }
 
   dimension: marca {
@@ -203,6 +214,12 @@ view: pedido_compras {
     type: string
     sql: ${TABLE}.versao ;;
   }
+
+  dimension: email_proprietario {
+    type: string
+    sql: ${TABLE}.email_proprietario ;;
+  }
+
 
   measure: count {
     type: count

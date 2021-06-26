@@ -1,392 +1,482 @@
 view: compras_selecionados {
-  sql_table_name: `volanty-production.spreedsheets_data.compras_selecionados`
+  sql_table_name: `volanty-production.views.Compras_Selecionados_BO`
     ;;
   drill_fields: [id]
 
   dimension: id {
     primary_key: yes
+    type: number
+    sql: ${TABLE}.ID ;;
+  }
+
+  dimension: a {
     type: string
-    sql: ${TABLE}.id ;;
+    sql: ${TABLE}.a ;;
   }
 
   dimension: ano_fab {
-    type: string
-    sql: ${TABLE}.ano_fab ;;
+    type: number
+    sql: ${TABLE}.Ano_fab ;;
   }
 
-  dimension: ano_mes_compra {
-    type: string
-    sql: ${TABLE}.ano_mes_compra ;;
+  dimension: ano_mod {
+    type: number
+    sql: ${TABLE}.Ano_mod ;;
   }
 
-  dimension: ano_modelo {
+  dimension: b {
     type: string
-    sql: ${TABLE}.ano_modelo ;;
+    sql: ${TABLE}.b ;;
   }
 
-  dimension: cav_captacao {
+  dimension: cav_compra {
     type: string
-    sql: ${TABLE}.cav_captacao ;;
+    sql: ${TABLE}.CAV_Compra ;;
   }
 
-  dimension: cav_showroom {
+  dimension: cav_destino_1 {
     type: string
-    sql: ${TABLE}.cav_showroom ;;
+    sql: ${TABLE}.CAV_destino_1 ;;
+  }
+
+  dimension: cav_destino_2 {
+    type: string
+    sql: ${TABLE}.CAV_destino_2 ;;
+  }
+
+  dimension: cav_destino_3 {
+    type: string
+    sql: ${TABLE}.CAV_destino_3 ;;
+  }
+
+  dimension: cav_destino_4 {
+    type: string
+    sql: ${TABLE}.CAV_destino_4 ;;
   }
 
   dimension: cav_venda {
     type: string
-    sql: ${TABLE}.cav_venda ;;
+    sql: ${TABLE}.CAV_venda ;;
+  }
+
+  dimension: fornecedor {
+    type: string
+    sql: ${TABLE}.fornecedor ;;
   }
 
   dimension: chassi {
     type: string
-    sql: ${TABLE}.chassi ;;
+    sql: ${TABLE}.Chassi ;;
   }
 
-  dimension: comunicacao_de_venda {
+  dimension: cnpj {
     type: string
-    sql: ${TABLE}.comunicacao_de_venda ;;
+    sql: ${TABLE}.CNPJ ;;
   }
 
-  dimension: consulta_veiculo {
-    type: string
-    sql: ${TABLE}.consulta_veiculo ;;
+  dimension: consulta {
+    type: number
+    sql: ${TABLE}.Consulta ;;
   }
 
-  dimension: custo_revisao {
-    type: string
-    sql: ${TABLE}.custo_revisao ;;
+  dimension_group: data_anuncio {
+    type: time
+    timeframes: [
+      raw,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    convert_tz: no
+    datatype: date
+    sql: ${TABLE}.Data_anuncio ;;
   }
 
-  dimension: custo_total {
-    type: string
-    sql: ${TABLE}.custo_total ;;
+  dimension_group: data_compra {
+    type: time
+    timeframes: [
+      raw,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    convert_tz: no
+    datatype: date
+    sql: ${TABLE}.Data_compra ;;
   }
 
-  dimension: custos_preparacao {
-    type: string
-    sql: ${TABLE}.custos_preparacao ;;
+  dimension_group: data_transf_1 {
+    type: time
+    timeframes: [
+      raw,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    convert_tz: no
+    datatype: date
+    sql: ${TABLE}.Data_transf_1 ;;
   }
 
-  dimension: custos_reparo {
-    type: string
-    sql: ${TABLE}.custos_reparo ;;
+  dimension_group: data_transf_2 {
+    type: time
+    timeframes: [
+      raw,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    convert_tz: no
+    datatype: date
+    sql: ${TABLE}.Data_transf_2 ;;
   }
 
-  dimension: data_anuncio {
-    type: string
-    sql: ${TABLE}.data_anuncio ;;
+  dimension_group: data_transf_3 {
+    type: time
+    timeframes: [
+      raw,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    convert_tz: no
+    datatype: date
+    sql: ${TABLE}.Data_transf_3 ;;
   }
 
-  dimension: data_compra {
+  dimension: data_transf_4 {
     type: string
-    sql: ${TABLE}.data_compra ;;
+    sql: ${TABLE}.Data_transf_4 ;;
   }
 
-  dimension: data_nf_remessa {
-    type: string
-    sql: ${TABLE}.data_nf_remessa ;;
-  }
-
-  dimension: data_venda {
-    type: string
-    sql: ${TABLE}.data_venda ;;
+  dimension_group: data_venda {
+    type: time
+    timeframes: [
+      raw,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    convert_tz: no
+    datatype: date
+    sql: ${TABLE}.Data_venda ;;
   }
 
   dimension: debitos {
-    type: string
-    sql: ${TABLE}.debitos ;;
+    type: number
+    sql: ${TABLE}.Debitos ;;
   }
 
-  dimension: debitos_pos_compra {
-    type: string
-    sql: ${TABLE}.debitos_pos_compra ;;
-  }
-
-  dimension: debitos_pos_fornecedores {
-    type: string
-    sql: ${TABLE}.debitos_pos_fornecedores ;;
+  dimension: debitos_pos {
+    type: number
+    sql: ${TABLE}.Debitos_pos ;;
   }
 
   dimension: despachante {
-    type: string
-    sql: ${TABLE}.despachante ;;
+    type: number
+    sql: ${TABLE}.Despachante ;;
   }
 
   dimension: dias_anunciado {
-    type: string
-    sql: ${TABLE}.dias_anunciado ;;
+    type: number
+    sql: ${TABLE}.Dias_anunciado ;;
   }
 
   dimension: dias_em_estoque {
-    type: string
-    sql: ${TABLE}.dias_em_estoque ;;
+    type: number
+    sql: ${TABLE}.Dias_em_estoque ;;
+  }
+
+  dimension: fornecedores_pos {
+    type: number
+    sql: ${TABLE}.Fornecedores_pos ;;
   }
 
   dimension: garantia {
-    type: string
-    sql: ${TABLE}.garantia ;;
+    type: number
+    sql: ${TABLE}.Garantia ;;
   }
 
   dimension: giro_anuncio {
-    type: string
-    sql: ${TABLE}.giro_anuncio ;;
+    type: number
+    sql: ${TABLE}.Giro_anuncio ;;
   }
 
   dimension: giro_total {
-    type: string
-    sql: ${TABLE}.giro_total ;;
+    type: number
+    sql: ${TABLE}.Giro_total ;;
   }
 
-  dimension: icms_anuncio {
-    type: string
-    sql: ${TABLE}.icms_anuncio ;;
+  dimension: gross_margin_1 {
+    type: number
+    sql: ${TABLE}.Gross_margin_1 ;;
   }
 
-  dimension: icms_remessa {
-    type: string
-    sql: ${TABLE}.icms_remessa ;;
+  dimension: gross_spread_1 {
+    type: number
+    sql: ${TABLE}.Gross_spread_1 ;;
   }
 
-  dimension: icms_venda {
-    type: string
-    sql: ${TABLE}.icms_venda ;;
+  dimension: icms_1 {
+    type: number
+    sql: ${TABLE}.ICMS_1 ;;
   }
 
-  dimension: impostos_anuncio {
-    type: string
-    sql: ${TABLE}.impostos_anuncio ;;
+  dimension: icms_2 {
+    type: number
+    sql: ${TABLE}.ICMS_2 ;;
+  }
+
+  dimension: icms_3 {
+    type: number
+    sql: ${TABLE}.ICMS_3 ;;
+  }
+
+  dimension: icms_4 {
+    type: number
+    sql: ${TABLE}.ICMS_4 ;;
+  }
+
+  dimension: icsm {
+    type: number
+    sql: ${TABLE}.ICSM ;;
   }
 
   dimension: km {
-    type: string
-    sql: ${TABLE}.km ;;
+    type: number
+    sql: ${TABLE}.KM ;;
   }
 
   dimension: laudo {
+    type: number
+    sql: ${TABLE}.Laudo ;;
+  }
+
+  dimension: m__s_compra {
     type: string
-    sql: ${TABLE}.laudo ;;
+    sql: ${TABLE}.M__s_compra ;;
   }
 
   dimension: marca {
     type: string
-    sql: ${TABLE}.marca ;;
+    sql: ${TABLE}.Marca ;;
   }
 
-  dimension: margem_bruta_anuncio {
+  dimension: mes_anuncio {
     type: string
-    sql: ${TABLE}.margem_bruta_anuncio ;;
+    sql: ${TABLE}.Mes_anuncio ;;
   }
 
-  dimension: margem_bruta_venda {
+  dimension: mes_icms_1 {
     type: string
-    sql: ${TABLE}.margem_bruta_venda ;;
+    sql: ${TABLE}.Mes_ICMS_1 ;;
   }
 
-  dimension: margem_de_cont_anuncio {
+  dimension: mes_icms_2 {
     type: string
-    sql: ${TABLE}.margem_de_cont_anuncio ;;
+    sql: ${TABLE}.Mes_ICMS_2 ;;
   }
 
-  dimension: margem_de_cont_venda {
+  dimension: mes_icms_3 {
     type: string
-    sql: ${TABLE}.margem_de_cont_venda ;;
+    sql: ${TABLE}.Mes_ICMS_3 ;;
   }
 
-  dimension: margem_liquida_anuncio {
+  dimension: mes_icms_4 {
     type: string
-    sql: ${TABLE}.margem_liquida_anuncio ;;
+    sql: ${TABLE}.Mes_ICMS_4 ;;
   }
 
-  dimension: margem_liquida_venda {
+  dimension: mes_venda {
     type: string
-    sql: ${TABLE}.margem_liquida_venda ;;
-  }
-
-  dimension: mes_ano_anuncio {
-    type: string
-    sql: ${TABLE}.mes_ano_anuncio ;;
-  }
-
-  dimension: mes_ano_venda {
-    type: string
-    sql: ${TABLE}.mes_ano_venda ;;
-  }
-
-  dimension: mes_icms_remessa {
-    type: string
-    sql: ${TABLE}.mes_icms_remessa ;;
+    sql: ${TABLE}.Mes_venda ;;
   }
 
   dimension: modelo {
     type: string
-    sql: ${TABLE}.modelo ;;
+    sql: ${TABLE}.Modelo ;;
   }
 
-  dimension: nf_de_remessa {
+  dimension: n_nfe_compra {
+    type: number
+    sql: ${TABLE}.N_NFe_compra ;;
+  }
+
+  dimension: n_nfe_venda {
     type: string
-    sql: ${TABLE}.nf_de_remessa ;;
+    sql: ${TABLE}.N_NFe_venda ;;
+  }
+
+  dimension: negociado {
+    type: number
+    sql: ${TABLE}.Negociado ;;
   }
 
   dimension: nfe_compra {
+    type: number
+    sql: ${TABLE}.NFe_compra ;;
+  }
+
+  dimension: nfe_transf_1 {
+    type: number
+    sql: ${TABLE}.NFe_transf_1 ;;
+  }
+
+  dimension: nfe_transf_2 {
+    type: number
+    sql: ${TABLE}.NFe_transf_2 ;;
+  }
+
+  dimension: nfe_transf_3 {
+    type: number
+    sql: ${TABLE}.NFe_transf_3 ;;
+  }
+
+  dimension: nfe_transf_4 {
     type: string
-    sql: ${TABLE}.nfe_compra ;;
+    sql: ${TABLE}.NFe_transf_4 ;;
   }
 
   dimension: nfe_venda {
-    type: string
-    sql: ${TABLE}.nfe_venda ;;
+    type: number
+    sql: ${TABLE}.NFe_venda ;;
   }
 
   dimension: operacao {
     type: string
-    sql: ${TABLE}.operacao ;;
+    sql: ${TABLE}.Operacao ;;
   }
 
   dimension: origem {
     type: string
-    sql: ${TABLE}.origem ;;
+    sql: ${TABLE}.Origem ;;
   }
 
-  dimension: pis_e_cofins_anuncio {
-    type: string
-    sql: ${TABLE}.pis_e_cofins_anuncio ;;
+  dimension: pis_e_cofins {
+    type: number
+    sql: ${TABLE}.PIS_e_Cofins ;;
   }
 
-  dimension: pis_e_cofins_venda {
+  dimension: placa_1 {
     type: string
-    sql: ${TABLE}.pis_e_cofins_venda ;;
+    sql: ${TABLE}.Placa_1 ;;
   }
 
-  dimension: placa {
+  dimension: placa_2 {
     type: string
-    sql: ${TABLE}.placa ;;
+    sql: ${TABLE}.Placa_2 ;;
   }
 
-  dimension: placa_nova {
-    type: string
-    sql: ${TABLE}.placa_nova ;;
+  dimension: prazo_anuncio {
+    type: number
+    sql: ${TABLE}.Prazo_anuncio ;;
   }
 
-  dimension: prazo_para_anuncio {
-    type: string
-    sql: ${TABLE}.prazo_para_anuncio ;;
-  }
-
-  dimension: prefeitura {
-    type: string
-    sql: ${TABLE}.prefeitura ;;
-  }
-
-  dimension: qtd {
-    type: string
-    sql: ${TABLE}.QTD ;;
-  }
-
-  dimension: quitacao_finan {
-    type: string
-    sql: ${TABLE}.quitacao_finan ;;
+  dimension: preparacao {
+    type: number
+    sql: ${TABLE}.Preparacao ;;
   }
 
   dimension: renavam {
-    type: string
-    sql: ${TABLE}.renavam ;;
+    type: number
+    sql: ${TABLE}.Renavam ;;
+  }
+
+  dimension: reparo {
+    type: number
+    sql: ${TABLE}.Reparo ;;
   }
 
   dimension: repasse {
-    type: string
-    sql: ${TABLE}.repasse ;;
+    type: number
+    sql: ${TABLE}.Repasse ;;
   }
 
-  dimension: situacao {
-    type: string
-    sql: ${TABLE}.situacao ;;
+  dimension: reservado_x_venda {
+    type: number
+    sql: ${TABLE}.Reservado_x_Venda ;;
+  }
+
+  dimension: revisao {
+    type: number
+    sql: ${TABLE}.Revisao ;;
   }
 
   dimension: status {
     type: string
-    sql: ${TABLE}.status ;;
+    sql: ${TABLE}.Status ;;
   }
 
   dimension: total_compra {
-    type: string
-    sql: ${TABLE}.total_compra ;;
+    type: number
+    sql: ${TABLE}.Total_compra ;;
   }
 
-  dimension: total_negociado {
-    type: string
-    sql: ${TABLE}.total_negociado ;;
+  dimension: total_custo {
+    type: number
+    sql: ${TABLE}.Total_custo ;;
   }
 
-  dimension: total_outros {
-    type: string
-    sql: ${TABLE}.total_outros ;;
+  dimension: total_impostos {
+    type: number
+    sql: ${TABLE}.Total_impostos ;;
   }
 
   dimension: transporte {
-    type: string
-    sql: ${TABLE}.transporte ;;
+    type: number
+    sql: ${TABLE}.Transporte ;;
   }
 
-  dimension: uf {
+  dimension: uf_compra {
     type: string
-    sql: ${TABLE}.uf ;;
+    sql: ${TABLE}.UF_compra ;;
+  }
+
+  dimension: uf_destino_1 {
+    type: string
+    sql: ${TABLE}.UF_destino_1 ;;
+  }
+
+  dimension: uf_destino_2 {
+    type: string
+    sql: ${TABLE}.UF_destino_2 ;;
+  }
+
+  dimension: uf_destino_3 {
+    type: string
+    sql: ${TABLE}.UF_destino_3 ;;
+  }
+
+  dimension: uf_destino_4 {
+    type: string
+    sql: ${TABLE}.UF_destino_4 ;;
+  }
+
+  dimension: uf_venda {
+    type: string
+    sql: ${TABLE}.UF_venda ;;
   }
 
   dimension: valor_anuncio {
-    type: string
-    sql: ${TABLE}.valor_anuncio ;;
+    type: number
+    sql: ${TABLE}.Valor_anuncio ;;
   }
 
-  dimension: valor_impostos_venda {
+  dimension: vers__o {
     type: string
-    sql: ${TABLE}.valor_impostos_venda ;;
-  }
-
-  dimension: valor_margem_bruta_anuncio {
-    type: string
-    sql: ${TABLE}.valor_margem_bruta_anuncio ;;
-  }
-
-  dimension: valor_margem_bruta_venda {
-    type: string
-    sql: ${TABLE}.valor_margem_bruta_venda ;;
-  }
-
-  dimension: valor_margem_de_cont_anuncio {
-    type: string
-    sql: ${TABLE}.valor_margem_de_cont_anuncio ;;
-  }
-
-  dimension: valor_margem_de_cont_venda {
-    type: string
-    sql: ${TABLE}.valor_margem_de_cont_venda ;;
-  }
-
-  dimension: valor_margem_liquida_anuncio {
-    type: string
-    sql: ${TABLE}.valor_margem_liquida_anuncio ;;
-  }
-
-  dimension: valor_margem_liquida_venda {
-    type: string
-    sql: ${TABLE}.valor_margem_liquida_venda ;;
-  }
-
-  dimension: valor_nfe {
-    type: string
-    sql: ${TABLE}.valor_nfe ;;
-  }
-
-  dimension: valor_venda_final {
-    type: string
-    sql: ${TABLE}.valor_venda_final ;;
-  }
-
-  dimension: versao {
-    type: string
-    sql: ${TABLE}.versao ;;
+    sql: ${TABLE}.Vers__o ;;
   }
 
   measure: count {

@@ -6,10 +6,19 @@ view: leads_proprietario {
     type: number
     sql: ${TABLE}.ano_modelo ;;
   }
-
   dimension: cav {
     type: string
     sql: ${TABLE}.Cav ;;
+  }
+
+  dimension: preLeadId {
+    type: string
+    sql: ${TABLE}.preLeadId ;;
+  }
+
+  dimension: faixa_km {
+    type: string
+    sql: ${TABLE}.faixa_km ;;
   }
 
   dimension_group: data_criacao_lead {
@@ -18,6 +27,7 @@ view: leads_proprietario {
       raw,
       time,
       date,
+      day_of_week,
       week,
       month,
       quarter,
@@ -45,6 +55,17 @@ view: leads_proprietario {
     sql: ${TABLE}.email_proprietario ;;
   }
 
+  dimension: deal_extra_reason {
+    type: string
+    sql: ${TABLE}.deal_extra_reason ;;
+  }
+
+  dimension: deal_extra_description {
+    type: string
+    sql: ${TABLE}.deal_extra_description ;;
+  }
+
+
   dimension: km {
     type: number
     sql: ${TABLE}.km ;;
@@ -53,6 +74,11 @@ view: leads_proprietario {
   dimension: marca {
     type: string
     sql: ${TABLE}.marca ;;
+  }
+
+  dimension: uf {
+    type: string
+    sql: ${TABLE}.uf ;;
   }
 
   dimension: maximo_preco_compra {
@@ -105,9 +131,9 @@ view: leads_proprietario {
     sql: ${TABLE}.minimo_preco_troca;;
   }
 
-  dimension: model {
+  dimension: modelo {
     type: string
-    sql: ${TABLE}.model ;;
+    sql: ${TABLE}.modelo ;;
   }
   dimension: modelo_escolhido {
     type: string
@@ -134,13 +160,63 @@ view: leads_proprietario {
     sql: ${TABLE}.telefone_proprietario ;;
   }
 
-  dimension: version {
+  dimension: versao {
     type: string
-    sql: ${TABLE}.version ;;
+    sql: ${TABLE}.versao ;;
   }
+
+  dimension: media_utmsource {
+    type: string
+    sql: ${TABLE}.media_utmsource ;;
+  }
+  dimension: media_utmCampaign {
+    type: string
+    sql: ${TABLE}.media_utmCampaign ;;
+  }
+
+  dimension: media_utmmedium {
+    type: string
+    sql: ${TABLE}.media_utmmedium ;;
+  }
+
+  dimension: media_interestedInHomeInspection{
+    type: yesno
+    sql: ${TABLE}.media_interestedInHomeInspection ;;
+  }
+
+  dimension: media_priceAcceptable{
+    type: yesno
+    sql: ${TABLE}.media_priceAcceptable ;;
+  }
+
+  dimension: media_priceFeedback{
+    type: string
+    sql: ${TABLE}.media_priceFeedback ;;
+  }
+
+  dimension: media_schedulingStrategy{
+    type: string
+    sql: ${TABLE}.media_schedulingStrategy ;;
+  }
+  dimension: media_utmTerm {
+    type: string
+    sql: ${TABLE}.media_utmTerm ;;
+  }
+  dimension: media_utmContent {
+    type: string
+    sql: ${TABLE}.media_utmContent ;;
+  }
+
+
+
+
 
   measure: count {
     type: count
     drill_fields: []
   }
+
+
+
+
 }

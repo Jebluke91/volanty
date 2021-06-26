@@ -42,6 +42,12 @@ view: estoque {
     sql: ${TABLE}.cor ;;
   }
 
+  dimension: tag {
+    type: string
+    sql: ${TABLE}.tag ;;
+  }
+
+
   dimension: categoria {
     type: string
     sql: ${TABLE}.categoria ;;
@@ -55,6 +61,11 @@ view: estoque {
   dimension: critico_lead_por_dias {
     type: string
     sql: ${TABLE}.critico_lead_por_dias ;;
+  }
+
+  dimension: fornecedor {
+    type: string
+    sql: ${TABLE}.fornecedor ;;
   }
 
 
@@ -92,7 +103,7 @@ view: estoque {
 
   }
   set: car_details {
-    fields: [placa,marca,modelo,versao,preco_por,produto,qtd_lead,qtd_visita,dias_em_estoque,dias_sem_lead,dias_sem_visita]
+    fields: [placa,marca,modelo,versao,preco_por,qtd_lead,qtd_visita,dias_em_estoque,dias_sem_lead,dias_sem_visita]
   }
 
 
@@ -170,10 +181,7 @@ view: estoque {
     sql: ${TABLE}.preco_por ;;
   }
 
-  dimension: produto {
-    type: string
-    sql: ${TABLE}.produto ;;
-  }
+
 
   measure: qtd_lead {
     type: sum
@@ -211,6 +219,10 @@ view: estoque {
   dimension: link_anuncio {
     type: string
     sql: ${TABLE}.link_anuncio ;;
+  }
+  dimension: tag_black_friday {
+    type: string
+    sql: ${TABLE}.tag_black_friday ;;
   }
 
   measure: count {
