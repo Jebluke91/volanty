@@ -156,7 +156,7 @@ view: avaliacao {
   }
 
   dimension: ano_modelo {
-    type: string
+    type: number
     sql: ${TABLE}.ano_modelo ;;
   }
 
