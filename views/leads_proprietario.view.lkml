@@ -3,7 +3,7 @@ view: leads_proprietario {
     ;;
 
   dimension: ano_modelo {
-    type: number
+    type: string
     sql: ${TABLE}.ano_modelo ;;
   }
   dimension: cav {

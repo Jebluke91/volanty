@@ -8,7 +8,7 @@ view: simulacoes_qvmc {
   }
 
   dimension: ano_modelo {
-    type: number
+    type: string
     sql: ${TABLE}.ano_modelo ;;
   }
 
