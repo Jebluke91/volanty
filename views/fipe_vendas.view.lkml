@@ -18,7 +18,7 @@ view: fipe_vendas {
   }
 
   dimension: inspection_key {
-    type: number
+    type: string
     sql: ${TABLE}.inspection_key ;;
   }
 
