@@ -72,6 +72,16 @@ view: fipe_vendas {
     sql: ${TABLE}.versao ;;
   }
 
+  dimension: cav {
+    type: string
+    sql: ${TABLE}.cav_venda ;;
+  }
+
+  dimension: uf {
+    type: string
+    sql: ${TABLE}.uf_venda ;;
+  }
+
   measure: count {
     type: count
     drill_fields: []
