@@ -82,6 +82,11 @@ view: fipe_vendas {
     sql: ${TABLE}.uf_venda ;;
   }
 
+  dimension: produto {
+    type: string
+    sql: ${TABLE}.produto_venda ;;
+  }
+
   measure: count {
     type: count
     drill_fields: []
