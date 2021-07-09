@@ -161,3 +161,6 @@ explore: indicarrao_cadastros {
 explore: fipe_vendas {
   label: "Fipe_Vendas"
 }
+explore: fipe_vendas_volanty {
+  label: "Fipe_Vendas_Volanty"
+}
