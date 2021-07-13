@@ -44,8 +44,8 @@ view: fipe_vendas_volanty {
 
   dimension: modelyear {
     type: number
-    sql: ${TABLE}.modelyear
-    value_format: "0" ;;
+    sql: ${TABLE}.modelyear;;
+    value_format: "0"
   }
 
   dimension: origem {
