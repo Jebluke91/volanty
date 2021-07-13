@@ -1,4 +1,4 @@
-- dashboard: vendas_vs_fipe_volanty_teste
+- dashboard: vendas_vs_fipe_volanty
   title: Vendas vs Fipe (Volanty)
   layout: newspaper
   preferred_viewer: dashboards-next
@@ -58,7 +58,7 @@
     interpolation: linear
     hidden_fields: [fipe_vendas_volanty.count]
     listen:
-      Produto: fipe_vendas_volanty.produto
+      Produto: fipe_vendas_volanty.produto_venda
       Data de Venda: fipe_vendas_volanty.sale_date
     row: 7
     col: 9
@@ -115,7 +115,7 @@
     defaults_version: 1
     hidden_fields: [fipe_vendas_volanty.count]
     listen:
-      Produto: fipe_vendas_volanty.produto
+      Produto: fipe_vendas_volanty.produto_venda
       Data de Venda: fipe_vendas_volanty.sale_date
     row: 14
     col: 0
@@ -174,7 +174,7 @@
     defaults_version: 1
     hidden_fields: [fipe_vendas_volanty.count]
     listen:
-      Produto: fipe_vendas_volanty.produto
+      Produto: fipe_vendas_volanty.produto_venda
       Data de Venda: fipe_vendas_volanty.sale_date
     row: 14
     col: 16
@@ -226,7 +226,7 @@
     defaults_version: 1
     hidden_fields: [fipe_vendas_volanty.count]
     listen:
-      Produto: fipe_vendas_volanty.produto
+      Produto: fipe_vendas_volanty.produto_venda
       Data de Venda: fipe_vendas_volanty.sale_date
     row: 0
     col: 0
@@ -287,7 +287,7 @@
     defaults_version: 1
     hidden_fields: [fipe_vendas_volanty.count]
     listen:
-      Produto: fipe_vendas_volanty.produto
+      Produto: fipe_vendas_volanty.produto_venda
       Data de Venda: fipe_vendas_volanty.sale_date
     row: 7
     col: 0
@@ -342,7 +342,7 @@
     defaults_version: 1
     hidden_fields: [fipe_vendas_volanty.count]
     listen:
-      Produto: fipe_vendas_volanty.produto
+      Produto: fipe_vendas_volanty.produto_venda
       Data de Venda: fipe_vendas_volanty.sale_date
     row: 14
     col: 8
@@ -390,7 +390,7 @@
     series_types: {}
     defaults_version: 1
     listen:
-      Produto: fipe_vendas_volanty.produto
+      Produto: fipe_vendas_volanty.produto_venda
       Data de Venda: fipe_vendas_volanty.sale_date
     row: 27
     col: 8
@@ -451,7 +451,7 @@
     defaults_version: 1
     hidden_fields: [fipe_vendas_volanty.count]
     listen:
-      Produto: fipe_vendas_volanty.produto
+      Produto: fipe_vendas_volanty.produto_venda
       Data de Venda: fipe_vendas_volanty.sale_date
     row: 21
     col: 8
@@ -499,7 +499,7 @@
     defaults_version: 1
     hidden_fields: [fipe_vendas_volanty.count]
     listen:
-      Produto: fipe_vendas_volanty.produto
+      Produto: fipe_vendas_volanty.produto_venda
       Data de Venda: fipe_vendas_volanty.sale_date
     row: 21
     col: 0
@@ -555,7 +555,7 @@
     defaults_version: 1
     hidden_fields: [fipe_vendas_volanty.count]
     listen:
-      Produto: fipe_vendas_volanty.produto
+      Produto: fipe_vendas_volanty.produto_venda
       Data de Venda: fipe_vendas_volanty.sale_date
     row: 27
     col: 0
@@ -613,7 +613,7 @@
     defaults_version: 1
     hidden_fields: [fipe_vendas_volanty.count]
     listen:
-      Produto: fipe_vendas_volanty.produto
+      Produto: fipe_vendas_volanty.produto_venda
       Data de Venda: fipe_vendas_volanty.sale_date
     row: 21
     col: 16
@@ -633,7 +633,7 @@
     model: datalake
     explore: fipe_vendas_volanty
     listens_to_filters: []
-    field: fipe_vendas_volanty.produto
+    field: fipe_vendas_volanty.produto_venda
   - name: Data de Venda
     title: Data de Venda
     type: field_filter
