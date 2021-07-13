@@ -38,6 +38,9 @@ explore: simulacoes_qvmc {
 explore: Carros {
 }
 
+explore: estoque_critico_creditas_ {
+}
+
 explore: pos_compra {
 }
 
