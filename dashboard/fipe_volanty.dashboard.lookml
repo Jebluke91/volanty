@@ -510,7 +510,7 @@
     model: datalake
     explore: fipe_vendas_volanty
     type: looker_bar
-    fields: [fipe_vendas_volanty.uf, mediana_percentage, fipe_vendas_volanty.count]
+    fields: [fipe_vendas_volanty.uf_venda, mediana_percentage, fipe_vendas_volanty.count]
     sorts: [mediana_percentage desc]
     limit: 500
     dynamic_fields: [{based_on: fipe_vendas_volanty.percentage, _kind_hint: measure, measure: mediana_percentage,
@@ -566,7 +566,7 @@
     model: datalake
     explore: fipe_vendas_volanty
     type: looker_column
-    fields: [mediana_percentage, fipe_vendas_volanty.cav, fipe_vendas_volanty.count]
+    fields: [mediana_percentage, fipe_vendas_volanty.cav_venda, fipe_vendas_volanty.count]
     sorts: [mediana_percentage desc]
     limit: 500
     dynamic_fields: [{based_on: fipe_vendas_volanty.percentage, _kind_hint: measure, measure: mediana_percentage,
