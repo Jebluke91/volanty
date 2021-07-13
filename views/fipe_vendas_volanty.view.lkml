@@ -18,7 +18,7 @@ view: fipe_vendas_volanty {
   }
 
   dimension: fipe_price {
-    type: string
+    type: number
     sql: ${TABLE}.fipe_price ;;
   }
 
