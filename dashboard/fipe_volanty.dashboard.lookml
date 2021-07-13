@@ -353,7 +353,7 @@
     model: datalake
     explore: fipe_vendas_volanty
     type: looker_grid
-    fields: [fipe_vendas_volanty.inspection_key, fipe_vendas_volanty.brand, fipe_vendas_volanty.model, fipe_vendas_volanty.versao,
+    fields: [fipe_vendas_volanty.placa, fipe_vendas_volanty.brand, fipe_vendas_volanty.model, fipe_vendas_volanty.versao,
       fipe_vendas_volanty.sale_date, fipe_vendas_volanty.sale_price, fipe_vendas_volanty.fipe_price, fipe_vendas_volanty.percentage]
     sorts: [fipe_vendas_volanty.percentage desc]
     limit: 500
