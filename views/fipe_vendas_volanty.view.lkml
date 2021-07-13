@@ -92,6 +92,11 @@ view: fipe_vendas_volanty {
     sql: ${TABLE}.versao ;;
   }
 
+  dimension: percentage {
+    type: number
+    sql: ${TABLE}.percentage ;;
+}
+
   measure: count {
     type: count
     drill_fields: []
