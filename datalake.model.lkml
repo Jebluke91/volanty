@@ -1,6 +1,7 @@
 connection: "volanty-production"
 
 include: "/views/*.view"
+include: "/dashboard/*.dashboard"
 
 label: " Volanty Geral"
 
