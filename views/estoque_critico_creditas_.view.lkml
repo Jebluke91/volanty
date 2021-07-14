@@ -24,6 +24,12 @@ view: estoque_critico_creditas_ {
     sql: ${TABLE}.fipe_compra ;;
   }
 
+  dimension: compra {
+    type: number
+    sql: ${TABLE}.compra ;;
+  }
+
+
 
   dimension: categoria {
     type: string
