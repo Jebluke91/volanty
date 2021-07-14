@@ -25,7 +25,7 @@ view: estoque_critico_creditas_ {
   }
 
   dimension: compra {
-    type: number
+    type: string
     sql: ${TABLE}.compra ;;
   }
 
