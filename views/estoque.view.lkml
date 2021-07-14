@@ -99,7 +99,7 @@ view: estoque {
     drill_fields: [car_details*]
     html:{{ rendered_value }} <br>
     {{ modelo._rendered_value }} - {{ placa._rendered_value }} <br>
-    {{ link_anuncio._rendered_value }} ;;  ## here we use || to concatenate the values
+   ;;  ## here we use || to concatenate the values
 
   }
   set: car_details {
