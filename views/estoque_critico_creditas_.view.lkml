@@ -2,9 +2,21 @@ view: estoque_critico_creditas_ {
   sql_table_name: `volanty-production.spreedsheets_data.Estoque_Critico_Creditas_`
     ;;
 
+
+  set: car_details {
+    fields: [placa,marca,modelo,versao,preco_venda,qtd_leads,dias_em_estoque]
+  }
+
+
+
   dimension: dias_em_estoque {
     type: number
     sql: ${TABLE}.Dias_Em_Estoque ;;
+    drill_fields: [car_details*]
+    html:{{ rendered_value }} <br>
+    {{ modelo._rendered_value }} - {{ placa._rendered_value }} <br>
+    {{ link_anuncio._rendered_value }} ;;  ## here we use || to concatenate the values
+
   }
 
   dimension: fipe_compra {
