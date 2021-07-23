@@ -46,3 +46,12 @@ explore: creditas_visitas {
 explore: creditas_vendas {
 
 }
+
+
+explore: creditas_funil_compras {
+
+}
+
+explore: creditas_funil_vendas {
+
+}
