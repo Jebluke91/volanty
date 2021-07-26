@@ -23,7 +23,7 @@ view: creditas_leads_proprietario {
       quarter,
       year
     ]
-    sql: ${TABLE}.data_criacao_lead ;;
+    sql: CAST(${TABLE}.data_criacao_lead AS TIMESTAMP) ;;
   }
 
   dimension_group: data_inspecao_agendada {
@@ -37,7 +37,7 @@ view: creditas_leads_proprietario {
       quarter,
       year
     ]
-    sql: ${TABLE}.data_inspecao_agendada ;;
+    sql: CAST(${TABLE}.data_inspecao_agendada AS TIMESTAMP) ;;
   }
 
   dimension: deal_extra_description {
