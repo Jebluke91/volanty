@@ -1,5 +1,5 @@
-- dashboard: monitoramentomtricas__creditas
-  title: Monitoramento-Métricas - Creditas
+- dashboard: monitoramentomtricas__volanty
+  title: Monitoramento-Métricas - Volanty
   layout: newspaper
   preferred_viewer: dashboards-next
   refresh: 10 hours
@@ -9,10 +9,10 @@
     model: datalake
     explore: creditas_leads_compradores
     type: looker_line
-    fields: [creditas_leads_compradores.data_criacao_lead, creditas_leads_compradores.count]
-    fill_fields: [creditas_leads_compradores.data_criacao_lead]
+    fields: [creditas_leads_compradores.data_criacao_lead_date, creditas_leads_compradores.count]
+    fill_fields: [creditas_leads_compradores.data_criacao_lead_date]
     filters: {}
-    sorts: [creditas_leads_compradores.data_criacao_lead desc]
+    sorts: [creditas_leads_compradores.data_criacao_lead_date desc]
     limit: 500
     dynamic_fields: [{table_calculation: media_movel, label: Media movel, expression: 'mean(offset_list(${creditas_leads_compradores.count},0,7))',
         value_format: !!null '', value_format_name: decimal_0, _kind_hint: measure,
@@ -62,7 +62,7 @@
     defaults_version: 1
     hidden_fields: [is_null]
     listen:
-      Data Criacao Lead Date: creditas_leads_compradores.data_criacao_lead
+      Data Criacao Lead Date: creditas_leads_compradores.data_criacao_lead_date
     row: 2
     col: 0
     width: 24
@@ -319,11 +319,11 @@
     model: datalake
     explore: creditas_leads_compradores
     type: looker_line
-    fields: [creditas_leads_compradores.data_criacao_lead, creditas_leads_compradores.count]
-    fill_fields: [creditas_leads_compradores.data_criacao_lead]
+    fields: [creditas_leads_compradores.data_criacao_lead_date, creditas_leads_compradores.count]
+    fill_fields: [creditas_leads_compradores.data_criacao_lead_date]
     filters:
       creditas_leads_compradores.referencia_lead: SITE VOLANTY,Site Volanty
-    sorts: [creditas_leads_compradores.data_criacao_lead desc]
+    sorts: [creditas_leads_compradores.data_criacao_lead_date desc]
     limit: 500
     dynamic_fields: [{table_calculation: media_movel, label: Media movel, expression: 'mean(offset_list(${creditas_leads_compradores.count},0,7))',
         value_format: !!null '', value_format_name: decimal_0, _kind_hint: measure,
@@ -366,7 +366,7 @@
       media_movel: "#080412"
     defaults_version: 1
     listen:
-      Data Criacao Lead Date: creditas_leads_compradores.data_criacao_lead
+      Data Criacao Lead Date: creditas_leads_compradores.data_criacao_lead_date
     row: 8
     col: 0
     width: 8
@@ -376,11 +376,11 @@
     model: datalake
     explore: creditas_leads_compradores
     type: looker_line
-    fields: [creditas_leads_compradores.data_criacao_lead, creditas_leads_compradores.count]
-    fill_fields: [creditas_leads_compradores.data_criacao_lead]
+    fields: [creditas_leads_compradores.data_criacao_lead_date, creditas_leads_compradores.count]
+    fill_fields: [creditas_leads_compradores.data_criacao_lead_date]
     filters:
       creditas_leads_compradores.referencia_lead: WebMotors
-    sorts: [creditas_leads_compradores.data_criacao_lead desc]
+    sorts: [creditas_leads_compradores.data_criacao_lead_date desc]
     limit: 500
     dynamic_fields: [{table_calculation: media_movel, label: Media movel, expression: 'mean(offset_list(${creditas_leads_compradores.count},0,7))',
         value_format: !!null '', value_format_name: decimal_0, _kind_hint: measure,
@@ -423,7 +423,7 @@
       media_movel: "#080412"
     defaults_version: 1
     listen:
-      Data Criacao Lead Date: creditas_leads_compradores.data_criacao_lead
+      Data Criacao Lead Date: creditas_leads_compradores.data_criacao_lead_date
     row: 8
     col: 8
     width: 8
@@ -433,11 +433,11 @@
     model: datalake
     explore: creditas_leads_compradores
     type: looker_line
-    fields: [creditas_leads_compradores.data_criacao_lead, creditas_leads_compradores.count]
-    fill_fields: [creditas_leads_compradores.data_criacao_lead]
+    fields: [creditas_leads_compradores.data_criacao_lead_date, creditas_leads_compradores.count]
+    fill_fields: [creditas_leads_compradores.data_criacao_lead_date]
     filters:
       creditas_leads_compradores.referencia_lead: OLX
-    sorts: [creditas_leads_compradores.data_criacao_lead desc]
+    sorts: [creditas_leads_compradores.data_criacao_lead_date desc]
     limit: 500
     dynamic_fields: [{table_calculation: media_movel, label: Media movel, expression: 'mean(offset_list(${creditas_leads_compradores.count},0,7))',
         value_format: !!null '', value_format_name: decimal_0, _kind_hint: measure,
@@ -480,7 +480,7 @@
       media_movel: "#080412"
     defaults_version: 1
     listen:
-      Data Criacao Lead Date: creditas_leads_compradores.data_criacao_lead
+      Data Criacao Lead Date: creditas_leads_compradores.data_criacao_lead_date
     row: 8
     col: 16
     width: 8
@@ -490,11 +490,11 @@
     model: datalake
     explore: creditas_leads_compradores
     type: looker_line
-    fields: [creditas_leads_compradores.data_criacao_lead, creditas_leads_compradores.count]
-    fill_fields: [creditas_leads_compradores.data_criacao_lead]
+    fields: [creditas_leads_compradores.data_criacao_lead_date, creditas_leads_compradores.count]
+    fill_fields: [creditas_leads_compradores.data_criacao_lead_date]
     filters:
       creditas_leads_compradores.referencia_lead: "%Atendimento%"
-    sorts: [creditas_leads_compradores.data_criacao_lead desc]
+    sorts: [creditas_leads_compradores.data_criacao_lead_date desc]
     limit: 500
     dynamic_fields: [{table_calculation: media_movel, label: Media movel, expression: 'mean(offset_list(${creditas_leads_compradores.count},0,7))',
         value_format: !!null '', value_format_name: decimal_0, _kind_hint: measure,
@@ -538,7 +538,7 @@
     label_color: []
     defaults_version: 1
     listen:
-      Data Criacao Lead Date: creditas_leads_compradores.data_criacao_lead
+      Data Criacao Lead Date: creditas_leads_compradores.data_criacao_lead_date
     row: 14
     col: 0
     width: 8
@@ -548,11 +548,11 @@
     model: datalake
     explore: creditas_leads_compradores
     type: looker_line
-    fields: [creditas_leads_compradores.data_criacao_lead, creditas_leads_compradores.count]
-    fill_fields: [creditas_leads_compradores.data_criacao_lead]
+    fields: [creditas_leads_compradores.data_criacao_lead_date, creditas_leads_compradores.count]
+    fill_fields: [creditas_leads_compradores.data_criacao_lead_date]
     filters:
       creditas_leads_compradores.referencia_lead: '"FACEBOOK_LEADS_ADS"'
-    sorts: [creditas_leads_compradores.data_criacao_lead desc]
+    sorts: [creditas_leads_compradores.data_criacao_lead_date desc]
     limit: 500
     dynamic_fields: [{table_calculation: media_movel, label: Media movel, expression: 'mean(offset_list(${creditas_leads_compradores.count},0,7))',
         value_format: !!null '', value_format_name: decimal_0, _kind_hint: measure,
@@ -595,7 +595,7 @@
       media_movel: "#080412"
     defaults_version: 1
     listen:
-      Data Criacao Lead Date: creditas_leads_compradores.data_criacao_lead
+      Data Criacao Lead Date: creditas_leads_compradores.data_criacao_lead_date
     row: 14
     col: 16
     width: 8
@@ -605,11 +605,11 @@
     model: datalake
     explore: creditas_leads_compradores
     type: looker_line
-    fields: [creditas_leads_compradores.data_criacao_lead, creditas_leads_compradores.count]
-    fill_fields: [creditas_leads_compradores.data_criacao_lead]
+    fields: [creditas_leads_compradores.data_criacao_lead_date, creditas_leads_compradores.count]
+    fill_fields: [creditas_leads_compradores.data_criacao_lead_date]
     filters:
       creditas_leads_compradores.referencia_lead: "%Whatsapp%"
-    sorts: [creditas_leads_compradores.data_criacao_lead desc]
+    sorts: [creditas_leads_compradores.data_criacao_lead_date desc]
     limit: 500
     dynamic_fields: [{table_calculation: media_movel, label: Media movel, expression: 'mean(offset_list(${creditas_leads_compradores.count},0,7))',
         value_format: !!null '', value_format_name: decimal_0, _kind_hint: measure,
@@ -652,7 +652,7 @@
       media_movel: "#080412"
     defaults_version: 1
     listen:
-      Data Criacao Lead Date: creditas_leads_compradores.data_criacao_lead
+      Data Criacao Lead Date: creditas_leads_compradores.data_criacao_lead_date
     row: 14
     col: 8
     width: 8
@@ -1155,4 +1155,4 @@
     model: datalake
     explore: creditas_leads_compradores
     listens_to_filters: []
-    field: creditas_leads_compradores.data_criacao_lead
+    field: creditas_leads_compradores.data_criacao_lead_date
