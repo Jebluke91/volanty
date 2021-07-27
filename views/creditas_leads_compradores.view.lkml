@@ -28,12 +28,13 @@ view: creditas_leads_compradores {
       raw,
       time,
       date,
+      day_of_week,
       week,
       month,
       quarter,
       year
     ]
-    sql: ${TABLE}.data_criacao_lead ;;
+    sql: CAST(${TABLE}.data_criacao_lead AS TIMESTAMP) ;;
   }
 
   dimension: email_lead {
