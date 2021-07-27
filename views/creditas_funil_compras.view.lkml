@@ -22,6 +22,12 @@ view: creditas_funil_compras {
     sql: ${TABLE}.etapa ;;
   }
 
+  dimension: media_origin {
+    type: string
+    sql: ${TABLE}.media_origin ;;
+  }
+
+
   dimension: qtd {
     type: number
     sql: ${TABLE}.qtd ;;
