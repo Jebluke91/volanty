@@ -273,7 +273,7 @@ view: vendas_oficial {
   }
 
   dimension: Financiamento {
-    type: yesno
+    type: string
     sql: ${TABLE}.versao ;;
   }
 
