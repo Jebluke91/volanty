@@ -273,13 +273,13 @@ view: vendas_oficial {
   }
 
   dimension: Financiamento {
-    type: string
-    sql: ${TABLE}.versao ;;
+    type: yesno
+    sql: ${TABLE}.Financiamento ;;
   }
 
   dimension: Banco {
     type: string
-    sql: ${TABLE}.versao ;;
+    sql: ${TABLE}.Banco ;;
   }
 
   dimension: MTD {
