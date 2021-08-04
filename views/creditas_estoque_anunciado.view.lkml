@@ -65,7 +65,7 @@ view: creditas_estoque_anunciado {
   }
 
   dimension: preco_anuncio {
-    type: string
+    type: number
     sql: ${TABLE}.preco_anuncio ;;
   }
 
@@ -79,9 +79,9 @@ view: creditas_estoque_anunciado {
     sql: ${TABLE}.modelo ;;
   }
 
-  dimension: modelyear {
+  dimension: ano_modelo {
     type: string
-    sql: ${TABLE}.modelyear ;;
+    sql: ${TABLE}.ano_modelo ;;
   }
 
   dimension: placa {
