@@ -97,7 +97,7 @@ view: creditas_estoque_anunciado {
   dimension: qtd_leads {
     type: number
     sql: ${TABLE}.Qtd_Leads ;;
-
+    }
 
   dimension: qtd_visitas {
     type: number
