@@ -96,7 +96,7 @@ view: creditas_estoque_anunciado {
     set: car_details {
       fields: [placa,marca,modelo,versao,preco_anuncio,precofipe,qtd_visitas,dias_em_estoque]
     }
-  }
+
 
   dimension: qtd_visitas {
     type: number
