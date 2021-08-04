@@ -35,7 +35,17 @@ view: creditas_estoque_anunciado {
   dimension: dias_em_estoque {
     type: number
     sql: ${TABLE}.Dias_Em_Estoque ;;
-  }
+    drill_fields: [car_details*]
+    html:{{ rendered_value }} <br>
+          {{ modelo._rendered_value }} - {{ placa._rendered_value }} <br>
+         ;;  ## here we use || to concatenate the values
+
+    }
+    set: car_details {
+      fields: [placa,marca,modelo,versao,preco_anuncio,precofipe,qtd_visitas,dias_em_estoque]
+    }
+
+
 
   dimension: inspection_key {
     type: string
@@ -50,6 +60,11 @@ view: creditas_estoque_anunciado {
   dimension: link_anuncio {
     type: string
     sql: ${TABLE}.link_anuncio ;;
+  }
+
+  dimension: preco_anuncio {
+    type: string
+    sql: ${TABLE}.preco_anuncio ;;
   }
 
   dimension: marca {
