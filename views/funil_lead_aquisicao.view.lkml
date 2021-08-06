@@ -42,6 +42,12 @@ view: funil_lead_aquisicao {
     sql: ${TABLE}.faixa_km ;;
   }
 
+
+  dimension: qtd {
+    type: number
+    sql: ${TABLE}.qtd ;;
+  }
+
   dimension: modelo {
     type: string
     sql: ${TABLE}.modelo ;;
