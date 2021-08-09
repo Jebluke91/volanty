@@ -25,7 +25,9 @@ explore: creditas_avaliacao {
 }
 
 explore: creditas_compras {
+}
 
+explore: creditas_estoque_anunciado{
 }
 
 explore: creditas_leads_proprietario {
