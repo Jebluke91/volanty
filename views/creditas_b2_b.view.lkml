@@ -13,7 +13,7 @@ view: creditas_b2_b {
   }
 
   dimension: km {
-    type: string
+    type: number
     sql: ${TABLE}.km ;;
   }
 
