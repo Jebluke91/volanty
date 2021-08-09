@@ -168,3 +168,6 @@ explore: fipe_vendas {
 explore: fipe_vendas_volanty {
   label: "Fipe_Vendas_Volanty"
 }
+explore: creditas_b2_b {
+  label: " Sourcing B2B"
+}
