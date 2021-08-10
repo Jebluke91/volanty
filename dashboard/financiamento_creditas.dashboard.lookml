@@ -215,6 +215,7 @@
     labelSize: 10pt
     showLegend: true
     color_application: undefined
+    listen: {}
     row: 0
     col: 0
     width: 8
@@ -231,6 +232,7 @@
       creditas_vendas.count: NOT NULL
       creditas_vendas.Financiamento: ''
       creditas_vendas.produto_venda: SELECIONADOS
+      creditas_vendas.data_vendido_date: 8 months
     sorts: [creditas_vendas.Financiamento desc, creditas_vendas.data_vendido_month desc]
     limit: 500
     column_limit: 50
@@ -279,6 +281,7 @@
     totals_color: "#808080"
     defaults_version: 1
     hidden_fields: [creditas_vendas.count]
+    listen: {}
     row: 6
     col: 16
     width: 8
@@ -293,6 +296,7 @@
       creditas_vendas.Financiamento: 'Yes'
       creditas_vendas.uf_venda: "-NULL"
       creditas_vendas.produto_venda: SELECIONADOS
+      creditas_vendas.data_vendido_date: 8 months
     sorts: [creditas_vendas.count desc]
     limit: 500
     column_limit: 50
@@ -337,6 +341,7 @@
     hidden_fields: [creditas_vendas.count]
     show_null_points: true
     interpolation: linear
+    listen: {}
     row: 6
     col: 0
     width: 8
@@ -350,6 +355,7 @@
     filters:
       creditas_vendas.Financiamento: 'Yes'
       creditas_vendas.uf_venda: "-NULL"
+      creditas_vendas.data_vendido_date: 8 months
     sorts: [creditas_vendas.count desc]
     limit: 500
     column_limit: 50
@@ -395,6 +401,7 @@
     defaults_version: 1
     series_types: {}
     hidden_fields: [creditas_vendas.count]
+    listen: {}
     row: 6
     col: 8
     width: 8
@@ -409,6 +416,7 @@
       creditas_vendas.data_vendido_month: NOT NULL
       creditas_vendas.Financiamento: 'Yes'
       creditas_vendas.produto_venda: SELECIONADOS
+      creditas_vendas.data_vendido_date: 8 months
       creditas_vendas.fornecedor: Creditas
     sorts: [creditas_vendas.data_vendido_month desc]
     limit: 500
@@ -486,6 +494,7 @@
     totals_color: "#808080"
     defaults_version: 1
     hidden_fields: [creditas_vendas.count]
+    listen: {}
     row: 0
     col: 16
     width: 8
@@ -499,6 +508,7 @@
     filters:
       creditas_vendas.Financiamento: 'Yes'
       creditas_vendas.produto_venda: SELECIONADOS
+      creditas_vendas.data_vendido_date: 8 months
     sorts: [creditas_vendas.count desc]
     limit: 5
     column_limit: 50
@@ -545,6 +555,7 @@
       percentage: "#B32F37"
     defaults_version: 1
     hidden_fields: [creditas_vendas.count]
+    listen: {}
     row: 12
     col: 0
     width: 8
@@ -558,6 +569,7 @@
     filters:
       creditas_vendas.Financiamento: 'Yes'
       creditas_vendas.produto_venda: SELECIONADOS
+      creditas_vendas.data_vendido_date: 8 months
     sorts: [creditas_vendas.count desc]
     limit: 5
     column_limit: 50
@@ -604,6 +616,7 @@
       percent_of_column_sum_of: "#72D16D"
     defaults_version: 1
     hidden_fields: [creditas_vendas.count]
+    listen: {}
     row: 12
     col: 8
     width: 8
@@ -618,6 +631,7 @@
       creditas_vendas.Financiamento: 'Yes'
       creditas_vendas.cav_venda: "-NULL"
       creditas_vendas.produto_venda: SELECIONADOS
+      creditas_vendas.data_vendido_date: 8 months
     sorts: [creditas_vendas.count desc]
     limit: 5
     column_limit: 50
@@ -664,6 +678,7 @@
       percentage: "#FFD95F"
     defaults_version: 1
     hidden_fields: [creditas_vendas.count]
+    listen: {}
     row: 12
     col: 16
     width: 8
@@ -677,6 +692,7 @@
     fill_fields: [creditas_vendas.Financiamento]
     filters:
       creditas_vendas.produto_venda: SELECIONADOS
+      creditas_vendas.data_vendido_date: 8 months
     sorts: [do_total_de_vendas]
     limit: 500
     column_limit: 50
@@ -883,6 +899,7 @@
     groupBars: true
     labelSize: 10pt
     showLegend: true
+    listen: {}
     row: 0
     col: 8
     width: 8
@@ -900,6 +917,7 @@
       creditas_vendas.Financiamento: 'Yes'
       creditas_vendas.Banco: "-NULL"
       creditas_vendas.produto_venda: SELECIONADOS
+      creditas_vendas.data_vendido_date: 8 months
     sorts: [creditas_vendas.data_vendido_month desc, creditas_vendas.Banco]
     limit: 500
     column_limit: 50
@@ -968,6 +986,7 @@
     interpolation: linear
     defaults_version: 1
     hidden_fields:
+    listen: {}
     row: 18
     col: 0
     width: 8
@@ -982,6 +1001,7 @@
       creditas_vendas.Financiamento: 'Yes'
       creditas_vendas.count: ">10"
       creditas_vendas.produto_venda: SELECIONADOS
+      creditas_vendas.data_vendido_date: 8 months
     sorts: [creditas_vendas.count desc]
     limit: 500
     column_limit: 50
@@ -1029,6 +1049,7 @@
       percentage: "#9174F0"
     defaults_version: 1
     hidden_fields: [creditas_vendas.count]
+    listen: {}
     row: 18
     col: 8
     width: 8
@@ -1042,6 +1063,7 @@
     filters:
       creditas_vendas.Financiamento: 'Yes'
       creditas_vendas.produto_venda: SELECIONADOS
+      creditas_vendas.data_vendido_date: 8 months
     sorts: [creditas_vendas.ano_modelo]
     limit: 500
     column_limit: 50
@@ -1102,6 +1124,7 @@
     filters:
       creditas_vendas.Financiamento: 'Yes'
       creditas_vendas.produto_venda: SELECIONADOS
+      creditas_vendas.data_vendido_date: 8 months
     sorts: [creditas_vendas.data_vendido_date desc]
     limit: 500
     column_limit: 50
