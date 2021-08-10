@@ -12,14 +12,15 @@ view: creditas_vendas {
     sql: ${TABLE}.carroceria ;;
   }
 
+
   dimension: cav {
     type: string
     sql: ${TABLE}.cav ;;
   }
 
-  dimension: cav_venda {
+  dimension: uf_venda {
     type: string
-    sql: ${TABLE}.cav_venda ;;
+    sql: ${TABLE}.uf_venda ;;
   }
 
   dimension: cep_comprador {
@@ -27,25 +28,40 @@ view: creditas_vendas {
     sql: ${TABLE}.cep_comprador ;;
   }
 
+  dimension: uf_comprador {
+    type: string
+    sql: ${TABLE}.uf_comprador ;;
+  }
+
   dimension: cidade_comprador {
     type: string
     sql: ${TABLE}.cidade_comprador ;;
-  }
-
-  dimension: consultor_apoiador {
-    type: string
-    sql: ${TABLE}.consultor_apoiador ;;
   }
 
   dimension: cor {
     type: string
     sql: ${TABLE}.cor ;;
   }
+  dimension: origem {
+    type: string
+    sql: ${TABLE}.origem ;;
+  }
+
+  dimension: fornecedor {
+    type: string
+    sql: ${TABLE}.fornecedor ;;
+  }
+  dimension: valor_compra {
+    type: number
+    sql: ${TABLE}.valor_compra ;;
+  }
+
+
 
   dimension_group: data_anunciado {
     type: time
     timeframes: [
-      raw,
+      day_of_month,
       time,
       date,
       week,
@@ -56,38 +72,11 @@ view: creditas_vendas {
     sql: ${TABLE}.data_anunciado ;;
   }
 
-  dimension_group: data_ativacao_garantia {
-    type: time
-    timeframes: [
-      raw,
-      time,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
-    sql: ${TABLE}.Data_ativacao_garantia ;;
-  }
-
-  dimension_group: data_entrega {
-    type: time
-    timeframes: [
-      raw,
-      time,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
-    sql: ${TABLE}.data_entrega ;;
-  }
 
   dimension_group: data_vendido {
     type: time
     timeframes: [
-      raw,
+      day_of_month,
       time,
       date,
       week,
@@ -95,38 +84,25 @@ view: creditas_vendas {
       quarter,
       year
     ]
-    sql: ${TABLE}.data_vendido ;;
+    sql:  ${TABLE}.data_vendido
+      ;;
+  }
+  dimension_group: Data_ativacao_garantia {
+    type: time
+    timeframes: [
+      day_of_month,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql:  ${TABLE}.Data_ativacao_garantia
+      ;;
   }
 
-  dimension: delivery_date {
-    type: string
-    sql: ${TABLE}.delivery_date ;;
-  }
 
-  dimension: email_comprador {
-    type: string
-    sql: ${TABLE}.email_comprador ;;
-  }
-
-  dimension: fornecedor {
-    type: string
-    sql: ${TABLE}.fornecedor ;;
-  }
-
-  dimension: garantia_premium {
-    type: string
-    sql: ${TABLE}.Garantia_Premium ;;
-  }
-
-  dimension: garantia_premium_preco {
-    type: string
-    sql: ${TABLE}.Garantia_Premium_Preco ;;
-  }
-
-  dimension: inspection_key {
-    type: string
-    sql: ${TABLE}.inspection_key ;;
-  }
 
   dimension: intervalo_anunciado_reservado {
     type: number
@@ -138,6 +114,7 @@ view: creditas_vendas {
     sql: ${TABLE}.intervalo_anunciado_vendido ;;
   }
 
+
   dimension: intervalo_reservado_vendido {
     type: number
     sql: ${TABLE}.intervalo_reservado_vendido ;;
@@ -148,19 +125,43 @@ view: creditas_vendas {
     sql: ${TABLE}.km ;;
   }
 
-  dimension: lavagem {
+  dimension: marca {
     type: string
+    sql: ${TABLE}.marca ;;
+  }
+
+
+
+  dimension: modelo {
+    type: string
+    sql: ${TABLE}.modelo ;;
+  }
+
+  dimension: referencia_lead {
+    type: string
+    sql: ${TABLE}.referencia_lead ;;
+  }
+
+  dimension: Garantia_Premium {
+    type: string
+    sql: ${TABLE}.Garantia_Premium ;;
+  }
+
+
+  dimension: Garantia_Premium_Preco {
+    type: number
+    sql: ${TABLE}.Garantia_Premium_Preco ;;
+  }
+
+
+  dimension: lavagem {
+    type: number
     sql: ${TABLE}.Lavagem ;;
   }
 
   dimension: lavagem_preco {
-    type: string
-    sql: ${TABLE}.Lavagem_Preco ;;
-  }
-
-  dimension: marca {
-    type: string
-    sql: ${TABLE}.marca ;;
+    type: number
+    sql: ${TABLE}.Lavagem_preco ;;
   }
 
   dimension: meta_nome_campanha {
@@ -168,20 +169,58 @@ view: creditas_vendas {
     sql: ${TABLE}.meta_nome_campanha ;;
   }
 
-  dimension: modelo {
+  dimension: referencia_cliente_telefone {
     type: string
-    sql: ${TABLE}.modelo ;;
+    sql: ${TABLE}.referencia_cliente_telefone ;;
+  }
+  dimension: utm_fonte_lead {
+    type: string
+    sql: ${TABLE}.utm_fonte_lead ;;
+  }
+  dimension: utm_campanha_lead {
+    type: string
+    sql: ${TABLE}.utm_campanha_lead ;;
   }
 
-  dimension: nome_comprador {
+
+  dimension: utm_volanty_lead {
     type: string
-    sql: ${TABLE}.nome_comprador ;;
+    sql: ${TABLE}.utm_volanty_lead ;;
+  }
+  dimension: utm_midia_lead {
+    type: string
+    sql: ${TABLE}.utm_midia_lead ;;
+  }
+  dimension: visitid {
+    type: string
+    sql: ${TABLE}.visitid ;;
   }
 
-  dimension: origem {
+
+  dimension: tipo_entrega {
     type: string
-    sql: ${TABLE}.origem ;;
+    sql: ${TABLE}.tipo_entrega ;;
   }
+
+
+  dimension: produto_venda {
+    type: string
+    sql: ${TABLE}.produto_venda ;;
+  }
+
+
+  dimension: consultor_apoiador {
+    type: string
+    sql: ${TABLE}.consultor_apoiador ;;
+  }
+
+  dimension: cav_venda {
+    type: string
+    sql: ${TABLE}.cav_venda ;;
+  }
+
+
+
 
   dimension: placa {
     type: string
@@ -189,9 +228,10 @@ view: creditas_vendas {
   }
 
   dimension: preco_anuncio {
-    type: string
+    type: number
     sql: ${TABLE}.preco_anuncio ;;
   }
+
 
   dimension: preco_venda {
     type: number
@@ -203,103 +243,29 @@ view: creditas_vendas {
     sql: ${TABLE}.produto ;;
   }
 
-  dimension: produto_venda {
+  dimension: tag {
     type: string
-    sql: ${TABLE}.produto_venda ;;
+    sql: ${TABLE}.tag ;;
   }
 
-  dimension: referencia_cliente_telefone {
-    type: string
-    sql: ${TABLE}.referencia_cliente_telefone ;;
-  }
 
-  dimension: referencia_lead {
-    type: string
-    sql: ${TABLE}.referencia_lead ;;
-  }
 
   dimension: status {
     type: string
     sql: ${TABLE}.status ;;
   }
 
-  dimension: tag {
-    type: string
-    sql: ${TABLE}.tag ;;
-  }
 
-  dimension: telefone_comprador {
-    type: string
-    sql: ${TABLE}.telefone_comprador ;;
-  }
-
-  dimension: tipo_delivery {
-    type: string
-    sql: ${TABLE}.tipo_delivery ;;
-  }
 
   dimension: transmissao {
     type: string
     sql: ${TABLE}.transmissao ;;
   }
 
-  dimension: uf_comprador {
-    type: string
-    sql: ${TABLE}.uf_comprador ;;
-  }
-
-  dimension: uf_venda {
-    type: string
-    sql: ${TABLE}.UF_venda ;;
-  }
-
-  dimension_group: ultima_atualizacao {
-    type: time
-    timeframes: [
-      raw,
-      time,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
-    sql: ${TABLE}.ultima_atualizacao ;;
-  }
-
-  dimension: utm_campanha_lead {
-    type: string
-    sql: ${TABLE}.utm_campanha_lead ;;
-  }
-
-  dimension: utm_fonte_lead {
-    type: string
-    sql: ${TABLE}.utm_fonte_lead ;;
-  }
-
-  dimension: utm_midia_lead {
-    type: string
-    sql: ${TABLE}.utm_midia_lead ;;
-  }
-
-  dimension: utm_volanty_lead {
-    type: string
-    sql: ${TABLE}.utm_volanty_lead ;;
-  }
-
-  dimension: valor_compra {
-    type: number
-    sql: ${TABLE}.valor_compra ;;
-  }
 
   dimension: vendedor {
     type: string
     sql: ${TABLE}.vendedor ;;
-  }
-
-  dimension: vendor {
-    type: string
-    sql: ${TABLE}.vendor ;;
   }
 
   dimension: versao {
@@ -307,13 +273,53 @@ view: creditas_vendas {
     sql: ${TABLE}.versao ;;
   }
 
-  dimension: visitid {
-    type: string
-    sql: ${TABLE}.visitid ;;
+  dimension: Financiamento {
+    type: yesno
+    sql: ${TABLE}.Financiamento ;;
   }
+
+  dimension: Banco {
+    type: string
+    sql: ${TABLE}.Banco ;;
+  }
+
+  dimension: MTD {
+    type: yesno
+    sql:  EXTRACT(DAY FROM  ${TABLE}.data_vendido) <= EXTRACT(DAY FROM CURRENT_DATE("America/Sao_Paulo"))
+      ;;
+  }
+  dimension_group: data_entrega {
+    type: time
+    timeframes: [
+      day_of_month,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql:  ${TABLE}.data_entrega
+      ;;
+  }
+
 
   measure: count {
     type: count
-    drill_fields: []
+    drill_fields: [car_details*]
+  }
+  set: car_details {
+    fields: [marca,placa,modelo,versao,cav,ano_modelo,vendedor]
+  }
+
+  measure: preco_soma {
+    sql: ${preco_venda} ;;
+    type: sum
+    value_format_name: reais
+  }
+  measure: preco_medio {
+    sql: ${preco_venda} ;;
+    type: average
+    value_format_name: reais
   }
 }
