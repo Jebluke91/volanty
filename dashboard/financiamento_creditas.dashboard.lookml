@@ -215,8 +215,6 @@
     labelSize: 10pt
     showLegend: true
     color_application: undefined
-    listen:
-      Data Vendido Date: creditas_vendas.data_vendido_date
     row: 0
     col: 0
     width: 8
@@ -281,8 +279,6 @@
     totals_color: "#808080"
     defaults_version: 1
     hidden_fields: [creditas_vendas.count]
-    listen:
-      Data Vendido Date: creditas_vendas.data_vendido_date
     row: 6
     col: 16
     width: 8
@@ -341,8 +337,6 @@
     hidden_fields: [creditas_vendas.count]
     show_null_points: true
     interpolation: linear
-    listen:
-      Data Vendido Date: creditas_vendas.data_vendido_date
     row: 6
     col: 0
     width: 8
@@ -401,8 +395,6 @@
     defaults_version: 1
     series_types: {}
     hidden_fields: [creditas_vendas.count]
-    listen:
-      Data Vendido Date: creditas_vendas.data_vendido_date
     row: 6
     col: 8
     width: 8
@@ -494,8 +486,6 @@
     totals_color: "#808080"
     defaults_version: 1
     hidden_fields: [creditas_vendas.count]
-    listen:
-      Data Vendido Date: creditas_vendas.data_vendido_date
     row: 0
     col: 16
     width: 8
@@ -555,8 +545,6 @@
       percentage: "#B32F37"
     defaults_version: 1
     hidden_fields: [creditas_vendas.count]
-    listen:
-      Data Vendido Date: creditas_vendas.data_vendido_date
     row: 12
     col: 0
     width: 8
@@ -616,8 +604,6 @@
       percent_of_column_sum_of: "#72D16D"
     defaults_version: 1
     hidden_fields: [creditas_vendas.count]
-    listen:
-      Data Vendido Date: creditas_vendas.data_vendido_date
     row: 12
     col: 8
     width: 8
@@ -678,8 +664,6 @@
       percentage: "#FFD95F"
     defaults_version: 1
     hidden_fields: [creditas_vendas.count]
-    listen:
-      Data Vendido Date: creditas_vendas.data_vendido_date
     row: 12
     col: 16
     width: 8
@@ -899,8 +883,6 @@
     groupBars: true
     labelSize: 10pt
     showLegend: true
-    listen:
-      Data Vendido Date: creditas_vendas.data_vendido_date
     row: 0
     col: 8
     width: 8
@@ -986,8 +968,6 @@
     interpolation: linear
     defaults_version: 1
     hidden_fields:
-    listen:
-      Data Vendido Date: creditas_vendas.data_vendido_date
     row: 18
     col: 0
     width: 8
@@ -1049,8 +1029,6 @@
       percentage: "#9174F0"
     defaults_version: 1
     hidden_fields: [creditas_vendas.count]
-    listen:
-      Data Vendido Date: creditas_vendas.data_vendido_date
     row: 18
     col: 8
     width: 8
@@ -1064,7 +1042,6 @@
     filters:
       creditas_vendas.Financiamento: 'Yes'
       creditas_vendas.produto_venda: SELECIONADOS
-      creditas_vendas.data_vendido_date: 8 months
     sorts: [creditas_vendas.ano_modelo]
     limit: 500
     column_limit: 50
@@ -1125,7 +1102,6 @@
     filters:
       creditas_vendas.Financiamento: 'Yes'
       creditas_vendas.produto_venda: SELECIONADOS
-      creditas_vendas.data_vendido_date: 8 months
     sorts: [creditas_vendas.data_vendido_date desc]
     limit: 500
     column_limit: 50
@@ -1179,18 +1155,3 @@
     col: 0
     width: 24
     height: 7
-  filters:
-  - name: Data Vendido Date
-    title: Data Vendido Date
-    type: field_filter
-    default_value: 8 month
-    allow_multiple_values: true
-    required: false
-    ui_config:
-      type: advanced
-      display: inline
-      options: []
-    model: datalake
-    explore: creditas_vendas
-    listens_to_filters: []
-    field: creditas_vendas.data_vendido_date
