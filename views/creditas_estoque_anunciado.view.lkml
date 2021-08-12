@@ -69,6 +69,12 @@ view: creditas_estoque_anunciado {
     sql: ${TABLE}.preco_anuncio ;;
   }
 
+  dimension: preco_webmotors {
+    type: number
+    sql: ${TABLE}.preco_webmotors ;;
+  }
+
+
   dimension: marca {
     type: string
     sql: ${TABLE}.marca ;;
