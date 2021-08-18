@@ -24,6 +24,12 @@ explore: creditas_avaliacao {
 
 }
 
+explore: creditas_compras_b2_b {
+  label: "creditas_compras_b2b"
+}
+
+
+
 explore: creditas_compras {
 }
 
