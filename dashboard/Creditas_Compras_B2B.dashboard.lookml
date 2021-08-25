@@ -5,7 +5,7 @@
   elements:
   - title: purchased cars
     name: purchased cars
-    model: datalake
+    modelo: datalake
     explore: creditas_compras_b2_b
     type: single_value
     fields: [creditas_compras_b2_b.count]
@@ -70,18 +70,18 @@
     quantize_map_value_colors: false
     reverse_map_value_colors: false
     listen:
-      Sale Month: creditas_compras_b2_b.sale_month
+      Sale Month: creditas_compras_b2_b.mes_compra_month
     row: 0
     col: 0
     width: 8
     height: 8
-  - title: Year
-    name: Year
-    model: datalake
+  - title: ano_modelo
+    name: ano_modelo
+    modelo: datalake
     explore: creditas_compras_b2_b
     type: looker_column
-    fields: [creditas_compras_b2_b.year, creditas_compras_b2_b.count, percent_of_column_sum_of]
-    sorts: [creditas_compras_b2_b.year]
+    fields: [creditas_compras_b2_b.ano_modelo, creditas_compras_b2_b.count, percent_of_column_sum_of]
+    sorts: [creditas_compras_b2_b.ano_modelo]
     limit: 500
     dynamic_fields: [{args: [creditas_compras_b2_b.count], calculation_type: percent_of_column_sum,
         category: table_calculation, based_on: creditas_compras_b2_b.count, label: Percent
@@ -125,20 +125,20 @@
     defaults_version: 1
     hidden_fields: [creditas_compras_b2_b.count]
     listen:
-      Sale Month: creditas_compras_b2_b.sale_month
+      Sale Month: creditas_compras_b2_b.mes_compra_month
     row: 21
     col: 0
     width: 8
     height: 6
-  - title: business partners
-    name: business partners
-    model: datalake
+  - title: business sourcings
+    name: business sourcings
+    modelo: datalake
     explore: creditas_compras_b2_b
     type: single_value
     fields: [distinct_count]
     limit: 500
     dynamic_fields: [{category: measure, expression: !!null '', label: Distinct Count,
-        value_format: !!null '', value_format_name: !!null '', based_on: creditas_compras_b2_b.partner,
+        value_format: !!null '', value_format_name: !!null '', based_on: creditas_compras_b2_b.sourcing,
         _kind_hint: measure, measure: distinct_count, type: count_distinct, _type_hint: number}]
     custom_color_enabled: true
     show_single_value_title: true
@@ -151,20 +151,20 @@
     conditional_formatting_include_nulls: false
     defaults_version: 1
     listen:
-      Sale Month: creditas_compras_b2_b.sale_month
+      Sale Month: creditas_compras_b2_b.mes_compra_month
     row: 0
     col: 8
     width: 4
     height: 4
-  - title: brands
-    name: brands
-    model: datalake
+  - title: marcas
+    name: marcas
+    modelo: datalake
     explore: creditas_compras_b2_b
     type: single_value
     fields: [distinct_count]
     limit: 500
     dynamic_fields: [{category: measure, expression: !!null '', label: Distinct Count,
-        value_format: !!null '', value_format_name: !!null '', based_on: creditas_compras_b2_b.brand,
+        value_format: !!null '', value_format_name: !!null '', based_on: creditas_compras_b2_b.marca,
         _kind_hint: measure, measure: distinct_count, type: count_distinct, _type_hint: number}]
     custom_color_enabled: true
     show_single_value_title: true
@@ -178,20 +178,20 @@
     defaults_version: 1
     series_types: {}
     listen:
-      Sale Month: creditas_compras_b2_b.sale_month
+      Sale Month: creditas_compras_b2_b.mes_compra_month
     row: 0
     col: 12
     width: 4
     height: 4
-  - title: models
-    name: models
-    model: datalake
+  - title: modelos_
+    name: modelos_
+    modelo: datalake
     explore: creditas_compras_b2_b
     type: single_value
     fields: [distinct_count]
     limit: 500
     dynamic_fields: [{category: measure, expression: !!null '', label: Distinct Count,
-        value_format: !!null '', value_format_name: !!null '', based_on: creditas_compras_b2_b.model,
+        value_format: !!null '', value_format_name: !!null '', based_on: creditas_compras_b2_b.modelo,
         _kind_hint: measure, measure: distinct_count, type: count_distinct, _type_hint: number}]
     custom_color_enabled: true
     show_single_value_title: true
@@ -205,14 +205,14 @@
     series_types: {}
     defaults_version: 1
     listen:
-      Sale Month: creditas_compras_b2_b.sale_month
+      Sale Month: creditas_compras_b2_b.mes_compra_month
     row: 4
     col: 8
     width: 4
     height: 4
   - title: versions
     name: versions
-    model: datalake
+    modelo: datalake
     explore: creditas_compras_b2_b
     type: single_value
     fields: [distinct_count]
@@ -231,19 +231,19 @@
     conditional_formatting_include_nulls: false
     defaults_version: 1
     listen:
-      Sale Month: creditas_compras_b2_b.sale_month
+      Sale Month: creditas_compras_b2_b.mes_compra_month
     row: 4
     col: 12
     width: 4
     height: 4
   - title: Km per Month
     name: Km per Month
-    model: datalake
+    modelo: datalake
     explore: creditas_compras_b2_b
     type: looker_line
-    fields: [creditas_compras_b2_b.sale_month, km_average]
-    fill_fields: [creditas_compras_b2_b.sale_month]
-    sorts: [creditas_compras_b2_b.sale_month desc]
+    fields: [creditas_compras_b2_b.mes_compra_month, km_average]
+    fill_fields: [creditas_compras_b2_b.mes_compra_month]
+    sorts: [creditas_compras_b2_b.mes_compra_month desc]
     limit: 500
     dynamic_fields: [{category: measure, expression: !!null '', label: Km Average,
         value_format: !!null '', value_format_name: decimal_0, based_on: creditas_compras_b2_b.km,
@@ -279,23 +279,23 @@
       km_average: "#49E295"
     defaults_version: 1
     listen:
-      Sale Month: creditas_compras_b2_b.sale_month
+      Sale Month: creditas_compras_b2_b.mes_compra_month
     row: 21
     col: 8
     width: 8
     height: 6
-  - title: Unique models per month
-    name: Unique models per month
-    model: datalake
+  - title: Unique modelos per month
+    name: Unique modelos per month
+    modelo: datalake
     explore: creditas_compras_b2_b
     type: looker_line
-    fields: [creditas_compras_b2_b.sale_month, distinct_count_model]
-    fill_fields: [creditas_compras_b2_b.sale_month]
-    sorts: [creditas_compras_b2_b.sale_month desc]
+    fields: [creditas_compras_b2_b.mes_compra_month, distinct_count_modelo]
+    fill_fields: [creditas_compras_b2_b.mes_compra_month]
+    sorts: [creditas_compras_b2_b.mes_compra_month desc]
     limit: 500
     dynamic_fields: [{category: measure, expression: !!null '', label: Distinct Count
-          Model, value_format: !!null '', value_format_name: !!null '', based_on: creditas_compras_b2_b.model,
-        _kind_hint: measure, measure: distinct_count_model, type: count_distinct,
+          modelo, value_format: !!null '', value_format_name: !!null '', based_on: creditas_compras_b2_b.modelo,
+        _kind_hint: measure, measure: distinct_count_modelo, type: count_distinct,
         _type_hint: number}]
     x_axis_gridlines: false
     y_axis_gridlines: false
@@ -321,33 +321,33 @@
     y_axis_combined: true
     show_null_points: true
     interpolation: monotone
-    y_axes: [{label: Quantity, orientation: left, series: [{axisId: distinct_count_model,
-            id: distinct_count_model, name: Distinct Count Model}], showLabels: false,
+    y_axes: [{label: Quantity, orientation: left, series: [{axisId: distinct_count_modelo,
+            id: distinct_count_modelo, name: Distinct Count modelo}], showLabels: false,
         showValues: false, unpinAxis: false, tickDensity: default, tickDensityCustom: 5,
         type: linear}]
     font_size: '16'
     series_colors:
-      distinct_count_model: "#49E295"
+      distinct_count_modelo: "#49E295"
     defaults_version: 1
     listen:
-      Sale Month: creditas_compras_b2_b.sale_month
+      Sale Month: creditas_compras_b2_b.mes_compra_month
     row: 27
     col: 0
     width: 8
     height: 6
-  - title: Unique partners per month
-    name: Unique partners per month
-    model: datalake
+  - title: Unique sourcings per month
+    name: Unique sourcings per month
+    modelo: datalake
     explore: creditas_compras_b2_b
     type: looker_line
-    fields: [creditas_compras_b2_b.sale_month, distinct_count_partner]
-    fill_fields: [creditas_compras_b2_b.sale_month]
+    fields: [creditas_compras_b2_b.mes_compra_month, distinct_count_sourcing]
+    fill_fields: [creditas_compras_b2_b.mes_compra_month]
     filters: {}
-    sorts: [creditas_compras_b2_b.sale_month desc]
+    sorts: [creditas_compras_b2_b.mes_compra_month desc]
     limit: 500
     dynamic_fields: [{category: measure, expression: !!null '', label: Distinct Count
-          Partner, value_format: !!null '', value_format_name: !!null '', based_on: creditas_compras_b2_b.partner,
-        _kind_hint: measure, measure: distinct_count_partner, type: count_distinct,
+          sourcing, value_format: !!null '', value_format_name: !!null '', based_on: creditas_compras_b2_b.sourcing,
+        _kind_hint: measure, measure: distinct_count_sourcing, type: count_distinct,
         _type_hint: number}]
     x_axis_gridlines: false
     y_axis_gridlines: false
@@ -373,60 +373,60 @@
     y_axis_combined: true
     show_null_points: true
     interpolation: monotone
-    y_axes: [{label: Quantity, orientation: left, series: [{axisId: distinct_count_partner,
-            id: distinct_count_partner, name: Distinct Count Partner}], showLabels: false,
+    y_axes: [{label: Quantity, orientation: left, series: [{axisId: distinct_count_sourcing,
+            id: distinct_count_sourcing, name: Distinct Count sourcing}], showLabels: false,
         showValues: false, unpinAxis: false, tickDensity: default, tickDensityCustom: 5,
         type: linear}]
     font_size: '16'
     series_colors:
-      distinct_count_partner: "#49E295"
+      distinct_count_sourcing: "#49E295"
     defaults_version: 1
     listen:
-      Sale Month: creditas_compras_b2_b.sale_month
+      Sale Month: creditas_compras_b2_b.mes_compra_month
     row: 33
     col: 0
     width: 8
     height: 6
-  - title: Models
-    name: Models
-    model: datalake
+  - title: modelos
+    name: modelos
+    modelo: datalake
     explore: creditas_compras_b2_b
     type: looker_wordcloud
-    fields: [creditas_compras_b2_b.model, creditas_compras_b2_b.count]
+    fields: [creditas_compras_b2_b.modelo, creditas_compras_b2_b.count]
     sorts: [creditas_compras_b2_b.count desc]
     limit: 500
     color_application: undefined
     series_types: {}
     defaults_version: 1
     listen:
-      Sale Month: creditas_compras_b2_b.sale_month
+      Sale Month: creditas_compras_b2_b.mes_compra_month
     row: 8
     col: 8
     width: 8
     height: 7
-  - title: Business Partners
-    name: Business Partners
-    model: datalake
+  - title: Business sourcings
+    name: Business sourcings
+    modelo: datalake
     explore: creditas_compras_b2_b
     type: looker_wordcloud
-    fields: [creditas_compras_b2_b.partner, creditas_compras_b2_b.count]
+    fields: [creditas_compras_b2_b.sourcing, creditas_compras_b2_b.count]
     sorts: [creditas_compras_b2_b.count desc]
     limit: 500
     color_application: undefined
     series_types: {}
     defaults_version: 1
     listen:
-      Sale Month: creditas_compras_b2_b.sale_month
+      Sale Month: creditas_compras_b2_b.mes_compra_month
     row: 8
     col: 0
     width: 8
     height: 7
-  - title: Partner
-    name: Partner
-    model: datalake
+  - title: sourcing
+    name: sourcing
+    modelo: datalake
     explore: creditas_compras_b2_b
     type: looker_column
-    fields: [creditas_compras_b2_b.partner, creditas_compras_b2_b.count, percent_of_column_sum_of]
+    fields: [creditas_compras_b2_b.sourcing, creditas_compras_b2_b.count, percent_of_column_sum_of]
     sorts: [creditas_compras_b2_b.count desc]
     limit: 5
     dynamic_fields: [{args: [creditas_compras_b2_b.count], calculation_type: percent_of_column_sum,
@@ -471,17 +471,17 @@
     defaults_version: 1
     hidden_fields: [creditas_compras_b2_b.count]
     listen:
-      Sale Month: creditas_compras_b2_b.sale_month
+      Sale Month: creditas_compras_b2_b.mes_compra_month
     row: 15
     col: 0
     width: 8
     height: 6
-  - title: Model
-    name: Model
-    model: datalake
+  - title: modelo
+    name: modelo
+    modelo: datalake
     explore: creditas_compras_b2_b
     type: looker_column
-    fields: [creditas_compras_b2_b.model, creditas_compras_b2_b.count, percent_of_column_sum_of]
+    fields: [creditas_compras_b2_b.modelo, creditas_compras_b2_b.count, percent_of_column_sum_of]
     sorts: [creditas_compras_b2_b.count desc]
     limit: 10
     dynamic_fields: [{args: [creditas_compras_b2_b.count], calculation_type: percent_of_column_sum,
@@ -526,20 +526,20 @@
     defaults_version: 1
     hidden_fields: [creditas_compras_b2_b.count]
     listen:
-      Sale Month: creditas_compras_b2_b.sale_month
+      Sale Month: creditas_compras_b2_b.mes_compra_month
     row: 15
     col: 8
     width: 8
     height: 6
   - title: Fipe
     name: Fipe
-    model: datalake
+    modelo: datalake
     explore: creditas_compras_b2_b
     type: looker_column
-    fields: [creditas_compras_b2_b.sale_month, media_de_percentage_of_fipe]
-    sorts: [creditas_compras_b2_b.sale_month]
+    fields: [creditas_compras_b2_b.mes_compra_month, media_de_percentage_of_fipe]
+    sorts: [creditas_compras_b2_b.mes_compra_month]
     limit: 500
-    dynamic_fields: [{category: dimension, expression: "${creditas_compras_b2_b.sale_price}/${creditas_compras_b2_b.fipe_price}",
+    dynamic_fields: [{category: dimension, expression: "${creditas_compras_b2_b.Valor_Compra}/${creditas_compras_b2_b.FIPE}",
         label: Percentage of Fipe, value_format: !!null '', value_format_name: percent_0,
         dimension: percentage_of_fipe_1, _kind_hint: dimension, _type_hint: number},
       {measure: media_de_percentage_of_fipe, based_on: percentage_of_fipe_1, expression: '',
@@ -583,20 +583,20 @@
     hidden_fields: []
     defaults_version: 1
     listen:
-      Sale Month: creditas_compras_b2_b.sale_month
+      Sale Month: creditas_compras_b2_b.mes_compra_month
     row: 27
     col: 8
     width: 8
     height: 6
   - title: Km tracks
     name: Km tracks
-    model: datalake
+    modelo: datalake
     explore: creditas_compras_b2_b
     type: looker_area
-    fields: [creditas_compras_b2_b.count, faixas_de_km, percent_of_column_sum_of, creditas_compras_b2_b.sale_month]
+    fields: [creditas_compras_b2_b.count, faixas_de_km, percent_of_column_sum_of, creditas_compras_b2_b.mes_compra_month]
     pivots: [faixas_de_km]
-    fill_fields: [creditas_compras_b2_b.sale_month]
-    sorts: [faixas_de_km, creditas_compras_b2_b.sale_month]
+    fill_fields: [creditas_compras_b2_b.mes_compra_month]
+    sorts: [faixas_de_km, creditas_compras_b2_b.mes_compra_month]
     limit: 500
     dynamic_fields: [{category: dimension, expression: "if(${creditas_compras_b2_b.km}<10000,10000,\n\
           \  if(${creditas_compras_b2_b.km}<20000, 20000,\n    if(${creditas_compras_b2_b.km}<30000,\
@@ -653,21 +653,21 @@
     defaults_version: 1
     hidden_fields: [creditas_compras_b2_b.count]
     listen:
-      Sale Month: creditas_compras_b2_b.sale_month
+      Sale Month: creditas_compras_b2_b.mes_compra_month
     row: 33
     col: 8
     width: 8
     height: 6
-  - title: Model year tracks
-    name: Model year tracks
-    model: datalake
+  - title: modelo ano_modelo tracks
+    name: modelo ano_modelo tracks
+    modelo: datalake
     explore: creditas_compras_b2_b
     type: looker_area
-    fields: [creditas_compras_b2_b.count, percent_of_column_sum_of, creditas_compras_b2_b.sale_month,
-      creditas_compras_b2_b.year]
-    pivots: [creditas_compras_b2_b.year]
-    fill_fields: [creditas_compras_b2_b.sale_month]
-    sorts: [creditas_compras_b2_b.sale_month, creditas_compras_b2_b.year]
+    fields: [creditas_compras_b2_b.count, percent_of_column_sum_of, creditas_compras_b2_b.mes_compra_month,
+      creditas_compras_b2_b.ano_modelo]
+    pivots: [creditas_compras_b2_b.ano_modelo]
+    fill_fields: [creditas_compras_b2_b.mes_compra_month]
+    sorts: [creditas_compras_b2_b.mes_compra_month, creditas_compras_b2_b.ano_modelo]
     limit: 500
     dynamic_fields: [{args: [creditas_compras_b2_b.count], calculation_type: percent_of_column_sum,
         category: table_calculation, based_on: creditas_compras_b2_b.count, label: Percent
@@ -717,22 +717,22 @@
     defaults_version: 1
     hidden_fields: [creditas_compras_b2_b.count]
     listen:
-      Sale Month: creditas_compras_b2_b.sale_month
+      Sale Month: creditas_compras_b2_b.mes_compra_month
     row: 39
     col: 0
     width: 8
     height: 6
   - title: Km tracks (Copiar)
     name: Km tracks (Copiar)
-    model: datalake
+    modelo: datalake
     explore: creditas_compras_b2_b
     type: looker_column
-    fields: [creditas_compras_b2_b.count, creditas_compras_b2_b.sale_month, faixas_de_km]
+    fields: [creditas_compras_b2_b.count, creditas_compras_b2_b.mes_compra_month, faixas_de_km]
     pivots: [faixas_de_km]
-    fill_fields: [creditas_compras_b2_b.sale_month]
+    fill_fields: [creditas_compras_b2_b.mes_compra_month]
     filters:
       faixas_de_km: "<180000"
-    sorts: [creditas_compras_b2_b.sale_month, faixas_de_km]
+    sorts: [creditas_compras_b2_b.mes_compra_month, faixas_de_km]
     limit: 500
     dynamic_fields: [{category: dimension, expression: "\n    if(${creditas_compras_b2_b.km}<30000,\
           \ 30000,\n      \n          if(${creditas_compras_b2_b.km}<60000, 60000,\n     \
@@ -795,27 +795,27 @@
     hidden_fields:
     hidden_series: [200000 - creditas_compras_b2_b.count]
     listen:
-      Sale Month: creditas_compras_b2_b.sale_month
+      Sale Month: creditas_compras_b2_b.mes_compra_month
     row: 45
     col: 0
     width: 8
     height: 6
-  - title: Model year tracks
-    name: Model year tracks (2)
-    model: datalake
+  - title: modelo ano_modelo tracks
+    name: modelo ano_modelo tracks (2)
+    modelo: datalake
     explore: creditas_compras_b2_b
     type: looker_column
-    fields: [creditas_compras_b2_b.count, creditas_compras_b2_b.sale_month, ano]
+    fields: [creditas_compras_b2_b.count, creditas_compras_b2_b.mes_compra_month, ano]
     pivots: [ano]
-    fill_fields: [creditas_compras_b2_b.sale_month]
+    fill_fields: [creditas_compras_b2_b.mes_compra_month]
     sorts: [creditas_compras_b2_b.count desc 0, ano]
     limit: 500
     dynamic_fields: [{args: [creditas_compras_b2_b.count], calculation_type: percent_of_column_sum,
         category: table_calculation, based_on: creditas_compras_b2_b.count, label: Percent
           of column sum of, source_field: creditas_compras_b2_b.count, table_calculation: percent_of_column_sum_of,
         value_format: !!null '', value_format_name: percent_0, _kind_hint: measure,
-        _type_hint: number, is_disabled: true}, {category: dimension, expression: "if(${creditas_compras_b2_b.year}<=2015,\"\
-          Ate_2015\",\n  if(${creditas_compras_b2_b.year}<=2018,\"Ate_2018\",\n  \"Ate_2021\"\
+        _type_hint: number, is_disabled: true}, {category: dimension, expression: "if(${creditas_compras_b2_b.ano_modelo}<=2015,\"\
+          Ate_2015\",\n  if(${creditas_compras_b2_b.ano_modelo}<=2018,\"Ate_2018\",\n  \"Ate_2021\"\
           ))\n ", label: Ano, value_format: !!null '', value_format_name: !!null '',
         dimension: ano, _kind_hint: measure, _type_hint: string}]
     x_axis_gridlines: false
@@ -869,30 +869,30 @@
     defaults_version: 1
     hidden_fields:
     listen:
-      Sale Month: creditas_compras_b2_b.sale_month
+      Sale Month: creditas_compras_b2_b.mes_compra_month
     row: 51
     col: 0
     width: 8
     height: 6
-  - title: 'Partner por Mês '
-    name: 'Partner por Mês '
-    model: datalake
+  - title: 'sourcing por Mês '
+    name: 'sourcing por Mês '
+    modelo: datalake
     explore: creditas_compras_b2_b
     type: looker_column
-    fields: [creditas_compras_b2_b.count, creditas_compras_b2_b.sale_month, parceiros]
-    pivots: [creditas_compras_b2_b.sale_month]
-    sorts: [creditas_compras_b2_b.count desc 0, creditas_compras_b2_b.sale_month]
+    fields: [creditas_compras_b2_b.count, creditas_compras_b2_b.mes_compra_month, parceiros]
+    pivots: [creditas_compras_b2_b.mes_compra_month]
+    sorts: [creditas_compras_b2_b.count desc 0, creditas_compras_b2_b.mes_compra_month]
     limit: 500
     dynamic_fields: [{args: [creditas_compras_b2_b.count], calculation_type: percent_of_column_sum,
         category: table_calculation, based_on: creditas_compras_b2_b.count, label: Percent
           of column sum of, source_field: creditas_compras_b2_b.count, table_calculation: percent_of_column_sum_of,
         value_format: !!null '', value_format_name: percent_0, _kind_hint: measure,
         _type_hint: number, is_disabled: true}, {category: dimension, expression: "\n\
-          if(${creditas_compras_b2_b.partner}=\"A REVENDA\",\"A REVENDA\",\nif(${creditas_compras_b2_b.partner}=\"\
-          LOCALIZA\",\"LOCALIZA\",\nif(${creditas_compras_b2_b.partner}=\"LOOP\",\"LOOP\"\
-          ,\nif(${creditas_compras_b2_b.partner}=\"MOVIDA\",\"MOVIDA\",\nif(${creditas_compras_b2_b.partner}=\"\
-          PORTO SEGURO\",\"PORTO SEGURO\",\nif(${creditas_compras_b2_b.partner}=\"UNIDAS\"\
-          ,\"UNIDAS\",\nif(${creditas_compras_b2_b.partner}=\"VENDA DIRETA\",\"VENDA DIRETA\"\
+          if(${creditas_compras_b2_b.sourcing}=\"A REVENDA\",\"A REVENDA\",\nif(${creditas_compras_b2_b.sourcing}=\"\
+          LOCALIZA\",\"LOCALIZA\",\nif(${creditas_compras_b2_b.sourcing}=\"LOOP\",\"LOOP\"\
+          ,\nif(${creditas_compras_b2_b.sourcing}=\"MOVIDA\",\"MOVIDA\",\nif(${creditas_compras_b2_b.sourcing}=\"\
+          PORTO SEGURO\",\"PORTO SEGURO\",\nif(${creditas_compras_b2_b.sourcing}=\"UNIDAS\"\
+          ,\"UNIDAS\",\nif(${creditas_compras_b2_b.sourcing}=\"VENDA DIRETA\",\"VENDA DIRETA\"\
           ,\"OUTROS\")))))))", label: Parceiros, value_format: !!null '', value_format_name: !!null '',
         dimension: parceiros, _kind_hint: dimension, _type_hint: string}]
     x_axis_gridlines: false
@@ -938,23 +938,23 @@
     show_null_points: true
     interpolation: linear
     listen:
-      Sale Month: creditas_compras_b2_b.sale_month
+      Sale Month: creditas_compras_b2_b.mes_compra_month
     row: 57
     col: 0
     width: 23
     height: 6
-  - title: Unique partners per month (Copiar)
-    name: Unique partners per month (Copiar)
-    model: datalake
+  - title: Unique sourcings per month (Copiar)
+    name: Unique sourcings per month (Copiar)
+    modelo: datalake
     explore: creditas_compras_b2_b
     type: looker_line
-    fields: [creditas_compras_b2_b.sale_month, distinct_count_partner]
-    fill_fields: [creditas_compras_b2_b.sale_month]
-    sorts: [creditas_compras_b2_b.sale_month desc]
+    fields: [creditas_compras_b2_b.mes_compra_month, distinct_count_sourcing]
+    fill_fields: [creditas_compras_b2_b.mes_compra_month]
+    sorts: [creditas_compras_b2_b.mes_compra_month desc]
     limit: 500
     dynamic_fields: [{category: measure, expression: !!null '', label: Distinct Count
-          Partner, value_format: !!null '', value_format_name: !!null '', based_on: creditas_compras_b2_b.partner,
-        _kind_hint: measure, measure: distinct_count_partner, type: count_distinct,
+          sourcing, value_format: !!null '', value_format_name: !!null '', based_on: creditas_compras_b2_b.sourcing,
+        _kind_hint: measure, measure: distinct_count_sourcing, type: count_distinct,
         _type_hint: number}]
     x_axis_gridlines: false
     y_axis_gridlines: true
@@ -980,45 +980,45 @@
     y_axis_combined: true
     show_null_points: true
     interpolation: linear
-    y_axes: [{label: Quantity, orientation: left, series: [{axisId: distinct_count_partner,
-            id: distinct_count_partner, name: Distinct Count Partner}], showLabels: true,
+    y_axes: [{label: Quantity, orientation: left, series: [{axisId: distinct_count_sourcing,
+            id: distinct_count_sourcing, name: Distinct Count sourcing}], showLabels: true,
         showValues: true, unpinAxis: false, tickDensity: default, tickDensityCustom: 5,
         type: linear}]
     series_colors:
-      distinct_count_partner: "#49E295"
+      distinct_count_sourcing: "#49E295"
     defaults_version: 1
     listen:
-      Sale Month: creditas_compras_b2_b.sale_month
+      Sale Month: creditas_compras_b2_b.mes_compra_month
     row: 63
     col: 0
     width: 8
     height: 6
   - title: Marcas
     name: Marcas
-    model: datalake
+    modelo: datalake
     explore: creditas_compras_b2_b
     type: looker_wordcloud
-    fields: [creditas_compras_b2_b.count, creditas_compras_b2_b.brand]
+    fields: [creditas_compras_b2_b.count, creditas_compras_b2_b.marca]
     sorts: [creditas_compras_b2_b.count desc]
     limit: 500
     color_application: undefined
     series_types: {}
     defaults_version: 1
     listen:
-      Sale Month: creditas_compras_b2_b.sale_month
+      Sale Month: creditas_compras_b2_b.mes_compra_month
     row: 69
     col: 0
     width: 8
     height: 6
   - title: ''
     name: ''
-    model: datalake
+    modelo: datalake
     explore: creditas_compras_b2_b
     type: looker_line
-    fields: [creditas_compras_b2_b.count, creditas_compras_b2_b.sale_month]
-    fill_fields: [creditas_compras_b2_b.sale_month]
+    fields: [creditas_compras_b2_b.count, creditas_compras_b2_b.mes_compra_month]
+    fill_fields: [creditas_compras_b2_b.mes_compra_month]
     filters: {}
-    sorts: [creditas_compras_b2_b.sale_month desc]
+    sorts: [creditas_compras_b2_b.mes_compra_month desc]
     limit: 500
     x_axis_gridlines: false
     y_axis_gridlines: false
@@ -1088,22 +1088,22 @@
     quantize_map_value_colors: false
     reverse_map_value_colors: false
     listen:
-      Sale Month: creditas_compras_b2_b.sale_month
+      Sale Month: creditas_compras_b2_b.mes_compra_month
     row: 75
     col: 0
     width: 8
     height: 6
-  - title: Partner (Copiar)
-    name: Partner (Copiar)
-    model: datalake
+  - title: sourcing (Copiar)
+    name: sourcing (Copiar)
+    modelo: datalake
     explore: creditas_compras_b2_b
     type: looker_grid
-    fields: [creditas_compras_b2_b.count, creditas_compras_b2_b.sale_month, parceiros]
-    pivots: [creditas_compras_b2_b.sale_month]
-    fill_fields: [creditas_compras_b2_b.sale_month]
+    fields: [creditas_compras_b2_b.count, creditas_compras_b2_b.mes_compra_month, parceiros]
+    pivots: [creditas_compras_b2_b.mes_compra_month]
+    fill_fields: [creditas_compras_b2_b.mes_compra_month]
     filters:
-      creditas_compras_b2_b.partner: ''
-    sorts: [creditas_compras_b2_b.count desc 2, creditas_compras_b2_b.sale_month]
+      creditas_compras_b2_b.sourcing: ''
+    sorts: [creditas_compras_b2_b.count desc 2, creditas_compras_b2_b.mes_compra_month]
     limit: 500
     total: true
     dynamic_fields: [{args: [creditas_compras_b2_b.count], calculation_type: percent_of_column_sum,
@@ -1111,11 +1111,11 @@
           of column sum of, source_field: creditas_compras_b2_b.count, table_calculation: percent_of_column_sum_of,
         value_format: !!null '', value_format_name: percent_0, _kind_hint: measure,
         _type_hint: number, is_disabled: true}, {category: dimension, expression: "\n\
-          if(${creditas_compras_b2_b.partner}=\"A REVENDA\",\"A REVENDA\",\nif(${creditas_compras_b2_b.partner}=\"\
-          LOCALIZA\",\"LOCALIZA\",\nif(${creditas_compras_b2_b.partner}=\"LOOP\",\"LOOP\"\
-          ,\nif(${creditas_compras_b2_b.partner}=\"MOVIDA\",\"MOVIDA\",\nif(${creditas_compras_b2_b.partner}=\"\
-          PORTO SEGURO\",\"PORTO SEGURO\",\nif(${creditas_compras_b2_b.partner}=\"UNIDAS\"\
-          ,\"UNIDAS\",\nif(${creditas_compras_b2_b.partner}=\"VENDA DIRETA\",\"VENDA DIRETA\"\
+          if(${creditas_compras_b2_b.sourcing}=\"A REVENDA\",\"A REVENDA\",\nif(${creditas_compras_b2_b.sourcing}=\"\
+          LOCALIZA\",\"LOCALIZA\",\nif(${creditas_compras_b2_b.sourcing}=\"LOOP\",\"LOOP\"\
+          ,\nif(${creditas_compras_b2_b.sourcing}=\"MOVIDA\",\"MOVIDA\",\nif(${creditas_compras_b2_b.sourcing}=\"\
+          PORTO SEGURO\",\"PORTO SEGURO\",\nif(${creditas_compras_b2_b.sourcing}=\"UNIDAS\"\
+          ,\"UNIDAS\",\nif(${creditas_compras_b2_b.sourcing}=\"VENDA DIRETA\",\"VENDA DIRETA\"\
           ,\"OUTROS\")))))))", label: Parceiros, value_format: !!null '', value_format_name: !!null '',
         dimension: parceiros, _kind_hint: measure, _type_hint: string}]
     show_view_names: false
@@ -1168,28 +1168,28 @@
     defaults_version: 1
     hidden_fields:
     listen:
-      Sale Month: creditas_compras_b2_b.sale_month
+      Sale Month: creditas_compras_b2_b.mes_compra_month
     row: 87
     col: 0
     width: 8
     height: 6
-  - title: Model year tracks 2
-    name: Model year tracks 2
-    model: datalake
+  - title: modelo ano_modelo tracks 2
+    name: modelo ano_modelo tracks 2
+    modelo: datalake
     explore: creditas_compras_b2_b
     type: looker_grid
-    fields: [creditas_compras_b2_b.count, creditas_compras_b2_b.year, creditas_compras_b2_b.sale_month]
-    pivots: [creditas_compras_b2_b.year]
-    fill_fields: [creditas_compras_b2_b.sale_month]
-    sorts: [creditas_compras_b2_b.sale_month desc 0, creditas_compras_b2_b.year]
+    fields: [creditas_compras_b2_b.count, creditas_compras_b2_b.ano_modelo, creditas_compras_b2_b.mes_compra_month]
+    pivots: [creditas_compras_b2_b.ano_modelo]
+    fill_fields: [creditas_compras_b2_b.mes_compra_month]
+    sorts: [creditas_compras_b2_b.mes_compra_month desc 0, creditas_compras_b2_b.ano_modelo]
     limit: 500
     row_total: right
     dynamic_fields: [{args: [creditas_compras_b2_b.count], calculation_type: percent_of_column_sum,
         category: table_calculation, based_on: creditas_compras_b2_b.count, label: Percent
           of column sum of, source_field: creditas_compras_b2_b.count, table_calculation: percent_of_column_sum_of,
         value_format: !!null '', value_format_name: percent_0, _kind_hint: measure,
-        _type_hint: number, is_disabled: true}, {category: dimension, expression: "if(${creditas_compras_b2_b.year}<=2015,\"\
-          Ate_2015\",\n  if(${creditas_compras_b2_b.year}<=2018,\"Ate_2018\",\n  \"Ate_2021\"\
+        _type_hint: number, is_disabled: true}, {category: dimension, expression: "if(${creditas_compras_b2_b.ano_modelo}<=2015,\"\
+          Ate_2015\",\n  if(${creditas_compras_b2_b.ano_modelo}<=2018,\"Ate_2018\",\n  \"Ate_2021\"\
           ))\n ", label: Ano, value_format: !!null '', value_format_name: !!null '',
         dimension: ano, _kind_hint: measure, _type_hint: string}]
     show_view_names: false
@@ -1256,20 +1256,20 @@
     defaults_version: 1
     hidden_fields:
     listen:
-      Sale Month: creditas_compras_b2_b.sale_month
+      Sale Month: creditas_compras_b2_b.mes_compra_month
     row: 81
     col: 0
     width: 13
     height: 6
-  - title: Model (Copiar)
-    name: Model (Copiar)
-    model: datalake
+  - title: modelo (Copiar)
+    name: modelo (Copiar)
+    modelo: datalake
     explore: creditas_compras_b2_b
     type: looker_grid
-    fields: [creditas_compras_b2_b.model, creditas_compras_b2_b.count, creditas_compras_b2_b.sale_month]
-    pivots: [creditas_compras_b2_b.sale_month]
-    fill_fields: [creditas_compras_b2_b.sale_month]
-    sorts: [creditas_compras_b2_b.count desc 0, creditas_compras_b2_b.sale_month]
+    fields: [creditas_compras_b2_b.modelo, creditas_compras_b2_b.count, creditas_compras_b2_b.mes_compra_month]
+    pivots: [creditas_compras_b2_b.mes_compra_month]
+    fill_fields: [creditas_compras_b2_b.mes_compra_month]
+    sorts: [creditas_compras_b2_b.count desc 0, creditas_compras_b2_b.mes_compra_month]
     limit: 500
     row_total: right
     dynamic_fields: [{args: [creditas_compras_b2_b.count], calculation_type: percent_of_column_sum,
@@ -1327,32 +1327,32 @@
     defaults_version: 1
     hidden_fields:
     listen:
-      Sale Month: creditas_compras_b2_b.sale_month
+      Sale Month: creditas_compras_b2_b.mes_compra_month
     row: 93
     col: 0
     width: 12
     height: 6
-  - title: Concentracão de Modelos
-    name: Concentracão de Modelos
-    model: datalake
+  - title: Concentracão de modeloos
+    name: Concentracão de modeloos
+    modelo: datalake
     explore: creditas_compras_b2_b
     type: looker_column
-    fields: [creditas_compras_b2_b.count, nova_dimensao, creditas_compras_b2_b.sale_month]
+    fields: [creditas_compras_b2_b.count, nova_dimensao, creditas_compras_b2_b.mes_compra_month]
     pivots: [nova_dimensao]
-    fill_fields: [creditas_compras_b2_b.sale_month]
+    fill_fields: [creditas_compras_b2_b.mes_compra_month]
     filters: {}
-    sorts: [nova_dimensao desc, creditas_compras_b2_b.sale_month desc]
+    sorts: [nova_dimensao desc, creditas_compras_b2_b.mes_compra_month desc]
     limit: 500
     dynamic_fields: [{args: [creditas_compras_b2_b.count], calculation_type: percent_of_column_sum,
         category: table_calculation, based_on: creditas_compras_b2_b.count, label: Percent
           of column sum of, source_field: creditas_compras_b2_b.count, table_calculation: percent_of_column_sum_of,
         value_format: !!null '', value_format_name: percent_0, _kind_hint: measure,
-        _type_hint: number, is_disabled: true}, {category: dimension, expression: "if(${creditas_compras_b2_b.model}=\"\
-          LOGAN\",\"Sim\",\nif(${creditas_compras_b2_b.model}=\"MOBI\",\"Sim\",\nif(${creditas_compras_b2_b.model}=\"\
-          ONIX\",\"Sim\",\nif(${creditas_compras_b2_b.model}=\"SANDERO\",\"Sim\",\nif(${creditas_compras_b2_b.model}=\"\
-          KWID\",\"Sim\",\nif(${creditas_compras_b2_b.model}=\"HB20\",\"Sim\",\nif(${creditas_compras_b2_b.model}=\"\
-          HB20S\",\"Sim\",\nif(${creditas_compras_b2_b.model}=\"PRISMA\",\"Sim\",\nif(${creditas_compras_b2_b.model}=\"\
-          GOL\",\"Sim\",\nif(${creditas_compras_b2_b.model}=\"ARGO\",\"Sim\",\"Não\"))))))))))",
+        _type_hint: number, is_disabled: true}, {category: dimension, expression: "if(${creditas_compras_b2_b.modelo}=\"\
+          LOGAN\",\"Sim\",\nif(${creditas_compras_b2_b.modelo}=\"MOBI\",\"Sim\",\nif(${creditas_compras_b2_b.modelo}=\"\
+          ONIX\",\"Sim\",\nif(${creditas_compras_b2_b.modelo}=\"SANDERO\",\"Sim\",\nif(${creditas_compras_b2_b.modelo}=\"\
+          KWID\",\"Sim\",\nif(${creditas_compras_b2_b.modelo}=\"HB20\",\"Sim\",\nif(${creditas_compras_b2_b.modelo}=\"\
+          HB20S\",\"Sim\",\nif(${creditas_compras_b2_b.modelo}=\"PRISMA\",\"Sim\",\nif(${creditas_compras_b2_b.modelo}=\"\
+          GOL\",\"Sim\",\nif(${creditas_compras_b2_b.modelo}=\"ARGO\",\"Sim\",\"Não\"))))))))))",
         label: Nova dimensão, value_format: !!null '', value_format_name: !!null '',
         dimension: nova_dimensao, _kind_hint: dimension, _type_hint: string}]
     x_axis_gridlines: false
@@ -1413,17 +1413,17 @@
     conditional_formatting_include_totals: false
     conditional_formatting_include_nulls: false
     listen:
-      Sale Month: creditas_compras_b2_b.sale_month
+      Sale Month: creditas_compras_b2_b.mes_compra_month
     row: 99
     col: 0
     width: 8
     height: 6
-  - title: Model (Copiar 2)
-    name: Model (Copiar 2)
-    model: datalake
+  - title: modelo (Copiar 2)
+    name: modelo (Copiar 2)
+    modelo: datalake
     explore: creditas_compras_b2_b
     type: looker_column
-    fields: [creditas_compras_b2_b.model, creditas_compras_b2_b.count, percent_of_column_sum_of]
+    fields: [creditas_compras_b2_b.modelo, creditas_compras_b2_b.count, percent_of_column_sum_of]
     sorts: [creditas_compras_b2_b.count desc]
     limit: 10
     dynamic_fields: [{args: [creditas_compras_b2_b.count], calculation_type: percent_of_column_sum,
@@ -1468,23 +1468,8 @@
     defaults_version: 1
     hidden_fields: [creditas_compras_b2_b.count]
     listen:
-      Sale Month: creditas_compras_b2_b.sale_month
+      Sale Month: creditas_compras_b2_b.mes_compra_month
     row: 105
     col: 0
     width: 8
     height: 6
-  filters:
-  - name: Sale Month
-    title: Sale Month
-    type: field_filter
-    default_value: 3 month
-    allow_multiple_values: true
-    required: false
-    ui_config:
-      type: advanced
-      display: popover
-      options: []
-    model: datalake
-    explore: creditas_compras_b2_b
-    listens_to_filters: []
-    field: creditas_compras_b2_b.sale_month
