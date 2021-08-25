@@ -33,6 +33,9 @@ explore: creditas_compras_b2_b {
 explore: creditas_compras {
 }
 
+explore: creditas_plano_acao_estoque_critico {
+}
+
 explore: creditas_estoque_anunciado{
 }
 
