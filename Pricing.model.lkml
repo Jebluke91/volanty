@@ -23,3 +23,7 @@ explore: rmse_vendas_oficial {
   label: "RMSE_vendas_oficial"
 
 }
+explore: crawler_kavak_stock {
+  label: "Crawler Kavak Stock"
+
+}
