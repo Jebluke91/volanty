@@ -24,6 +24,17 @@ explore: creditas_avaliacao {
 
 }
 
+
+explore: crm_creditas_acquisition {
+
+}
+
+explore: crm_creditas_vendas {
+
+}
+
+
+
 explore: creditas_compras_b2_b {
   label: "creditas_compras_b2b"
 }
