@@ -27,3 +27,7 @@ explore: crawler_kavak_stock {
   label: "Crawler Kavak Stock"
 
 }
+explore: crawler_kavak {
+  label: "Crawler Kavak"
+
+}
