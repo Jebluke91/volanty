@@ -32,6 +32,11 @@ view: crawler_kavak_stock {
     sql: ${TABLE}.qtd_saida ;;
   }
 
+  dimension: qtd_breve {
+    type: number
+    sql: ${TABLE}.qtd_breve ;;
+  }
+
   dimension: qtd_vendas_acum {
     type: number
     sql: ${TABLE}.qtd_vendas_acum ;;
