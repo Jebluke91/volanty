@@ -105,6 +105,11 @@ view: compras {
     sql: ${TABLE}.media_utmsource ;;
   }
 
+  dimension: metas {
+    type: number
+    sql: ${TABLE}.metas ;;
+  }
+
   dimension: modelo {
     type: string
     sql: ${TABLE}.modelo ;;
