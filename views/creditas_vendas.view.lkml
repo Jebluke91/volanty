@@ -273,7 +273,7 @@ view: creditas_vendas {
     sql: ${TABLE}.versao ;;
   }
 
-  dimension: Financiamento_interno {
+  dimension: Financiamento{
     type: yesno
     sql: ${TABLE}.Financiamento_interno ;;
   }
