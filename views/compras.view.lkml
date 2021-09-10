@@ -8,7 +8,7 @@ view: compras {
   }
 
   dimension: ano_fabricacao {
-    type: string
+    type: number
     sql: ${TABLE}.ano_fabricacao ;;
   }
 
@@ -152,27 +152,27 @@ view: compras {
   }
 
   dimension: preco {
-    type: string
+    type: number
     sql: ${TABLE}.preco ;;
   }
 
   dimension: preco_fipe_carro {
-    type: string
+    type: number
     sql: ${TABLE}.preco_fipe_carro ;;
   }
 
   dimension: preco_maximo_carro {
-    type: string
+    type: number
     sql: ${TABLE}.preco_maximo_carro ;;
   }
 
   dimension: preco_minimo_carro {
-    type: string
+    type: number
     sql: ${TABLE}.preco_minimo_carro ;;
   }
 
   dimension: preco_reparo {
-    type: string
+    type: number
     sql: ${TABLE}.preco_reparo ;;
   }
 
