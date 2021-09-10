@@ -274,7 +274,12 @@ view: vendas_oficial {
 
   dimension: Financiamento {
     type: yesno
-    sql: ${TABLE}.Financiamento ;;
+    sql: ${TABLE}.Financiamento_interno ;;
+  }
+
+  dimension: Financiamento_externo {
+    type: yesno
+    sql: ${TABLE}.Financiamento_externo ;;
   }
 
   dimension: Banco {
