@@ -82,7 +82,7 @@ view: compras {
   }
 
   dimension: km {
-    type: string
+    type: number
     sql: ${TABLE}.km ;;
   }
 
