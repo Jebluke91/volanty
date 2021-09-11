@@ -274,6 +274,11 @@ view: vendas {
     sql: ${TABLE}.meta_nome_campanha ;;
   }
 
+  dimension: metas {
+    type: number
+    sql: ${TABLE}.metas ;;
+  }
+
   dimension: modelo {
     type: string
     sql: ${TABLE}.modelo ;;
