@@ -71,7 +71,8 @@ view: vendas {
       week,
       month,
       quarter,
-      year
+      year,
+      day_of_month
     ]
     sql: ${TABLE}.data_anunciado ;;
   }
