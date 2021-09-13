@@ -33,6 +33,9 @@ explore: crm_creditas_vendas {
 
 }
 
+explore: creditas_logistica_ {
+
+}
 
 
 explore: creditas_compras_b2_b {
