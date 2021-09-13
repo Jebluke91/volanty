@@ -1,5 +1,5 @@
 view: simulacoes_qvmc {
-  sql_table_name: `volanty-production.adhoc_views.Simulacoes`
+  sql_table_name: `volanty-production.views.Simulacoes_QVMC`
     ;;
 
   dimension: agendou_avaliacao {
@@ -44,11 +44,6 @@ view: simulacoes_qvmc {
   dimension: email_agendamento {
     type: string
     sql: ${TABLE}.email_agendamento ;;
-  }
-
-  dimension: faixa_km {
-    type: string
-    sql: ${TABLE}.Faixa_KM ;;
   }
 
   dimension: ga_client_id {
