@@ -72,6 +72,10 @@ explore: creditas_vendas {
 
 }
 
+explore: preditas {
+
+}
+
 
 explore: creditas_funil_compras {
 
