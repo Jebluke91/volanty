@@ -12,6 +12,11 @@ view: vendas {
     sql: ${TABLE}.Banco ;;
   }
 
+  dimension: reserva_paga {
+    type: yesno
+    sql: ${TABLE}.reserva_paga ;;
+  }
+
   dimension: car_vendor {
     type: string
     sql: ${TABLE}.CAR_VENDOR ;;
