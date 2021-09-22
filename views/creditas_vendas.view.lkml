@@ -284,7 +284,7 @@ view: creditas_vendas {
   }
 
   dimension: reserva_paga {
-    type: yesno
+    type: string
     sql: ${TABLE}.reserva_paga ;;
   }
 
