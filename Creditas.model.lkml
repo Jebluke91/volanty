@@ -76,6 +76,10 @@ explore: preditas {
 
 }
 
+explore: preditas_fallback {
+
+}
+
 
 explore: creditas_funil_compras {
 
