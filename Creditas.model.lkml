@@ -88,3 +88,7 @@ explore: creditas_funil_compras {
 explore: creditas_funil_vendas {
 
 }
+
+explore: inventario {
+
+}

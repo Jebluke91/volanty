@@ -171,3 +171,6 @@ explore: fipe_vendas_volanty {
 explore: creditas_b2_b {
   label: " Sourcing B2B"
 }
+explore: inventario {
+
+}
