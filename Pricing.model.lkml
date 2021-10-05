@@ -31,3 +31,7 @@ explore: crawler_kavak {
   label: "Crawler Kavak"
 
 }
+explore: preditas_fallback {
+  label: "Preditas Fallback"
+
+}
