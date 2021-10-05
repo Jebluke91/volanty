@@ -2,19 +2,19 @@ view: preditas_fallback {
   sql_table_name: `volanty-production.views.Preditas_Fallback`
     ;;
 
+  dimension: body_style {
+    type: string
+    sql: ${TABLE}.body_style ;;
+  }
+
   dimension: brand {
     type: string
     sql: ${TABLE}.brand ;;
   }
 
-  dimension: carroceria {
+  dimension: fipe_id {
     type: string
-    sql: ${TABLE}.Carroceria ;;
-  }
-
-  dimension: fipe_cod {
-    type: string
-    sql: ${TABLE}.Fipe_Cod ;;
+    sql: ${TABLE}.fipe_id ;;
   }
 
   dimension: fipe_value {
@@ -57,59 +57,59 @@ view: preditas_fallback {
     sql: ${TABLE}.modelYear ;;
   }
 
-  dimension: n_ofertas {
+  dimension: offer_number {
     type: number
-    sql: ${TABLE}.N_ofertas ;;
+    sql: ${TABLE}.offer_number ;;
   }
 
   dimension: p0_1 {
     type: number
-    sql: ${TABLE}.P0_1 ;;
+    sql: ${TABLE}.p0_1 ;;
   }
 
   dimension: p0_2 {
     type: number
-    sql: ${TABLE}.P0_2 ;;
+    sql: ${TABLE}.p0_2 ;;
   }
 
   dimension: p0_3 {
     type: number
-    sql: ${TABLE}.P0_3 ;;
+    sql: ${TABLE}.p0_3 ;;
   }
 
   dimension: p0_4 {
     type: number
-    sql: ${TABLE}.P0_4 ;;
+    sql: ${TABLE}.p0_4 ;;
   }
 
   dimension: p0_5 {
     type: number
-    sql: ${TABLE}.P0_5 ;;
+    sql: ${TABLE}.p0_5 ;;
   }
 
   dimension: p0_6 {
     type: number
-    sql: ${TABLE}.P0_6 ;;
+    sql: ${TABLE}.p0_6 ;;
   }
 
   dimension: p0_7 {
     type: number
-    sql: ${TABLE}.P0_7 ;;
+    sql: ${TABLE}.p0_7 ;;
   }
 
   dimension: p0_8 {
     type: number
-    sql: ${TABLE}.P0_8 ;;
+    sql: ${TABLE}.p0_8 ;;
   }
 
   dimension: p0_9 {
     type: number
-    sql: ${TABLE}.P0_9 ;;
+    sql: ${TABLE}.p0_9 ;;
   }
 
-  dimension: preco_compra {
+  dimension: price {
     type: number
-    sql: ${TABLE}.Preco_Compra ;;
+    sql: ${TABLE}.price ;;
   }
 
   dimension: price_km_1 {
