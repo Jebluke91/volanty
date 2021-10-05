@@ -283,6 +283,11 @@ view: creditas_vendas {
     sql: ${TABLE}.Financiamento_externo ;;
   }
 
+  dimension: reserva_paga {
+    type: string
+    sql: ${TABLE}.reserva_paga ;;
+  }
+
   dimension: Banco {
     type: string
     sql: ${TABLE}.Banco ;;

@@ -33,6 +33,9 @@ explore: crm_creditas_vendas {
 
 }
 
+explore: creditas_logistica_ {
+
+}
 
 
 explore: creditas_compras_b2_b {
@@ -69,11 +72,23 @@ explore: creditas_vendas {
 
 }
 
+explore: preditas {
+
+}
+
+explore: preditas_fallback {
+
+}
+
 
 explore: creditas_funil_compras {
 
 }
 
 explore: creditas_funil_vendas {
+
+}
+
+explore: inventario {
 
 }

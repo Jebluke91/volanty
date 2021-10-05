@@ -249,6 +249,11 @@ view: crm_creditas_vendas {
     sql: ${TABLE}.moeda ;;
   }
 
+  dimension: motivo_descontinuado_vendas {
+    type: string
+    sql: ${TABLE}.motivo_descontinuado_vendas ;;
+  }
+
   dimension: negocio_recorrente {
     type: string
     sql: ${TABLE}.negocio_recorrente ;;
