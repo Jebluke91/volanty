@@ -1,5 +1,5 @@
 view: avaliacao {
-  sql_table_name: `volanty-production.views.Avaliacao`
+  sql_table_name: `volanty-production.views.Volanty_Avaliacao`
     ;;
 
   dimension: cav {

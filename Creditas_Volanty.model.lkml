@@ -33,3 +33,7 @@ explore: leads_compradores {
 explore: estoque_anunciado {
 
 }
+
+explore: avaliacoes {
+
+}
