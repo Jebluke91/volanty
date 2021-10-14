@@ -107,6 +107,10 @@ explore: vendas_canceladas {
 
 }
 
+explore: volanty_estoque_anunciado {
+  label: "Estoque_Anunciado"
+}
+
 
 
 explore: estoque_movimentacao {

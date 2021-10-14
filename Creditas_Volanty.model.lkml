@@ -29,3 +29,7 @@ explore: simulacoes_qvmc {
 explore: leads_compradores {
 
 }
+
+explore: estoque_anunciado {
+
+}
