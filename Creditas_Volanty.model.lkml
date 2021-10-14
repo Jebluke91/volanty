@@ -25,3 +25,7 @@ explore: agendamentos_proprietario {
 explore: simulacoes_qvmc {
 
 }
+
+explore: leads_compradores {
+
+}

@@ -1,5 +1,5 @@
 view: leads_compra {
-  sql_table_name: `volanty-production.views.Leads_Compra`
+  sql_table_name: `volanty-production.views.Volanty_Leads_Compra`
     ;;
 
   dimension: cav {
