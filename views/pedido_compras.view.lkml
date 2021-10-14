@@ -1,5 +1,5 @@
 view: pedido_compras {
-  sql_table_name: `volanty-production.views.Pedido_Compras`
+  sql_table_name: `volanty-production.views.Volanty_Compras`
     ;;
 
   dimension: _id_ {

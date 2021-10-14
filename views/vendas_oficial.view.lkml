@@ -1,5 +1,5 @@
 view: vendas_oficial {
-  sql_table_name: volanty-production.views.Vendas_Oficial ;;
+  sql_table_name: volanty-production.views.Volanty_Vendas ;;
 
   dimension: ano_modelo {
     type: string
