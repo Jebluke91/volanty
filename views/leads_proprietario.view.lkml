@@ -1,5 +1,5 @@
 view: leads_proprietario {
-  sql_table_name: `volanty-production.views.Leads_Proprietario`
+  sql_table_name: `volanty-production.views.Volanty_Leads_Proprietario`
     ;;
 
   dimension: ano_modelo {
