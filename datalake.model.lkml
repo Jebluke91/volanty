@@ -30,7 +30,7 @@ named_value_format: reais {
 
 
 
-explore: simulacoes_qvmc {
+explore: volanty_simulacoes_qvmc {
   label: "Simulacoes_qvmc"
 
 }

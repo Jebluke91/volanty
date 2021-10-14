@@ -1,4 +1,4 @@
-view: simulacoes_qvmc {
+view: volanty_simulacoes_qvmc {
   sql_table_name: `volanty-production.views.Volanty_Simulacoes_QVMC`
     ;;
 
