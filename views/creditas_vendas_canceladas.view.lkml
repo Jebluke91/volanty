@@ -1,10 +1,15 @@
-view: vendas_canceladas {
-  sql_table_name: `volanty-production.views.Vendas_Canceladas`
+view: creditas_vendas_canceladas {
+  sql_table_name: `volanty-production.views.Creditas_Vendas_Canceladas`
     ;;
 
   dimension: ano_modelo {
     type: string
     sql: ${TABLE}.ano_modelo ;;
+  }
+
+  dimension: car_vendor {
+    type: string
+    sql: ${TABLE}.CAR_VENDOR ;;
   }
 
   dimension: carroceria {
@@ -79,11 +84,6 @@ view: vendas_canceladas {
     sql: ${TABLE}.email_comprador ;;
   }
 
-  dimension: empresa {
-    type: string
-    sql: ${TABLE}.empresa ;;
-  }
-
   dimension: fornecedor {
     type: string
     sql: ${TABLE}.fornecedor ;;
@@ -129,11 +129,6 @@ view: vendas_canceladas {
     sql: ${TABLE}.modelo ;;
   }
 
-  dimension: nome_comprador {
-    type: string
-    sql: ${TABLE}.nome_comprador ;;
-  }
-
   dimension: origem {
     type: string
     sql: ${TABLE}.origem ;;
@@ -177,11 +172,6 @@ view: vendas_canceladas {
   dimension: referencia_lead {
     type: string
     sql: ${TABLE}.referencia_lead ;;
-  }
-
-  dimension: reserva_paga {
-    type: string
-    sql: ${TABLE}.reserva_paga ;;
   }
 
   dimension: status {

@@ -103,7 +103,7 @@ explore: leads_proprietario {
 }
 
 
-explore: vendas_canceladas {
+explore: volanty_vendas_canceladas {
 
 }
 

@@ -1,5 +1,6 @@
-view: vendas_canceladas {
-  sql_table_name: `volanty-production.views.Vendas_Canceladas`
+view: volanty_vendas_canceladas {
+
+  sql_table_name: `volanty-production.views.Volanty_Vendas_Canceladas`
     ;;
 
   dimension: ano_modelo {
@@ -79,11 +80,6 @@ view: vendas_canceladas {
     sql: ${TABLE}.email_comprador ;;
   }
 
-  dimension: empresa {
-    type: string
-    sql: ${TABLE}.empresa ;;
-  }
-
   dimension: fornecedor {
     type: string
     sql: ${TABLE}.fornecedor ;;
@@ -129,11 +125,6 @@ view: vendas_canceladas {
     sql: ${TABLE}.modelo ;;
   }
 
-  dimension: nome_comprador {
-    type: string
-    sql: ${TABLE}.nome_comprador ;;
-  }
-
   dimension: origem {
     type: string
     sql: ${TABLE}.origem ;;
@@ -159,16 +150,16 @@ view: vendas_canceladas {
     sql: ${TABLE}.produto ;;
   }
 
-  dimension: reason {
-    type: string
-    sql: ${TABLE}.reason ;;
-  }
-
   dimension: reason_description {
     type: string
     sql: ${TABLE}.reasonDescription ;;
   }
 
+
+  dimension: reason {
+    type: string
+    sql: ${TABLE}.reason ;;
+  }
   dimension: referencia_cliente_telefone {
     type: string
     sql: ${TABLE}.referencia_cliente_telefone ;;
@@ -177,11 +168,6 @@ view: vendas_canceladas {
   dimension: referencia_lead {
     type: string
     sql: ${TABLE}.referencia_lead ;;
-  }
-
-  dimension: reserva_paga {
-    type: string
-    sql: ${TABLE}.reserva_paga ;;
   }
 
   dimension: status {
@@ -272,4 +258,5 @@ view: vendas_canceladas {
     type: count
     drill_fields: []
   }
-}
+
+  }

@@ -89,6 +89,11 @@ explore: creditas_funil_vendas {
 
 }
 
+explore: creditas_vendas_canceladas {
+
+}
+
+
 explore: inventario {
 
 }

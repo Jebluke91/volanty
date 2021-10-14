@@ -45,3 +45,7 @@ explore: funil_compras {
 explore: funil_vendas {
 
 }
+
+explore: vendas_canceladas {
+
+}
