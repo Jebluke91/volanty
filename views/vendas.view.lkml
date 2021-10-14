@@ -464,9 +464,9 @@ view: vendas {
     sql: ${TABLE}.vendedor ;;
   }
 
-  dimension: vendor {
+  dimension: empresa {
     type: string
-    sql: ${TABLE}.vendor ;;
+    sql: ${TABLE}.empresa ;;
   }
 
   dimension: versao {

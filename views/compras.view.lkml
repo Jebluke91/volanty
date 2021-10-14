@@ -141,9 +141,9 @@ view: compras {
     sql: ${TABLE}.numero_documentos ;;
   }
 
-  dimension: partner {
+  dimension: empresa {
     type: string
-    sql: ${TABLE}.partner ;;
+    sql: ${TABLE}.empresa ;;
   }
 
   dimension: placa {
