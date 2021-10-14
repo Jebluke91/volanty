@@ -41,3 +41,7 @@ explore: avaliacoes {
 explore: funil_compras {
 
 }
+
+explore: funil_vendas {
+
+}
