@@ -49,3 +49,16 @@ explore: funil_vendas {
 explore: vendas_canceladas {
 
 }
+
+explore: vendas {
+
+}
+
+explore: compras {
+
+}
+
+explore: visitas {
+
+
+}
