@@ -1,5 +1,5 @@
 view: simulacoes_qvmc {
-  sql_table_name: `volanty-production.views.Simulacoes_QVMC`
+  sql_table_name: `volanty-production.views.Volanty_Simulacoes_QVMC`
     ;;
 
   dimension: agendou_avaliacao {
@@ -67,13 +67,43 @@ view: simulacoes_qvmc {
   }
 
   dimension: km {
-    type: string
+    type: number
     sql: ${TABLE}.km ;;
   }
 
   dimension: marca {
     type: string
     sql: ${TABLE}.marca ;;
+  }
+
+  dimension: maximo_preco_compra {
+    type: number
+    sql: ${TABLE}.maximo_preco_compra ;;
+  }
+
+  dimension: maximo_preco_consignado {
+    type: number
+    sql: ${TABLE}.maximo_preco_consignado ;;
+  }
+
+  dimension: maximo_preco_troca {
+    type: number
+    sql: ${TABLE}.maximo_preco_troca ;;
+  }
+
+  dimension: minimo_preco_compra {
+    type: number
+    sql: ${TABLE}.minimo_preco_compra ;;
+  }
+
+  dimension: minimo_preco_consignado {
+    type: number
+    sql: ${TABLE}.minimo_preco_consignado ;;
+  }
+
+  dimension: minimo_preco_troca {
+    type: number
+    sql: ${TABLE}.minimo_preco_troca ;;
   }
 
   dimension: modelo {
@@ -104,51 +134,6 @@ view: simulacoes_qvmc {
   dimension: preco_min {
     type: number
     sql: ${TABLE}.preco_min ;;
-  }
-
-  dimension: pricing_0_maximum {
-    type: number
-    sql: ${TABLE}.pricing_0_maximum ;;
-  }
-
-  dimension: pricing_0_minimum {
-    type: number
-    sql: ${TABLE}.pricing_0_minimum ;;
-  }
-
-  dimension: pricing_0_type {
-    type: string
-    sql: ${TABLE}.pricing_0_type ;;
-  }
-
-  dimension: pricing_1_maximum {
-    type: number
-    sql: ${TABLE}.pricing_1_maximum ;;
-  }
-
-  dimension: pricing_1_minimum {
-    type: number
-    sql: ${TABLE}.pricing_1_minimum ;;
-  }
-
-  dimension: pricing_1_type {
-    type: string
-    sql: ${TABLE}.pricing_1_type ;;
-  }
-
-  dimension: pricing_2_maximum {
-    type: number
-    sql: ${TABLE}.pricing_2_maximum ;;
-  }
-
-  dimension: pricing_2_minimum {
-    type: number
-    sql: ${TABLE}.pricing_2_minimum ;;
-  }
-
-  dimension: pricing_2_type {
-    type: string
-    sql: ${TABLE}.pricing_2_type ;;
   }
 
   dimension: referer {

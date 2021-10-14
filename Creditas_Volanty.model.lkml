@@ -21,3 +21,7 @@ include: "/views/*.view.lkml"                # include all views in the views/ f
 explore: agendamentos_proprietario {
 
 }
+
+explore: simulacoes_qvmc {
+
+}
