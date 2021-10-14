@@ -1,12 +1,12 @@
-view: funil_lead_aquisicao {
-  sql_table_name: views.Volanty_Funil_Compras ;;
+view: funil_compras {
+  sql_table_name: `volanty-production.views.Funil_Compras`
+    ;;
 
   dimension_group: data {
     type: time
     timeframes: [
       raw,
       date,
-      day_of_week,
       week,
       month,
       quarter,
@@ -14,7 +14,7 @@ view: funil_lead_aquisicao {
     ]
     convert_tz: no
     datatype: date
-    sql: ${TABLE}.data ;;
+    sql: ${TABLE}.DATA ;;
   }
 
   dimension: estagio {
@@ -27,30 +27,29 @@ view: funil_lead_aquisicao {
     sql: ${TABLE}.etapa ;;
   }
 
-  dimension: tipo {
+  dimension: loja {
     type: string
-    sql: ${TABLE}.tipo ;;
+    sql: ${TABLE}.loja ;;
   }
 
-  dimension: utm_source {
+  dimension: media_origin {
     type: string
-    sql: ${TABLE}.utm_source ;;
+    sql: ${TABLE}.media_origin ;;
   }
-
-  dimension: faixa_km {
-    type: string
-    sql: ${TABLE}.faixa_km ;;
-  }
-
 
   dimension: qtd {
     type: number
     sql: ${TABLE}.qtd ;;
   }
 
-  dimension: modelo {
+  dimension: uf {
     type: string
-    sql: ${TABLE}.modelo ;;
+    sql: ${TABLE}.uf ;;
+  }
+
+  dimension: utm_source {
+    type: string
+    sql: ${TABLE}.utm_source ;;
   }
 
   measure: count {

@@ -37,3 +37,7 @@ explore: estoque_anunciado {
 explore: avaliacoes {
 
 }
+
+explore: funil_compras {
+
+}
