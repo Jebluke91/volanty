@@ -179,9 +179,9 @@ view: venda_pedidos_v1 {
     sql: ${TABLE}.reason ;;
   }
 
-  dimension: reason_description {
+  dimension: reasondescription {
     type: string
-    sql: ${TABLE}.reason_description ;;
+    sql: ${TABLE}.reasondescription ;;
   }
 
   dimension: preco_anuncio {
