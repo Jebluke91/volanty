@@ -153,10 +153,6 @@ view: venda_pedidos_v1 {
     sql: ${TABLE}.marca ;;
   }
 
-  dimension: meta_nome_campanha {
-    type: string
-    sql: ${TABLE}.meta_nome_campanha ;;
-  }
 
   dimension: modelo {
     type: string
@@ -241,6 +237,17 @@ view: venda_pedidos_v1 {
   dimension: uf_venda {
     type: string
     sql: ${TABLE}.UF_venda ;;
+  }
+
+
+  dimension: empresa {
+    type: string
+    sql: ${TABLE}.empresa ;;
+  }
+
+  dimension: reserva_paga {
+    type: string
+    sql: ${TABLE}.reserva_paga ;;
   }
 
   dimension_group: ultima_atualizacao {
