@@ -54,6 +54,11 @@ view: funil_vendas {
     sql: ${TABLE}.utmsource_cliente ;;
   }
 
+  dimension: utmmedium_cliente {
+    type: string
+    sql: ${TABLE}.utmmedium_cliente ;;
+  }
+
   dimension: utmcampaign_cliente {
     type: string
     sql: ${TABLE}.utmcampaign_cliente ;;
