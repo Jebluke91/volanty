@@ -1,5 +1,5 @@
 view: campanhas_comprador {
-  sql_table_name: `volanty-production.views.Campanhas_Comprador`
+  sql_table_name: `volanty-production.views.Funil_Vendas`
     ;;
 
   dimension_group: data {
@@ -17,43 +17,56 @@ view: campanhas_comprador {
     sql: ${TABLE}.data ;;
   }
 
-  dimension: meta_nome_campanha {
+
+  dimension: cav {
     type: string
-    sql: ${TABLE}.meta_nome_campanha ;;
+    sql: ${TABLE}.cav ;;
   }
 
-  dimension: uf {
+  dimension: estado {
     type: string
-    sql: ${TABLE}.uf ;;
+    sql: ${TABLE}.estado ;;
   }
 
-  dimension: produto {
+  dimension: empresa {
     type: string
-    sql: ${TABLE}.produto ;;
+    sql: ${TABLE}.empresa ;;
   }
 
-  dimension: qtd_lead {
+  dimension: etapa {
+    type: string
+    sql: ${TABLE}.etapa ;;
+  }
+
+
+  dimension: qtd {
     type: number
-    sql: ${TABLE}.qtd_lead ;;
+    sql: ${TABLE}.qtd ;;
   }
 
-  dimension: qtd_venda {
-    type: number
-    sql: ${TABLE}.qtd_venda ;;
-  }
 
-  dimension: qtd_visita {
-    type: number
-    sql: ${TABLE}.qtd_visita ;;
-  }
-
-  dimension: referencia_lead {
+  dimension: referencia_cliente {
     type: string
-    sql: ${TABLE}.referencia_lead ;;
+    sql: ${TABLE}.referencia_cliente ;;
+  }
+  dimension: utmsource_cliente {
+    type: string
+    sql: ${TABLE}.utmsource_cliente ;;
   }
 
-  measure: count {
-    type: count
-    drill_fields: []
+  dimension: utmcampaign_cliente {
+    type: string
+    sql: ${TABLE}.utmcampaign_cliente ;;
   }
+
+  dimension: partner_cliente {
+    type: string
+    sql: ${TABLE}.partner_cliente ;;
+  }
+
+  dimension: origin_cliente {
+    type: string
+    sql: ${TABLE}.origin_cliente ;;
+  }
+
 }
