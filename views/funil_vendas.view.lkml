@@ -2,11 +2,6 @@ view: funil_vendas {
   sql_table_name: `volanty-production.views.Funil_Vendas`
     ;;
 
-  dimension: cav {
-    type: string
-    sql: ${TABLE}.cav ;;
-  }
-
   dimension_group: data {
     type: time
     timeframes: [
@@ -19,7 +14,13 @@ view: funil_vendas {
     ]
     convert_tz: no
     datatype: date
-    sql: ${TABLE}.DATA ;;
+    sql: ${TABLE}.data ;;
+  }
+
+
+  dimension: cav {
+    type: string
+    sql: ${TABLE}.cav ;;
   }
 
   dimension: estado {
@@ -27,23 +28,45 @@ view: funil_vendas {
     sql: ${TABLE}.estado ;;
   }
 
+  dimension: empresa {
+    type: string
+    sql: ${TABLE}.empresa ;;
+  }
+
   dimension: etapa {
     type: string
     sql: ${TABLE}.etapa ;;
   }
+
 
   dimension: qtd {
     type: number
     sql: ${TABLE}.qtd ;;
   }
 
-  dimension: referencia_lead {
+
+  dimension: referencia_cliente {
     type: string
-    sql: ${TABLE}.referencia_lead ;;
+    sql: ${TABLE}.referencia_cliente ;;
+  }
+  dimension: utmsource_cliente {
+    type: string
+    sql: ${TABLE}.utmsource_cliente ;;
   }
 
-  measure: count {
-    type: count
-    drill_fields: []
+  dimension: utmcampaign_cliente {
+    type: string
+    sql: ${TABLE}.utmcampaign_cliente ;;
   }
+
+  dimension: partner_cliente {
+    type: string
+    sql: ${TABLE}.partner_cliente ;;
+  }
+
+  dimension: origin_cliente {
+    type: string
+    sql: ${TABLE}.origin_cliente ;;
+  }
+
 }
