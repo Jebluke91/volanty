@@ -220,6 +220,12 @@ view: vendas {
     sql: ${TABLE}.Financiamento_interno ;;
   }
 
+  dimension: veiculo_na_troca {
+    type: yesno
+    sql: ${TABLE}.Veiculo_troca ;;
+  }
+
+
   dimension: id_venda {
     type: string
     sql: ${TABLE}.id_venda ;;
