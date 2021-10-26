@@ -1,4 +1,4 @@
-- dashboard: estoque_critico_
+- dashboard: estoque_critico
   title: Estoque_Crítico
   layout: newspaper
   preferred_viewer: dashboards-next
@@ -225,8 +225,8 @@
     height: 2
   - title: Detalhado
     name: Detalhado
-    model: Creditas
-    explore: creditas_plano_acao_estoque_critico
+    model: Creditas_Volanty
+    explore: plano_acao_estoque_critico
     type: looker_grid
     fields: [creditas_plano_acao_estoque_critico.placa, creditas_plano_acao_estoque_critico.a____o,
       creditas_plano_acao_estoque_critico.data_a____o_date, creditas_plano_acao_estoque_critico.status,
@@ -299,8 +299,8 @@
     height: 5
   - title: Leads Semana Anterior
     name: Leads Semana Anterior
-    model: Creditas
-    explore: creditas_plano_acao_estoque_critico
+    model: Creditas_Volanty
+    explore: plano_acao_estoque_critico
     type: single_value
     fields: [leads_semana_anterior]
     limit: 500
@@ -378,8 +378,8 @@
     height: 4
   - title: Leads Semana Posterior
     name: Leads Semana Posterior
-    model: Creditas
-    explore: creditas_plano_acao_estoque_critico
+    model: Creditas_Volanty
+    explore: plano_acao_estoque_critico
     type: single_value
     fields: [leads_semana_posterior]
     limit: 500
@@ -457,8 +457,8 @@
     height: 4
   - title: Reservados/Vendidos
     name: Reservados/Vendidos
-    model: Creditas
-    explore: creditas_plano_acao_estoque_critico
+    model: Creditas_Volanty
+    explore: plano_acao_estoque_critico
     type: single_value
     fields: [creditas_plano_acao_estoque_critico.count]
     filters:
@@ -535,8 +535,8 @@
     height: 4
   - title: Qtd_Carros
     name: Qtd_Carros
-    model: Creditas
-    explore: creditas_plano_acao_estoque_critico
+    model: Creditas_Volanty
+    explore: plano_acao_estoque_critico
     type: single_value
     fields: [creditas_plano_acao_estoque_critico.count]
     limit: 500
@@ -611,8 +611,8 @@
     height: 4
   - title: Variacão
     name: Variacão
-    model: Creditas
-    explore: creditas_plano_acao_estoque_critico
+    model: Creditas_Volanty
+    explore: plano_acao_estoque_critico
     type: single_value
     fields: [leads_semana_posterior, leads_semana_anterior]
     limit: 500
@@ -912,8 +912,8 @@
     default_value: 2021/08/25
     allow_multiple_values: true
     required: false
-    model: Creditas
-    explore: creditas_plano_acao_estoque_critico
+    model: Creditas_Volanty
+    explore: plano_acao_estoque_critico
     listens_to_filters: []
     field: creditas_plano_acao_estoque_critico.data_a____o_date
   - name: Qtde Leads
