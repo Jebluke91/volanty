@@ -1,4 +1,4 @@
-- dashboard: estoque_crtico
+- dashboard: estoque_critico_
   title: Estoque_Crítico
   layout: newspaper
   preferred_viewer: dashboards-next
