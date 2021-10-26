@@ -29,6 +29,10 @@ explore: simulacoes_qvmc {
 
 }
 
+explore: creditas_plano_acao_estoque_critico {
+  label: "plano_acao_estoque_critico"
+}
+
 explore: leads_compradores {
 
 }
