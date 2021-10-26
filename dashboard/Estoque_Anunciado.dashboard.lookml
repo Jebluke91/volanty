@@ -5,7 +5,7 @@
   elements:
   - title: Estoque Detalhado
     name: Estoque Detalhado
-    model: Creditas_Volanty_Volanty
+    model: Creditas_Volanty
     explore: estoque_anunciado
     type: looker_grid
     fields: [estoque_anunciado.placa, estoque_anunciado.marca, estoque_anunciado.modelo,

@@ -1,7 +1,6 @@
 connection: "volanty-production"
 
 include: "/views/*.view"
-include: "/dashboard/*.dashboard"
 
 label: " Volanty Geral"
 
@@ -88,9 +87,6 @@ explore: vendas_oficial {
   label: "Vendas"
 }
 
-explore: atribuicao_venda_leads {
-  label: "atribuicao_venda_leads"
-}
 
 explore: estoque {
   label: "Estoque"
@@ -108,7 +104,7 @@ explore: volanty_vendas_canceladas {
 }
 
 explore: volanty_estoque_anunciado {
-  label: "Estoque_Anunciado"
+  label: "Volanty_Estoque_Anunciado"
 }
 
 
@@ -117,16 +113,7 @@ explore: estoque_movimentacao {
   label: "Estoque_movimentacao"
 }
 
-explore: acquisition_lead {
-  label: "acquisiton_lead_describe"
-  required_access_grants: [admin_team]
-}
 
-
-explore: amostra_kbb_qvmc {
-  label: "amostra_kbb"
-  required_access_grants: [admin_team]
-}
 
 
 explore: compras_selecionados {
@@ -152,9 +139,7 @@ explore: campanhas_proprietarios {
   label: "Campanhas_Proprietarios"
 }
 
-explore: campanhas_comprador {
-  label: "Campanhas_Compradores"
-}
+
 explore: pedido_compras {
   label: "Compras"
 }
