@@ -93,7 +93,7 @@ view: estoque_anunciado {
   }
 
   dimension: km {
-    type: string
+    type: number
     sql: ${TABLE}.km ;;
   }
 
