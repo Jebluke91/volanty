@@ -123,7 +123,7 @@ view: estoque_anunciado {
   }
 
   dimension: preco_anuncio {
-    type: string
+    type: number
     sql: ${TABLE}.preco_anuncio ;;
   }
 
@@ -133,7 +133,7 @@ view: estoque_anunciado {
   }
 
   dimension: precofipe {
-    type: string
+    type: number
     sql: ${TABLE}.precofipe ;;
   }
 
