@@ -70,7 +70,7 @@
     height: 9
   - title: Categoria Dias Em Estoque
     name: Categoria Dias Em Estoque
-    model: Creditas
+    model: Creditas_Volanty
     explore: estoque_anunciado
     type: looker_bar
     fields: [estoque_anunciado.categoria, estoque_anunciado.count]
@@ -299,7 +299,7 @@
     height: 5
   - title: Leads Semana Anterior
     name: Leads Semana Anterior
-    model: Creditas_Volanty
+    model: Creditas
     explore: creditas_plano_acao_estoque_critico
     type: single_value
     fields: [leads_semana_anterior]
@@ -457,7 +457,7 @@
     height: 4
   - title: Reservados/Vendidos
     name: Reservados/Vendidos
-    model: Creditas_Volanty
+    model: Creditas
     explore: creditas_plano_acao_estoque_critico
     type: single_value
     fields: [creditas_plano_acao_estoque_critico.count]
@@ -611,7 +611,7 @@
     height: 4
   - title: Variacão
     name: Variacão
-    model: Creditas_Volanty
+    model: Creditas
     explore: creditas_plano_acao_estoque_critico
     type: single_value
     fields: [leads_semana_posterior, leads_semana_anterior]
@@ -697,7 +697,7 @@
     height: 4
   - title: Performance por Marca e Modelo e versão
     name: Performance por Marca e Modelo e versão
-    model: Creditas
+    model: Creditas_Volanty
     explore: estoque_anunciado
     type: looker_grid
     fields: [estoque_anunciado.marca, estoque_anunciado.modelo,
@@ -888,7 +888,7 @@
       type: button_group
       display: inline
       options: []
-    model: Creditas
+    model: Creditas_Volanty
     explore: estoque_anunciado
     listens_to_filters: []
     field: estoque_anunciado.status
