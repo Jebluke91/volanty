@@ -1,5 +1,5 @@
-view: creditas_estoque_anunciado {
-  sql_table_name: `volanty-production.views.Creditas_Estoque_Anunciado`
+view: estoque_anunciado {
+  sql_table_name: `volanty-production.views.Estoque_Anunciado`
     ;;
 
   dimension: categoria {
