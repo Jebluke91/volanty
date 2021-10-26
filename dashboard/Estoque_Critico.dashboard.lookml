@@ -228,10 +228,10 @@
     model: Creditas_Volanty
     explore: plano_acao_estoque_critico
     type: looker_grid
-    fields: [creditas_plano_acao_estoque_critico.placa, creditas_plano_acao_estoque_critico.a____o,
-      creditas_plano_acao_estoque_critico.data_a____o_date, creditas_plano_acao_estoque_critico.status,
-      creditas_plano_acao_estoque_critico.leads_semana_anterior, creditas_plano_acao_estoque_critico.leads_semana_anterior_por_dia,
-      creditas_plano_acao_estoque_critico.leads_semana_posterior, creditas_plano_acao_estoque_critico.leads_semana_posterior_por_dia,
+    fields: [creditas_plano_acao_estoque_critico.placa,plano_acao_estoque_critico.a____o,
+     plano_acao_estoque_critico.data_a____o_date,plano_acao_estoque_critico.status,
+     plano_acao_estoque_critico.leads_semana_anterior,plano_acao_estoque_critico.leads_semana_anterior_por_dia,
+     plano_acao_estoque_critico.leads_semana_posterior,plano_acao_estoque_critico.leads_semana_posterior_por_dia,
       crescimento_leads_por_dia]
     sorts: [creditas_plano_acao_estoque_critico.data_a____o_date desc]
     limit: 500
@@ -257,17 +257,17 @@
     conditional_formatting_include_totals: false
     conditional_formatting_include_nulls: false
     show_sql_query_menu_options: false
-    column_order: ["$$$_row_numbers_$$$", creditas_plano_acao_estoque_critico.placa,
-      creditas_plano_acao_estoque_critico.a____o, creditas_plano_acao_estoque_critico.data_a____o_date,
-      creditas_plano_acao_estoque_critico.status, creditas_plano_acao_estoque_critico.leads_semana_anterior,
-      creditas_plano_acao_estoque_critico.leads_semana_anterior_por_dia, creditas_plano_acao_estoque_critico.leads_semana_posterior,
-      creditas_plano_acao_estoque_critico.leads_semana_posterior_por_dia]
+    column_order: ["$$$_row_numbers_$$$",plano_acao_estoque_critico.placa,
+     plano_acao_estoque_critico.a____o,plano_acao_estoque_critico.data_a____o_date,
+     plano_acao_estoque_critico.status,plano_acao_estoque_critico.leads_semana_anterior,
+     plano_acao_estoque_critico.leads_semana_anterior_por_dia,plano_acao_estoque_critico.leads_semana_posterior,
+     plano_acao_estoque_critico.leads_semana_posterior_por_dia]
     show_totals: true
     show_row_totals: true
     series_labels:
-      creditas_plano_acao_estoque_critico.status: Venda
-      creditas_plano_acao_estoque_critico.data_a____o_date: Data_Acao
-      creditas_plano_acao_estoque_critico.a____o: Acao
+     plano_acao_estoque_critico.status: Venda
+     plano_acao_estoque_critico.data_a____o_date: Data_Acao
+     plano_acao_estoque_critico.a____o: Acao
     x_axis_gridlines: false
     y_axis_gridlines: true
     show_y_axis_labels: true
@@ -311,7 +311,7 @@
           \  ))\n\n", label: Crescimento_Leads_Por_Dia, value_format: !!null '', value_format_name: percent_1,
         dimension: crescimento_leads_por_dia, _kind_hint: dimension, _type_hint: number},
       {category: measure, expression: !!null '', label: Leads Semana Anterior, value_format: !!null '',
-        value_format_name: !!null '', based_on: creditas_plano_acao_estoque_critico.leads_semana_anterior,
+        value_format_name: !!null '', based_on:plano_acao_estoque_critico.leads_semana_anterior,
         _kind_hint: measure, measure: leads_semana_anterior, type: sum, _type_hint: number}]
     custom_color_enabled: true
     show_single_value_title: true
@@ -323,11 +323,11 @@
     conditional_formatting_include_totals: false
     conditional_formatting_include_nulls: false
     show_sql_query_menu_options: false
-    column_order: ["$$$_row_numbers_$$$", creditas_plano_acao_estoque_critico.placa,
-      creditas_plano_acao_estoque_critico.a____o, creditas_plano_acao_estoque_critico.data_a____o_date,
-      creditas_plano_acao_estoque_critico.status, creditas_plano_acao_estoque_critico.leads_semana_anterior,
-      creditas_plano_acao_estoque_critico.leads_semana_anterior_por_dia, creditas_plano_acao_estoque_critico.leads_semana_posterior,
-      creditas_plano_acao_estoque_critico.leads_semana_posterior_por_dia]
+    column_order: ["$$$_row_numbers_$$$",plano_acao_estoque_critico.placa,
+     plano_acao_estoque_critico.a____o,plano_acao_estoque_critico.data_a____o_date,
+     plano_acao_estoque_critico.status,plano_acao_estoque_critico.leads_semana_anterior,
+     plano_acao_estoque_critico.leads_semana_anterior_por_dia,plano_acao_estoque_critico.leads_semana_posterior,
+     plano_acao_estoque_critico.leads_semana_posterior_por_dia]
     show_totals: true
     show_row_totals: true
     show_view_names: false
@@ -336,9 +336,9 @@
     truncate_text: true
     size_to_fit: true
     series_labels:
-      creditas_plano_acao_estoque_critico.status: Venda
-      creditas_plano_acao_estoque_critico.data_a____o_date: Data_Acao
-      creditas_plano_acao_estoque_critico.a____o: Acao
+     plano_acao_estoque_critico.status: Venda
+     plano_acao_estoque_critico.data_a____o_date: Data_Acao
+     plano_acao_estoque_critico.a____o: Acao
     table_theme: white
     limit_displayed_rows: false
     header_text_alignment: left
@@ -371,7 +371,7 @@
     hide_totals: false
     hide_row_totals: false
     listen:
-      Data Ação: creditas_plano_acao_estoque_critico.data_a____o_date
+      Data Ação:plano_acao_estoque_critico.data_a____o_date
     row: 32
     col: 10
     width: 5
@@ -390,7 +390,7 @@
           \  ))\n\n", label: Crescimento_Leads_Por_Dia, value_format: !!null '', value_format_name: percent_1,
         dimension: crescimento_leads_por_dia, _kind_hint: dimension, _type_hint: number},
       {category: measure, expression: !!null '', label: Leads Semana Posterior, value_format: !!null '',
-        value_format_name: !!null '', based_on: creditas_plano_acao_estoque_critico.leads_semana_posterior,
+        value_format_name: !!null '', based_on:plano_acao_estoque_critico.leads_semana_posterior,
         _kind_hint: measure, measure: leads_semana_posterior, type: sum, _type_hint: number}]
     custom_color_enabled: true
     show_single_value_title: true
@@ -402,11 +402,11 @@
     conditional_formatting_include_totals: false
     conditional_formatting_include_nulls: false
     show_sql_query_menu_options: false
-    column_order: ["$$$_row_numbers_$$$", creditas_plano_acao_estoque_critico.placa,
-      creditas_plano_acao_estoque_critico.a____o, creditas_plano_acao_estoque_critico.data_a____o_date,
-      creditas_plano_acao_estoque_critico.status, creditas_plano_acao_estoque_critico.leads_semana_anterior,
-      creditas_plano_acao_estoque_critico.leads_semana_anterior_por_dia, creditas_plano_acao_estoque_critico.leads_semana_posterior,
-      creditas_plano_acao_estoque_critico.leads_semana_posterior_por_dia]
+    column_order: ["$$$_row_numbers_$$$",plano_acao_estoque_critico.placa,
+     plano_acao_estoque_critico.a____o,plano_acao_estoque_critico.data_a____o_date,
+     plano_acao_estoque_critico.status,plano_acao_estoque_critico.leads_semana_anterior,
+     plano_acao_estoque_critico.leads_semana_anterior_por_dia,plano_acao_estoque_critico.leads_semana_posterior,
+     plano_acao_estoque_critico.leads_semana_posterior_por_dia]
     show_totals: true
     show_row_totals: true
     show_view_names: false
@@ -415,9 +415,9 @@
     truncate_text: true
     size_to_fit: true
     series_labels:
-      creditas_plano_acao_estoque_critico.status: Venda
-      creditas_plano_acao_estoque_critico.data_a____o_date: Data_Acao
-      creditas_plano_acao_estoque_critico.a____o: Acao
+     plano_acao_estoque_critico.status: Venda
+     plano_acao_estoque_critico.data_a____o_date: Data_Acao
+     plano_acao_estoque_critico.a____o: Acao
     table_theme: white
     limit_displayed_rows: false
     header_text_alignment: left
@@ -450,7 +450,7 @@
     hide_totals: false
     hide_row_totals: false
     listen:
-      Data Ação: creditas_plano_acao_estoque_critico.data_a____o_date
+      Data Ação:plano_acao_estoque_critico.data_a____o_date
     row: 32
     col: 15
     width: 5
@@ -462,7 +462,7 @@
     type: single_value
     fields: [creditas_plano_acao_estoque_critico.count]
     filters:
-      creditas_plano_acao_estoque_critico.status: "-NULL"
+     plano_acao_estoque_critico.status: "-NULL"
     limit: 500
     dynamic_fields: [{category: dimension, expression: "if(${creditas_plano_acao_estoque_critico.leads_semana_posterior_por_dia}\n\
           \  =0,0,\n  if(${creditas_plano_acao_estoque_critico.leads_semana_anterior_por_dia}\n\
@@ -480,11 +480,11 @@
     conditional_formatting_include_totals: false
     conditional_formatting_include_nulls: false
     show_sql_query_menu_options: false
-    column_order: ["$$$_row_numbers_$$$", creditas_plano_acao_estoque_critico.placa,
-      creditas_plano_acao_estoque_critico.a____o, creditas_plano_acao_estoque_critico.data_a____o_date,
-      creditas_plano_acao_estoque_critico.status, creditas_plano_acao_estoque_critico.leads_semana_anterior,
-      creditas_plano_acao_estoque_critico.leads_semana_anterior_por_dia, creditas_plano_acao_estoque_critico.leads_semana_posterior,
-      creditas_plano_acao_estoque_critico.leads_semana_posterior_por_dia]
+    column_order: ["$$$_row_numbers_$$$",plano_acao_estoque_critico.placa,
+     plano_acao_estoque_critico.a____o,plano_acao_estoque_critico.data_a____o_date,
+     plano_acao_estoque_critico.status,plano_acao_estoque_critico.leads_semana_anterior,
+     plano_acao_estoque_critico.leads_semana_anterior_por_dia,plano_acao_estoque_critico.leads_semana_posterior,
+     plano_acao_estoque_critico.leads_semana_posterior_por_dia]
     show_totals: true
     show_row_totals: true
     show_view_names: false
@@ -493,9 +493,9 @@
     truncate_text: true
     size_to_fit: true
     series_labels:
-      creditas_plano_acao_estoque_critico.status: Venda
-      creditas_plano_acao_estoque_critico.data_a____o_date: Data_Acao
-      creditas_plano_acao_estoque_critico.a____o: Acao
+     plano_acao_estoque_critico.status: Venda
+     plano_acao_estoque_critico.data_a____o_date: Data_Acao
+     plano_acao_estoque_critico.a____o: Acao
     table_theme: white
     limit_displayed_rows: false
     header_text_alignment: left
@@ -528,7 +528,7 @@
     hide_totals: false
     hide_row_totals: false
     listen:
-      Data Ação: creditas_plano_acao_estoque_critico.data_a____o_date
+      Data Ação:plano_acao_estoque_critico.data_a____o_date
     row: 32
     col: 5
     width: 5
@@ -556,11 +556,11 @@
     conditional_formatting_include_totals: false
     conditional_formatting_include_nulls: false
     show_sql_query_menu_options: false
-    column_order: ["$$$_row_numbers_$$$", creditas_plano_acao_estoque_critico.placa,
-      creditas_plano_acao_estoque_critico.a____o, creditas_plano_acao_estoque_critico.data_a____o_date,
-      creditas_plano_acao_estoque_critico.status, creditas_plano_acao_estoque_critico.leads_semana_anterior,
-      creditas_plano_acao_estoque_critico.leads_semana_anterior_por_dia, creditas_plano_acao_estoque_critico.leads_semana_posterior,
-      creditas_plano_acao_estoque_critico.leads_semana_posterior_por_dia]
+    column_order: ["$$$_row_numbers_$$$",plano_acao_estoque_critico.placa,
+     plano_acao_estoque_critico.a____o,plano_acao_estoque_critico.data_a____o_date,
+     plano_acao_estoque_critico.status,plano_acao_estoque_critico.leads_semana_anterior,
+     plano_acao_estoque_critico.leads_semana_anterior_por_dia,plano_acao_estoque_critico.leads_semana_posterior,
+     plano_acao_estoque_critico.leads_semana_posterior_por_dia]
     show_totals: true
     show_row_totals: true
     show_view_names: false
@@ -569,9 +569,9 @@
     truncate_text: true
     size_to_fit: true
     series_labels:
-      creditas_plano_acao_estoque_critico.status: Venda
-      creditas_plano_acao_estoque_critico.data_a____o_date: Data_Acao
-      creditas_plano_acao_estoque_critico.a____o: Acao
+     plano_acao_estoque_critico.status: Venda
+     plano_acao_estoque_critico.data_a____o_date: Data_Acao
+     plano_acao_estoque_critico.a____o: Acao
     table_theme: white
     limit_displayed_rows: false
     header_text_alignment: left
@@ -604,7 +604,7 @@
     hide_totals: false
     hide_row_totals: false
     listen:
-      Data Ação: creditas_plano_acao_estoque_critico.data_a____o_date
+      Data Ação:plano_acao_estoque_critico.data_a____o_date
     row: 32
     col: 0
     width: 5
@@ -623,10 +623,10 @@
           \  ))\n\n", label: Crescimento_Leads_Por_Dia, value_format: !!null '', value_format_name: percent_1,
         dimension: crescimento_leads_por_dia, _kind_hint: dimension, _type_hint: number},
       {category: measure, expression: !!null '', label: Leads Semana Posterior, value_format: !!null '',
-        value_format_name: !!null '', based_on: creditas_plano_acao_estoque_critico.leads_semana_posterior,
+        value_format_name: !!null '', based_on:plano_acao_estoque_critico.leads_semana_posterior,
         _kind_hint: measure, measure: leads_semana_posterior, type: sum, _type_hint: number},
       {category: measure, expression: !!null '', label: Leads_Semana_Anterior, value_format: !!null '',
-        value_format_name: !!null '', based_on: creditas_plano_acao_estoque_critico.leads_semana_anterior,
+        value_format_name: !!null '', based_on:plano_acao_estoque_critico.leads_semana_anterior,
         _kind_hint: measure, measure: leads_semana_anterior, type: sum, _type_hint: number},
       {category: table_calculation, expression: "${leads_semana_posterior}/${leads_semana_anterior}-1",
         label: Variacão, value_format: !!null '', value_format_name: percent_1, _kind_hint: measure,
@@ -641,11 +641,11 @@
     conditional_formatting_include_totals: false
     conditional_formatting_include_nulls: false
     show_sql_query_menu_options: false
-    column_order: ["$$$_row_numbers_$$$", creditas_plano_acao_estoque_critico.placa,
-      creditas_plano_acao_estoque_critico.a____o, creditas_plano_acao_estoque_critico.data_a____o_date,
-      creditas_plano_acao_estoque_critico.status, creditas_plano_acao_estoque_critico.leads_semana_anterior,
-      creditas_plano_acao_estoque_critico.leads_semana_anterior_por_dia, creditas_plano_acao_estoque_critico.leads_semana_posterior,
-      creditas_plano_acao_estoque_critico.leads_semana_posterior_por_dia]
+    column_order: ["$$$_row_numbers_$$$",plano_acao_estoque_critico.placa,
+     plano_acao_estoque_critico.a____o,plano_acao_estoque_critico.data_a____o_date,
+     plano_acao_estoque_critico.status,plano_acao_estoque_critico.leads_semana_anterior,
+     plano_acao_estoque_critico.leads_semana_anterior_por_dia,plano_acao_estoque_critico.leads_semana_posterior,
+     plano_acao_estoque_critico.leads_semana_posterior_por_dia]
     show_totals: true
     show_row_totals: true
     show_view_names: false
@@ -654,9 +654,9 @@
     truncate_text: true
     size_to_fit: true
     series_labels:
-      creditas_plano_acao_estoque_critico.status: Venda
-      creditas_plano_acao_estoque_critico.data_a____o_date: Data_Acao
-      creditas_plano_acao_estoque_critico.a____o: Acao
+     plano_acao_estoque_critico.status: Venda
+     plano_acao_estoque_critico.data_a____o_date: Data_Acao
+     plano_acao_estoque_critico.a____o: Acao
     table_theme: white
     limit_displayed_rows: false
     header_text_alignment: left
@@ -690,7 +690,7 @@
     hide_row_totals: false
     hidden_fields: [leads_semana_anterior, leads_semana_posterior]
     listen:
-      Data Ação: creditas_plano_acao_estoque_critico.data_a____o_date
+      Data Ação:plano_acao_estoque_critico.data_a____o_date
     row: 32
     col: 20
     width: 4
@@ -915,7 +915,7 @@
     model: Creditas_Volanty
     explore: plano_acao_estoque_critico
     listens_to_filters: []
-    field: creditas_plano_acao_estoque_critico.data_a____o_date
+    field: plano_acao_estoque_critico.data_a____o_date
   - name: Qtde Leads
     title: Qtde Leads
     type: field_filter
