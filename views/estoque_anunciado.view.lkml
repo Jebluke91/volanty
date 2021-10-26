@@ -1,4 +1,4 @@
-view: estoque_anunciado {
+view: estoque_anunciado2 {
   sql_table_name: `volanty-production.views.Estoque_Anunciado`
     ;;
 

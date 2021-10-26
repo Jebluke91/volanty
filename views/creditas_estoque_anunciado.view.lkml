@@ -54,6 +54,11 @@ view: estoque_anunciado {
     sql: ${TABLE}.inspection_key ;;
   }
 
+  dimension: empresa {
+    type: string
+    sql: ${TABLE}.empresa ;;
+  }
+
   dimension: km {
     type: string
     sql: ${TABLE}.km ;;
