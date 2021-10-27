@@ -77,10 +77,6 @@ view: estoque_anunciado {
     sql: ${TABLE}.Dias_Em_Estoque ;;
   }
 
-  dimension: empresa {
-    type: string
-    sql: ${TABLE}.empresa ;;
-  }
 
   dimension: freio_abs {
     type: string
