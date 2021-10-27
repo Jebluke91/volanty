@@ -37,9 +37,14 @@ view: estoque_anunciado {
     sql: ${TABLE}.carroceria ;;
   }
 
-  dimension: categoria {
+  dimension: categoria_dias {
     type: string
-    sql: ${TABLE}.categoria ;;
+    sql: ${TABLE}.categoria_dias ;;
+  }
+
+  dimension: categoria_leads {
+    type: string
+    sql: ${TABLE}.categoria_leads ;;
   }
 
   dimension: cav {
