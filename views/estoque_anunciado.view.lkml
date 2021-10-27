@@ -27,6 +27,11 @@ view: estoque_anunciado {
     sql: ${TABLE}.Cambio ;;
   }
 
+  dimension: empresa {
+    type: string
+    sql: ${TABLE}.empresa ;;
+  }
+
   dimension: carroceria {
     type: string
     sql: ${TABLE}.carroceria ;;
