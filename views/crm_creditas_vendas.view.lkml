@@ -69,10 +69,22 @@ view: crm_creditas_vendas {
     sql: ${TABLE}.criado_por ;;
   }
 
-  dimension: data_de_inicio {
-    type: string
+
+  dimension_group: data_de_inicio {
+    type: time
+    timeframes: [
+      raw,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    convert_tz: no
+    datatype: date
     sql: ${TABLE}.data_de_inicio ;;
   }
+
 
   dimension: data_de_termino {
     type: string
