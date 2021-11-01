@@ -1,5 +1,5 @@
-- dashboard: estoque_crtico
-  title: Estoque_Crítico
+- dashboard: estoque_crtico_old
+  title: Estoque_Crítico_old
   layout: newspaper
   elements:
   - title: Leads VS Aging VS Visitas

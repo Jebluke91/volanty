@@ -18,7 +18,7 @@ view: estoque_anunciado {
   }
 
   dimension: ano_modelo {
-    type: string
+    type: number
     sql: ${TABLE}.ano_modelo ;;
   }
 
@@ -27,14 +27,24 @@ view: estoque_anunciado {
     sql: ${TABLE}.Cambio ;;
   }
 
+  dimension: empresa {
+    type: string
+    sql: ${TABLE}.empresa ;;
+  }
+
   dimension: carroceria {
     type: string
     sql: ${TABLE}.carroceria ;;
   }
 
-  dimension: categoria {
+  dimension: categoria_dias {
     type: string
-    sql: ${TABLE}.categoria ;;
+    sql: ${TABLE}.categoria_dias ;;
+  }
+
+  dimension: categoria_leads {
+    type: string
+    sql: ${TABLE}.categoria_leads ;;
   }
 
   dimension: cav {
@@ -72,10 +82,6 @@ view: estoque_anunciado {
     sql: ${TABLE}.Dias_Em_Estoque ;;
   }
 
-  dimension: empresa {
-    type: string
-    sql: ${TABLE}.empresa ;;
-  }
 
   dimension: freio_abs {
     type: string
@@ -93,7 +99,7 @@ view: estoque_anunciado {
   }
 
   dimension: km {
-    type: string
+    type: number
     sql: ${TABLE}.km ;;
   }
 
@@ -123,7 +129,7 @@ view: estoque_anunciado {
   }
 
   dimension: preco_anuncio {
-    type: string
+    type: number
     sql: ${TABLE}.preco_anuncio ;;
   }
 
@@ -133,7 +139,7 @@ view: estoque_anunciado {
   }
 
   dimension: precofipe {
-    type: string
+    type: number
     sql: ${TABLE}.precofipe ;;
   }
 

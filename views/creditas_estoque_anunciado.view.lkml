@@ -1,5 +1,5 @@
 view: creditas_estoque_anunciado {
-  sql_table_name: `volanty-production.views.Creditas_Estoque_Anunciado`
+  sql_table_name: `volanty-production.views.Estoque_Anunciado`
     ;;
 
   dimension: categoria {
@@ -52,6 +52,11 @@ view: creditas_estoque_anunciado {
   dimension: inspection_key {
     type: string
     sql: ${TABLE}.inspection_key ;;
+  }
+
+  dimension: empresa {
+    type: string
+    sql: ${TABLE}.empresa ;;
   }
 
   dimension: km {
