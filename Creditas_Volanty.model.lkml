@@ -69,3 +69,7 @@ explore: visitas {
 
 
 }
+
+explore: proprietarios_ceps  {
+
+}
