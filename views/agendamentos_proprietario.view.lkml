@@ -1,5 +1,5 @@
 view: agendamentos_proprietario {
-  sql_table_name: `volanty-production.views.Agendamentos_Proprietario`
+  sql_table_name: `volanty-production.views.Agendamentos_Proprietarios`
     ;;
 
   dimension: ano_modelo {
