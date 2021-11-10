@@ -82,6 +82,11 @@ view: estoque_anunciado {
     sql: ${TABLE}.Dias_Em_Estoque ;;
   }
 
+  dimension: pedidos_cancelados {
+    type: number
+    sql: ${TABLE}.pedidos_cancelados ;;
+  }
+
 
   dimension: freio_abs {
     type: string
