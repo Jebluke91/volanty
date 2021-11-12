@@ -1,4 +1,4 @@
-view: visitas {
+view: visita {
   sql_table_name: `volanty-production.views.Visitas`
     ;;
 
