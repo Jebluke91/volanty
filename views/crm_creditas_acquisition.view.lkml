@@ -74,6 +74,7 @@ view: crm_creditas_acquisition {
       quarter,
       year
     ]
+    sql: ${TABLE}.data_de_inicio
     }
 
   dimension: data_de_termino {
