@@ -75,6 +75,8 @@ view: crm_creditas_acquisition {
           quarter,
           year
         ]
+        convert_tz: no
+        datatype: date
         sql: ${TABLE}.data_de_inicio ;;
       }
 
