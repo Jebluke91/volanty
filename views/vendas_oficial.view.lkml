@@ -294,7 +294,7 @@ view: vendas_oficial {
 
   dimension: MTD {
     type: yesno
-    sql:  EXTRACT(DAY FROM  ${TABLE}.data_vendido) <= EXTRACT(DAY FROM CURRENT_DATE("America/Sao_Paulo"))
+    sql:  EXTRACT(DAY FROM  ${TABLE}.data_vendido) < EXTRACT(DAY FROM CURRENT_DATE("America/Sao_Paulo"))
 ;;
   }
   dimension_group: data_entrega {

@@ -138,6 +138,11 @@ view: vendas {
     sql: ${TABLE}.data_vendido ;;
   }
 
+  dimension: MTD {
+    type: yesno
+    sql:  EXTRACT(DAY FROM  ${TABLE}.data_vendido) < EXTRACT(DAY FROM CURRENT_DATE("America/Sao_Paulo"))
+      ; ;
+
   dimension_group: data_visita_agendada_para {
     type: time
     timeframes: [
