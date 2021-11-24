@@ -64,10 +64,22 @@ view: crm_creditas_acquisition {
     sql: ${TABLE}.criado_por ;;
   }
 
-  dimension: data_de_inicio {
-    type: string
-    sql: ${TABLE}.data_de_inicio ;;
-  }
+      dimension_group: data_de_inicio {
+        type: time
+        timeframes: [
+          raw,
+          time,
+          date,
+          week,
+          month,
+          quarter,
+          year
+        ]
+        convert_tz: no
+        datatype: date
+        sql: ${TABLE}.data_de_inicio ;;
+      }
+
 
   dimension: data_de_termino {
     type: string
