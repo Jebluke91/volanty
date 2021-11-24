@@ -97,3 +97,7 @@ explore: creditas_vendas_canceladas {
 explore: inventario {
 
 }
+
+explore: plano_reducao_green_friday{
+
+}
