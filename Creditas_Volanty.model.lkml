@@ -73,3 +73,7 @@ explore: visitas {
 explore: proprietarios_ceps  {
 
 }
+
+explore: plano_reducao_green_friday{
+
+}
