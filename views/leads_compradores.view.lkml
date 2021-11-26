@@ -56,6 +56,11 @@ view: leads_compradores {
     sql: ${TABLE}.financeintention ;;
   }
 
+  dimension: insuranceintention {
+    type: string
+    sql: ${TABLE}.insuranceintention ;;
+  }
+
   dimension: inspectionkey {
     type: number
     sql: ${TABLE}.inspectionkey ;;
