@@ -121,65 +121,209 @@ view: crm_creditas_acquisition {
     sql: ${TABLE}.disponivel_para_todos ;;
   }
 
-  dimension: dt_enter_avaliacao_agendadaaquisicao {
-    type: string
+
+  dimension_group: dt_enter_avaliacao_agendadaaquisicao {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    convert_tz: no
+    datatype: date
     sql: ${TABLE}.dt_enter_avaliacao_agendadaaquisicao ;;
   }
 
-  dimension: dt_enter_avaliacao_confirmadaaquisicao {
-    type: string
+
+
+  dimension_group: dt_enter_avaliacao_confirmadaaquisicao {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    convert_tz: no
+    datatype: date
     sql: ${TABLE}.dt_enter_avaliacao_confirmadaaquisicao ;;
   }
 
-  dimension: dt_enter_avaliacoes_canceladasaquisicao {
-    type: string
+  dimension_group: dt_enter_avaliacoes_canceladasaquisicao {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    convert_tz: no
+    datatype: date
     sql: ${TABLE}.dt_enter_avaliacoes_canceladasaquisicao ;;
   }
 
-  dimension: dt_enter_confirmar_avaliacaoaquisicao {
-    type: string
+
+  dimension_group: dt_enter_confirmar_avaliacaoaquisicao {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    convert_tz: no
+    datatype: date
     sql: ${TABLE}.dt_enter_confirmar_avaliacaoaquisicao ;;
   }
 
-  dimension: dt_enter_contato_sem_sucessoaquisicao {
-    type: string
+
+
+  dimension_group: dt_enter_contato_sem_sucessoaquisicao {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    convert_tz: no
+    datatype: date
     sql: ${TABLE}.dt_enter_contato_sem_sucessoaquisicao ;;
   }
 
-  dimension: dt_enter_formsaquisicao {
-    type: string
+
+  dimension_group: dt_enter_formsaquisicao {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    convert_tz: no
+    datatype: date
     sql: ${TABLE}.dt_enter_formsaquisicao ;;
   }
 
-  dimension: dt_enter_negociando_avaliacaoaquisicao {
-    type: string
+
+  dimension_group: dt_enter_negociando_avaliacaoaquisicao {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    convert_tz: no
+    datatype: date
     sql: ${TABLE}.dt_enter_negociando_avaliacaoaquisicao ;;
   }
 
-  dimension: dt_enter_negocios_ganhosaquisicao {
-    type: string
+
+
+  dimension_group: dt_enter_negocios_ganhosaquisicao {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    convert_tz: no
+    datatype: date
     sql: ${TABLE}.dt_enter_negocios_ganhosaquisicao ;;
   }
 
-  dimension: dt_enter_negocios_perdidosaquisicao {
-    type: string
+  dimension_group: dt_enter_negocios_perdidosaquisicao {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    convert_tz: no
+    datatype: date
     sql: ${TABLE}.dt_enter_negocios_perdidosaquisicao ;;
   }
 
-  dimension: dt_enter_no_showaquisicao {
-    type: string
+  dimension_group: dt_enter_no_showaquisicao {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    convert_tz: no
+    datatype: date
     sql: ${TABLE}.dt_enter_no_showaquisicao ;;
   }
 
-  dimension: dt_enter_resposta_emailaquisicao {
-    type: string
+  dimension_group: dt_enter_resposta_emailaquisicao {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    convert_tz: no
+    datatype: date
     sql: ${TABLE}.dt_enter_resposta_emailaquisicao ;;
   }
 
-  dimension: dt_entrada_avaliacao_agendada {
-    type: string
+  dimension_group: dt_entrada_avaliacao_agendada {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    convert_tz: no
+    datatype: date
     sql: ${TABLE}.dt_entrada_avaliacao_agendada ;;
   }
+
+
 
   dimension: email {
     type: string

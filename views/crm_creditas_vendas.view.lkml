@@ -59,8 +59,18 @@ view: crm_creditas_vendas {
     sql: ${TABLE}.cpf ;;
   }
 
-  dimension: criado_em {
-    type: string
+  dimension_group: criado_em {
+    type: time
+    timeframes: [
+      raw,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    convert_tz: no
+    datatype: date
     sql: ${TABLE}.criado_em ;;
   }
 
@@ -86,10 +96,23 @@ view: crm_creditas_vendas {
   }
 
 
-  dimension: data_de_termino {
-    type: string
+
+  dimension_group: data_de_termino {
+    type: time
+    timeframes: [
+      raw,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    convert_tz: no
+    datatype: date
     sql: ${TABLE}.data_de_termino ;;
   }
+
+
 
   dimension: data_exportacao {
     type: string
@@ -116,31 +139,86 @@ view: crm_creditas_vendas {
     sql: ${TABLE}.deseja_financiar ;;
   }
 
-  dimension: dt_enter_carro_vendidovendas {
-    type: string
+
+  dimension_group: dt_enter_carro_vendidovendas {
+    type: time
+    timeframes: [
+      raw,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    convert_tz: no
+    datatype: date
     sql: ${TABLE}.dt_enter_carro_vendidovendas ;;
   }
 
-  dimension: dt_enter_negociandovendas {
-    type: string
+
+
+  dimension_group: dt_enter_negociandovendas {
+    type: time
+    timeframes: [
+      raw,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    convert_tz: no
+    datatype: date
     sql: ${TABLE}.dt_enter_negociandovendas ;;
   }
 
-  dimension: dt_enter_novos_clientesvendas {
-    type: string
+
+  dimension_group: dt_enter_novos_clientesvendas {
+    type: time
+    timeframes: [
+      raw,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    convert_tz: no
+    datatype: date
     sql: ${TABLE}.dt_enter_novos_clientesvendas ;;
   }
 
-  dimension: dt_enter_tentativa_contatovendas {
-    type: string
+
+  dimension_group: dt_enter_tentativa_contatovendas {
+    type: time
+    timeframes: [
+      raw,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    convert_tz: no
+    datatype: date
     sql: ${TABLE}.dt_enter_tentativa_contatovendas ;;
   }
 
-  dimension: dt_enter_visita_agendadavendas {
-    type: string
+
+  dimension_group: dt_enter_visita_agendadavendas {
+    type: time
+    timeframes: [
+      raw,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    convert_tz: no
+    datatype: date
     sql: ${TABLE}.dt_enter_visita_agendadavendas ;;
   }
-
   dimension: email {
     type: string
     sql: ${TABLE}.email ;;
