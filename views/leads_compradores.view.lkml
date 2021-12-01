@@ -12,6 +12,11 @@ view: leads_compradores {
     sql: ${TABLE}.cav ;;
   }
 
+  dimension: utm_source {
+    type: string
+    sql: ${TABLE}.utmSource ;;
+  }
+
   dimension: cav_mercado_livre {
     type: string
     sql: ${TABLE}.Cav_MercadoLivre ;;
