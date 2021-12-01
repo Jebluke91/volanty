@@ -176,6 +176,11 @@ view: leads_compradores {
     sql: ${TABLE}.tipo_visita ;;
   }
 
+  dimension: utm_source {
+    type: string
+    sql: ${TABLE}.utmSource ;;
+  }
+
   dimension: utm_campanha_lead {
     type: string
     sql: ${TABLE}.utm_campanha_lead ;;
