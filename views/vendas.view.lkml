@@ -377,6 +377,8 @@ view: vendas {
     sql: ${TABLE}.responsavel_venda ;;
   }
 
+
+
   dimension: responsavel_visita {
     type: string
     sql: ${TABLE}.responsavel_visita ;;
@@ -489,6 +491,11 @@ view: vendas {
   dimension: visitid {
     type: string
     sql: ${TABLE}.visitid ;;
+  }
+
+  dimension: Valor_Financiamento_interno {
+    type: number
+    sql: ${TABLE}.Valor_Financiamento_interno ;;
   }
 
   measure: count {
