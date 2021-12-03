@@ -77,3 +77,7 @@ explore: proprietarios_ceps  {
 explore: plano_reducao_green_friday{
 
 }
+
+explore: projecao_vendas_{
+
+}
