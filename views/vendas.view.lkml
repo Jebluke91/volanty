@@ -16,6 +16,15 @@ view: vendas {
     type: string
     sql: ${TABLE}.reserva_paga ;;
   }
+  dimension: partner_cliente {
+    type: string
+    sql: ${TABLE}.partner_cliente ;;
+  }
+
+  dimension: origin_cliente {
+    type: string
+    sql: ${TABLE}.origin_cliente ;;
+  }
 
   dimension: car_vendor {
     type: string
