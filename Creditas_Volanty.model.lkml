@@ -81,3 +81,7 @@ explore: plano_reducao_green_friday{
 explore: projecao_vendas_{
 
 }
+
+explore: pedido_venda{
+
+}
