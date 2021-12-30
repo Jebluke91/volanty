@@ -66,7 +66,10 @@ explore: compras {
 }
 
 explore: visitas {
-
+  join: pedido_venda {
+    type: left_outer
+    sql: ${visitas.visitid}=${pedido_venda.visitid} ;;
+  }
 
 }
 
