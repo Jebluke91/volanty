@@ -65,10 +65,14 @@ explore: compras {
 
 }
 
+explore: pedido_venda{
+
+}
+
 explore: visitas {
   join: pedido_venda {
     type: left_outer
-    sql: ${visitas.visitid}=${pedido_venda.visitid} ;;
+    sql_on: ${visitas.visitid}=${pedido_venda.visitid} ;;
   }
 
 }
@@ -82,9 +86,5 @@ explore: plano_reducao_green_friday{
 }
 
 explore: projecao_vendas_{
-
-}
-
-explore: pedido_venda{
 
 }
