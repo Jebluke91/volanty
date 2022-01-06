@@ -7,6 +7,11 @@ view: vendas_canceladas {
     sql: ${TABLE}.ano_modelo ;;
   }
 
+  dimension: banco {
+    type: string
+    sql: ${TABLE}.banco ;;
+  }
+
   dimension: carroceria {
     type: string
     sql: ${TABLE}.carroceria ;;
