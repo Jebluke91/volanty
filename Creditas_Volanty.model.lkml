@@ -88,3 +88,7 @@ explore: plano_reducao_green_friday{
 explore: projecao_vendas_{
 
 }
+
+explore: avaliacao_historico_short{
+
+}
