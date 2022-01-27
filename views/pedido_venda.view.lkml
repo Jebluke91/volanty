@@ -160,19 +160,9 @@ view: pedido_venda {
     sql: ${TABLE}.origin_cliente ;;
   }
 
-  dimension: origin_lead {
-    type: string
-    sql: ${TABLE}.origin_lead ;;
-  }
-
   dimension: partner_cliente {
     type: string
     sql: ${TABLE}.partner_cliente ;;
-  }
-
-  dimension: partner_lead {
-    type: string
-    sql: ${TABLE}.partner_lead ;;
   }
 
   dimension: placa {

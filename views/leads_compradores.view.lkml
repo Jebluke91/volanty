@@ -12,11 +12,6 @@ view: leads_compradores {
     sql: ${TABLE}.cav ;;
   }
 
-  dimension: cav_mercado_livre {
-    type: string
-    sql: ${TABLE}.Cav_MercadoLivre ;;
-  }
-
   dimension: cor {
     type: string
     sql: ${TABLE}.cor ;;
@@ -146,19 +141,9 @@ view: leads_compradores {
     sql: ${TABLE}.preco_por ;;
   }
 
-  dimension: produto {
-    type: string
-    sql: ${TABLE}.produto ;;
-  }
-
   dimension: referencia_lead {
     type: string
     sql: ${TABLE}.referencia_lead ;;
-  }
-
-  dimension: status {
-    type: string
-    sql: ${TABLE}.status ;;
   }
 
   dimension: telefone_lead {
@@ -171,44 +156,9 @@ view: leads_compradores {
     sql: ${TABLE}.ticketid ;;
   }
 
-  dimension: tipo_visita {
-    type: string
-    sql: ${TABLE}.tipo_visita ;;
-  }
-
   dimension: utm_source {
     type: string
     sql: ${TABLE}.utmSource ;;
-  }
-
-  dimension: utm_campanha_lead {
-    type: string
-    sql: ${TABLE}.utm_campanha_lead ;;
-  }
-
-  dimension: utm_conteudo_lead {
-    type: string
-    sql: ${TABLE}.utm_conteudo_lead ;;
-  }
-
-  dimension: utm_fonte_lead {
-    type: string
-    sql: ${TABLE}.utm_fonte_lead ;;
-  }
-
-  dimension: utm_midia_lead {
-    type: string
-    sql: ${TABLE}.utm_midia_lead ;;
-  }
-
-  dimension: utm_termo_lead {
-    type: string
-    sql: ${TABLE}.utm_termo_lead ;;
-  }
-
-  dimension: utm_volanty_lead {
-    type: string
-    sql: ${TABLE}.utm_volanty_lead ;;
   }
 
   dimension: versao {

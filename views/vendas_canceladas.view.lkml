@@ -12,11 +12,6 @@ view: vendas_canceladas {
     sql: ${TABLE}.banco ;;
   }
 
-  dimension: carroceria {
-    type: string
-    sql: ${TABLE}.carroceria ;;
-  }
-
   dimension: cav_venda {
     type: string
     sql: ${TABLE}.cav_venda ;;
@@ -104,16 +99,6 @@ view: vendas_canceladas {
     sql: ${TABLE}.intervalo_anunciado_reservado ;;
   }
 
-  dimension: intervalo_anunciado_vendido {
-    type: number
-    sql: ${TABLE}.intervalo_anunciado_vendido ;;
-  }
-
-  dimension: intervalo_reservado_vendido {
-    type: number
-    sql: ${TABLE}.intervalo_reservado_vendido ;;
-  }
-
   dimension: km {
     type: number
     sql: ${TABLE}.km ;;
@@ -126,7 +111,7 @@ view: vendas_canceladas {
 
   dimension: meta_nome_campanha {
     type: string
-    sql: ${TABLE}.meta_nome_campanha ;;
+    sql: ${TABLE}.meta_nome_campanha_lead ;;
   }
 
   dimension: modelo {
@@ -137,11 +122,6 @@ view: vendas_canceladas {
   dimension: nome_comprador {
     type: string
     sql: ${TABLE}.nome_comprador ;;
-  }
-
-  dimension: origem {
-    type: string
-    sql: ${TABLE}.origem ;;
   }
 
   dimension: placa {
@@ -161,7 +141,7 @@ view: vendas_canceladas {
 
   dimension: produto {
     type: string
-    sql: ${TABLE}.produto ;;
+    sql: ${TABLE}.produto_venda ;;
   }
 
   dimension: reason {
@@ -172,11 +152,6 @@ view: vendas_canceladas {
   dimension: reason_description {
     type: string
     sql: ${TABLE}.reasonDescription ;;
-  }
-
-  dimension: referencia_cliente_telefone {
-    type: string
-    sql: ${TABLE}.referencia_cliente_telefone ;;
   }
 
   dimension: referencia_lead {
@@ -194,19 +169,9 @@ view: vendas_canceladas {
     sql: ${TABLE}.status ;;
   }
 
-  dimension: tag_black_friday {
-    type: string
-    sql: ${TABLE}.tag_black_friday ;;
-  }
-
   dimension: telefone_comprador {
     type: string
     sql: ${TABLE}.telefone_comprador ;;
-  }
-
-  dimension: transmissao {
-    type: string
-    sql: ${TABLE}.transmissao ;;
   }
 
   dimension: uf_comprador {
@@ -231,31 +196,6 @@ view: vendas_canceladas {
       year
     ]
     sql: ${TABLE}.ultima_atualizacao ;;
-  }
-
-  dimension: utm_campanha_lead {
-    type: string
-    sql: ${TABLE}.utm_campanha_lead ;;
-  }
-
-  dimension: utm_fonte_lead {
-    type: string
-    sql: ${TABLE}.utm_fonte_lead ;;
-  }
-
-  dimension: utm_midia_lead {
-    type: string
-    sql: ${TABLE}.utm_midia_lead ;;
-  }
-
-  dimension: utm_volanty_lead {
-    type: string
-    sql: ${TABLE}.utm_volanty_lead ;;
-  }
-
-  dimension: valor_compra {
-    type: number
-    sql: ${TABLE}.valor_compra ;;
   }
 
   dimension: vendedor {

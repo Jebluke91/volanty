@@ -42,7 +42,7 @@ view: visitas {
       quarter,
       year
     ]
-    sql: ${TABLE}.data_criacao_lead ;;
+    sql: ${TABLE}.data_criacao_lead_cliente ;;
   }
 
   dimension_group: data_visita_agendada_para {
@@ -117,11 +117,6 @@ view: visitas {
     sql: ${TABLE}.inspetor_visita ;;
   }
 
-  dimension: leadid {
-    type: string
-    sql: ${TABLE}.leadid ;;
-  }
-
   dimension: level_of_interest_feedback {
     type: number
     sql: ${TABLE}.levelOfInterestFeedback ;;
@@ -134,7 +129,7 @@ view: visitas {
 
   dimension: meta_nome_campanha {
     type: string
-    sql: ${TABLE}.meta_nome_campanha ;;
+    sql: ${TABLE}.meta_nome_campanha_lead ;;
   }
 
   dimension: modelo {
@@ -182,16 +177,6 @@ view: visitas {
     sql: ${TABLE}.preco_venda ;;
   }
 
-  dimension: produto {
-    type: string
-    sql: ${TABLE}.produto ;;
-  }
-
-  dimension: referencia_cliente_telefone {
-    type: string
-    sql: ${TABLE}.referencia_cliente_telefone ;;
-  }
-
   dimension: referencia_lead {
     type: string
     sql: ${TABLE}.referencia_lead ;;
@@ -215,31 +200,6 @@ view: visitas {
   dimension: tipo {
     type: string
     sql: ${TABLE}.tipo ;;
-  }
-
-  dimension: uf {
-    type: string
-    sql: ${TABLE}.UF ;;
-  }
-
-  dimension: utm_campanha_lead {
-    type: string
-    sql: ${TABLE}.utm_campanha_lead ;;
-  }
-
-  dimension: utm_fonte_lead {
-    type: string
-    sql: ${TABLE}.utm_fonte_lead ;;
-  }
-
-  dimension: utm_midia_lead {
-    type: string
-    sql: ${TABLE}.utm_midia_lead ;;
-  }
-
-  dimension: utm_volanty_lead {
-    type: string
-    sql: ${TABLE}.utm_volanty_lead ;;
   }
 
   dimension: versao {
