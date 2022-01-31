@@ -92,3 +92,7 @@ explore: projecao_vendas_{
 explore: avaliacao_historico_short{
 
 }
+
+explore: bigquery_metadados{
+
+}
