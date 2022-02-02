@@ -77,9 +77,9 @@ view: inventario {
     sql: ${TABLE}.stock_car_plate ;;
   }
 
-  dimension: user {
+  dimension: consultor {
     type: string
-    sql: ${TABLE}.user ;;
+    sql: ${TABLE}.consultor ;;
   }
 
   dimension: vacancy {
