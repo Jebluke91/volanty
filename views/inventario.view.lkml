@@ -17,16 +17,6 @@ view: inventario {
     sql: ${TABLE}.coordinates_long ;;
   }
 
-  dimension: create_date {
-    type: string
-    sql: ${TABLE}.createDate ;;
-  }
-
-  dimension: date {
-    type: string
-    sql: ${TABLE}.date ;;
-  }
-
   dimension: from_qr_code {
     type: string
     sql: ${TABLE}.fromQrCode ;;
@@ -95,6 +85,34 @@ view: inventario {
   dimension: vacancy {
     type: string
     sql: ${TABLE}.vacancy ;;
+  }
+
+  dimension_group: date {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql: ${TABLE}.date ;;
+  }
+
+  dimension_group: create_date {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql: ${TABLE}.create_date ;;
   }
 
   measure: count {

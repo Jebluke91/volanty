@@ -7,11 +7,6 @@ view: inventario_evento {
     sql: ${TABLE}._id ;;
   }
 
-  dimension: date {
-    type: string
-    sql: ${TABLE}.date ;;
-  }
-
   dimension: inventory_coordinates_lat {
     type: string
     sql: ${TABLE}.inventory_coordinates_lat ;;
@@ -282,9 +277,32 @@ view: inventario_evento {
     sql: ${TABLE}.type ;;
   }
 
-  dimension: update_date {
-    type: string
-    sql: ${TABLE}.updateDate ;;
+  dimension_group: date {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql: ${TABLE}.date ;;
+  }
+
+  dimension_group: update_date {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql: ${TABLE}.update_date ;;
   }
 
   measure: count {
