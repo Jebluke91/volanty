@@ -96,3 +96,11 @@ explore: avaliacao_historico_short{
 explore: bigquery_metadados{
 
 }
+
+explore: inventario{
+
+}
+
+explore: inventario_evento{
+
+}
