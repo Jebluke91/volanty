@@ -104,3 +104,7 @@ explore: inventario{
 explore: inventario_evento{
 
 }
+
+explore: crm_garantia{
+
+}
