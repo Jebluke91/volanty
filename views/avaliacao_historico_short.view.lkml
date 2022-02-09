@@ -89,6 +89,16 @@ view: avaliacao_historico_short {
     sql: ${TABLE}.km ;;
   }
 
+  dimension: cav {
+    type: string
+    sql: ${TABLE}.cav ;;
+  }
+
+  dimension: estado {
+    type: string
+    sql: ${TABLE}.estado ;;
+  }
+
   dimension: lead_ddd {
     type: string
     sql: ${TABLE}.lead_ddd ;;
