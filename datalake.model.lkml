@@ -37,6 +37,11 @@ explore: volanty_simulacoes_qvmc {
 explore: Carros {
 }
 
+
+
+explore: crm_pos_vendas {
+}
+
 explore: estoque_critico_creditas_ {
 }
 
