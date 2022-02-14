@@ -52,6 +52,11 @@ view: funil_compras {
     sql: ${TABLE}.utm_source ;;
   }
 
+  dimension: utm_campaign {
+    type: string
+    sql: ${TABLE}.utm_campaign ;;
+  }
+
   measure: count {
     type: count
     drill_fields: []
