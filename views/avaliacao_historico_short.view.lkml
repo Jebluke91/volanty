@@ -1,5 +1,5 @@
 view: avaliacao_historico_short {
-  sql_table_name: `volanty-production.views.Avaliacao_Historico_Short`
+  sql_table_name: `volanty-production:views.Avaliacoes_Lead_Time`
     ;;
   drill_fields: [id]
 
