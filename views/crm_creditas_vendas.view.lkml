@@ -509,6 +509,11 @@ view: crm_creditas_vendas {
     sql: ${TABLE}.valor_visto_no_anuncio ;;
   }
 
+  dimension: reponsavel_categorizado {
+    type: string
+    sql: ${TABLE}.reponsavel_categorizado ;;
+  }
+
   measure: count {
     type: count
     drill_fields: [id]
