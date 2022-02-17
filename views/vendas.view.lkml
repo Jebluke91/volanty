@@ -287,7 +287,7 @@ view: vendas {
 
   dimension: Carteizado_PosVenda {
     type: string
-    sql: ${TABLE}.carterizado_posvenda ;;
+    sql: ${TABLE}.carterizado_pos_venda ;;
   }
 
   measure: count {
