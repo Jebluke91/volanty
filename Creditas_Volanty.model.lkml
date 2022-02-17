@@ -108,3 +108,7 @@ explore: inventario_evento{
 explore: crm_garantia{
 
 }
+
+explore: vendas_pos_vendas{
+
+}
