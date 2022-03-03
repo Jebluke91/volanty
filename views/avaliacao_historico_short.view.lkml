@@ -144,6 +144,36 @@ view: avaliacao_historico_short {
     sql: ${TABLE}.ultimo_status ;;
   }
 
+  dimension: placa {
+    type: string
+    sql: ${TABLE}.placa ;;
+  }
+
+  dimension: consultor_status_pendente {
+    type: string
+    sql: ${TABLE}.consultor_status_pending ;;
+  }
+
+  dimension: consultor_status_aguardando_mesa {
+    type: string
+    sql: ${TABLE}.consultor_status_aguardando_mesa ;;
+  }
+
+  dimension: consultor_status_gerando_proposta {
+    type: string
+    sql: ${TABLE}.consultor_status_gerando_proposta ;;
+  }
+
+  dimension: consultor_status_aguardando_dono {
+    type: string
+    sql: ${TABLE}.consultor_status_aguardando_dono ;;
+  }
+
+  dimension: consultor_status_finalizado {
+    type: string
+    sql: ${TABLE}.consultor_status_finalizado ;;
+  }
+
   measure: count {
     type: count
     drill_fields: [id]
