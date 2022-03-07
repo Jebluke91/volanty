@@ -25,6 +25,9 @@ explore: agendamentos_proprietario {
 
 }
 
+explore: formalizacao_ {
+  label: "promocao_tripulantes"
+}
 explore: simulacoes_qvmc {
 
 }
