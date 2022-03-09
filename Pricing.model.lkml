@@ -40,3 +40,7 @@ explore: sortimento_kavak {
   label: "Sortimento Kavak"
 
 }
+explore: sortimento_creditas_auto {
+  label: "Sortimento Creditas Auto"
+
+}
