@@ -2,6 +2,7 @@ connection: "volanty-production"
 
 
 include: "/views/*.view"
+include: "/exploratory_querys/*.view"
 
 label: "Pricing"
 
@@ -33,5 +34,9 @@ explore: crawler_kavak {
 }
 explore: preditas_fallback {
   label: "Preditas Fallback"
+
+}
+explore: sortimento_kavak {
+  label: "Sortimento Kavak"
 
 }
