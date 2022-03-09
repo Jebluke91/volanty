@@ -24,8 +24,8 @@ view: sortimento_kavak {
     drill_fields: [detail*]
   }
 
-  dimension: sortimento {
-    type: number
+  measure: sortimento {
+    type: sum
     sql: ${TABLE}.sortimento ;;
   }
 
