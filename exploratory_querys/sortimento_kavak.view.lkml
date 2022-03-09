@@ -8,9 +8,8 @@ view: sortimento_kavak {
           from (
             select brand, model, model_year, km, price, version, gear, body_type, color, fuel,
             case
-              when km <= 40000 then 'A: Até 40mil kms'
-              when km > 40000 and km <= 80000 then 'B: de 40mil até 80mil kms'
-              when km > 80000 and km <= 120000 then 'C: de 80mil até 120mil kms'
+              when km <= 50000 then 'A: Até 50mil kms'
+              when km > 50000 then 'B: mais de 50mil kms'
             end as km_categ
             from views.Crawler_Kavak) a ) b
         group by same_car
