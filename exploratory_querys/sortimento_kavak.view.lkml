@@ -1,6 +1,6 @@
 view: sortimento_kavak {
   derived_table: {
-    sql: select concat(round((select sum(qtd_carros) as soma_carros
+    sql: select (select sum(qtd_carros) as soma_carros
       from (
         select count(0) as qtd_carros, same_car
         from (
@@ -15,7 +15,7 @@ view: sortimento_kavak {
             from views.Crawler_Kavak) a ) b
         group by same_car
         having count(0) > 1
-        order by 1 desc ) c) / (select count(0) from views.Crawler_Kavak) * 100, 2), "%") as sortimento
+        order by 1 desc ) c) / (select count(0) from views.Crawler_Kavak) as sortimento
        ;;
   }
 
@@ -25,7 +25,7 @@ view: sortimento_kavak {
   }
 
   dimension: sortimento {
-    type: string
+    type: number
     sql: ${TABLE}.sortimento ;;
   }
 
