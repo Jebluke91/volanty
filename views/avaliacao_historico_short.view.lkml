@@ -91,10 +91,8 @@ view: avaliacao_historico_short {
 
   dimension: cav {
     type: string
-    sql: ${TABLE}.cav
-    html:{{ rendered_value }} <br>
-    {{ ${placa}._rendered_value }} - {{ ${modelo}._rendered_value }} <br>
-    ;;
+    sql: ${TABLE}.cav ;;
+
   }
 
   dimension: estado {
