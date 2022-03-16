@@ -25,6 +25,9 @@ explore: agendamentos_proprietario {
 
 }
 
+explore: formalizacao_ {
+  label: "promocao_tripulantes"
+}
 explore: simulacoes_qvmc {
 
 }
@@ -70,10 +73,6 @@ explore: pedido_venda{
 }
 
 explore: visitas {
-  join: pedido_venda {
-    type: left_outer
-    sql_on: ${visitas.visitid}=${pedido_venda.visitid} ;;
-  }
 
 }
 
@@ -94,5 +93,21 @@ explore: avaliacao_historico_short{
 }
 
 explore: bigquery_metadados{
+
+}
+
+explore: inventario{
+
+}
+
+explore: inventario_evento{
+
+}
+
+explore: crm_garantia{
+
+}
+
+explore: vendas_pos_vendas{
 
 }

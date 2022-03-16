@@ -1,5 +1,5 @@
-view: crm_pos_vendas {
-  sql_table_name: `volanty-production.views.CRM_Pos_Vendas`
+view: vendas_pos_vendas {
+  sql_table_name: `volanty-production.views.Vendas_PosVendas`
     ;;
   drill_fields: [id]
 
@@ -49,6 +49,11 @@ view: crm_pos_vendas {
     sql: ${TABLE}.ano_do_veiculo ;;
   }
 
+  dimension: ano_modelo {
+    type: string
+    sql: ${TABLE}.ano_modelo ;;
+  }
+
   dimension: area_solicitante {
     type: string
     sql: ${TABLE}.area_solicitante ;;
@@ -79,6 +84,11 @@ view: crm_pos_vendas {
     sql: ${TABLE}.at_tipo_de_solicitacao ;;
   }
 
+  dimension: banco {
+    type: string
+    sql: ${TABLE}.Banco ;;
+  }
+
   dimension: beneficios {
     type: string
     sql: ${TABLE}.beneficios ;;
@@ -102,6 +112,21 @@ view: crm_pos_vendas {
   dimension: cav_para_visita {
     type: string
     sql: ${TABLE}.cav_para_visita ;;
+  }
+
+  dimension: cav_venda {
+    type: string
+    sql: ${TABLE}.cav_venda ;;
+  }
+
+  dimension: cep_comprador {
+    type: string
+    sql: ${TABLE}.cep_comprador ;;
+  }
+
+  dimension: cidade_comprador {
+    type: string
+    sql: ${TABLE}.cidade_comprador ;;
   }
 
   dimension: cliente_optou_pelo_servico_de_despachante_ {
@@ -129,6 +154,16 @@ view: crm_pos_vendas {
     sql: ${TABLE}.confirmacao_do_financeiro ;;
   }
 
+  dimension: consultor {
+    type: string
+    sql: ${TABLE}.consultor ;;
+  }
+
+  dimension: consultor_apoiador {
+    type: string
+    sql: ${TABLE}.consultor_apoiador ;;
+  }
+
   dimension: contato {
     type: string
     sql: ${TABLE}.contato ;;
@@ -137,6 +172,11 @@ view: crm_pos_vendas {
   dimension: contato_com_sucesso {
     type: string
     sql: ${TABLE}.contato_com_sucesso ;;
+  }
+
+  dimension: cor {
+    type: string
+    sql: ${TABLE}.cor ;;
   }
 
   dimension: cpf {
@@ -149,9 +189,17 @@ view: crm_pos_vendas {
     sql: ${TABLE}.cpf2 ;;
   }
 
-
-  dimension: criado_em {
-    type: string
+  dimension_group: criado_em {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
     sql: ${TABLE}.criado_em ;;
   }
 
@@ -165,6 +213,16 @@ view: crm_pos_vendas {
     sql: ${TABLE}.criado_por ;;
   }
 
+  dimension: data_anunciado {
+    type: string
+    sql: ${TABLE}.data_anunciado ;;
+  }
+
+  dimension: data_da_desistencia {
+    type: string
+    sql: ${TABLE}.data_da_desistencia ;;
+  }
+
   dimension: data_da_ocorrencia {
     type: string
     sql: ${TABLE}.data_da_ocorrencia ;;
@@ -173,6 +231,11 @@ view: crm_pos_vendas {
   dimension: data_da_ocorrencia_timestamp {
     type: number
     sql: ${TABLE}.data_da_ocorrencia_timestamp ;;
+  }
+
+  dimension: data_da_recompra {
+    type: string
+    sql: ${TABLE}.data_da_recompra ;;
   }
 
   dimension: data_de_entrega_do_veiculo {
@@ -185,8 +248,22 @@ view: crm_pos_vendas {
     sql: ${TABLE}.data_de_entrega_do_veiculo_timestamp ;;
   }
 
-  dimension: data_de_inicio {
+  dimension: data_de_envio_do_kit {
     type: string
+    sql: ${TABLE}.data_de_envio_do_kit ;;
+  }
+
+  dimension_group: data_de_inicio {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
     sql: ${TABLE}.data_de_inicio ;;
   }
 
@@ -245,6 +322,11 @@ view: crm_pos_vendas {
     sql: ${TABLE}.data_de_termino_timestamp ;;
   }
 
+  dimension: data_do_contato_cliente {
+    type: string
+    sql: ${TABLE}.data_do_contato_cliente ;;
+  }
+
   dimension: data_do_contrato {
     type: string
     sql: ${TABLE}.data_do_contrato ;;
@@ -255,6 +337,16 @@ view: crm_pos_vendas {
     sql: ${TABLE}.data_do_contrato_timestamp ;;
   }
 
+  dimension: data_do_distrato {
+    type: string
+    sql: ${TABLE}.data_do_distrato ;;
+  }
+
+  dimension: data_do_pagamento_total {
+    type: string
+    sql: ${TABLE}.data_do_pagamento_total ;;
+  }
+
   dimension: data_e_hora_da_atribuicao_responsavel {
     type: string
     sql: ${TABLE}.data_e_hora_da_atribuicao_responsavel ;;
@@ -263,6 +355,25 @@ view: crm_pos_vendas {
   dimension: data_e_hora_da_atribuicao_responsavel_timestamp {
     type: number
     sql: ${TABLE}.data_e_hora_da_atribuicao_responsavel_timestamp ;;
+  }
+
+  dimension_group: data_entrega {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql: ${TABLE}.data_entrega ;;
+  }
+
+  dimension: data_entrega_do_veiculo {
+    type: string
+    sql: ${TABLE}.data_entrega_do_veiculo ;;
   }
 
   dimension: data_exportacao {
@@ -283,7 +394,26 @@ view: crm_pos_vendas {
   dimension: data_hora_primeiro_contato_timestamp {
     type: number
     sql: ${TABLE}.data_hora_primeiro_contato_timestamp ;;
-}
+  }
+
+  dimension: data_solicitacao_de_documentacao {
+    type: string
+    sql: ${TABLE}.data_solicitacao_de_documentacao ;;
+  }
+
+  dimension_group: data_vendido {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql: ${TABLE}.data_vendido ;;
+  }
 
   dimension: datahora_da_visita {
     type: string
@@ -295,9 +425,19 @@ view: crm_pos_vendas {
     sql: ${TABLE}.datahora_da_visita_timestamp ;;
   }
 
+  dimension: ddd_comprador {
+    type: string
+    sql: ${TABLE}.ddd_comprador ;;
+  }
+
   dimension: ddd_do_contato {
     type: string
     sql: ${TABLE}.ddd_do_contato ;;
+  }
+
+  dimension: delivery_date {
+    type: string
+    sql: ${TABLE}.delivery_date ;;
   }
 
   dimension: departamento {
@@ -545,9 +685,19 @@ view: crm_pos_vendas {
     sql: ${TABLE}.email ;;
   }
 
+  dimension: email_comprador {
+    type: string
+    sql: ${TABLE}.email_comprador ;;
+  }
+
   dimension: empresa {
     type: string
     sql: ${TABLE}.empresa ;;
+  }
+
+  dimension: empresa_1 {
+    type: string
+    sql: ${TABLE}.empresa_1 ;;
   }
 
   dimension: fase_do_negocio {
@@ -570,6 +720,16 @@ view: crm_pos_vendas {
     sql: ${TABLE}.financiamento_autofin_liberado ;;
   }
 
+  dimension: financiamento_externo {
+    type: yesno
+    sql: ${TABLE}.Financiamento_externo ;;
+  }
+
+  dimension: financiamento_interno {
+    type: yesno
+    sql: ${TABLE}.Financiamento_interno ;;
+  }
+
   dimension: formas_de_pagamento {
     type: string
     sql: ${TABLE}.formas_de_pagamento ;;
@@ -578,6 +738,11 @@ view: crm_pos_vendas {
   dimension: formas_de_pagamento_da_entrada {
     type: string
     sql: ${TABLE}.formas_de_pagamento_da_entrada ;;
+  }
+
+  dimension: fornecedor {
+    type: string
+    sql: ${TABLE}.fornecedor ;;
   }
 
   dimension: gostou_do_preco {
@@ -600,9 +765,24 @@ view: crm_pos_vendas {
     sql: ${TABLE}.id_do_veiculo_no_estoque ;;
   }
 
+  dimension: id_venda {
+    type: string
+    sql: ${TABLE}.id_venda ;;
+  }
+
+  dimension: inspection_key {
+    type: string
+    sql: ${TABLE}.inspection_key ;;
+  }
+
   dimension: interaction_history {
     type: string
     sql: ${TABLE}.interaction_history ;;
+  }
+
+  dimension: intervalo_anunciado_reservado {
+    type: number
+    sql: ${TABLE}.intervalo_anunciado_reservado ;;
   }
 
   dimension: is_manual_opportunity {
@@ -618,6 +798,11 @@ view: crm_pos_vendas {
   dimension: kit_entrega {
     type: string
     sql: ${TABLE}.kit_entrega ;;
+  }
+
+  dimension: km {
+    type: number
+    sql: ${TABLE}.km ;;
   }
 
   dimension: km_atual {
@@ -665,9 +850,29 @@ view: crm_pos_vendas {
     sql: ${TABLE}.marca ;;
   }
 
+  dimension: marca_1 {
+    type: string
+    sql: ${TABLE}.marca_1 ;;
+  }
+
+  dimension: meta_nome_campanha_lead {
+    type: string
+    sql: ${TABLE}.meta_nome_campanha_lead ;;
+  }
+
+  dimension: metas {
+    type: number
+    sql: ${TABLE}.metas ;;
+  }
+
   dimension: modelo {
     type: string
     sql: ${TABLE}.modelo ;;
+  }
+
+  dimension: modelo_1 {
+    type: string
+    sql: ${TABLE}.modelo_1 ;;
   }
 
   dimension: modificado_em {
@@ -735,6 +940,11 @@ view: crm_pos_vendas {
     sql: ${TABLE}.nome ;;
   }
 
+  dimension: nome_comprador {
+    type: string
+    sql: ${TABLE}.nome_comprador ;;
+  }
+
   dimension: novo_negocio {
     type: string
     sql: ${TABLE}.novo_negocio ;;
@@ -760,6 +970,16 @@ view: crm_pos_vendas {
     sql: ${TABLE}.origem_do_lead ;;
   }
 
+  dimension: origin_cliente {
+    type: string
+    sql: ${TABLE}.origin_cliente ;;
+  }
+
+  dimension: partner_cliente {
+    type: string
+    sql: ${TABLE}.partner_cliente ;;
+  }
+
   dimension: pendencias_restricoes {
     type: string
     sql: ${TABLE}.pendencias_restricoes ;;
@@ -780,9 +1000,19 @@ view: crm_pos_vendas {
     sql: ${TABLE}.placa ;;
   }
 
+  dimension: placa_1 {
+    type: string
+    sql: ${TABLE}.placa_1 ;;
+  }
+
   dimension: placa_do_carro_na_visita {
     type: string
     sql: ${TABLE}.placa_do_carro_na_visita ;;
+  }
+
+  dimension: placa_veiculo_troca {
+    type: string
+    sql: ${TABLE}.Placa_Veiculo_troca ;;
   }
 
   dimension: plastico_para_o_volante {
@@ -790,9 +1020,24 @@ view: crm_pos_vendas {
     sql: ${TABLE}.plastico_para_o_volante ;;
   }
 
+  dimension: preco_anuncio {
+    type: number
+    sql: ${TABLE}.preco_anuncio ;;
+  }
+
+  dimension: preco_venda {
+    type: number
+    sql: ${TABLE}.preco_venda ;;
+  }
+
   dimension: probabilidade {
     type: string
     sql: ${TABLE}.probabilidade ;;
+  }
+
+  dimension: produto_venda {
+    type: string
+    sql: ${TABLE}.produto_venda ;;
   }
 
   dimension: pv_data_doc_entregue_para_cliente {
@@ -850,9 +1095,34 @@ view: crm_pos_vendas {
     sql: ${TABLE}.recompra_veiculo_nao_atendeu_expectativa ;;
   }
 
+  dimension: referencia_cliente {
+    type: string
+    sql: ${TABLE}.referencia_cliente ;;
+  }
+
+  dimension: referencia_cliente_ultimo {
+    type: string
+    sql: ${TABLE}.referencia_cliente_ultimo ;;
+  }
+
+  dimension: referencia_lead {
+    type: string
+    sql: ${TABLE}.referencia_lead ;;
+  }
+
   dimension: repetir_consulta {
     type: string
     sql: ${TABLE}.repetir_consulta ;;
+  }
+
+  dimension: reserva_paga {
+    type: string
+    sql: ${TABLE}.reserva_paga ;;
+  }
+
+  dimension: responsavel_visita {
+    type: string
+    sql: ${TABLE}.responsavel_visita ;;
   }
 
   dimension: sacola_de_pertences_do_cliente_compras {
@@ -870,6 +1140,11 @@ view: crm_pos_vendas {
     sql: ${TABLE}.status ;;
   }
 
+  dimension: status_1 {
+    type: string
+    sql: ${TABLE}.status_1 ;;
+  }
+
   dimension: status_ativacao_carbee {
     type: string
     sql: ${TABLE}.status_ativacao_carbee ;;
@@ -883,6 +1158,16 @@ view: crm_pos_vendas {
   dimension: status_do_carro_no_estoque {
     type: string
     sql: ${TABLE}.status_do_carro_no_estoque ;;
+  }
+
+  dimension: status_primeiro_pagamento {
+    type: string
+    sql: ${TABLE}.status_primeiro_pagamento ;;
+  }
+
+  dimension: tag {
+    type: string
+    sql: ${TABLE}.tag ;;
   }
 
   dimension: tag_de_retrovisor_carro_inspecionado_e_revisado_compras {
@@ -910,6 +1195,11 @@ view: crm_pos_vendas {
     sql: ${TABLE}.telefone ;;
   }
 
+  dimension: telefone_comprador {
+    type: string
+    sql: ${TABLE}.telefone_comprador ;;
+  }
+
   dimension: tem_interesse_na_avaliacao_em_domicilio {
     type: string
     sql: ${TABLE}.tem_interesse_na_avaliacao_em_domicilio ;;
@@ -935,9 +1225,48 @@ view: crm_pos_vendas {
     sql: ${TABLE}.tipo_de_visita ;;
   }
 
+  dimension: tipo_delivery {
+    type: string
+    sql: ${TABLE}.tipo_delivery ;;
+  }
+
   dimension: total {
     type: string
     sql: ${TABLE}.total ;;
+  }
+
+  dimension: uf_comprador {
+    type: string
+    sql: ${TABLE}.uf_comprador ;;
+  }
+
+  dimension: uf_venda {
+    type: string
+    sql: ${TABLE}.UF_venda ;;
+  }
+
+  dimension_group: ultima_atualizacao {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql: ${TABLE}.ultima_atualizacao ;;
+  }
+
+  dimension: utm_campaign_cliente {
+    type: string
+    sql: ${TABLE}.utmCampaign_cliente ;;
+  }
+
+  dimension: utm_campaign_lead {
+    type: string
+    sql: ${TABLE}.utmCampaign_lead ;;
   }
 
   dimension: utm_campanha {
@@ -950,14 +1279,39 @@ view: crm_pos_vendas {
     sql: ${TABLE}.utm_fonte ;;
   }
 
+  dimension: utm_medium_cliente {
+    type: string
+    sql: ${TABLE}.utmMedium_cliente ;;
+  }
+
+  dimension: utm_medium_lead {
+    type: string
+    sql: ${TABLE}.utmMedium_lead ;;
+  }
+
   dimension: utm_midia {
     type: string
     sql: ${TABLE}.utm_midia ;;
   }
 
+  dimension: utmsource_cliente {
+    type: string
+    sql: ${TABLE}.utmsource_cliente ;;
+  }
+
+  dimension: utmsource_lead {
+    type: string
+    sql: ${TABLE}.utmsource_lead ;;
+  }
+
   dimension: valor_da_entrada {
     type: string
     sql: ${TABLE}.valor_da_entrada ;;
+  }
+
+  dimension: valor_financiamento_interno {
+    type: number
+    sql: ${TABLE}.Valor_Financiamento_interno ;;
   }
 
   dimension: valor_total_da_venda {
@@ -968,6 +1322,26 @@ view: crm_pos_vendas {
   dimension: valor_visto_no_anuncio {
     type: string
     sql: ${TABLE}.valor_visto_no_anuncio ;;
+  }
+
+  dimension: veiculo_troca {
+    type: yesno
+    sql: ${TABLE}.Veiculo_troca ;;
+  }
+
+  dimension: vendedor {
+    type: string
+    sql: ${TABLE}.vendedor ;;
+  }
+
+  dimension: versao {
+    type: string
+    sql: ${TABLE}.versao ;;
+  }
+
+  dimension: visitid {
+    type: string
+    sql: ${TABLE}.visitid ;;
   }
 
   measure: count {

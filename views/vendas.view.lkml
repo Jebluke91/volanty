@@ -285,6 +285,11 @@ view: vendas {
     sql: ${TABLE}.Valor_Financiamento_interno ;;
   }
 
+  dimension: Carteizado_PosVenda {
+    type: string
+    sql: ${TABLE}.carterizado_pos_venda ;;
+  }
+
   measure: count {
     type: count
     drill_fields: []

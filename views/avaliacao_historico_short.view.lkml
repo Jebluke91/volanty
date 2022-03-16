@@ -1,5 +1,5 @@
 view: avaliacao_historico_short {
-  sql_table_name: `volanty-production.views.Avaliacao_Historico_Short`
+  sql_table_name: `volanty-production.views.Avaliacoes_Lead_Time`
     ;;
   drill_fields: [id]
 
@@ -89,6 +89,17 @@ view: avaliacao_historico_short {
     sql: ${TABLE}.km ;;
   }
 
+  dimension: cav {
+    type: string
+    sql: ${TABLE}.cav ;;
+
+  }
+
+  dimension: estado {
+    type: string
+    sql: ${TABLE}.estado ;;
+  }
+
   dimension: lead_ddd {
     type: string
     sql: ${TABLE}.lead_ddd ;;
@@ -132,6 +143,36 @@ view: avaliacao_historico_short {
   dimension: ultimo_status {
     type: string
     sql: ${TABLE}.ultimo_status ;;
+  }
+
+  dimension: placa {
+    type: string
+    sql: ${TABLE}.placa ;;
+  }
+
+  dimension: consultor_status_pendente {
+    type: string
+    sql: ${TABLE}.consultor_status_pending ;;
+  }
+
+  dimension: consultor_status_aguardando_mesa {
+    type: string
+    sql: ${TABLE}.consultor_status_aguardando_mesa ;;
+  }
+
+  dimension: consultor_status_gerando_proposta {
+    type: string
+    sql: ${TABLE}.consultor_status_gerando_proposta ;;
+  }
+
+  dimension: consultor_status_aguardando_dono {
+    type: string
+    sql: ${TABLE}.consultor_status_aguardando_dono ;;
+  }
+
+  dimension: consultor_status_finalizado {
+    type: string
+    sql: ${TABLE}.consultor_status_finalizado ;;
   }
 
   measure: count {
