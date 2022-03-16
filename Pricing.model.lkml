@@ -31,6 +31,16 @@ explore: crawler_kavak {
   label: "Crawler Kavak"
 
 }
+
+
+explore: crawler_kavak_mex_stock {
+  label: "Crawler Kavak Mexico Stock"
+
+}
+explore: crawler_kavak_mex {
+  label: "Crawler Kavak Mexicok"
+
+}
 explore: preditas_fallback {
   label: "Preditas Fallback"
 
