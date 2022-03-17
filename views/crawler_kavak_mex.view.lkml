@@ -58,7 +58,7 @@ view: crawler_kavak_mex {
   }
 
   dimension: final_price {
-    type: string
+    type: number
     sql: ${TABLE}.final_price ;;
   }
 
@@ -83,7 +83,7 @@ view: crawler_kavak_mex {
   }
 
   dimension: km {
-    type: string
+    type: number
     sql: ${TABLE}.km ;;
   }
 
@@ -107,13 +107,21 @@ view: crawler_kavak_mex {
     sql: ${TABLE}.num_passengers ;;
   }
 
-  dimension: offer_date {
-    type: string
+  dimension_group: offer {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
     sql: ${TABLE}.offer_date ;;
-  }
-
+}
   dimension: price {
-    type: string
+    type: number
     sql: ${TABLE}.price ;;
   }
 
@@ -157,10 +165,20 @@ view: crawler_kavak_mex {
     sql: ${TABLE}.traction ;;
   }
 
-  dimension: updated_at {
-    type: string
-    sql: ${TABLE}.updated_at ;;
+  dimension_group: updated {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql: ${TABLE}.updated_At ;;
   }
+
 
   dimension: url {
     type: string
@@ -171,4 +189,5 @@ view: crawler_kavak_mex {
     type: count
     drill_fields: [promotion_name]
   }
+
 }
