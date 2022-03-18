@@ -12,6 +12,12 @@ view: visitas {
     sql: ${TABLE}.cav ;;
   }
 
+dimension: lead_id {
+type: string
+sql: ${TABLE}.lead_id ;;
+}
+
+
   dimension: comentarios_visita {
     type: string
     sql: ${TABLE}.comentarios_visita ;;
