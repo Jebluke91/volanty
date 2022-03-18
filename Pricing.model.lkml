@@ -54,3 +54,6 @@ explore: sortimento_creditas_auto {
   label: "Sortimento Creditas Auto"
 
 }
+explore: estoque_anunciado_entrada_saida {
+
+}
