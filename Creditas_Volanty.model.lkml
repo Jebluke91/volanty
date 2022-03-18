@@ -44,6 +44,10 @@ explore: estoque_anunciado {
 
 }
 
+explore: estoque_anunciado_his {
+
+}
+
 explore: avaliacoes {
 
 }
