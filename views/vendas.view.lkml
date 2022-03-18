@@ -280,6 +280,12 @@ view: vendas {
     sql: ${TABLE}.visitid ;;
   }
 
+  dimension: lead_id {
+    type: string
+    sql: ${TABLE}.lead_id ;;
+  }
+
+
   dimension: Valor_Financiamento_interno {
     type: number
     sql: ${TABLE}.Valor_Financiamento_interno ;;
