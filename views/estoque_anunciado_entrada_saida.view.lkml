@@ -17,13 +17,13 @@ view: estoque_anunciado_entrada_saida {
     sql: ${TABLE}.data ;;
   }
 
-  dimension: qtd_entrada {
-    type: number
+  measure: qtd_entrada {
+    type: sum
     sql: ${TABLE}.qtd_entrada ;;
   }
 
-  dimension: qtd_saida {
-    type: number
+  measure: qtd_saida {
+    type: sum
     sql: ${TABLE}.qtd_saida ;;
   }
 
