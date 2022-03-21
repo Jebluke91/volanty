@@ -211,6 +211,12 @@ view: vendas {
     sql: ${TABLE}.referencia_lead ;;
   }
 
+  dimension: referencia_cliente {
+    type: string
+    sql: ${TABLE}.referencia_cliente ;;
+  }
+
+
   dimension: responsavel_visita {
     type: string
     sql: ${TABLE}.responsavel_visita ;;
