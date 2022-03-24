@@ -42,6 +42,17 @@ view: crawler_kavak_stock {
     sql: ${TABLE}.qtd_vendas_acum ;;
   }
 
+
+  measure: qtd_entrada_ {
+    type: sum
+    sql: ${TABLE}.qtd_entrada ;;
+  }
+
+  measure: qtd_saida_ {
+    type: sum
+    sql: ${TABLE}.qtd_saida ;;
+  }
+
   measure: count {
     type: count
     drill_fields: []
