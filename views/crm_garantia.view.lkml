@@ -29,6 +29,12 @@ view: crm_garantia {
     sql: ${TABLE}.criado_em ;;
   }
 
+  dimension: fase_do_negocio {
+    type: string
+    sql: ${TABLE}.fase_do_negocio ;;
+  }
+
+
   dimension: data_da_entrega_do_diagnostico___garantia {
     type: string
     sql: ${TABLE}.data_da_entrega_do_diagnostico___garantia ;;
