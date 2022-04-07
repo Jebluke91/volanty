@@ -55,8 +55,17 @@ view: crm_garantia {
     sql: ${TABLE}.data_de_envio_da_solicitacao_de_pagamento___garantia ;;
   }
 
-  dimension: data_inicio_servico {
-    type: string
+  dimension_group: data_inicio_servico {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
     sql: ${TABLE}.data_inicio_servico ;;
   }
 
