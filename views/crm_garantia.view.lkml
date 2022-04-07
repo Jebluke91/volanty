@@ -55,9 +55,9 @@ view: crm_garantia {
     sql: ${TABLE}.data_de_envio_da_solicitacao_de_pagamento___garantia ;;
   }
 
-  dimension: data_de_inicio_do_servico___garantia {
+  dimension: data_inicio_servico {
     type: string
-    sql: ${TABLE}.data_de_inicio_do_servico___garantia ;;
+    sql: ${TABLE}.data_inicio_servico ;;
   }
 
   dimension: data_de_retirada_do_veiculo_da_oficina___garantia {
