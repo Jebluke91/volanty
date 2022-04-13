@@ -115,3 +115,7 @@ explore: crm_garantia{
 explore: vendas_pos_vendas{
 
 }
+
+explore: leads_proprietario{
+
+}
