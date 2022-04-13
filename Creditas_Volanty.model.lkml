@@ -116,6 +116,6 @@ explore: vendas_pos_vendas{
 
 }
 
-explore: leads_proprietario{
+explore: leads_proprietarios{
 
 }
