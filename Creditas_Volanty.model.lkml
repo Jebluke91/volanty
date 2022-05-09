@@ -119,3 +119,7 @@ explore: vendas_pos_vendas{
 explore: leads_proprietarios{
 
 }
+
+explore: crm_formalizacao{
+
+}
