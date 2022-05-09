@@ -9,44 +9,6 @@ view: crm_formalizacao {
     sql: ${TABLE}.id ;;
   }
 
-  dimension: _airbyte_ab_id {
-    type: string
-    sql: ${TABLE}._airbyte_ab_id ;;
-  }
-
-  dimension: _airbyte_crm_deal_formalizacao_hashid {
-    type: string
-    sql: ${TABLE}._airbyte_CRM_Deal_Formalizacao_hashid ;;
-  }
-
-  dimension_group: _airbyte_emitted {
-    type: time
-    timeframes: [
-      raw,
-      time,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
-    sql: ${TABLE}._airbyte_emitted_at ;;
-  }
-
-  dimension_group: _airbyte_normalized {
-    type: time
-    timeframes: [
-      raw,
-      time,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
-    sql: ${TABLE}._airbyte_normalized_at ;;
-  }
-
   dimension: ano_do_veiculo {
     type: string
     sql: ${TABLE}.ano_do_veiculo ;;
@@ -87,98 +49,269 @@ view: crm_formalizacao {
     sql: ${TABLE}.dados_bancarios_do_cliente___formalizacao ;;
   }
 
-  dimension: data___formalizacao {
-    type: string
-    sql: ${TABLE}.data___formalizacao ;;
+  dimension_group: data_entrega_do_veiculo {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql: ${TABLE}.data_entrega_do_veiculo ;;
   }
 
-  dimension: data_de_entrega_do_veiculo {
-    type: string
-    sql: ${TABLE}.data_de_entrega_do_veiculo ;;
+  dimension_group: data_formalizacao {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql: ${TABLE}.data_formalizacao ;;
   }
 
-  dimension: dt_enter_blocklist_formalizacao {
-    type: string
+  dimension_group: dt_enter_blocklist_formalizacao {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
     sql: ${TABLE}.dt_enter_blocklist_formalizacao ;;
   }
 
-  dimension: dt_enter_contrato_assinado__consultor__formalizacao {
-    type: string
+  dimension_group: dt_enter_contrato_assinado__consultor__formalizacao {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
     sql: ${TABLE}.dt_enter_contrato_assinado__consultor__formalizacao ;;
   }
 
-  dimension: dt_enter_contrato_emitido_e_enviado_formalizacao {
-    type: string
+  dimension_group: dt_enter_contrato_emitido_e_enviado_formalizacao {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
     sql: ${TABLE}.dt_enter_contrato_emitido_e_enviado_formalizacao ;;
   }
 
-  dimension: dt_enter_contratos_cancelados_formalizacao {
-    type: string
+  dimension_group: dt_enter_contratos_cancelados_formalizacao {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
     sql: ${TABLE}.dt_enter_contratos_cancelados_formalizacao ;;
   }
 
-  dimension: dt_enter_contratos_fechados_formalizacao {
-    type: string
+  dimension_group: dt_enter_contratos_fechados_formalizacao {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
     sql: ${TABLE}.dt_enter_contratos_fechados_formalizacao ;;
   }
 
-  dimension: dt_enter_desistente_formalizacao {
-    type: string
+  dimension_group: dt_enter_desistente_formalizacao {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
     sql: ${TABLE}.dt_enter_desistente_formalizacao ;;
   }
 
-  dimension: dt_enter_em_analise__gar__formalizacao {
-    type: string
+  dimension_group: dt_enter_em_analise__gar__formalizacao {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
     sql: ${TABLE}.dt_enter_em_analise__gar__formalizacao ;;
   }
 
-  dimension: dt_enter_em_analise__seg__formalizacao {
-    type: string
+  dimension_group: dt_enter_em_analise__seg__formalizacao {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
     sql: ${TABLE}.dt_enter_em_analise__seg__formalizacao ;;
   }
 
-  dimension: dt_enter_em_analise_formalizacao {
-    type: string
+  dimension_group: dt_enter_em_analise_formalizacao {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
     sql: ${TABLE}.dt_enter_em_analise_formalizacao ;;
   }
 
-  dimension: dt_enter_emitido__gar__formalizacao {
-    type: string
+  dimension_group: dt_enter_emitido__gar__formalizacao {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
     sql: ${TABLE}.dt_enter_emitido__gar__formalizacao ;;
   }
 
-  dimension: dt_enter_emitido__seg__formalizacao {
-    type: string
+  dimension_group: dt_enter_emitido__seg__formalizacao {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
     sql: ${TABLE}.dt_enter_emitido__seg__formalizacao ;;
   }
 
-  dimension: dt_enter_garantia_formalizacao {
-    type: string
+  dimension_group: dt_enter_garantia_formalizacao {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
     sql: ${TABLE}.dt_enter_garantia_formalizacao ;;
   }
 
-  dimension: dt_enter_nova_proposta_formalizacao {
-    type: string
+  dimension_group: dt_enter_nova_proposta_formalizacao {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
     sql: ${TABLE}.dt_enter_nova_proposta_formalizacao ;;
   }
 
-  dimension: dt_enter_pendencia__consultor__formalizacao {
-    type: string
+  dimension_group: dt_enter_pendencia__consultor__formalizacao {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
     sql: ${TABLE}.dt_enter_pendencia__consultor__formalizacao ;;
   }
 
-  dimension: dt_enter_pendencia_assinar_contrato__consultor__formalizacao {
-    type: string
+  dimension_group: dt_enter_pendencia_assinar_contrato__consultor__formalizacao {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
     sql: ${TABLE}.dt_enter_pendencia_assinar_contrato__consultor__formalizacao ;;
   }
 
-  dimension: dt_enter_pendencia_concluida_formalizacao {
-    type: string
+  dimension_group: dt_enter_pendencia_concluida_formalizacao {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
     sql: ${TABLE}.dt_enter_pendencia_concluida_formalizacao ;;
   }
 
-  dimension: dt_enter_seguro_formalizacao {
-    type: string
+  dimension_group: dt_enter_seguro_formalizacao {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
     sql: ${TABLE}.dt_enter_seguro_formalizacao ;;
   }
 
@@ -212,53 +345,143 @@ view: crm_formalizacao {
     sql: ${TABLE}.fase_do_negocio ;;
   }
 
-  dimension: hora_lead__admin____formalizacao {
-    type: string
+  dimension_group: hora_lead__admin____formalizacao {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
     sql: ${TABLE}.hora_lead__admin____formalizacao ;;
   }
 
-  dimension: horario_envio_sms___formalizacao {
-    type: string
+  dimension_group: horario_envio_sms___formalizacao {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
     sql: ${TABLE}.horario_envio_sms___formalizacao ;;
   }
 
-  dimension: horario_fim___formalizacao {
-    type: string
+  dimension_group: horario_fim___formalizacao {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
     sql: ${TABLE}.horario_fim___formalizacao ;;
   }
 
-  dimension: horario_fim_reanalise_01___formalizacao {
-    type: string
+  dimension_group: horario_fim_reanalise_01___formalizacao {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
     sql: ${TABLE}.horario_fim_reanalise_01___formalizacao ;;
   }
 
-  dimension: horario_fim_reanalise_02___formalizacao {
-    type: string
+  dimension_group: horario_fim_reanalise_02___formalizacao {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
     sql: ${TABLE}.horario_fim_reanalise_02___formalizacao ;;
   }
 
-  dimension: horario_fim_reanalise_03___formalizacao {
-    type: string
+  dimension_group: horario_fim_reanalise_03___formalizacao {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
     sql: ${TABLE}.horario_fim_reanalise_03___formalizacao ;;
   }
 
-  dimension: horario_inicio___formalizacao {
-    type: string
+  dimension_group: horario_inicio___formalizacao {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
     sql: ${TABLE}.horario_inicio___formalizacao ;;
   }
 
-  dimension: horario_inicio_reanalise_01___formalizacao {
-    type: string
+  dimension_group: horario_inicio_reanalise_01___formalizacao {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
     sql: ${TABLE}.horario_inicio_reanalise_01___formalizacao ;;
   }
 
-  dimension: horario_inicio_reanalise_02___formalizacao {
-    type: string
+  dimension_group: horario_inicio_reanalise_02___formalizacao {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
     sql: ${TABLE}.horario_inicio_reanalise_02___formalizacao ;;
   }
 
-  dimension: horario_inicio_reanalise_03___formalizacao {
-    type: string
+  dimension_group: horario_inicio_reanalise_03___formalizacao {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
     sql: ${TABLE}.horario_inicio_reanalise_03___formalizacao ;;
   }
 
@@ -387,8 +610,17 @@ view: crm_formalizacao {
     sql: ${TABLE}.responsavel_consultor_showroom___formalizacao ;;
   }
 
-  dimension: retorno_biometria___formalizacao {
-    type: string
+  dimension_group: retorno_biometria___formalizacao {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
     sql: ${TABLE}.retorno_biometria___formalizacao ;;
   }
 
