@@ -37,6 +37,11 @@ view: crawler_kavak {
     sql: ${TABLE}.car_cluster ;;
   }
 
+  dimension: car_cluster_v2 {
+    type: string
+    sql: ${TABLE}.car_cluster_v2 ;;
+  }
+
   dimension: car_downpayment {
     type: string
     sql: ${TABLE}.car_downpayment ;;
