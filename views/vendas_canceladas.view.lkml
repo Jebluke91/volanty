@@ -203,6 +203,19 @@ view: vendas_canceladas {
     sql: ${TABLE}.vendedor ;;
   }
 
+
+  dimension: motivo_devolucao_descricao {
+    type: string
+    sql: ${TABLE}.motivo_devolucao_descricao ;;
+  }
+
+
+  dimension: motivo_devolucao {
+    type: string
+    sql: ${TABLE}.motivo_devolucao ;;
+  }
+
+
   dimension: versao {
     type: string
     sql: ${TABLE}.versao ;;
