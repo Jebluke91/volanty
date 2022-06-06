@@ -109,10 +109,7 @@ view: vendas_canceladas {
     sql: ${TABLE}.marca ;;
   }
 
-  dimension: meta_nome_campanha {
-    type: string
-    sql: ${TABLE}.meta_nome_campanha_lead ;;
-  }
+
 
   dimension: modelo {
     type: string
@@ -139,7 +136,7 @@ view: vendas_canceladas {
     sql: ${TABLE}.preco_venda ;;
   }
 
-  dimension: produto {
+  dimension: produto_venda {
     type: string
     sql: ${TABLE}.produto_venda ;;
   }
