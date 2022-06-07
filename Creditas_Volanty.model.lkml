@@ -112,7 +112,7 @@ explore: crm_garantia{
 
 }
 
-explore: avaliacao{
+explore: creditas_avaliacao{
 
 }
 
