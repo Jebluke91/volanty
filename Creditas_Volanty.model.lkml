@@ -112,6 +112,10 @@ explore: crm_garantia{
 
 }
 
+explore: avaliacao{
+
+}
+
 explore: vendas_pos_vendas{
 
 }
