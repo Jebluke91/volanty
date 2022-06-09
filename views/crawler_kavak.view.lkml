@@ -63,7 +63,7 @@ view: crawler_kavak {
   }
 
   dimension: final_price {
-    type: string
+    type: number
     sql: ${TABLE}.final_price ;;
   }
 
