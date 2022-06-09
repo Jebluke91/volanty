@@ -77,6 +77,20 @@ view: crm_formalizacao {
     sql: ${TABLE}.data_formalizacao ;;
   }
 
+  dimension_group: dt_enter_alteracao_de_contrato__consultor__formalizacao {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql: ${TABLE}.dt_enter_alteracao_de_contrato__consultor__formalizacao ;;
+  }
+
   dimension_group: dt_enter_blocklist_formalizacao {
     type: time
     timeframes: [
@@ -159,6 +173,20 @@ view: crm_formalizacao {
       year
     ]
     sql: ${TABLE}.dt_enter_desistente_formalizacao ;;
+  }
+
+  dimension_group: dt_enter_desistentes_pos_vendas_formalizacao {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql: ${TABLE}.dt_enter_desistentes_pos_vendas_formalizacao ;;
   }
 
   dimension_group: dt_enter_em_analise__gar__formalizacao {
@@ -301,6 +329,34 @@ view: crm_formalizacao {
     sql: ${TABLE}.dt_enter_pendencia_concluida_formalizacao ;;
   }
 
+  dimension_group: dt_enter_pendencia_termos__pos__formalizacao {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql: ${TABLE}.dt_enter_pendencia_termos__pos__formalizacao ;;
+  }
+
+  dimension_group: dt_enter_pendencia_termos_concluida__pos__formalizacao {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql: ${TABLE}.dt_enter_pendencia_termos_concluida__pos__formalizacao ;;
+  }
+
   dimension_group: dt_enter_seguro_formalizacao {
     type: time
     timeframes: [
@@ -313,6 +369,16 @@ view: crm_formalizacao {
       year
     ]
     sql: ${TABLE}.dt_enter_seguro_formalizacao ;;
+  }
+
+  dimension: e_mail_time_inside {
+    type: string
+    sql: ${TABLE}.e_mail_time_inside ;;
+  }
+
+  dimension: e_mail_time_showroom {
+    type: string
+    sql: ${TABLE}.e_mail_time_showroom ;;
   }
 
   dimension: extensao_do_motivo_01___formalizacao {
@@ -490,6 +556,11 @@ view: crm_formalizacao {
     sql: ${TABLE}.km_atual ;;
   }
 
+  dimension: km_de_retirada {
+    type: string
+    sql: ${TABLE}.km_de_retirada ;;
+  }
+
   dimension: link_do_pedido_admin___formalizacao {
     type: string
     sql: ${TABLE}.link_do_pedido_admin___formalizacao ;;
@@ -530,6 +601,11 @@ view: crm_formalizacao {
     sql: ${TABLE}.motivo_blocklist___formalizacao ;;
   }
 
+  dimension: motivo_da_alteracao_de_contrato {
+    type: string
+    sql: ${TABLE}.motivo_da_alteracao_de_contrato ;;
+  }
+
   dimension: motivo_do_status_01___formalizacao {
     type: string
     sql: ${TABLE}.motivo_do_status_01___formalizacao ;;
@@ -550,6 +626,11 @@ view: crm_formalizacao {
     sql: ${TABLE}.motivo_do_status___formalizacao ;;
   }
 
+  dimension: motivo_pendencia_de_termos {
+    type: string
+    sql: ${TABLE}.motivo_pendencia_de_termos ;;
+  }
+
   dimension: nome_do_analista___formalizacao {
     type: string
     sql: ${TABLE}.nome_do_analista___formalizacao ;;
@@ -558,6 +639,11 @@ view: crm_formalizacao {
   dimension: nome_do_analista___formalizacao_2 {
     type: string
     sql: ${TABLE}.nome_do_analista___formalizacao_2 ;;
+  }
+
+  dimension: nome_do_analista_reanalise___formalizacao {
+    type: string
+    sql: ${TABLE}.nome_do_analista_reanalise___formalizacao ;;
   }
 
   dimension: nova_placa {
@@ -593,6 +679,11 @@ view: crm_formalizacao {
   dimension: placa___formalizacao {
     type: string
     sql: ${TABLE}.placa___formalizacao ;;
+  }
+
+  dimension: quem_subiu_o_pedido_ {
+    type: string
+    sql: ${TABLE}.quem_subiu_o_pedido_ ;;
   }
 
   dimension: reemitido___formalizacao {
@@ -672,6 +763,11 @@ view: crm_formalizacao {
   dimension: tipo_de_garantia___formalizacao {
     type: string
     sql: ${TABLE}.tipo_de_garantia___formalizacao ;;
+  }
+
+  dimension: tipo_de_negocio___form {
+    type: string
+    sql: ${TABLE}.tipo_de_negocio___form ;;
   }
 
   dimension: tipo_de_termo___formalizacao {
