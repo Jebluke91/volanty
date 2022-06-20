@@ -1,5 +1,5 @@
 view: visitas {
-  sql_table_name: `volanty-production.views.Visitas`
+  sql_table_name: `volanty-production.views_LGPD.Visitas`
     ;;
 
   dimension: ano_modelo {
