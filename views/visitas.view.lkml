@@ -120,7 +120,7 @@ sql: ${TABLE}.lead_id ;;
 
   dimension: inspetor_visita {
     type: string
-    sql: ${TABLE}.inspetor_visita ;;
+    sql: ${TABLE}.consultor_visita ;;
   }
 
   dimension: level_of_interest_feedback {
