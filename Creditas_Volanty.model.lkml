@@ -127,3 +127,7 @@ explore: leads_proprietarios{
 explore: crm_formalizacao{
 
 }
+
+explore: crm_documentacao{
+
+}
