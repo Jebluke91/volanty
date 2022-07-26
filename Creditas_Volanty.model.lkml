@@ -131,3 +131,7 @@ explore: crm_formalizacao{
 explore: crm_documentacao{
 
 }
+
+explore: esteira_express{
+
+}
