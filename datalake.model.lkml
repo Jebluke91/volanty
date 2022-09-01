@@ -1,170 +1,23 @@
 connection: "volanty-production"
 
-include: "/views/*.view"
+include: "/views/*.view.lkml"                # include all views in the views/ folder in this project
+# include: "/**/*.view.lkml"                 # include all views in this project
+# include: "my_dashboard.dashboard.lookml"   # include a LookML dashboard called my_dashboard
 
-label: " Volanty Geral"
-
-datagroup: default_datagroup  {
-  max_cache_age: "24 hours"
-#   sql_trigger: SELECT MAX(transaction_date) FROM imaginary_table ;;
-}
-
-access_grant: user_team {
-  user_attribute: team
-  allowed_values: [ "user","admin"]
-}
-
-access_grant: admin_team {
-  user_attribute: team
-  allowed_values: ["admin"]
-}
-
-
-named_value_format: reais {
-  value_format: "#,##0"
-  strict_value_format: yes
-}
-
-
-
-
-
-explore: volanty_simulacoes_qvmc {
-  label: "Simulacoes_qvmc"
-
-}
-
-explore: Carros {
-}
-
-
-
-explore: crm_pos_vendas {
-}
-
-explore: estoque_critico_creditas_ {
-}
-
-explore: pos_compra {
-}
-
-explore: pos_compra_estoque {
-}
-
-
-explore: pos_compra_fila {
-}
-
-explore: avaliacao {
-}
-
-explore: custo_proprietario {
-}
-
-
-explore: visita {
-  label: "visita"
-}
-#explore: visita_user {
-#  label: "visita"
-#  extends: [visita]
-#  required_access_grants: [user_team]
-#}
-
-explore: leads_compra {
-  label: "leads_compra"
-}
-
-explore: leads_ads_ {
-  label: "leads_compra_custo"
-}
-
-explore: financiamentos_ {
-  label: "Financiamento"
-}
-
-
-explore: report_comparador_pr {
-  label: "Comparador_Precos"
-}
-
-explore: vendas_oficial {
-  label: "Vendas"
-}
-
-
-explore: estoque {
-  label: "Estoque"
-}
-
-
-
-explore: leads_proprietario {
-
-}
-
-
-explore: volanty_vendas_canceladas {
-
-}
-
-explore: volanty_estoque_anunciado {
-  label: "Volanty_Estoque_Anunciado"
-}
-
-
-
-explore: estoque_movimentacao {
-  label: "Estoque_movimentacao"
-}
-
-
-
-
-explore: compras_selecionados {
-  label: "compras_selecionados"
-}
-
-explore: web_motors {
-  label: "Oportunidades_Web_Motors"
-  required_access_grants: [admin_team]
-}
-
-explore: report_alteracao_precos {
-  label: "report_estoque_crítico"
-
-}
-
-explore: capacidade_estoque {
-  label: "Estoque_capacidade"
-}
-
-
-explore: campanhas_proprietarios {
-  label: "Campanhas_Proprietarios"
-}
-
-
-explore: pedido_compras {
-  label: "Compras"
-}
-
-explore: indicarrao{
-  label: "Indicarrao"
-}
-
-explore: indicarrao_cadastros {
-  label: "indicarrao_cadastros"
-}
-explore: fipe_vendas {
-  label: "Fipe_Vendas"
-}
-explore: fipe_vendas_volanty {
-  label: "Fipe_Vendas_Volanty"
-}
-explore: creditas_b2_b {
-  label: " Sourcing B2B"
-}
-explore: inventario {
+# # Select the views that should be a part of this model,
+# # and define the joins that connect them together.
+#
+# explore: order_items {
+#   join: orders {
+#     relationship: many_to_one
+#     sql_on: ${orders.id} = ${order_items.order_id} ;;
+#   }
+#
+#   join: users {
+#     relationship: many_to_one
+#     sql_on: ${users.id} = ${orders.user_id} ;;
+#   }
+# }
+explore: visita{
 
 }

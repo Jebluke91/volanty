@@ -188,6 +188,11 @@ view: estoque_anunciado {
     sql: ${TABLE}.car_cluster ;;
   }
 
+  dimension: car_cluster_v2 {
+    type: string
+    sql: ${TABLE}.car_cluster_v2 ;;
+  }
+
   measure: count {
     type: count
     drill_fields: []

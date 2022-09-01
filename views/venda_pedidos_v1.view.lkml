@@ -1,5 +1,5 @@
 view: venda_pedidos_v1 {
-  sql_table_name: `volanty-production.raw_views.Union_Vendas_v1`
+  sql_table_name: `volanty-production.raw_views.Union_Vendas_v3`
     ;;
 
   dimension: ano_modelo {

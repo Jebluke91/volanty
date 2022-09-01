@@ -1,6 +1,11 @@
-view: crawler_kavak {
-  sql_table_name: `volanty-production.views.Crawler_Kavak`
+view: crawler_kavak_mex_history {
+  sql_table_name: `volanty-production.views.Crawler_Kavak_Mex_History`
     ;;
+
+  dimension: _id {
+    type: string
+    sql: ${TABLE}._id ;;
+  }
 
   dimension: apply_uber {
     type: string
@@ -32,16 +37,6 @@ view: crawler_kavak {
     sql: ${TABLE}.brand_model_version ;;
   }
 
-  dimension: car_cluster {
-    type: string
-    sql: ${TABLE}.car_cluster ;;
-  }
-
-  dimension: car_cluster_v2 {
-    type: string
-    sql: ${TABLE}.car_cluster_v2 ;;
-  }
-
   dimension: car_downpayment {
     type: string
     sql: ${TABLE}.car_downpayment ;;
@@ -55,11 +50,6 @@ view: crawler_kavak {
   dimension: delivery_date {
     type: string
     sql: ${TABLE}.delivery_date ;;
-  }
-
-  dimension: external_id {
-    type: string
-    sql: ${TABLE}.external_id ;;
   }
 
   dimension: final_price {
@@ -82,6 +72,11 @@ view: crawler_kavak {
     sql: ${TABLE}.horse_power ;;
   }
 
+  dimension: kavak_version {
+    type: string
+    sql: ${TABLE}.kavak_version ;;
+  }
+
   dimension: km {
     type: number
     sql: ${TABLE}.km ;;
@@ -98,7 +93,7 @@ view: crawler_kavak {
   }
 
   dimension: model_year {
-    type: number
+    type: string
     sql: ${TABLE}.model_year ;;
   }
 
@@ -118,8 +113,8 @@ view: crawler_kavak {
       quarter,
       year
     ]
-    sql: ${TABLE}.offerDate ;;
-  }
+    sql: ${TABLE}.offer_date ;;
+    }
 
   dimension: price {
     type: number
@@ -166,28 +161,23 @@ view: crawler_kavak {
     sql: ${TABLE}.traction ;;
   }
 
-  dimension_group: updated {
-    type: time
-    timeframes: [
-      raw,
-      time,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
-    sql: ${TABLE}.updatedAt ;;
-  }
+    dimension_group: updated {
+      type: time
+      timeframes: [
+        raw,
+        time,
+        date,
+        week,
+        month,
+        quarter,
+        year
+      ]
+      sql: ${TABLE}.updated_At ;;
+    }
 
   dimension: url {
     type: string
     sql: ${TABLE}.url ;;
-  }
-
-  dimension: version {
-    type: string
-    sql: ${TABLE}.version ;;
   }
 
   measure: count {
@@ -195,3 +185,7 @@ view: crawler_kavak {
     drill_fields: [promotion_name]
   }
 }
+
+
+
+

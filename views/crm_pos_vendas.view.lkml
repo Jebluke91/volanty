@@ -149,17 +149,9 @@ view: crm_pos_vendas {
     sql: ${TABLE}.cpf2 ;;
   }
 
-  dimension_group: criado_em {
-    type: time
-    timeframes: [
-      raw,
-      time,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
+
+  dimension: criado_em {
+    type: string
     sql: ${TABLE}.criado_em ;;
   }
 
@@ -173,11 +165,6 @@ view: crm_pos_vendas {
     sql: ${TABLE}.criado_por ;;
   }
 
-  dimension: data_da_desistencia {
-    type: string
-    sql: ${TABLE}.data_da_desistencia ;;
-  }
-
   dimension: data_da_ocorrencia {
     type: string
     sql: ${TABLE}.data_da_ocorrencia ;;
@@ -186,11 +173,6 @@ view: crm_pos_vendas {
   dimension: data_da_ocorrencia_timestamp {
     type: number
     sql: ${TABLE}.data_da_ocorrencia_timestamp ;;
-  }
-
-  dimension: data_da_recompra {
-    type: string
-    sql: ${TABLE}.data_da_recompra ;;
   }
 
   dimension: data_de_entrega_do_veiculo {
@@ -203,22 +185,8 @@ view: crm_pos_vendas {
     sql: ${TABLE}.data_de_entrega_do_veiculo_timestamp ;;
   }
 
-  dimension: data_de_envio_do_kit {
+  dimension: data_de_inicio {
     type: string
-    sql: ${TABLE}.data_de_envio_do_kit ;;
-  }
-
-  dimension_group: data_de_inicio {
-    type: time
-    timeframes: [
-      raw,
-      time,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
     sql: ${TABLE}.data_de_inicio ;;
   }
 
@@ -277,11 +245,6 @@ view: crm_pos_vendas {
     sql: ${TABLE}.data_de_termino_timestamp ;;
   }
 
-  dimension: data_do_contato_cliente {
-    type: string
-    sql: ${TABLE}.data_do_contato_cliente ;;
-  }
-
   dimension: data_do_contrato {
     type: string
     sql: ${TABLE}.data_do_contrato ;;
@@ -292,16 +255,6 @@ view: crm_pos_vendas {
     sql: ${TABLE}.data_do_contrato_timestamp ;;
   }
 
-  dimension: data_do_distrato {
-    type: string
-    sql: ${TABLE}.data_do_distrato ;;
-  }
-
-  dimension: data_do_pagamento_total {
-    type: string
-    sql: ${TABLE}.data_do_pagamento_total ;;
-  }
-
   dimension: data_e_hora_da_atribuicao_responsavel {
     type: string
     sql: ${TABLE}.data_e_hora_da_atribuicao_responsavel ;;
@@ -310,11 +263,6 @@ view: crm_pos_vendas {
   dimension: data_e_hora_da_atribuicao_responsavel_timestamp {
     type: number
     sql: ${TABLE}.data_e_hora_da_atribuicao_responsavel_timestamp ;;
-  }
-
-  dimension: data_entrega_do_veiculo {
-    type: string
-    sql: ${TABLE}.data_entrega_do_veiculo ;;
   }
 
   dimension: data_exportacao {
@@ -335,12 +283,7 @@ view: crm_pos_vendas {
   dimension: data_hora_primeiro_contato_timestamp {
     type: number
     sql: ${TABLE}.data_hora_primeiro_contato_timestamp ;;
-  }
-
-  dimension: data_solicitacao_de_documentacao {
-    type: string
-    sql: ${TABLE}.data_solicitacao_de_documentacao ;;
-  }
+}
 
   dimension: datahora_da_visita {
     type: string

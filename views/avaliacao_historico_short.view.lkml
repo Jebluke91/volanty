@@ -92,6 +92,7 @@ view: avaliacao_historico_short {
   dimension: cav {
     type: string
     sql: ${TABLE}.cav ;;
+
   }
 
   dimension: estado {

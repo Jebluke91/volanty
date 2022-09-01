@@ -2,6 +2,7 @@ connection: "volanty-production"
 
 
 include: "/views/*.view"
+include: "/exploratory_querys/*.view"
 
 label: "Pricing"
 
@@ -31,7 +32,28 @@ explore: crawler_kavak {
   label: "Crawler Kavak"
 
 }
+
+
+explore: crawler_kavak_mex_stock {
+  label: "Crawler Kavak Mexico Stock"
+
+}
+explore: crawler_kavak_mex {
+  label: "Crawler Kavak Mexicok"
+
+}
 explore: preditas_fallback {
   label: "Preditas Fallback"
+
+}
+explore: sortimento_kavak {
+  label: "Sortimento Kavak"
+
+}
+explore: sortimento_creditas_auto {
+  label: "Sortimento Creditas Auto"
+
+}
+explore: estoque_anunciado_entrada_saida {
 
 }

@@ -1,5 +1,5 @@
 view: visitas {
-  sql_table_name: `volanty-production.views.Visitas`
+  sql_table_name: `volanty-production.views_LGPD.Visitas`
     ;;
 
   dimension: ano_modelo {
@@ -11,6 +11,12 @@ view: visitas {
     type: string
     sql: ${TABLE}.cav ;;
   }
+
+dimension: lead_id {
+type: string
+sql: ${TABLE}.lead_id ;;
+}
+
 
   dimension: comentarios_visita {
     type: string
@@ -114,7 +120,7 @@ view: visitas {
 
   dimension: inspetor_visita {
     type: string
-    sql: ${TABLE}.inspetor_visita ;;
+    sql: ${TABLE}.consultor_visita ;;
   }
 
   dimension: level_of_interest_feedback {

@@ -109,10 +109,7 @@ view: vendas_canceladas {
     sql: ${TABLE}.marca ;;
   }
 
-  dimension: meta_nome_campanha {
-    type: string
-    sql: ${TABLE}.meta_nome_campanha_lead ;;
-  }
+
 
   dimension: modelo {
     type: string
@@ -139,7 +136,7 @@ view: vendas_canceladas {
     sql: ${TABLE}.preco_venda ;;
   }
 
-  dimension: produto {
+  dimension: produto_venda {
     type: string
     sql: ${TABLE}.produto_venda ;;
   }
@@ -202,6 +199,19 @@ view: vendas_canceladas {
     type: string
     sql: ${TABLE}.vendedor ;;
   }
+
+
+  dimension: motivo_devolucao_descricao {
+    type: string
+    sql: ${TABLE}.motivo_devolucao_descricao ;;
+  }
+
+
+  dimension: motivo_devolucao {
+    type: string
+    sql: ${TABLE}.motivo_devolucao ;;
+  }
+
 
   dimension: versao {
     type: string

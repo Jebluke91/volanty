@@ -29,6 +29,12 @@ view: crm_garantia {
     sql: ${TABLE}.criado_em ;;
   }
 
+  dimension: fase_do_negocio {
+    type: string
+    sql: ${TABLE}.fase_do_negocio ;;
+  }
+
+
   dimension: data_da_entrega_do_diagnostico___garantia {
     type: string
     sql: ${TABLE}.data_da_entrega_do_diagnostico___garantia ;;
@@ -49,9 +55,18 @@ view: crm_garantia {
     sql: ${TABLE}.data_de_envio_da_solicitacao_de_pagamento___garantia ;;
   }
 
-  dimension: data_de_inicio_do_servico___garantia {
-    type: string
-    sql: ${TABLE}.data_de_inicio_do_servico___garantia ;;
+  dimension_group: data_inicio_servico {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql: ${TABLE}.data_inicio_servico ;;
   }
 
   dimension: data_de_retirada_do_veiculo_da_oficina___garantia {

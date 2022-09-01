@@ -44,6 +44,10 @@ explore: estoque_anunciado {
 
 }
 
+explore: estoque_anunciado_his {
+
+}
+
 explore: avaliacoes {
 
 }
@@ -108,6 +112,26 @@ explore: crm_garantia{
 
 }
 
+explore: creditas_avaliacao{
+
+}
+
 explore: vendas_pos_vendas{
+
+}
+
+explore: leads_proprietarios{
+
+}
+
+explore: crm_formalizacao{
+
+}
+
+explore: crm_documentacao{
+
+}
+
+explore: esteira_express{
 
 }
