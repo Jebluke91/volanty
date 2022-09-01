@@ -212,6 +212,16 @@ view: visitas {
     sql: ${TABLE}.visitid ;;
   }
 
+  dimension: descricao_avulsa{
+    type: string
+    sql: ${TABLE}.Description_Avulsa ;;
+  }
+
+  dimension: motivo_avulsa{
+    type: string
+    sql: ${TABLE}.Motivo_Avulsa ;;
+  }
+
   measure: count {
     type: count
     drill_fields: []
